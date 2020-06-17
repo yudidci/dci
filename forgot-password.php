@@ -22,7 +22,7 @@
 
 <body class="bg-gradient-primary">
 <?php
-include('db.php');
+include('config.php');
 if(isset($_POST["email"]) && (!empty($_POST["email"]))){
 $email = $_POST["email"];
 $email = filter_var($email, FILTER_SANITIZE_EMAIL);
@@ -48,7 +48,7 @@ if (!$email) {
 		}else{
 	$expFormat = mktime(date("H"), date("i"), date("s"), date("m")  , date("d")+1, date("Y"));
 	$expDate = date("Y-m-d H:i:s",$expFormat);
-	$key = (2418*2+$email);
+	$key = (2418*2);
 	$addKey = substr(md5(uniqid(rand(),1)),3,10);
   $key = $key . $addKey;
   
@@ -80,6 +80,7 @@ $mail->Host = "smtp.mailtrap.io"; // Enter your host here
 $mail->SMTPAuth = true;
 $mail->Username = "c5a0d6ea74b770"; // Enter your email here
 $mail->Password = "7f5c27bd1e55fd"; //Enter your passwrod here
+
 $mail->Port = 2525;
 $mail->IsHTML(true);
 $mail->From = "noreply@yourwebsite.com";
