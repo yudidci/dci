@@ -479,6 +479,7 @@ if ( !isset($_SESSION['user_login']) ||
         <div class="container-fluid">
   
           <!-- Page Heading -->
+          <form action='http://localhost:3001/user/1234567890123445' method="post">
           <h1 class="h3 mb-4 text-gray-800">Identitas</h1>
           <div class="mb-4">Edit Data Member</div>
   
@@ -641,10 +642,21 @@ if ( !isset($_SESSION['user_login']) ||
               <div class="card-header py-3">
                 <div class="row">
                   <div class="col-sm-2">
-                  <h6 class="m-0 font-weight-bold text-primary">Kodereferal</h6>
+                  <h6 class="m-0 font-weight-bold text-primary">Nomor Telepon</h6>
                 </div>
                 <div class="col-sm-10">
-                  <input type="text" id="fname" name="fname" value="<?=$_SESSION['ferall'];?>"><br>
+                  <input type="text" id="phone" name="phone" value="<?=$_SESSION['phone'];?>"><br>
+                </div>
+                </div>
+                
+              </div>
+              <div class="card-header py-3">
+                <div class="row">
+                  <div class="col-sm-2">
+                  <h6 class="m-0 font-weight-bold text-primary">Email</h6>
+                </div>
+                <div class="col-sm-10">
+                  <input type="text" id="email" name="email" value="<?=$_SESSION['email'];?>"><br>
                 </div>
                 </div>
                 
