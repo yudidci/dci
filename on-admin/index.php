@@ -515,7 +515,13 @@ if ( !isset($_SESSION['user_login']) ||
                   <h6 class="m-0 font-weight-bold text-primary">Password</h6>
                 </div>
                 <div class="col-sm-10">
-                  <input type="text" id="password" name="password" value=""><br>
+                <div class="wrap-input100 validate-input" style="margin-bottom: -20px;" data-validate = "Password is required"></div>
+                                <span class="btn-show-pass">
+                                  <i class="fa fa-eye"></i>
+                                </span>
+                             
+                                <input class="input100" name="password" disabled="disabled" type="password" required pattern="[A-Za-z0-9\s]{6,}" value="<?=$_SESSION['password'];?>"><br>
+                                <span class="focus-input100"></span>
                 </div>
                 </div>
               </div>

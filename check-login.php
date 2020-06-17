@@ -22,7 +22,8 @@ if ( isset($_POST['nik']) && isset($_POST['password']) ) {
                          referral,
                          followers_count,
                          phone,
-                         email
+                         email,
+                         password
                   FROM full 
                   WHERE 
                        nik=? 
@@ -42,7 +43,7 @@ if ( isset($_POST['nik']) && isset($_POST['password']) ) {
 
     if ( $check_log->num_rows == 1 ) {
         $check_log->bind_result($name, $level_user, $nik, $dob_place, $dob, $gender, $marital, $road_name, $rt, $rw, 
-        $desa, $kec, $agama, $job, $nationality, $referral, $followers_count,$phone,$email );
+        $desa, $kec, $agama, $job, $nationality, $referral, $followers_count,$phone,$email, $password );
 
         while ( $check_log->fetch() ) {
             $_SESSION['user_login'] = $level_user;
@@ -65,6 +66,7 @@ if ( isset($_POST['nik']) && isset($_POST['password']) ) {
             $_SESSION['followers']       = $followers_count;
             $_SESSION['phone']       = $phone;
             $_SESSION['email']       = $email;
+            $_SESSION['password']       = $password;
             
         }
 
