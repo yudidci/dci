@@ -19,7 +19,7 @@ if ( !isset($_SESSION['user_login']) ||
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title> Admin Member</title>
+  <title> Admin Area</title>
 
   <!-- Favicon -->
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
@@ -52,7 +52,7 @@ if ( !isset($_SESSION['user_login']) ||
         <div class="sidebar-brand-icon rotate-n-15">
           <img src="img/OscoOk64.png" alt="Girl in a jacket" width="60" height="60">
         </div>
-        <div class="sidebar-brand-text mx-3">Member Admin</div>
+        <div class="sidebar-brand-text mx-3">Member Area</div>
       </a>
 
       <!-- Divider -->
@@ -241,147 +241,7 @@ if ( !isset($_SESSION['user_login']) ||
           <div class="d-sm-flex align-items-center justify-content-between mb-4">
             <h1 class="h3 mb-0 text-gray-800">Dashboard</h1>
           </div>
-            <div class="row">
-
-              <!-- Earnings (Monthly) Card Example -->
-              <div class="col-xl-3 col-md-6 mb-4">
-                <div class="card border-left-primary shadow h-100 py-2">
-                  <div class="card-body">
-                    <div class="row no-gutters align-items-center">
-                      <div class="col mr-2">
-                      <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Follower Anda</div>
-                        <div class="h5 mb-0 font-weight-bold text-gray-800"><?=$_SESSION['followers'];?> </div>
-                      </div>
-                      <div class="col-auto">
-                      <i class="fa fa-users fa-2x text-gray-300"></i>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              
-  
-              <!-- Earnings (Monthly) Card Example -->
-              <div class="col-xl-3 col-md-6 mb-4">
-                <div class="card border-left-success shadow h-100 py-2">
-                  <div class="card-body">
-                    <div class="row no-gutters align-items-center">
-                      <div class="col mr-2">
-                      <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Mobil Pendukung Osco</div>
-                        <div class="h5 mb-0 font-weight-bold text-gray-800">473</div>
-                      </div>
-                      <div class="col-auto">
-                        <i class="fas fa-car fa-2x text-gray-300"></i>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-  
-              <!-- Earnings (Monthly) Card Example -->
-              <div class="col-xl-3 col-md-6 mb-4">
-                <div class="card border-left-info shadow h-100 py-2">
-                  <div class="card-body">
-                    <div class="row no-gutters align-items-center">
-                      <div class="col mr-2">
-                      <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Kecamatan Pendukung</div>
-                        <div class="row no-gutters align-items-center">
-                          <div class="col-auto">
-                            <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800">12</div>
-                          </div>
-                          <div class="col">
-                            <div class="progress progress-sm mr-2">
-                              <div class="progress-bar bg-info" role="progressbar" style="width: 20%" aria-valuenow="12" aria-valuemin="0" aria-valuemax="100"></div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="col-auto">
-                        <i class="fa fa-handshake fa-2x text-gray-300"></i>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-  
-              <!-- Pending Requests Card Example -->
-              <div class="col-xl-3 col-md-6 mb-4">
-                <div class="card border-left-warning shadow h-100 py-2">
-                  <div class="card-body">
-                    <div class="row no-gutters align-items-center">
-                      <div class="col mr-2">
-                        <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">Kelurahan Pendukung</div>
-                        <div class="h5 mb-0 font-weight-bold text-gray-800">64</div>
-                      </div>
-                      <div class="col-auto">
-                        <i class="fa fa-asl-interpreting fa-2x text-gray-300"></i>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-             <div class="row">
-
-              <!-- Earnings (Monthly) Card Example -->
-              <div class="col-xl-4 col-md-6 mb-4">
-                <div class="card border-left-primar shadow h-100 py-2">
-                  <div class="card-body">
-                    <div class="row no-gutters align-items-center">
-                      <div class="col mr-2">
-                       <img src="./img/hand.png" alt="img" style="width: 20%; ">
-                        <div class="h5 mb-0 font-weight-bold text-gray-800">BANGKIT </div>
-                        <div class="h6 mb-0 font-weight-bold text-gray-700">Mampu bangkit kembali setiap <br>kali terjatuh</div>
-                      </div>
-                      <div class="col-auto">
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              
-  
-              <!-- Earnings (Monthly) Card Example -->
-              <div class="col-xl-4 col-md-6 mb-4">
-                <div class="card border-left-succes shadow h-100 py-2">
-                  <div class="card-body">
-                    <div class="row no-gutters align-items-center">
-                      <div class="col mr-2">
-                      <img src="./img/pencil.png" alt="img" style="width: 20%; ">
-                        <div class="h5 mb-0 font-weight-bold text-white-800">BEKERJA</div>
-                        <div class="h6 mb-0 font-weight-bold text-white-700">Bekerja dengan ketekunan dan <br>kerja keras</div>
-                      </div>
-                      <div class="col-auto">
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-  
-              <!-- Earnings (Monthly) Card Example -->
-              <div class="col-xl-4 col-md-6 mb-4">
-                <div class="card border-left-inf shadow h-100 py-2">
-                  <div class="card-body">
-                    <div class="row no-gutters align-items-center">
-                      <div class="col mr-2">
-                      <img src="./img/organic-food.png" alt="img" style="width: 20%; ">
-                        <div class="row no-gutters align-items-center">
-                          <div class="col-auto">
-                            <div class="h5 mb-0 mr-3 font-weight-bold text-white-800">BERKARYA</div>
-                            <div class="h6 mb-0 mr-3 font-weight-bold text-white-700">Berkarya untuk berkontribusi dalam kehidupan</div>
-                          </div>
-                          <div class="col">
-                          </div>
-                        </div>
-                      </div>
-                      <div class="col-auto">
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-            </div>
+            
                
             <div class="row">
   
@@ -453,27 +313,6 @@ if ( !isset($_SESSION['user_login']) ||
                 </div>
               </div>
   
-              <!-- Pie Chart -->
-              <div class="col-xl-4 col-lg-5">
-                <div class="card shadow mb-4">
-                  <!-- Card Header - Dropdown -->
-                  <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                    <h6 class="m-0 font-weight-bold text-primary"> #MASKERUNTUKSEMUA</h6>
-                    <div class="dropdown no-arrow">
-                      <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
-                      </a>
-                    </div>
-                  </div>
-                  <!-- Card Body -->
-                  <div class="card-body">
-                   <img src="./img/masker.png" alt="img" style="width: 100%; ">
-                      <div class="h5 text-center font-weight-bold text-gray-800">25000</div>
-                      <div class="text-primar text-center">SUDAH DIBAGIKAN SAMPAI SAAT INI</div>
-                  </div>
-                </div>
-              </div>
-            </div>
 
 
       </div>
@@ -763,7 +602,10 @@ if ( !isset($_SESSION['user_login']) ||
   <div class="card-header">
   </div>
   <div class="card-body">
-    <p>Dengan menjadi member osco ("Sahabat Osco"") 
+  <H3 class="pengenalan">Pengenalan</h3>
+  <p class="pengenalan">Dalam menggunakan layanan web ini, Pengguna setuju untuk mengikatkan diri, tunduk pada dan melaksanakan syarat-syarat dan ketentuan-ketentuan penggunaan layanann web ("Ketentuan Layanan Sahabat OSCO"), sebagai berikut:
+</p>
+    <p class="pengenalan">Dengan menjadi member osco ("Sahabat Osco"") 
       berarti Anda telah setuju dengan Syarat dan Ketentuan Layanan 
       (untuk selanjutnya disebut "Syarat dan Ketentuan") berikut ini. 
       Anda bisa melihat Syarat dan Ketentuan secara lengkap di halaman ini. 

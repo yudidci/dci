@@ -534,7 +534,7 @@ if ( !isset($_SESSION['user_login']) ||
                   <h6 class="m-0 font-weight-bold text-primary">No Handphone</h6>
                 </div>
                 <div class="col-sm-10">
-                  <input type="text" id="no_hp" name="no_hp"><br>
+                  <input type="text" id="no_hp" name="no_hp" value="<?=$_SESSION['phone'];?>"><br>
                 </div>
                 </div>
               </div>
