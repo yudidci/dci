@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 15, 2020 at 07:45 AM
+-- Generation Time: Jun 18, 2020 at 05:48 AM
 -- Server version: 10.4.11-MariaDB
 -- PHP Version: 7.4.2
 
@@ -60,7 +60,7 @@ CREATE TABLE `full` (
 
 INSERT INTO `full` (`reg_no`, `name`, `nik`, `dob_place`, `dob`, `gender`, `road_name`, `rt`, `rw`, `desa`, `kec`, `agama`, `marital`, `job`, `nationality`, `followers_count`, `password`, `tingkat`, `referral`, `level_user`, `email`, `trn_date`, `phone`) VALUES
 ('20200506382552', 'Andi', '1234567890123456', 'Tangerang', '2020-05-06', 'pria', 'Depok', '002', '004', 'Sukatani', 'Cisoka', 'Islam', 'Belum Menikah', 'Karyawan Swasta', 'WNI', 1, '$2b$10$cbC6EILPekm.uHr7UBw7WecKkCl08.626srd4Jjb/.ActO0B/6yRS', NULL, '', NULL, NULL, NULL, NULL),
-('20200506908427', 'Belle Dian', '4030620209876675', 'Tangerang', '2020-05-06', 'pria', 'Depok', '002', '004', 'Sukatani', 'Cisoka', 'Islam', 'Belum Menikah', 'Karyawan Swasta', 'WNI', 9, '22sambal', NULL, '20200506382552', 'admin', 'belle@mail.com', '2020-06-15 09:37:15', NULL),
+('20200506908427', 'Belle Dian', '4030620209876675', 'Tangerang', '2020-05-06', 'pria', 'Depok', '002', '004', 'Sukatani', 'Cisoka', 'Islam', 'Belum Menikah', 'Karyawan Swasta', 'WNI', 9, '22kucing', NULL, '20200506382552', 'admin', 'belle@mail.com', '2020-06-15 11:25:46', NULL),
 ('2020050661834', 'Cindy', '1234567890123456', 'Tangerang', '2020-05-06', 'pria', 'Depok', '002', '004', 'Sukatani', 'Cisoka', 'Islam', 'Belum Menikah', 'Karyawan Swasta', 'WNI', 0, '$2b$10$cbC6EILPekm.uHr7UBw7WepUpYa0l8DQxlwYkTxxL8XNEXeWAIQQC', NULL, '20200506908427', NULL, NULL, NULL, NULL),
 ('20200506872657', 'Dian', '1234567890123456', 'Tangerang', '2020-05-06', 'pria', 'Depok', '002', '004', 'Sukatani', 'Cisoka', 'Islam', 'Belum Menikah', 'Karyawan Swasta', 'WNI', 0, '$2b$10$cbC6EILPekm.uHr7UBw7WepUpYa0l8DQxlwYkTxxL8XNEXeWAIQQC', NULL, '20200506908427', NULL, NULL, NULL, NULL),
 ('20200506467229', 'Erik', '1234567890123456', 'Tangerang', '2020-05-06', 'pria', 'Depok', '002', '004', 'Sukatani', 'Cisoka', 'Islam', 'Belum Menikah', 'Karyawan Swasta', 'WNI', 0, '$2b$10$cbC6EILPekm.uHr7UBw7Weuo0RTofkY/MCIdXtz6tBgumIOHUFH7C', NULL, '20200506908427', NULL, NULL, NULL, NULL),
@@ -102,7 +102,7 @@ INSERT INTO `full` (`reg_no`, `name`, `nik`, `dob_place`, `dob`, `gender`, `road
 ('20200508139778', 'Layla', '1234567890123456', 'Tangerang', '2020-05-08', 'pria', 'Depok', '002', '001', 'Sukatani', 'Cisoka', 'Islam', 'Belum Menikah', 'Karyawan Swasta', 'WNA', 0, '$2b$10$5ynHktEdnFxztWRkgqsZweVLZIuJ0KXtSCEfrILjTZUQSUxeBnWEC', NULL, '20200506908427', NULL, NULL, NULL, NULL),
 ('20200508930439', 'Keysa', '1234567890123456', 'Tangerang', '2020-05-08', 'pria', 'Depok', '002', '001', 'Sukatani', 'Cisoka', 'Islam', 'Belum Menikah', 'Karyawan Swasta', 'WNA', 0, '$2b$10$5ynHktEdnFxztWRkgqsZweVLZIuJ0KXtSCEfrILjTZUQSUxeBnWEC', NULL, '20200506908427', NULL, NULL, NULL, NULL),
 ('20200508713084', 'Jina', '1234567890123456', 'Tangerang', '2020-05-08', 'pria', 'Depok', '002', '001', 'Sukatani', 'Cisoka', 'Islam', 'Belum Menikah', 'Karyawan Swasta', 'WNA', 0, '$2b$10$5ynHktEdnFxztWRkgqsZweVLZIuJ0KXtSCEfrILjTZUQSUxeBnWEC', NULL, '20200506908427', NULL, NULL, NULL, NULL),
-('20200508751317', 'Irsyad', '1234567890123445', 'Depok', '2020-05-08', 'pria', 'Depok', '002', '001', 'Sukatani', 'Cisoka', 'Islam', 'Belum Menikah', 'Karyawan Swasta', 'WNA', 5, '22timdrake', NULL, '20200506908427', 'admin', NULL, NULL, NULL),
+('20200508751317', '', '1234567890123445', '', '0000-00-00', 'pria', 'Depok', '002', '001', 'Sukatani', 'Cisoka', 'Islam', 'Belum Menikah', 'Karyawan Swasta', 'WNA', 5, '22timdrake', NULL, '20200506908427', 'admin', NULL, NULL, NULL),
 ('20200508701900', 'Gundala', '1234567890123456', 'Tangerang', '2020-05-08', 'pria', 'Depok', '002', '001', 'Sukatani', 'Cisoka', 'Islam', 'Belum Menikah', 'Karyawan Swasta', 'WNA', 0, '$2b$10$ifS5LU4pZHI4AmpOqO471eWPSpkr3nalTZfmVuLbj9Z0M.PhY4/2C', NULL, '20200508751317', NULL, NULL, NULL, NULL),
 ('20200508166260', 'Flores', '1234567890123456', 'Tangerang', '2020-05-08', 'pria', 'Depok', '002', '001', 'Sukatani', 'Cisoka', 'Islam', 'Belum Menikah', 'Karyawan Swasta', 'WNA', 0, '$2b$10$ifS5LU4pZHI4AmpOqO471eDTpNxxj80fuZ23US2DpQYIusIMQKu6u', NULL, '20200508751317', NULL, NULL, NULL, NULL),
 ('20200508864933', 'Ernes', '1234567890123456', 'Tangerang', '2020-05-08', 'pria', 'Depok', '002', '001', 'Sukatani', 'Cisoka', 'Islam', 'Belum Menikah', 'Karyawan Swasta', 'WNA', 0, '$2b$10$ifS5LU4pZHI4AmpOqO471eWPSpkr3nalTZfmVuLbj9Z0M.PhY4/2C', NULL, '20200508751317', NULL, NULL, NULL, NULL),
@@ -138,7 +138,7 @@ INSERT INTO `full` (`reg_no`, `name`, `nik`, `dob_place`, `dob`, `gender`, `road
 ('20200508107527', 'Yahya', '1234567890123456', 'Tangerang', '2020-05-08', 'pria', 'Depok', '002', '001', 'Sukatani', 'Cisoka', 'Islam', 'Belum Menikah', 'Karyawan Swasta', 'WNA', 0, '$2b$10$ifS5LU4pZHI4AmpOqO471eDTpNxxj80fuZ23US2DpQYIusIMQKu6u', NULL, '20200508591417', NULL, NULL, NULL, NULL),
 ('20200508702245', 'Zikra', '1234567890123456', 'Tangerang', '2020-05-08', 'pria', 'Depok', '002', '001', 'Sukatani', 'Cisoka', 'Islam', 'Belum Menikah', 'Karyawan Swasta', 'WNA', 0, '$2b$10$ifS5LU4pZHI4AmpOqO471eWPSpkr3nalTZfmVuLbj9Z0M.PhY4/2C', NULL, '20200508591417', NULL, NULL, NULL, NULL),
 ('20200512927191', 'Putra', '1234567890123456', 'Tangerang', '2020-05-12', 'pria', 'Depok', '002', '004', 'Cisoka', 'Sukatani', 'Islam', 'Belum Menikah', 'Karyawan Swasta', 'WNI', 0, '$2b$10$oOkp7bA9jHCSqLlpLeN0PuMrBfvjIde1zfGST/R0blvQh2yDlUN/.', NULL, '', NULL, NULL, NULL, NULL),
-('20200512467227', 'Hendri', '1234567890123456', 'Tangerang', '2020-05-12', 'pria', 'Depok', '002', '004', 'Cisoka', 'Sukatani', 'Islam', 'Belum Menikah', 'Karyawan Swasta', 'WNI', 7, '$2b$10$oOkp7bA9jHCSqLlpLeN0PuMrBfvjIde1zfGST/R0blvQh2yDlUN/.', NULL, '20200506974718', NULL, NULL, NULL, NULL),
+('20200512467227', 'Hendri', '1234567890123456', 'Tangerang', '2020-05-12', 'pria', 'Depok', '002', '004', 'Cisoka', 'Sukatani', 'Islam', 'Belum Menikah', 'Karyawan Swasta', 'WNI', 13, '$2b$10$oOkp7bA9jHCSqLlpLeN0PuMrBfvjIde1zfGST/R0blvQh2yDlUN/.', NULL, '20200506974718', NULL, NULL, NULL, NULL),
 ('20200518470047', 'Hendra', '1234567890123456', 'Tangerang', '2020-05-18', 'pria', 'depok', '003', '002', 'Sukatani', 'Cisoka', 'Islam', 'Belum Menikah', 'Karyawan Swasta', 'WNI', 0, '$2b$10$yD0dMX.DHoJoOKAygSK68.OfyCSB6ofNfZ.7caGatE9NQr9Hu9pVu', NULL, '20200512467227', NULL, NULL, NULL, NULL),
 ('20200519775305', 'Hendro', '1234567890123455', 'Tangerang', '2020-05-19', 'pria', 'Depok', '001', '004', 'Cisoka', 'Sukatani', 'Islam', 'Belum Menikah', 'Karyawan Swasta', 'WNI', 0, '$2b$10$acHOC92kRfm5iiDiP/P6r.YynUwJayDqDyAlzO5ChC74/Zc902ro2', NULL, '20200512467227', NULL, NULL, NULL, NULL),
 ('20200519195995', 'Hendrik', '1234567890123455', 'Tangerang', '2020-05-19', 'pria', 'Depok', '001', '004', 'Cisoka', 'Sukatani', 'Islam', 'Belum Menikah', 'Karyawan Swasta', 'WNI', 0, '$2b$10$acHOC92kRfm5iiDiP/P6r.YynUwJayDqDyAlzO5ChC74/Zc902ro2', NULL, '20200512467227', NULL, NULL, NULL, NULL),
@@ -153,7 +153,10 @@ INSERT INTO `full` (`reg_no`, `name`, `nik`, `dob_place`, `dob`, `gender`, `road
 ('202006021453', 'Tim Drake', '2020060298123476', '', '0000-00-00', '', '', '', '', '', '', '', '', '', '', 0, '22timdrake', NULL, NULL, NULL, NULL, NULL, NULL),
 ('20200602649109', 'Tim Drake', '2020060298181919', 'Tangerang', '2020-05-08', 'pria', 'Depok', '004', '002', 'Sukatani', 'Cisoka', 'Islam', 'Belum Menikah', 'Karyawan Swasta', 'WNI', 0, '22timdrake', NULL, '', 'admin', NULL, NULL, NULL),
 ('2020060485917', 'Mulan', '2020060499887728', 'Tangerang', '2020-06-04', 'pria', 'Jl. Sawo No 27', '004', '001', 'Pondok Cina', 'Beji', 'Islam', 'Belum Menikah', 'Karyawan Swasta', 'WNI', 0, '$2b$10$8Ct8V2xBjXW3O9QSbC3WRepOTN99qgVv3OVEZ15b/0QeHYNFy0G6O', NULL, '', NULL, NULL, NULL, NULL),
-('20200609402695', 'Ben Platt', '2020060917030804', 'Tangerang', '2020-06-09', 'pria', 'Jl Sawo', '004', '001', 'Sukatani', 'Cisoka', 'Islam', 'Belum Menikah', 'Karyawan Swasta', 'WNI', 0, '22timdrake', NULL, '', 'admin', NULL, NULL, NULL);
+('20200609402695', 'Ben Platt', '2020060917030804', 'Tangerang', '2020-06-09', 'pria', 'Jl Sawo', '004', '001', 'Sukatani', 'Cisoka', 'Islam', 'Belum Menikah', 'Karyawan Swasta', 'WNI', 0, '22timdrake', NULL, '', 'admin', NULL, NULL, NULL),
+('20200615197145', 'Kenzo', '1506202019950833', 'wolter', '1995-08-04', 'Pria', 'Wolter', '04', '03', 'Wolter', 'wolter', 'islam', 'lajang', 'karyawan swasta', 'indonesia', 0, '22hello', NULL, '20200512467227', 'admin', 'kenzo@mail.com', '2020-06-15 12:00:28', '082298655387'),
+('20200617167382', 'jasmine', '2020061710518889', 'Depok', '2020-06-17', 'wanita', 'Depok', '001', '004', 'Sukatani', 'Cisoka', 'Islam', 'Belum Menikah', 'Karyawan Swasta', 'WNA', 0, '22jasmine', NULL, '', 'member', 'jasmine@mail.com', '2020-06-17 09:10:06', '082381166777'),
+('20200617801976', 'Alin', '2020061717071245', 'Tangerang', '2020-06-17', 'pria', 'Depok', '004', '004', 'Cisoka', 'Sukatani', 'Islam', 'Belum Menikah', 'Wiraswasta', 'WNI', 0, '22alin', NULL, '', 'admin', 'alin@mail.com', NULL, '08229787662');
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
