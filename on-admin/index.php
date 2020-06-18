@@ -789,6 +789,7 @@ if ( !isset($_SESSION['user_login']) ||
     <p class="pengenalan1">2. Resiko penggunaan Layanan ini adalah resiko Anda. Layanan ini disediakan seperti apa adanya tanpa jaminan apapun, tersurat ataupun tersirat</p>
     <p class="pengenalan1">3. OSCO tidak menjamin Layanan ini tidak akan mengalami gangguan, tepat waktu, aman ataupun bebas dari kesalahan</p>
     <p class="pengenalan1">4. OSCO tidak menjamin segala hal yang dihasilkan dari penggunaan Layanan akan akurat atau bisa diandalkan</p>
+
 </div>
       <div class="card-body">
       <div style="overflow-x:auto;">
@@ -830,7 +831,7 @@ if ( !isset($_SESSION['user_login']) ||
               </table>
             </div>
           </div>
-
+          </div>
       </div>
         </div>
 

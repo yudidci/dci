@@ -174,15 +174,7 @@ if ( !isset($_SESSION['user_login']) ||
               </a>
               <!-- Dropdown - User Information -->
               <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
-                <a class="dropdown-item" id="klikidentitas-" href="#klikidentitas-">
-                  <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
-                  Edit Profile
-                </a>
-                <a class="dropdown-item" id="klikketentuan-" href="#klikketentuan-">
-                  <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
-                  SKU
-                </a>
-                <div class="dropdown-divider"></div>
+
                 <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
                   <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
                   Logout
@@ -195,7 +187,6 @@ if ( !isset($_SESSION['user_login']) ||
         </nav>
         <!-- End of Topbar -->
 
-        <!-- Begin Page Content -->
         <div class="container-fluid" id="dashboard">
           <!-- Page Heading -->
           <div class="d-sm-flex align-items-center justify-content-between mb-4">
@@ -261,442 +252,361 @@ if ( !isset($_SESSION['user_login']) ||
                   </div>
                 </div>
               </div>
-
             </div>
-               
-            <div class="row">
-  
-              <!-- Area Chart -->
-              <div class="col-xl-8 col-lg-7">
-                <div class="card shadow mb-4">
-                  <!-- Card Header - Dropdown -->
-                  <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                    <h3 class="osco-title">PROGRAM OSCO</h3>
-                    <div class="dropdown no-arrow">
-                    </div>
-                  </div>
-                  <!-- Card Body -->
-                  <div class="card-body">
-                  <div class="container">
-      <div class="row">
-        <div class="col-lg-12 col-md-12 osco-program-box">
-          <div class="mu-features-area">
-            <!-- Start Title -->
-            <!-- End Title -->
-            <!-- Start features content -->
-            <div class="mu-features-content">
-              <div class="row">
-
-                <div class=" col-sm-12 text-center">
-                  <div class="mu-single-feature">
-
-                    <div class="row">
-                      <div class="col-sm-4 icon-box">
-                        <img src="./img/iconPendidikanVokasi.png" alt="img" style="width: 50%; ">
-                        <h5>Pendidikan Vokasi</h5>
-                      </div>
-                      <div class="col-sm-4 icon-box">
-                        <img src="./img/iconIndusKesehatan.png" alt="img" style="width: 50%; ">
-                        <h5>Industrialisasi Kesehatan</h5>
-                      </div>
-                      <div class="col-sm-4 icon-box">
-                        <img src="./img/iconPelatihanKewira.png" alt="img" style="width: 50%; ">
-                        <h5>Pelatihan Kewirausahaan</h5>
-                      </div>
-                    </div>
-                    <div class="row" style="margin-top: 65px;">
-                      <div class="col-sm-4 icon-box">
-                        <img src="./img/iconPameranSeni.png" alt="img" style="width: 50%; ">
-                        <h5>Pameran Seni Budaya</h5>
-                      </div>
-                      <div class="col-sm-4 icon-box">
-                        <img src="./img/iconPelatihanAtlet.png" alt="img" style="width: 50%; ">
-                        <h5>Pelatihan Atlet</h5>
-                      </div>
-                      <div class="col-sm-4 icon-box">
-                        <img src="./img/iconSportTour.png" alt="img" style="width: 50%; ">
-                        <h5>Sport Tourism</h5>
-                      </div>
-                    </div>
-                    <br>
-
-
-                  </div>
-                </div>
               </div>
-            </div>
-            <!-- End features content -->
+  
+
+           <div class="container-fluid" id="follower">
+
+<!-- Page Heading -->
+<h1 class="h3 mb-2 text-gray-800">Edit Batas Follower</h1>
+<!-- DataTales Example -->
+<div class="advance">
+
+        <div class="row">
+        <div class="card1">
+          <p class="judul">Batas Follower Kota</p>
+          <div class="column">
+            <input type="text" id="username" name="username" onkeypress="return hanyaAngka(event)"><br>
           </div>
+          <div class="column">
+            <select id="cars" name="cars">
+              <option value="volvo">></option>
+              <option value="saab"><</option>
+              <option value="fiat">≥</option>
+              <option value="audi">≤</option>
+            </select>
+          </div>
+          <div class="column">
+            <input type="text" id="username" name="username" onkeypress="return hanyaAngka(event)"><br>
+          </div>
+          <button type="button" class="updt-follower" id="updt-follower">update</button>
         </div>
-      </div>
-    </div>
-                  </div>
-                </div>
-              </div>
-  
-              <!-- Pie Chart -->
-              <div class="col-xl-4 col-lg-5">
-                <div class="card shadow mb-4">
-                  <!-- Card Header - Dropdown -->
-                  <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                    <h6 class="m-0 font-weight-bold text-primary"> #MASKERUNTUKSEMUA</h6>
-                    <div class="dropdown no-arrow">
-                      <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
-                      </a>
-                    </div>
-                  </div>
-                  <!-- Card Body -->
-                  <div class="card-body">
-                   <img src="./img/masker.png" alt="img" style="width: 100%; ">
-                      <div class="h5 text-center font-weight-bold text-gray-800">25000</div>
-                      <div class="text-primar text-center">SUDAH DIBAGIKAN SAMPAI SAAT INI</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-
-      </div>
-      <!-- End of Main Content -->   
-
-
-      <div class="container-fluid" id="follower">
-
-        <!-- Page Heading -->
-        <h1 class="h3 mb-2 text-gray-800">Edit Batas Follower</h1>
-
-        <!-- DataTales Example -->
-        <div class="advance">
-
-                <div class="row">
-                <div class="card1">
-                  <p class="judul">Batas Follower Kota</p>
-                  <div class="column">
-                    <input type="text" id="username" name="username" onkeypress="return hanyaAngka(event)"><br>
-                  </div>
-                  <div class="column">
-                    <select id="cars" name="cars">
-                      <option value="volvo">></option>
-                      <option value="saab"><</option>
-                      <option value="fiat">≥</option>
-                      <option value="audi">≤</option>
-                    </select>
-                  </div>
-                  <div class="column">
-                    <input type="text" id="username" name="username" onkeypress="return hanyaAngka(event)"><br>
-                  </div>
-                  <button type="button" class="updt-follower" id="updt-follower">update</button>
-                </div>
-                <div class="card1">
-                  <p class="judul">Batas Follower Camat</p>
-                  <div class="column">
-                    <input type="text" id="username" name="username" onkeypress="return hanyaAngka(event)"><br>
-                  </div>
-                  <div class="column">
-                  <select id="cars" name="cars">
-                    <option value="volvo">></option>
-                    <option value="saab"><</option>
-                    <option value="fiat">≥</option>
-                    <option value="audi">≤</option>
-                  </select>
-                  </div>
-                  <div class="column">
-                    <input type="text" id="username" name="username" onkeypress="return hanyaAngka(event)"><br>
-                  </div>
-                  <button type="button" class="updt-follower" id="updt-follower">update</button>
-                </div>
-                <div class="card1">
-                  <p class="judul">Batas Follower Lurah</p>
-                  <div class="column">
-                    <input type="text" id="username" name="username" onkeypress="return hanyaAngka(event)"><br>
-                  </div>
-                  <div class="column">
-                    <select id="cars" name="cars">
-                      <option value="volvo">></option>
-                      <option value="saab"><</option>
-                      <option value="fiat">≥</option>
-                      <option value="audi">≤</option>
-                    </select>
-                  </div>
-                  <div class="column">
-                    <input type="text" id="username" name="username" onkeypress="return hanyaAngka(event)"><br>
-                  </div>
-                  <button type="button" class="updt-follower" id="updt-follower">update</button>
-                </div>
-                <div class="card1">
-                  <p class="judul">Batas Follower RT</p>
-                  <div class="column">
-                    <input type="text" id="username" name="username"><br>
-                  </div>
-                  <div class="column">
-                    <select id="cars" name="cars">
-                      <option value="volvo">></option>
-                      <option value="saab"><</option>
-                      <option value="fiat">≥</option>
-                      <option value="audi">≤</option>
-                    </select>
-                  </div>
-                  <div class="column">
-                    <input type="text" id="username" name="username"><br>
-                  </div>
-                  <button type="button" class="updt-follower" id="updt-follower">update</button>
-                </div>
-                <div class="card1">
-                  <p class="judul">Batas Follower RW</p>
-                  <div class="column">
-                    <input type="text" id="username" name="username"><br>
-                  </div>
-                  <div class="column">
-                    <select id="cars" name="cars">
-                      <option value="volvo">></option>
-                      <option value="saab"><</option>
-                      <option value="fiat">≥</option>
-                      <option value="audi">≤</option>
-                    </select>
-                  </div>
-                  <div class="column">
-                    <input type="text" id="username" name="username"><br>
-                  </div>
-                  <button type="button" class="updt-follower" id="updt-follower">update</button>
-                </div>
-                <div class="card1">
-                  <p class="judul">Batas Follower Warga</p>
-                <div class="column">
-                  <input type="text" id="username" name="username" onkeypress="return hanyaAngka(event)"><br>
-                </div>
-                <div class="column">
-                  <select id="cars" name="cars">
-                    <option value="volvo">></option>
-                    <option value="saab"><</option>
-                    <option value="fiat">≥</option>
-                    <option value="audi">≤</option>
-                  </select>
-                </div>
-                <div class="column">
-                  <input type="text" id="username" name="username" onkeypress="return hanyaAngka(event)"><br>
-                </div>
-                <button type="button" class="updt-follower" id="updt-follower">update</button>
-              </div>
-              </div>
+        <div class="card1">
+          <p class="judul">Batas Follower Camat</p>
+          <div class="column">
+            <input type="text" id="username" name="username" onkeypress="return hanyaAngka(event)"><br>
+          </div>
+          <div class="column">
+          <select id="cars" name="cars">
+            <option value="volvo">></option>
+            <option value="saab"><</option>
+            <option value="fiat">≥</option>
+            <option value="audi">≤</option>
+          </select>
+          </div>
+          <div class="column">
+            <input type="text" id="username" name="username" onkeypress="return hanyaAngka(event)"><br>
+          </div>
+          <button type="button" class="updt-follower" id="updt-follower">update</button>
         </div>
-
+        <div class="card1">
+          <p class="judul">Batas Follower Lurah</p>
+          <div class="column">
+            <input type="text" id="username" name="username" onkeypress="return hanyaAngka(event)"><br>
+          </div>
+          <div class="column">
+            <select id="cars" name="cars">
+              <option value="volvo">></option>
+              <option value="saab"><</option>
+              <option value="fiat">≥</option>
+              <option value="audi">≤</option>
+            </select>
+          </div>
+          <div class="column">
+            <input type="text" id="username" name="username" onkeypress="return hanyaAngka(event)"><br>
+          </div>
+          <button type="button" class="updt-follower" id="updt-follower">update</button>
+        </div>
+        <div class="card1">
+          <p class="judul">Batas Follower RT</p>
+          <div class="column">
+            <input type="text" id="username" name="username"><br>
+          </div>
+          <div class="column">
+            <select id="cars" name="cars">
+              <option value="volvo">></option>
+              <option value="saab"><</option>
+              <option value="fiat">≥</option>
+              <option value="audi">≤</option>
+            </select>
+          </div>
+          <div class="column">
+            <input type="text" id="username" name="username"><br>
+          </div>
+          <button type="button" class="updt-follower" id="updt-follower">update</button>
+        </div>
+        <div class="card1">
+          <p class="judul">Batas Follower RW</p>
+          <div class="column">
+            <input type="text" id="username" name="username"><br>
+          </div>
+          <div class="column">
+            <select id="cars" name="cars">
+              <option value="volvo">></option>
+              <option value="saab"><</option>
+              <option value="fiat">≥</option>
+              <option value="audi">≤</option>
+            </select>
+          </div>
+          <div class="column">
+            <input type="text" id="username" name="username"><br>
+          </div>
+          <button type="button" class="updt-follower" id="updt-follower">update</button>
+        </div>
+        <div class="card1">
+          <p class="judul">Batas Follower Warga</p>
+        <div class="column">
+          <input type="text" id="username" name="username" onkeypress="return hanyaAngka(event)"><br>
+        </div>
+        <div class="column">
+          <select id="cars" name="cars">
+            <option value="volvo">></option>
+            <option value="saab"><</option>
+            <option value="fiat">≥</option>
+            <option value="audi">≤</option>
+          </select>
+        </div>
+        <div class="column">
+          <input type="text" id="username" name="username" onkeypress="return hanyaAngka(event)"><br>
+        </div>
+        <button type="button" class="updt-follower" id="updt-follower">update</button>
       </div>
+      </div>
+</div>
+</div>
 
-      <div class="container-fluid" id="point">
+<div class="container-fluid" id="point">
 
-        <!-- Page Heading -->
-        <h1 class="h3 mb-2 text-gray-800">Filter Member</h1>
+<!-- Page Heading -->
+<h1 class="h3 mb-2 text-gray-800">Filter Member</h1>
 <div class="s008">
-    
-    <form>
-      
-      <!-- <a class="navbar-brand">CARI NIK BERDASARKAN TINGKATAN</a> -->
-      <div class="inner-form">
 
-        <div class="advance">
+<form>
 
-          <div class="row">
-            <div class="input-field">
-              <div class="tengah2">
-                <h3>Batas Bawah</h3>
-              </div>
-            </div>
-            <div class="input-field">
-              <div class="input-select">
-                <input type="text" id="search-text" class="form-control" onkeypress="return hanyaAngka(event) "aria-label="Recipient's username" aria-describedby="button-addon2">
-              </div>
-            </div>
-            <div class="input-field">
-              <div class="tengah">
-               <h3>Batas Atas</h3>
-              </div>
-            </div>
-            <div class="input-field">
-              <div class="kiri">
-                <input type="text" id="search-text2" class="form-control" onkeypress="return hanyaAngka(event) "aria-label="Recipient's username" aria-describedby="button-addon2">
-              </div>
-            </div>
-            <div class="input-field">
-              <div class="input-select">
-                <button type="button" class="btn-search" id="btn-detail">Search</button>
-              </div>
-            </div>
-          </div>
+<!-- <a class="navbar-brand">CARI NIK BERDASARKAN TINGKATAN</a> -->
+<div class="inner-form">
 
-          <!-- search -->
-                <form class="example">
-                  <input type="text" id="search-text3" class="form-control" onkeypress="return hanyaAngka(event)"placeholder="Masukan Referral Number" aria-label="Recipient's username" aria-describedby="button-addon2">
-                  <!-- <button type="button" id="btn-follower"><i class="fa fa-search"></i></button> -->
-                  <button type="button" class="btn-follower" id="btn-follower">Search</button>
-                </form>
+<div class="advance">
 
-       
+  <div class="row">
+    <div class="input-field">
+      <div class="tengah2">
+        <h3>Batas Bawah</h3>
+      </div>
+    </div>
+    <div class="input-field">
+      <div class="input-select">
+        <input type="text" id="search-text" class="form-control" onkeypress="return hanyaAngka(event) "aria-label="Recipient's username" aria-describedby="button-addon2">
+      </div>
+    </div>
+    <div class="input-field">
+      <div class="tengah">
+       <h3>Batas Atas</h3>
+      </div>
+    </div>
+    <div class="input-field">
+      <div class="kiri">
+        <input type="text" id="search-text2" class="form-control" onkeypress="return hanyaAngka(event) "aria-label="Recipient's username" aria-describedby="button-addon2">
+      </div>
+    </div>
+    <div class="input-field">
+      <div class="input-select">
+        <button type="button" class="btn-search" id="btn-detail">Search</button>
+      </div>
+    </div>
+  </div>
 
+  <!-- search -->
+        <form class="example">
+          <input type="text" id="search-text3" class="form-control" onkeypress="return hanyaAngka(event)"placeholder="Masukan Referral Number" aria-label="Recipient's username" aria-describedby="button-addon2">
+          <!-- <button type="button" id="btn-follower"><i class="fa fa-search"></i></button> -->
+          <button type="button" class="btn-follower" id="btn-follower">Search</button>
+        </form>
+
+
+
+</div>
+
+        
+
+<!-- end dropdown menu here -->
+
+
+<div class="basic-search">
+<div align="center">
+<button class="btn btn-primary ml-2" type="button" id="btn-search">Filter NIK Kota <i class="fa fa-search"></i></button>
+<button class="btn btn-primary ml-2" type="button" id="btn-camat">Filter NIK Camat <i
+    class="fa fa-search"></i></button>
+<button class="btn btn-primary ml-2" type="button" id="btn-lurah">Filter NIK Lurah <i
+    class="fa fa-search"></i></button>
+<button class="btn btn-primary ml-2" type="button" id="btn-RW">Filter NIK RW <i
+    class="fa fa-search"></i></button>
+<button class="btn btn-primary ml-2" type="button" id="btn-RT">Filter NIK RT <i
+    class="fa fa-search"></i></button>
+<button class="btn btn-primary ml-2" type="button" id="btn-warga">Filter NIK Warga <i
+    class="fa fa-search"></i></button>
+</div>
+</div>
+</div>
+
+<div class="advance-search">
+<span class="desc">List Member :<button class="button2" type="button" id="btn-tingkatan"><span> Lihat
+    Semua</span></button>
+
+
+<div class="row" id="movie-list">
+  <div class="col-md-4 mb-3 nikKota">
+  </div>
+  <div class="row" id="camat-list">
+    <div class="col-md-4 mb-3 nikCamat">
+    </div>
+    <div class="row" id="lurah-list">
+      <div class="col-md-4 mb-3 nikLurah">
+      </div>
+      <div class="row" id="RW-list">
+        <div class="col-md-4 mb-3 nikRW">
         </div>
-       
-                
-
-     <!-- end dropdown menu here -->
-
-
-     <div class="basic-search">
-      <div align="center">
-        <button class="btn btn-primary ml-2" type="button" id="btn-search">Filter NIK Kota <i class="fa fa-search"></i></button>
-        <button class="btn btn-primary ml-2" type="button" id="btn-camat">Filter NIK Camat <i
-            class="fa fa-search"></i></button>
-        <button class="btn btn-primary ml-2" type="button" id="btn-lurah">Filter NIK Lurah <i
-            class="fa fa-search"></i></button>
-        <button class="btn btn-primary ml-2" type="button" id="btn-RW">Filter NIK RW <i
-            class="fa fa-search"></i></button>
-        <button class="btn btn-primary ml-2" type="button" id="btn-RT">Filter NIK RT <i
-            class="fa fa-search"></i></button>
-        <button class="btn btn-primary ml-2" type="button" id="btn-warga">Filter NIK Warga <i
-            class="fa fa-search"></i></button>
-      </div>
-    </div>
-    </div>
-
-    <div class="advance-search">
-      <span class="desc">List Member :<button class="button2" type="button" id="btn-tingkatan"><span> Lihat
-            Semua</span></button>
-
-
-        <div class="row" id="movie-list">
-          <div class="col-md-4 mb-3 nikKota">
+        <div class="row" id="RT-list">
+          <div class="col-md-4 mb-3 nikRT">
           </div>
-          <div class="row" id="camat-list">
-            <div class="col-md-4 mb-3 nikCamat">
+          <div class="row" id="warga-list">
+            <div class="col-md-4 mb-3 nikWarga">
             </div>
-            <div class="row" id="lurah-list">
-              <div class="col-md-4 mb-3 nikLurah">
+            <div class="row" id="tingkatan-list">
+              <div class="col-md-4 mb-3 nikTingkatan">
               </div>
-              <div class="row" id="RW-list">
-                <div class="col-md-4 mb-3 nikRW">
-                </div>
-                <div class="row" id="RT-list">
-                  <div class="col-md-4 mb-3 nikRT">
-                  </div>
-                  <div class="row" id="warga-list">
-                    <div class="col-md-4 mb-3 nikWarga">
-                    </div>
-                    <div class="row" id="tingkatan-list">
-                      <div class="col-md-4 mb-3 nikTingkatan">
-                      </div>
-                      <div class="row" id="filter-list">
-                        <div class="col-md-4 mb-3 filterList">
-                        </div>
-
-                        <div class="row" id="follower-list">
-                          <div class="col-md-4 mb-3 followerList">
-                          </div>
-                      </div>
-                    </div>
-                  </div>
+              <div class="row" id="filter-list">
+                <div class="col-md-4 mb-3 filterList">
                 </div>
 
+                <div class="row" id="follower-list">
+                  <div class="col-md-4 mb-3 followerList">
+                  </div>
               </div>
             </div>
-            </form>
-            
-    
-          
-         
+          </div>
+        </div>
+        </div>
 
-
-
-          <!-- Modal Button -->
-          <!-- <div id="myModal" class="modal"> -->
-
-          <!-- Modal content -->
-          <!-- <div class="modal-content">
-      <div class="modal-header">
-        <span class="close">&times;</span>
-        <h2>Sukses</h2>
-      </div>
-      <div class="modal-body">
-        <p>Registrasi Berhasil</p>
-      </div>
-      <div class="modal-footer">
-        <h3>Terima Kasih</h3>
       </div>
     </div>
+    </form>
+    
+
   
-  </div> -->
+ 
 
-          <!-- <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-lg" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-        </div>
-        <div class="modal-body">
-        </div>
-      </div>
-    </div>
-  </div> -->
-          <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
-          <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-          <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
-          <script src='https://kit.fontawesome.com/a076d05399.js'></script>
 
-          <script src="assets/js/bootstrap.js"></script>
-          <script src="assets/script.js"></script>
-          <!-- button modal -->
-          <script>
-            // Get the modal
-            var modal = document.getElementById("myModal");
 
-            // Get the button that opens the modal
-            var btn = document.getElementById("myBtn");
+  <!-- Modal Button -->
+  <!-- <div id="myModal" class="modal"> -->
 
-            // Get the <span> element that closes the modal
-            var span = document.getElementsByClassName("close")[0];
+  <!-- Modal content -->
+  <!-- <div class="modal-content">
+<div class="modal-header">
+<span class="close">&times;</span>
+<h2>Sukses</h2>
+</div>
+<div class="modal-body">
+<p>Registrasi Berhasil</p>
+</div>
+<div class="modal-footer">
+<h3>Terima Kasih</h3>
+</div>
+</div>
 
-            // When the user clicks the button, open the modal 
-            btn.onclick = function () {
-              modal.style.display = "block";
-            }
+</div> -->
 
-            // When the user clicks on <span> (x), close the modal
-            span.onclick = function () {
-              modal.style.display = "none";
-            }
+  <!-- <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal-dialog modal-lg" role="document">
+<div class="modal-content">
+<div class="modal-header">
+</div>
+<div class="modal-body">
+</div>
+</div>
+</div>
+</div> -->
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+  <script src='https://kit.fontawesome.com/a076d05399.js'></script>
 
-            // When the user clicks anywhere outside of the modal, close it
-            window.onclick = function (event) {
-              if (event.target == modal) {
-                modal.style.display = "none";
-              }
-            }
-          </script>
-          <!-- <script>
-    $(document).ready(function(){
-        $("select").change(function(){
-            $(this).find("option:selected").each(function(){
-                var optionValue = $(this).attr("value");
-                if(optionValue){
-                    $(".box").not("." + optionValue).hide();
-                    $("." + optionValue).show();
-                } else{
-                    $(".box").hide();
-                }
-            });
-        }).change();
+  <script src="assets/js/bootstrap.js"></script>
+  <script src="assets/script.js"></script>
+  <!-- button modal -->
+  <script>
+    // Get the modal
+    var modal = document.getElementById("myModal");
+
+    // Get the button that opens the modal
+    var btn = document.getElementById("myBtn");
+
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("close")[0];
+
+    // When the user clicks the button, open the modal 
+    btn.onclick = function () {
+      modal.style.display = "block";
+    }
+
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function () {
+      modal.style.display = "none";
+    }
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function (event) {
+      if (event.target == modal) {
+        modal.style.display = "none";
+      }
+    }
+  </script>
+  <!-- <script>
+$(document).ready(function(){
+$("select").change(function(){
+    $(this).find("option:selected").each(function(){
+        var optionValue = $(this).attr("value");
+        if(optionValue){
+            $(".box").not("." + optionValue).hide();
+            $("." + optionValue).show();
+        } else{
+            $(".box").hide();
+        }
     });
-    </script> -->
-          <script>
-            function hanyaAngka(evt) {
-              var charCode = (evt.which) ? evt.which : event.keyCode
-              if (charCode > 31 && (charCode < 48 || charCode > 57))
+}).change();
+});
+</script> -->
+  <script>
+    function hanyaAngka(evt) {
+      var charCode = (evt.which) ? evt.which : event.keyCode
+      if (charCode > 31 && (charCode < 48 || charCode > 57))
 
-                return false;
-              return true;
-            }
-          </script>
+        return false;
+      return true;
+    }
+  </script>
 
+</div>
+
+<!-- Footer -->
+<!-- End of Footer -->
+
+</div>
+<!-- End of Content Wrapper -->
+
+</div>
     </div>
 
     <!-- Footer -->
+    <footer class="sticky-footer bg-white">
+      <div class="container my-auto">
+        <div class="copyright text-center my-auto">
+          <span>© 2020 Sahabat Osco | All rights reserved.</span>
+        </div>
+      </div>
+    </footer>
     <!-- End of Footer -->
 
   </div>
@@ -766,15 +676,7 @@ if ( !isset($_SESSION['user_login']) ||
     <!-- Page level custom scripts -->
     <script src="js/demo/datatables-demo.js"></script>
     <script src="../on-admin/js/dataklik.js"></script>
-    <script>
-            function hanyaAngka(evt) {
-              var charCode = (evt.which) ? evt.which : event.keyCode
-              if (charCode > 31 && (charCode < 48 || charCode > 57))
 
-                return false;
-              return true;
-            }
-          </script>
 
   <script>
     $(document).ready(function(){
