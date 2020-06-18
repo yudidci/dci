@@ -52,7 +52,7 @@ if ( !isset($_SESSION['user_login']) ||
         <div class="sidebar-brand-icon rotate-n-15">
           <img src="img/OscoOk64.png" alt="Girl in a jacket" width="60" height="60">
         </div>
-        <div class="sidebar-brand-text mx-3">Member Area</div>
+        <div class="sidebar-brand-text mx-3">Admin Area</div>
       </a>
 
       <!-- Divider -->
@@ -65,58 +65,18 @@ if ( !isset($_SESSION['user_login']) ||
           <span>Dashboard</span></a>
       </li>
 
-      <!-- Divider -->
-      <hr class="sidebar-divider">
-
-      <!-- Heading -->
-      <div class="sidebar-heading">
-        Menu utama
-      </div>
-
-      <!-- Nav Item - Pages Collapse Menu -->
-      <li class="nav-item">
-        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
-          <i class="fas fa-fw fa-cog"></i>
-          <span>Modul User</span>
-        </a>
-        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
-          <div class="bg-white py-2 collapse-inner rounded">
-            <h6 class="collapse-header">Components:</h6>
-            <a class="collapse-item" id="klikidentitas" href="#klikidentitas">Identitas</a>
-            <a class="collapse-item" id="klikblank" href="#klikblank">Visi & Misi</a>
-            <a class="collapse-item" id="klikketentuan" href="#klikketentuan">Syarat & Ketentuan</a>
-          </div>
-        </div>
-      </li>
-
-
-      <!-- Divider -->
-      <hr class="sidebar-divider">
-
-      <!-- Heading -->
-      <div class="sidebar-heading">
-        Addons
-      </div>
-
       <!-- Nav Item - Charts -->
       <li class="nav-item">
         <a class="nav-link" id="klikpoint-" href="#klikpoint-">
           <i class="fas fa-fw fa-chart-area"></i>
-          <span>Point</span></a>
+          <span>Filter</span></a>
       </li>
 
                   <!-- Nav Item - Tables -->
             <li class="nav-item">
               <a class="nav-link" id="klikfollower" href="#klikfollower">
                 <i class="fas fa-fw fa-table"></i>
-                <span>Follower</span></a>
-            </li>
-
-                       <!-- Nav Item - Tables -->
-           <li class="nav-item">
-              <a class="nav-link" href="../forgot-password.php">
-                <i class="fa fa-key"></i>
-                <span>Lupa Password</span></a>
+                <span>Batas Follower</span></a>
             </li>
 
       <li class="nav-item">
@@ -241,7 +201,68 @@ if ( !isset($_SESSION['user_login']) ||
           <div class="d-sm-flex align-items-center justify-content-between mb-4">
             <h1 class="h3 mb-0 text-gray-800">Dashboard</h1>
           </div>
-            
+
+             <div class="row">
+
+              <!-- Earnings (Monthly) Card Example -->
+              <div class="col-xl-4 col-md-6 mb-4">
+                <div class="card border-left-primar shadow h-100 py-2">
+                  <div class="card-body">
+                    <div class="row no-gutters align-items-center">
+                      <div class="col mr-2">
+                       <img src="./img/hand.png" alt="img" style="width: 20%; ">
+                        <div class="h5 mb-0 font-weight-bold text-gray-800">BANGKIT </div>
+                        <div class="h6 mb-0 font-weight-bold text-gray-700">Mampu bangkit kembali setiap <br>kali terjatuh</div>
+                      </div>
+                      <div class="col-auto">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+  
+              <!-- Earnings (Monthly) Card Example -->
+              <div class="col-xl-4 col-md-6 mb-4">
+                <div class="card border-left-succes shadow h-100 py-2">
+                  <div class="card-body">
+                    <div class="row no-gutters align-items-center">
+                      <div class="col mr-2">
+                      <img src="./img/pencil.png" alt="img" style="width: 20%; ">
+                        <div class="h5 mb-0 font-weight-bold text-white-800">BEKERJA</div>
+                        <div class="h6 mb-0 font-weight-bold text-white-700">Bekerja dengan ketekunan dan <br>kerja keras</div>
+                      </div>
+                      <div class="col-auto">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+  
+              <!-- Earnings (Monthly) Card Example -->
+              <div class="col-xl-4 col-md-6 mb-4">
+                <div class="card border-left-inf shadow h-100 py-2">
+                  <div class="card-body">
+                    <div class="row no-gutters align-items-center">
+                      <div class="col mr-2">
+                      <img src="./img/organic-food.png" alt="img" style="width: 20%; ">
+                        <div class="row no-gutters align-items-center">
+                          <div class="col-auto">
+                            <div class="h5 mb-0 mr-3 font-weight-bold text-white-800">BERKARYA</div>
+                            <div class="h6 mb-0 mr-3 font-weight-bold text-white-700">Berkarya untuk berkontribusi dalam kehidupan</div>
+                          </div>
+                          <div class="col">
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-auto">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
                
             <div class="row">
   
@@ -313,746 +334,369 @@ if ( !isset($_SESSION['user_login']) ||
                 </div>
               </div>
   
+              <!-- Pie Chart -->
+              <div class="col-xl-4 col-lg-5">
+                <div class="card shadow mb-4">
+                  <!-- Card Header - Dropdown -->
+                  <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                    <h6 class="m-0 font-weight-bold text-primary"> #MASKERUNTUKSEMUA</h6>
+                    <div class="dropdown no-arrow">
+                      <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
+                      </a>
+                    </div>
+                  </div>
+                  <!-- Card Body -->
+                  <div class="card-body">
+                   <img src="./img/masker.png" alt="img" style="width: 100%; ">
+                      <div class="h5 text-center font-weight-bold text-gray-800">25000</div>
+                      <div class="text-primar text-center">SUDAH DIBAGIKAN SAMPAI SAAT INI</div>
+                  </div>
+                </div>
+              </div>
+            </div>
 
 
       </div>
       <!-- End of Main Content -->   
 
-      <div  id="identitas">
-        <div class="container-fluid">
-  
-          <!-- Page Heading -->
-          <h1 class="h3 mb-4 text-gray-800">Identitas</h1>
-          <div class="mb-4">Edit Data Member</div>
-  
-          <div class="row">
-             
-              </div>
-  
-              <!-- Brand Buttons -->
-              <div class="card shadow mb-4">
-                <div class="card-header py-3">
-                <div class="row">
-                  <div class="col-sm-2">
-                  <h6 class="m-0 font-weight-bold text-primary">Nama</h6>
-                </div>
-                <div class="col-sm-10">
-                  <input type="text" id="fname" name="fname" value="<?=$_SESSION['nama'];?>"><br>
-                </div>
-                </div>
-              </div>
-              <div class="card-header py-3">
-                <div class="row">
-                  <div class="col-sm-2">
-                  <h6 class="m-0 font-weight-bold text-primary">NIK</h6>
-                </div>
-                <div class="col-sm-10">
-                  <input type="text" id="fname" name="fname" value="<?=$_SESSION['sess_id'];?>"><br>
-                </div>
-                </div>
-              </div>
-              <div class="card-header py-3">
-                <div class="row">
-                  <div class="col-sm-2">
-                  <h6 class="m-0 font-weight-bold text-primary">Password</h6>
-                </div>
-                <div class="col-sm-10">
-                <div class="wrap-input100 validate-input" style="margin-bottom: -20px;" data-validate = "Password is required"></div>
-                                <span class="btn-show-pass">
-                                  <i class="fa fa-eye"></i>
-                                </span>
-                                <input class="input100" name="password" disabled="disabled" type="password" required pattern="[A-Za-z0-9\s]{6,}" value="<?=$_SESSION['password'];?>"><br>
-                                <span class="focus-input100"></span>
-                </div>
-                </div>
-              </div>
-              <div class="card-header py-3">
-                <div class="row">
-                  <div class="col-sm-2">
-                  <h6 class="m-0 font-weight-bold text-primary">No Handphone</h6>
-                </div>
-                <div class="col-sm-10">
-                  <input type="text" id="no_hp" name="no_hp " value="<?=$_SESSION['phone'];?>"><br>
-                </div>
-                </div>
-              </div>
-              <div class="card-header py-3">
-                <div class="row">
-                  <div class="col-sm-2">
-                  <h6 class="m-0 font-weight-bold text-primary">Tempat Lahir</h6>
-                </div>
-                <div class="col-sm-10">
-                  <input type="text" id="fname" name="fname" value="<?=$_SESSION['tempat_lahir'];?>"><br>
-                </div>
-                </div>
-              </div>
-              <div class="card-header py-3">
-                <div class="row">
-                  <div class="col-sm-2">
-                  <h6 class="m-0 font-weight-bold text-primary">Tanggal Lahir</h6>
-                </div>
-                <div class="col-sm-10">
-                  <input type="text" id="fname" name="fname" value="<?=$_SESSION['tanggal_lahir'];?>"><br>
-                </div>
-                </div>
-              </div>
-              <div class="card-header py-3">
-                <div class="row">
-                  <div class="col-sm-2">
-                  <h6 class="m-0 font-weight-bold text-primary">Jenis Kelamin</h6>
-                </div>
-                <div class="col-sm-10">
-                  <input type="text" id="fname" name="fname" value="<?=$_SESSION['jenis_kelamin'];?>"><br>
-                </div>
-                </div>
-              </div>
-              <div class="card-header py-3">
-                <div class="row">
-                  <div class="col-sm-2">
-                  <h6 class="m-0 font-weight-bold text-primary">Status Perkawinan</h6>
-                </div>
-                <div class="col-sm-10">
-                  <input type="text" id="fname" name="fname" value="<?=$_SESSION['marital'];?>"><br>
-                </div>
-                </div>
-              </div>
-              <div class="card-header py-3">
-                <div class="row">
-                  <div class="col-sm-2">
-                  <h6 class="m-0 font-weight-bold text-primary">Alamat</h6>
-                </div>
-                <div class="col-sm-10">
-                  <input type="text" id="fname" name="fname" value="<?=$_SESSION['alamat'];?>"><br>
-                </div>
-                </div>
-              </div>
-              <div class="card-header py-3">
-                <div class="row">
-                  <div class="col-sm-2">
-                  <h6 class="m-0 font-weight-bold text-primary">RT</h6>
-                </div>
-                <div class="col-sm-10">
-                  <input type="text" id="fname" name="fname" value="<?=$_SESSION['rt'];?>"><br>
-                </div>
-                </div>
-              </div>
-              <div class="card-header py-3">
-                <div class="row">
-                  <div class="col-sm-2">
-                  <h6 class="m-0 font-weight-bold text-primary">RW</h6>
-                </div>
-                <div class="col-sm-10">
-                  <input type="text" id="fname" name="fname" value="<?=$_SESSION['rw'];?>"><br>
-                </div>
-                </div>
-              </div>
-              <div class="card-header py-3">
-                <div class="row">
-                  <div class="col-sm-2">
-                  <h6 class="m-0 font-weight-bold text-primary">Kelurahan</h6>
-                </div>
-                <div class="col-sm-10">
-                  <input type="text" id="fname" name="fname" value="<?=$_SESSION['kelurahan'];?>"><br>
-                </div>
-                </div>
-              </div>
-              <div class="card-header py-3">
-                <div class="row">
-                  <div class="col-sm-2">
-                  <h6 class="m-0 font-weight-bold text-primary">Kecamatan</h6>
-                </div>
-                <div class="col-sm-10">
-                  <input type="text" id="fname" name="fname" value="<?=$_SESSION['kecamatan'];?>"><br>
-                </div>
-                </div>
-              </div>
-              <div class="card-header py-3">
-                <div class="row">
-                  <div class="col-sm-2">
-                  <h6 class="m-0 font-weight-bold text-primary">Agama</h6>
-                </div>
-                <div class="col-sm-10">
-                  <input type="text" id="fname" name="fname" value="<?=$_SESSION['agama'];?>"><br>
-                </div>
-                </div>
-              </div>
-              <div class="card-header py-3">
-                <div class="row">
-                  <div class="col-sm-2">
-                  <h6 class="m-0 font-weight-bold text-primary">Pekerjaan</h6>
-                </div>
-                <div class="col-sm-10">
-                  <input type="text" id="fname" name="fname" value="<?=$_SESSION['job'];?>"><br>
-                </div>
-                </div>
-              </div>
-              <div class="card-header py-3">
-                <div class="row">
-                  <div class="col-sm-2">
-                  <h6 class="m-0 font-weight-bold text-primary">Kewarga Negaraan</h6>
-                </div>
-                <div class="col-sm-10">
-                  <input type="text" id="fname" name="fname" value="<?=$_SESSION['nationality'];?>"><br>
-                </div>
-                </div>
-              </div>
-              <div class="card-header py-3">
-                <div class="row">
-                  <div class="col-sm-2">
-                  <h6 class="m-0 font-weight-bold text-primary">Kodereferal</h6>
-                </div>
-                <div class="col-sm-10">
-                  <input type="text" id="fname" name="fname" value="<?=$_SESSION['ferall'];?>"><br>
-                </div>
-                </div>
-                
-              </div>
-  
-  
-        </div>
-        <!-- /.container-fluid -->
-        <button class="button2" onclick="alert('Hello world!')">Update</button>
-      </div>
-      </div>
-
-      <div class="container-fluid"  id="blank">
-        <div class="d-sm-flex align-items-center justify-content-between mb-4">
-          <h1 class="h3 mb-0 text-gray-800">Visi & Misi </h1>
-     </div>
-     <div class="row">
-        <div class="row">
-
-          <div class="col-lg-7">
-
-            <!-- Default Card Example -->
-            <div class="card mb-4">
-              <div class="card-header">
-              <h3 class="osco-visi">VISI</h3>
-              </div>
-              <div class="card-body">
-                <p class="impact">"Terwujudnya Batam Bermatabat yang kuat, berdaulat, mandiri, inovatif dan berkepribadian, 
-                  belandaskan gotong-royong dengan semangat baru untuk berkarya"..
-                </p>
-              </div>
-            </div>
-
-            <!-- Basic Card Example -->
-            <div class="card shadow mb-4">
-              <div class="card-header py-3">
-                <h3 class="osco-visi">MISI</h3>
-              </div>
-              <div class="card-body">
-              <p class="impact">✓ Meningkatkan Kualitas Sumber Daya Manusia<p>
-              <p class="impact"> ✓ Mengembangkan Sistem Pendidikan dan Kesehatan yang Modern</p>
-              <p class="impact">✓ Memajukan Kualitas dan Kuantitas Industri dan Dunia Usaha</p>
-              <p class="impact">✓ Menjaga Kesetaraan Gender dan pemberdayaan Perempuan</p>
-              <p class="impact">✓ Mengedepankan Kebijikan Tata Ruang yang Terintegrasi</p>
-              <p class="impact">✓ Mendorong Kemajuan Seni Budaya dan Pariwsata</p>
-              <p class="impact">✓ Meningkatkan Prestasi Olah Raga</p>
-              <img src="./img/sahabatosco.jpg" class="img-fluid" alt="">
-              <h5 class="osco-future">"HARAPAN BATAM PERJUANGAN OSCO"</h5>
-              </div>
-            </div>
-
-          </div>
-
-          <div class="col-lg-5">
-
-            <!-- Dropdown Card Example -->
-            <div class="card shadow mb-4">
-              <!-- Card Header - Dropdown -->
-              <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-              <h2 class="mu-title">Profile Osco</h2>
-              </div>
-              <!-- Card Body -->
-              <div class="card-body">
-              <h5 class="osco">Osco Olfriady Letunggamu, M.Sc.</h5>
-              <p class="impact">CALON WAKIL WALIKOTA BATAM 2020</p>
-              <img src="./img/osco-puasa.jpg" class="img-fluid" alt="">
-              <p class="impac">✓ Warga Batam dan mempunyai KTP Batam.</p>
-              <p class="impac">✓ Lulusan tercepat di Jerman, lulus Sarjana dalam 2 tahun 3 bulan.</p>
-              <p class="impac">✓ Ketua Komite Eropa & Rusia KADIN Indonesia.</p>
-              <p class="impac">✓ Wakil Ketua KADIN Indonesia Bidang Ekonomi dan Industri Kreatif.</p>
-              <p class="impac">✓ Executive Advisior Indonesia Business Council NSW Australia.</p>
-              <p class="impac">✓ Senior Advisor Indonesia Diaspora Network Australia.</p>
-              <p class="impac">✓ Dewan Ahli IKRAR</p>
-              <p class="impac">✓ Bendahara Umum Equestrian Indonesia Raya EQUINARA</p>
-              <p class="impac">✓ Wakil Bendahara Umum Persatuan Olahraga Berkuda Indonesia</p>
-              <p class="impac">✓ Wakil Bendahara Umum Persatuan Olahraga Berkuda Indonesia</p>
-              <p class="impac">✓ Wakil Bendahara Umum Persatuan Olahraga Berkuda Indonesia</p>
-              <p class="impac">✓ Wakil Bendahara Umum Persatuan Olahraga Berkuda Indonesia</p>
-              <p class="impac">✓ Ketua Umum Perhimpunan Alumni Jerman.</p>
-              <p class="slogan">"SEMANGAT BARU UNTUK BERKARYA"</p>
-              </div>
-            </div>
-
-           
-
-        </div>
-
-      </div>
-      <!-- /.container-fluid -->
-
-    </div>
-      </div>
-
-      <div class="container-fluid" id="ketentuan">
-      <h1 class="h3 mb-2 text-gray-800">Syarat Dan Ketentuan</h1>
-      <div class="card mb-4">
-  <div class="card-header">
-  </div>
-  <div class="card-body">
-  <H3 class="pengenalan">Pengenalan</h3>
-  <p class="pengenalan">Dalam menggunakan layanan web ini, Pengguna setuju untuk mengikatkan diri, tunduk pada dan melaksanakan syarat-syarat dan ketentuan-ketentuan penggunaan layanann web ("Ketentuan Layanan Sahabat OSCO"), sebagai berikut:
-</p>
-    <p class="pengenalan">Dengan menjadi member osco ("Sahabat Osco"") 
-      berarti Anda telah setuju dengan Syarat dan Ketentuan Layanan 
-      (untuk selanjutnya disebut "Syarat dan Ketentuan") berikut ini. 
-      Anda bisa melihat Syarat dan Ketentuan secara lengkap di halaman ini. 
-      Segala macam fitur baru yang ada pada Layanan akan terikat dengan Syarat dan Ketentuan ini.
-      Admin memiliki hak untuk melakukan perubahan sewaktu-waktu. 
-      Di sarankan Anda untuk membaca Syarat dan Ketentuan ini secara periodik untuk melihat perubahan-perubahan yang dibuat.
-    </p>
-    Bagian I - Akun
-    <p>1. Anda harus berumur minimal 16 tahun ketika mendaftar member osco</P>
-    <p>2. Anda wajib memberikan nama lengkap dan jelas, alamat, alamat email yang valid dan informasi lain yang dibutuhkan dalam pendaftaran layanan Sahabat OSCO</P>
-    <p>3. Anda berkewajiban untuk menjaga kemanan password Anda, Osco tidak akan bertanggung jawab pada kerugian dan kerusakan yang timbul akibat ketidak mampuan Anda dalam menjaga keamanan password Anda.</P>
-    <p>4. Anda tidak diijinkan menggunakan Web ini untuk aktifitas ilegal dan melanggar hukum/undang-undang (termasuk undang-undang hak cipta) di wilayah Anda dan/ataupun wilayah hukum Indonesia.</P>
-    <p>5. Anda dilarang mengirimkan segalam macam worm, virus, kode yang bersifat merusak.</p>
-    <p>6. Pelanggaran akan ketentuan ini akan mengakibatkan dihentikannya akun Anda.</p>
-    Bagian II - Syarat Umum
-    <p>1. Admin area OSCO memiliki hak untuk mengubah atau membatalkan Layanan ini dengan alasan apapun dan tanpa pemberitahuan sebelumnya</p>
-    <p>2. Admin area OSCO memiliki hak untuk menolak memberikan layanan ini setiap saat pada siapapun dengan alasan apapun</p>
-    <p>2. Resiko penggunaan Layanan ini adalah resiko Anda. Layanan ini disediakan seperti apa adanya tanpa jaminan apapun, tersurat ataupun tersirat</p>
-    <p>3. OSCO tidak menjamin Layanan ini tidak akan mengalami gangguan, tepat waktu, aman ataupun bebas dari kesalahan</p>
-    <p>3. OSCO tidak menjamin segala hal yang dihasilkan dari penggunaan Layanan akan akurat atau bisa diandalkan</p>
-    <p>3. OSCO tidak menjamin segala hal yang dihasilkan dari penggunaan Layanan akan akurat atau bisa diandalkan</p>
-     <p>3. OSCO tidak menjamin segala hal yang dihasilkan dari penggunaan Layanan akan akurat atau bisa diandalkan</p>
-</div>
-</div>
-      <div class="card-body">
-      <div style="overflow-x:auto;">
-            <div class="table-responsive">
-              <table class="table table-border" width="100%" cellspacing="0">
-                <thead>
-                  <tr>
-                    <th><center>Keterangan</center></th>
-                    <th><center>Follower</center></th>
-                  </tr>
-                </thead>
-                <tbody>
-                <tr>
-                    <td><div class="keterangan">Untuk mencapai tingkatan KOTA anda harus mempunyai<div></td>
-                    <td><div class="box text-center">10000 <br>Follower</div></td>
-                  </tr>
-                <tr>
-                    <td><div class="keterangan">Untuk mencapai tingkatan KECAMATAN anda harus mempunyai<div></td>
-                    <td><div class="box text-center">2500 <br>Follower</div></td>
-                  </tr>
-                <tr>
-                    <td><div class="keterangan">Untuk mencapai tingkatan KELURAHAN anda harus mempunyai<div></td>
-                    <td><div class="box text-center">1500 <br>Follower</div></td>
-                  </tr>
-                <tr>
-                    <td><div class="keterangan">Untuk mencapai tingkatan RW anda harus mempunyai<div></td>
-                    <td><div class="box text-center">800 <br>Follower</div></td>
-                  </tr>
-                <tr>
-                    <td><div class="keterangan">Untuk mencapai tingkatan RT anda harus mempunyai<div></td>
-                    <td><div class="box text-center">200 <br>Follower</dic></td>
-                  </tr>
-                  <tr>
-                    <td><div class="keterangan">Jika member baru anda akan menjadi tingkatan WARGA <div></td>
-                    <td><div class="box text-center">0 <br>Follower</div></td>
-                  </tr>
-                 
-                </tbody>
-              </table>
-            </div>
-          </div>
-
-      </div>
-        </div>
 
       <div class="container-fluid" id="follower">
 
         <!-- Page Heading -->
-        <h1 class="h3 mb-2 text-gray-800">Table Follower</h1>
-        <p class="mb-4">Di bawah ini adalah data table follower yang anda miliki :</p>
+        <h1 class="h3 mb-2 text-gray-800">Edit Batas Follower</h1>
 
         <!-- DataTales Example -->
-        <div class="card shadow mb-4">
-          <div class="card-header py-3">
-            <h6 class="m-0 font-weight-bold text-primary"><?=$_SESSION['followers'];?> Follower</h6>
-          </div>
-          <div class="card-body">
-          <div style="overflow-x:auto;">
-            <div class="table-responsive">
-              <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
-                <thead>
-                  <tr>
-                    <th>Registration Number</th>
-                    <th>Name</th>
-                    <th>NIK</th>
-                    <th>Jenis Kelamin</th>
-                    <th>Tanggal Lahir</th>
-                    <th>Pekerjaan</th>  
-                    <th>Tingkatan</th>
-                  </tr>
-                </thead>
-                <tfoot>
-                  <tr>
-                    <th>Registration Number</th>
-                    <th>Name</th>
-                    <th>NIK</th>
-                    <th>Jenis Kelamin</th>
-                    <th>Tanggal Lahir</th>
-                    <th>Pekerjaan</th>
-                    <th>Tingkatan</th>
-                  </tr>
-                </tfoot>
-                <tbody>
-                  <tr>
-                    <td>20200506382552</td>
-                    <td>Andi</td>
-                    <td>1234567890123456</td>
-                    <td>Pria</td>
-                    <td>2011/04/25</td>
-                    <td>PNS</td>
-                    <td>Desa</td>
-                  </tr>
-                  <tr>
-                    <td>20200506382512</td>
-                    <td>Cindy</td>
-                    <td>1234567890123456</td>
-                    <td>Wanita</td>
-                    <td>2011/07/25</td>
-                    <td>Wirausaha</td>
-                    <td>Lurah</td>
-                  </tr>
-                  <tr>
-                    <td>20200506872657</td>
-                    <td>Dian</td>
-                    <td>1234567890123456</td>
-                    <td>Wanita</td>
-                    <td>2009/01/12</td>
-                    <td></td>
-                    <td>Kecamtan</td>
-                  </tr>
-                  <tr>
-                    <td>20200506872653</td>
-                    <td>Robet</td>
-                    <td>1234567890123456</td>
-                    <td>Pria</td>
-                    <td>2012/03/29</td>
-                    <td></td>
-                    <td>Warga</td>
-                  </tr>
-                  <tr>
-                    <td>20200506467229</td>
-                    <td>Erik</td>
-                    <td>1234567890123456</td>
-                    <td>Pria</td>
-                    <td>2008/11/28</td>
-                    <td></td>
-                    <td>Warga</td>
-                  </tr>
-                  <tr>
-                    <td>20200506282765</td>
-                    <td>Fira</td>
-                    <td>1234567890123456</td>
-                    <td>Wanita</td>
-                    <td>2012/12/02</td>
-                    <td></td>
-                    <td>Warga</td>
-                  </tr>
-                  <tr>
-                    <td>20200508993471</td>
-                    <td>Hella</td>
-                    <td>1234567890123456</td>
-                    <td>Wanita</td>
-                    <td>2012/08/06</td>
-                    <td>Wirausaha</td>
-                    <td>Warga</td>
-                  </tr>
-                  <tr>
-                    <td>20200508349020</td>
-                    <td>Heri</td>
-                    <td>1234567890123456</td>
-                    <td>Pria</td>
-                    <td>2010/10/14</td>
-                    <td></td>
-                    <td>Warga</td>
-                  </tr>
-                  <tr>
-                    <td>20200508462933</td>
-                    <td>Ian</td>
-                    <td>1234567890123456</td>
-                    <td>Pria</td>
-                    <td>2009/09/15</td>
-                    <td></td>
-                    <td>RT</td>
-                  </tr>
-                  <tr>
-                    <td>20200508528033</td>
-                    <td>Rocky</td>
-                    <td>Edinburgh</td>
-                    <td>Pria</td>
-                    <td>2008/12/13</td>
-                    <td>Karyawan</td>
-                    <td>Kota</td>
-                  </tr>
-                  <tr>
-                    <td>20200508777785</td>
-                    <td>Jerry</td>
-                    <td>1234567890123456</td>
-                    <td>Pria</td>
-                    <td>2008/12/19</td>
-                    <td>PNS</td>
-                    <td>RW</td>
-                  </tr>
-                  <tr>
-                    <td>20200508300654</td>
-                    <td>Lina</td>
-                    <td>1234567890123456</td>
-                    <td>Wanita</td>
-                    <td>2013/03/03</td>
-                    <td></td>
-                    <td>RW</td>
-                  </tr>
-                  <tr>
-                    <td>20200508704272</td>
-                    <td>Mia</td>
-                    <td>1234567890123456</td>
-                    <td>Wanita</td>
-                    <td>2008/10/16</td>
-                    <td>Pelajar</td>
-                    <td>Kecamatan</td>
-                  </tr>
-                  <tr>
-                    <td>20200508649092</td>
-                    <td>Nila</td>
-                    <td>1234567890123456</td>
-                    <td>Wanita</td>
-                    <td>2012/12/18</td>
-                    <td>Mahasiswa</td>
-                    <td>Kelurahan</td>
-                  </tr>
-                  <tr>
-                    <td>20200508170618</td>
-                    <td>Regi</td>
-                    <td>1234567890123456</td>
-                    <td>Pria</td>
-                    <td>2010/03/17</td>
-                    <td></td>
-                    <td>Kelurahan</td>
-                  </tr>
-                  <tr>
-                    <td>2020050815326</td>
-                    <td>Omar</td>
-                    <td>1234567890123456</td>
-                    <td>Pria</td>
-                    <td>2012/11/27</td>
-                    <td></td>
-                    <td>Kecamatan</td>
-                  </tr>
-                  <tr>
-                    <td>20200508878966</td>
-                    <td>Puan</td>
-                    <td>1234567890123456</td>
-                    <td>Pria</td>
-                    <td>2010/06/09</td>
-                    <td>Pegawai Swasta</td>
-                    <td>Warga</td>
-                  </tr>
-                  <tr>
-                    <td>20200508535269</td>
-                    <td>Qintri</td>
-                    <td>1234567890123456</td>
-                    <td>Wanita</td>
-                    <td>2009/04/10</td>
-                    <td></td>
-                    <td>Warga</td>
-                  </tr>
-                  <tr>
-                    <td>20200508676253</td>
-                    <td>Rini</td>
-                    <td>1234567890123456</td>
-                    <td>Wanita</td>
-                    <td>2012/10/13</td>
-                    <td></td>
-                    <td>Kota</td>
-                  </tr>
-                  <tr>
-                    <td>20200508463835</td>
-                    <td>Sinta</td>
-                    <td>1234567890123456</td>
-                    <td>Wanita</td>
-                    <td>2012/09/26</td>
-                    <td></td>
-                    <td>RW</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-          </div>
+        <div class="advance">
+
+                <div class="row">
+                <div class="card1">
+                  <p class="judul">Batas Follower Kota</p>
+                  <div class="column">
+                    <input type="text" id="username" name="username" onkeypress="return hanyaAngka(event)"><br>
+                  </div>
+                  <div class="column">
+                    <select id="cars" name="cars">
+                      <option value="volvo">></option>
+                      <option value="saab"><</option>
+                      <option value="fiat">≥</option>
+                      <option value="audi">≤</option>
+                    </select>
+                  </div>
+                  <div class="column">
+                    <input type="text" id="username" name="username" onkeypress="return hanyaAngka(event)"><br>
+                  </div>
+                  <button type="button" class="updt-follower" id="updt-follower">update</button>
+                </div>
+                <div class="card1">
+                  <p class="judul">Batas Follower Camat</p>
+                  <div class="column">
+                    <input type="text" id="username" name="username" onkeypress="return hanyaAngka(event)"><br>
+                  </div>
+                  <div class="column">
+                  <select id="cars" name="cars">
+                    <option value="volvo">></option>
+                    <option value="saab"><</option>
+                    <option value="fiat">≥</option>
+                    <option value="audi">≤</option>
+                  </select>
+                  </div>
+                  <div class="column">
+                    <input type="text" id="username" name="username" onkeypress="return hanyaAngka(event)"><br>
+                  </div>
+                  <button type="button" class="updt-follower" id="updt-follower">update</button>
+                </div>
+                <div class="card1">
+                  <p class="judul">Batas Follower Lurah</p>
+                  <div class="column">
+                    <input type="text" id="username" name="username" onkeypress="return hanyaAngka(event)"><br>
+                  </div>
+                  <div class="column">
+                    <select id="cars" name="cars">
+                      <option value="volvo">></option>
+                      <option value="saab"><</option>
+                      <option value="fiat">≥</option>
+                      <option value="audi">≤</option>
+                    </select>
+                  </div>
+                  <div class="column">
+                    <input type="text" id="username" name="username" onkeypress="return hanyaAngka(event)"><br>
+                  </div>
+                  <button type="button" class="updt-follower" id="updt-follower">update</button>
+                </div>
+                <div class="card1">
+                  <p class="judul">Batas Follower RT</p>
+                  <div class="column">
+                    <input type="text" id="username" name="username"><br>
+                  </div>
+                  <div class="column">
+                    <select id="cars" name="cars">
+                      <option value="volvo">></option>
+                      <option value="saab"><</option>
+                      <option value="fiat">≥</option>
+                      <option value="audi">≤</option>
+                    </select>
+                  </div>
+                  <div class="column">
+                    <input type="text" id="username" name="username"><br>
+                  </div>
+                  <button type="button" class="updt-follower" id="updt-follower">update</button>
+                </div>
+                <div class="card1">
+                  <p class="judul">Batas Follower RW</p>
+                  <div class="column">
+                    <input type="text" id="username" name="username"><br>
+                  </div>
+                  <div class="column">
+                    <select id="cars" name="cars">
+                      <option value="volvo">></option>
+                      <option value="saab"><</option>
+                      <option value="fiat">≥</option>
+                      <option value="audi">≤</option>
+                    </select>
+                  </div>
+                  <div class="column">
+                    <input type="text" id="username" name="username"><br>
+                  </div>
+                  <button type="button" class="updt-follower" id="updt-follower">update</button>
+                </div>
+                <div class="card1">
+                  <p class="judul">Batas Follower Warga</p>
+                <div class="column">
+                  <input type="text" id="username" name="username" onkeypress="return hanyaAngka(event)"><br>
+                </div>
+                <div class="column">
+                  <select id="cars" name="cars">
+                    <option value="volvo">></option>
+                    <option value="saab"><</option>
+                    <option value="fiat">≥</option>
+                    <option value="audi">≤</option>
+                  </select>
+                </div>
+                <div class="column">
+                  <input type="text" id="username" name="username" onkeypress="return hanyaAngka(event)"><br>
+                </div>
+                <button type="button" class="updt-follower" id="updt-follower">update</button>
+              </div>
+              </div>
         </div>
-      </div>
 
       </div>
 
       <div class="container-fluid" id="point">
 
         <!-- Page Heading -->
-        <h1 class="h3 mb-2 text-gray-800">POIN</h1>
-        <h6 class="m-0 font-weight-bold text-primary1"><?=$_SESSION['followers'];?> FOLLOWER</h6>
-        <p class="mb-4">Tukar Follower anda dengan Hadiah di bawah ini</p>
+        <h1 class="h3 mb-2 text-gray-800">Filter Member</h1>
+<div class="s008">
+    
+    <form>
+      
+      <!-- <a class="navbar-brand">CARI NIK BERDASARKAN TINGKATAN</a> -->
+      <div class="inner-form">
 
-        <!-- Content Row -->
-        <div class="row">
+        <div class="advance">
 
-          <div class="col-xl-4 col-lg-7">
-            <!-- Area Chart -->
-
-            <div class="card shadow mb-4">
-            <div class="card-header py-3">
-                <h6 class="m-0 font-weight-bold text-primary">Bonus 1</h6>
+          <div class="row">
+            <div class="input-field">
+              <div class="tengah2">
+                <h3>Batas Bawah</h3>
               </div>
-                  
-                 <div class="card-body">
-                 <div class="card3">
-                    <img src="img/download.jpg" alt="Avatar" style="width:100%; border-radius: 27px 27px 0px 0px;">
-                    <div class="centered"><span class="currDate"></span></div>
-                    <div class="container">
-                        <h5><b>Beras 1 Karung</b></h5>
-                        <p>1000 Follower
-                        <div class="my-4 text-right"><a href="https://foto.tempo.co/read/67259/jokowi-sampaikan-pidato-di-forum-ekonomi-dunia-asean" target="blank">Tukar</a></div>
-                        </p>
-                    </div>
-                </div>
-                </div>
+            </div>
+            <div class="input-field">
+              <div class="input-select">
+                <input type="text" id="search-text" class="form-control" onkeypress="return hanyaAngka(event) "aria-label="Recipient's username" aria-describedby="button-addon2">
               </div>
-
-              <div class="card shadow mb-4">
-            <div class="card-header py-3">
-                <h6 class="m-0 font-weight-bold text-primary">Bonus 2</h6>
+            </div>
+            <div class="input-field">
+              <div class="tengah">
+               <h3>Batas Atas</h3>
               </div>
-                 <div class="card-body">
-                 <div class="card3">
-                      <img src="img/Indomie.jpg" alt="Avatar" style="width:100%; border-radius: 27px 27px 0px 0px;">
-                      <div class="centered"><span class="currDate"></span></div>
-                      <div class="container">
-                     <h5><b>Indomie 1 Kardus</b></h5>
-                   <p>800 Follower
-                    <div class="my-4 text-right"><a href="https://foto.tempo.co/read/67259/jokowi-sampaikan-pidato-di-forum-ekonomi-dunia-asean" target="blank">Tukar</a></div>
-                    </p>
-                  </div>
-                </div>
-                </div>
+            </div>
+            <div class="input-field">
+              <div class="kiri">
+                <input type="text" id="search-text2" class="form-control" onkeypress="return hanyaAngka(event) "aria-label="Recipient's username" aria-describedby="button-addon2">
               </div>
+            </div>
+            <div class="input-field">
+              <div class="input-select">
+                <button type="button" class="btn-search" id="btn-detail">Search</button>
+              </div>
+            </div>
           </div>
 
-          <div class="col-xl-4 col-lg-7">
-        <!-- Area Chart -->
-        <div class="card shadow mb-4">
-        <div class="card-header py-3">
-       <h6 class="m-0 font-weight-bold text-primary">Bonus 3</h6>
-        </div>
-      
-     <div class="card-body">
-     <div class="card3">
-      <img src="img/sembako2.jpg" alt="Avatar" style="width:100%; border-radius: 27px 27px 0px 0px;">
-         <div class="centered"><span class="currDate"></span></div>
-          <div class="container">
-          <h5><b>Sembako2</b></h5>
-            <p>400 Follower
-                      <div class="my-4 text-right"><a href="https://foto.tempo.co/read/67259/jokowi-sampaikan-pidato-di-forum-ekonomi-dunia-asean" target="blank">Tukar</a></div>
-            </p>
-        </div>
-        </div>
-       </div>
-       </div>
+          <!-- search -->
+                <form class="example">
+                  <input type="text" id="search-text3" class="form-control" onkeypress="return hanyaAngka(event)"placeholder="Masukan Referral Number" aria-label="Recipient's username" aria-describedby="button-addon2">
+                  <!-- <button type="button" id="btn-follower"><i class="fa fa-search"></i></button> -->
+                  <button type="button" class="btn-follower" id="btn-follower">Search</button>
+                </form>
 
-     <div class="card shadow mb-4">
-     <div class="card-header py-3">
-    <h6 class="m-0 font-weight-bold text-primary">Bonus 4</h6>
-     </div>
-     <div class="card-body">
-     <div class="card3">
-        <img src="img/sembako1.png" alt="Avatar" style="width:100%; border-radius: 27px 27px 0px 0px;">
-        <div class="centered"><span class="currDate"></span></div>
-        <div class="container">
-            <h5><b>Sembako 1</b></h5>
-            <p>600 Follower
-            <div class="my-4 text-right"><a href="https://foto.tempo.co/read/67259/jokowi-sampaikan-pidato-di-forum-ekonomi-dunia-asean" target="blank">Tukar</a></div>
-            </p>
+       
+
         </div>
-       </div>
-      </div>
+       
+                
+
+     <!-- end dropdown menu here -->
+
+
+     <div class="basic-search">
+      <div align="center">
+        <button class="btn btn-primary ml-2" type="button" id="btn-search">Filter NIK Kota <i class="fa fa-search"></i></button>
+        <button class="btn btn-primary ml-2" type="button" id="btn-camat">Filter NIK Camat <i
+            class="fa fa-search"></i></button>
+        <button class="btn btn-primary ml-2" type="button" id="btn-lurah">Filter NIK Lurah <i
+            class="fa fa-search"></i></button>
+        <button class="btn btn-primary ml-2" type="button" id="btn-RW">Filter NIK RW <i
+            class="fa fa-search"></i></button>
+        <button class="btn btn-primary ml-2" type="button" id="btn-RT">Filter NIK RT <i
+            class="fa fa-search"></i></button>
+        <button class="btn btn-primary ml-2" type="button" id="btn-warga">Filter NIK Warga <i
+            class="fa fa-search"></i></button>
       </div>
     </div>
+    </div>
 
-          <!-- Donut Chart -->
-          <div class="col-xl-4 col-lg-5">
-            <div class="card shadow mb-4">
-              <!-- Card Header - Dropdown -->
-              <div class="card-header py-3">
-                <h6 class="m-0 font-weight-bold text-primary">Bonus 5</h6>
-              </div>
-              <!-- Card Body -->
-              <div class="card-body">
-                <div class="card3">
-                  <img src="img/tv.jpg" alt="Avatar" style="width:100%; border-radius: 27px 27px 0px 0px;">
-                  <div class="centered"><span class="currDate"></span></div>
-                  <div class="container">
-                      <h5><b>Televisi</b></h5>
-                      <p>2000 Follower
-                      <div class="my-4 text-right"><a href="https://foto.tempo.co/read/67259/jokowi-sampaikan-pidato-di-forum-ekonomi-dunia-asean" target="blank">Tukar</a></div>
-                      </p>
-                  </div>
-                </div>
-              </div>
-          
-              
+    <div class="advance-search">
+      <span class="desc">List Member :<button class="button2" type="button" id="btn-tingkatan"><span> Lihat
+            Semua</span></button>
+
+
+        <div class="row" id="movie-list">
+          <div class="col-md-4 mb-3 nikKota">
+          </div>
+          <div class="row" id="camat-list">
+            <div class="col-md-4 mb-3 nikCamat">
             </div>
-              <div class="card shadow mb-4">
-                <!-- Card Header - Dropdown -->
-                <div class="card-header py-3">
-                  <h6 class="m-0 font-weight-bold text-primary">Bonus 6</h6>
+            <div class="row" id="lurah-list">
+              <div class="col-md-4 mb-3 nikLurah">
+              </div>
+              <div class="row" id="RW-list">
+                <div class="col-md-4 mb-3 nikRW">
                 </div>
-                <!-- Card Body -->
-                <div class="card-body">
-                  <div class="card3">
-                    <img src="img/motor.png" alt="Avatar" style="width:100%; border-radius: 27px 27px 0px 0px;">
-                    <div class="centered"><span class="currDate"></span></div>
-                    <div class="container">
-                        <h5><b>Sepeda Motor</b></h5>
-                        <p>10000 Follower
-                        <div class="my-4 text-right"><a href="https://foto.tempo.co/read/67259/jokowi-sampaikan-pidato-di-forum-ekonomi-dunia-asean" target="blank">Tukar</a></div>
-                        </p>
+                <div class="row" id="RT-list">
+                  <div class="col-md-4 mb-3 nikRT">
+                  </div>
+                  <div class="row" id="warga-list">
+                    <div class="col-md-4 mb-3 nikWarga">
+                    </div>
+                    <div class="row" id="tingkatan-list">
+                      <div class="col-md-4 mb-3 nikTingkatan">
+                      </div>
+                      <div class="row" id="filter-list">
+                        <div class="col-md-4 mb-3 filterList">
+                        </div>
+
+                        <div class="row" id="follower-list">
+                          <div class="col-md-4 mb-3 followerList">
+                          </div>
+                      </div>
                     </div>
                   </div>
                 </div>
-            
-                
-              </div>
-     
-          </div>
-      
-        </div>
 
+              </div>
+            </div>
+            </form>
+            
+    
+          
+         
+
+
+
+          <!-- Modal Button -->
+          <!-- <div id="myModal" class="modal"> -->
+
+          <!-- Modal content -->
+          <!-- <div class="modal-content">
+      <div class="modal-header">
+        <span class="close">&times;</span>
+        <h2>Sukses</h2>
       </div>
+      <div class="modal-body">
+        <p>Registrasi Berhasil</p>
+      </div>
+      <div class="modal-footer">
+        <h3>Terima Kasih</h3>
+      </div>
+    </div>
+  
+  </div> -->
+
+          <!-- <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+        </div>
+        <div class="modal-body">
+        </div>
+      </div>
+    </div>
+  </div> -->
+          <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+          <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+          <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+
+          <script src="assets/js/bootstrap.js"></script>
+          <script src="assets/script.js"></script>
+          <!-- button modal -->
+          <script>
+            // Get the modal
+            var modal = document.getElementById("myModal");
+
+            // Get the button that opens the modal
+            var btn = document.getElementById("myBtn");
+
+            // Get the <span> element that closes the modal
+            var span = document.getElementsByClassName("close")[0];
+
+            // When the user clicks the button, open the modal 
+            btn.onclick = function () {
+              modal.style.display = "block";
+            }
+
+            // When the user clicks on <span> (x), close the modal
+            span.onclick = function () {
+              modal.style.display = "none";
+            }
+
+            // When the user clicks anywhere outside of the modal, close it
+            window.onclick = function (event) {
+              if (event.target == modal) {
+                modal.style.display = "none";
+              }
+            }
+          </script>
+          <!-- <script>
+    $(document).ready(function(){
+        $("select").change(function(){
+            $(this).find("option:selected").each(function(){
+                var optionValue = $(this).attr("value");
+                if(optionValue){
+                    $(".box").not("." + optionValue).hide();
+                    $("." + optionValue).show();
+                } else{
+                    $(".box").hide();
+                }
+            });
+        }).change();
+    });
+    </script> -->
+          <script>
+            function hanyaAngka(evt) {
+              var charCode = (evt.which) ? evt.which : event.keyCode
+              if (charCode > 31 && (charCode < 48 || charCode > 57))
+
+                return false;
+              return true;
+            }
+          </script>
 
     </div>
 
     <!-- Footer -->
-    <footer class="sticky-footer bg-white">
-      <div class="container my-auto">
-        <div class="copyright text-center my-auto">
-          <span>© 2020 Sahabat Osco | All rights reserved.</span>
-        </div>
-      </div>
-    </footer>
     <!-- End of Footer -->
 
   </div>
@@ -1122,7 +766,15 @@ if ( !isset($_SESSION['user_login']) ||
     <!-- Page level custom scripts -->
     <script src="js/demo/datatables-demo.js"></script>
     <script src="../on-admin/js/dataklik.js"></script>
+    <script>
+            function hanyaAngka(evt) {
+              var charCode = (evt.which) ? evt.which : event.keyCode
+              if (charCode > 31 && (charCode < 48 || charCode > 57))
 
+                return false;
+              return true;
+            }
+          </script>
 
   <script>
     $(document).ready(function(){

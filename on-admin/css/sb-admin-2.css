@@ -609,6 +609,8 @@ kbd kbd {
   font-weight: 700;
 }
 
+
+
 pre {
   display: block;
   font-size: 87.5%;
@@ -4448,6 +4450,25 @@ input[type="button"].btn-block {
   padding: 0 48px;
   font-style: italic;
   clip-path: polygon(13% 0%, 100% 0%, 87% 100%, 0% 100%);
+}
+
+p.pengenalan {
+  font-size: 15px;
+  font-style: italic;
+}
+
+p.pengenalan1 {
+  font-size: 15px;
+  margin-left: 38px;
+  margin-bottom: 6px;
+  font-style: italic;
+}
+
+p.judul {
+  font-size: 23px;
+    line-height: 1.7;
+    font-weight: 700;
+    color: red;
 }
 
 p.impact {

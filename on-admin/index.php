@@ -764,10 +764,8 @@ if ( !isset($_SESSION['user_login']) ||
       <div class="container-fluid" id="ketentuan">
       <h1 class="h3 mb-2 text-gray-800">Syarat Dan Ketentuan</h1>
       <div class="card mb-4">
-  <div class="card-header">
-  </div>
   <div class="card-body">
-  <H3 class="pengenalan">Pengenalan</h3>
+  <p class="judul">Pengenalan</p>
   <p class="pengenalan">Dalam menggunakan layanan web ini, Pengguna setuju untuk mengikatkan diri, tunduk pada dan melaksanakan syarat-syarat dan ketentuan-ketentuan penggunaan layanann web ("Ketentuan Layanan Sahabat OSCO"), sebagai berikut:
 </p>
     <p class="pengenalan">Dengan menjadi member osco ("Sahabat Osco"") 
@@ -778,22 +776,19 @@ if ( !isset($_SESSION['user_login']) ||
       Admin memiliki hak untuk melakukan perubahan sewaktu-waktu. 
       Di sarankan Anda untuk membaca Syarat dan Ketentuan ini secara periodik untuk melihat perubahan-perubahan yang dibuat.
     </p>
-    Bagian I - Akun
-    <p>1. Anda harus berumur minimal 16 tahun ketika mendaftar member osco</P>
-    <p>2. Anda wajib memberikan nama lengkap dan jelas, alamat, alamat email yang valid dan informasi lain yang dibutuhkan dalam pendaftaran layanan Sahabat OSCO</P>
-    <p>3. Anda berkewajiban untuk menjaga kemanan password Anda, Osco tidak akan bertanggung jawab pada kerugian dan kerusakan yang timbul akibat ketidak mampuan Anda dalam menjaga keamanan password Anda.</P>
-    <p>4. Anda tidak diijinkan menggunakan Web ini untuk aktifitas ilegal dan melanggar hukum/undang-undang (termasuk undang-undang hak cipta) di wilayah Anda dan/ataupun wilayah hukum Indonesia.</P>
-    <p>5. Anda dilarang mengirimkan segalam macam worm, virus, kode yang bersifat merusak.</p>
-    <p>6. Pelanggaran akan ketentuan ini akan mengakibatkan dihentikannya akun Anda.</p>
-    Bagian II - Syarat Umum
-    <p>1. Admin area OSCO memiliki hak untuk mengubah atau membatalkan Layanan ini dengan alasan apapun dan tanpa pemberitahuan sebelumnya</p>
-    <p>2. Admin area OSCO memiliki hak untuk menolak memberikan layanan ini setiap saat pada siapapun dengan alasan apapun</p>
-    <p>2. Resiko penggunaan Layanan ini adalah resiko Anda. Layanan ini disediakan seperti apa adanya tanpa jaminan apapun, tersurat ataupun tersirat</p>
-    <p>3. OSCO tidak menjamin Layanan ini tidak akan mengalami gangguan, tepat waktu, aman ataupun bebas dari kesalahan</p>
-    <p>3. OSCO tidak menjamin segala hal yang dihasilkan dari penggunaan Layanan akan akurat atau bisa diandalkan</p>
-    <p>3. OSCO tidak menjamin segala hal yang dihasilkan dari penggunaan Layanan akan akurat atau bisa diandalkan</p>
-     <p>3. OSCO tidak menjamin segala hal yang dihasilkan dari penggunaan Layanan akan akurat atau bisa diandalkan</p>
-</div>
+    <p class="judul">Bagian I - Akun</p>
+    <p class="pengenalan1">1. Anda harus berumur minimal 16 tahun ketika mendaftar member osco</P>
+    <p class="pengenalan1">2. Anda wajib memberikan nama lengkap dan jelas, alamat, alamat email yang valid dan informasi lain yang dibutuhkan dalam pendaftaran layanan Sahabat OSCO</P>
+    <p class="pengenalan1">3. Anda berkewajiban untuk menjaga kemanan password Anda, Osco tidak akan bertanggung jawab pada kerugian dan kerusakan yang timbul akibat ketidak mampuan Anda dalam menjaga keamanan password Anda.</P>
+    <p class="pengenalan1">4. Anda tidak diijinkan menggunakan Web ini untuk aktifitas ilegal dan melanggar hukum/undang-undang (termasuk undang-undang hak cipta) di wilayah Anda dan/ataupun wilayah hukum Indonesia.</P>
+    <p class="pengenalan1">5. Anda dilarang mengirimkan segalam macam worm, virus, kode yang bersifat merusak.</p>
+    <p class="pengenalan1">6. Pelanggaran akan ketentuan ini akan mengakibatkan dihentikannya akun Anda.</p>
+    <p class="judul">Bagian II - Syarat Umum</p>
+    <p class="pengenalan1">1. Admin area OSCO memiliki hak untuk mengubah atau membatalkan Layanan ini dengan alasan apapun dan tanpa pemberitahuan sebelumnya</p>
+    <p class="pengenalan1">2. Admin area OSCO memiliki hak untuk menolak memberikan layanan ini setiap saat pada siapapun dengan alasan apapun</p>
+    <p class="pengenalan1">2. Resiko penggunaan Layanan ini adalah resiko Anda. Layanan ini disediakan seperti apa adanya tanpa jaminan apapun, tersurat ataupun tersirat</p>
+    <p class="pengenalan1">3. OSCO tidak menjamin Layanan ini tidak akan mengalami gangguan, tepat waktu, aman ataupun bebas dari kesalahan</p>
+    <p class="pengenalan1">4. OSCO tidak menjamin segala hal yang dihasilkan dari penggunaan Layanan akan akurat atau bisa diandalkan</p>
 </div>
       <div class="card-body">
       <div style="overflow-x:auto;">
