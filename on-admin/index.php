@@ -91,7 +91,6 @@ if ( !isset($_SESSION['user_login']) ||
       </li>
 
 
-
       <!-- Divider -->
       <hr class="sidebar-divider">
 
@@ -100,25 +99,26 @@ if ( !isset($_SESSION['user_login']) ||
         Addons
       </div>
 
-
-            <!-- Nav Item - Tables -->
-            <li class="nav-item">
-              <a class="nav-link" href="../forgot-password.php">
-                <i class="fa fa-key"></i>
-                <span>Lupa Password</span></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" id="klikfollower" href="#klikfollower">
-                <i class="fas fa-fw fa-table"></i>
-                <span>Follower</span></a>
-            </li>
-
       <!-- Nav Item - Charts -->
       <li class="nav-item">
         <a class="nav-link" id="klikpoint-" href="#klikpoint-">
           <i class="fas fa-fw fa-chart-area"></i>
           <span>Point</span></a>
       </li>
+
+                  <!-- Nav Item - Tables -->
+            <li class="nav-item">
+              <a class="nav-link" id="klikfollower" href="#klikfollower">
+                <i class="fas fa-fw fa-table"></i>
+                <span>Follower</span></a>
+            </li>
+
+                       <!-- Nav Item - Tables -->
+           <li class="nav-item">
+              <a class="nav-link" href="../forgot-password.php">
+                <i class="fa fa-key"></i>
+                <span>Lupa Password</span></a>
+            </li>
 
       <li class="nav-item">
         <a class="nav-link" href="#" data-toggle="modal" data-target="#logoutModal">
@@ -484,7 +484,6 @@ if ( !isset($_SESSION['user_login']) ||
         <div class="container-fluid">
   
           <!-- Page Heading -->
-          <form action='http://localhost:3001/user/1234567890123445' method="post">
           <h1 class="h3 mb-4 text-gray-800">Identitas</h1>
           <div class="mb-4">Edit Data Member</div>
   
@@ -500,7 +499,7 @@ if ( !isset($_SESSION['user_login']) ||
                   <h6 class="m-0 font-weight-bold text-primary">Nama</h6>
                 </div>
                 <div class="col-sm-10">
-                  <input type="text" id="name" name="name" value="<?=$_SESSION['nama'];?>"><br>
+                  <input type="text" id="fname" name="fname" value="<?=$_SESSION['nama'];?>"><br>
                 </div>
                 </div>
               </div>
@@ -510,7 +509,7 @@ if ( !isset($_SESSION['user_login']) ||
                   <h6 class="m-0 font-weight-bold text-primary">NIK</h6>
                 </div>
                 <div class="col-sm-10">
-                  <input type="text" id="nik" name="nik" value="<?=$_SESSION['sess_id'];?>"><br>
+                  <input type="text" id="fname" name="fname" value="<?=$_SESSION['sess_id'];?>"><br>
                 </div>
                 </div>
               </div>
@@ -524,9 +523,18 @@ if ( !isset($_SESSION['user_login']) ||
                                 <span class="btn-show-pass">
                                   <i class="fa fa-eye"></i>
                                 </span>
-                             
                                 <input class="input100" name="password" disabled="disabled" type="password" required pattern="[A-Za-z0-9\s]{6,}" value="<?=$_SESSION['password'];?>"><br>
                                 <span class="focus-input100"></span>
+                </div>
+                </div>
+              </div>
+              <div class="card-header py-3">
+                <div class="row">
+                  <div class="col-sm-2">
+                  <h6 class="m-0 font-weight-bold text-primary">No Handphone</h6>
+                </div>
+                <div class="col-sm-10">
+                  <input type="text" id="no_hp" name="no_hp"><br>
                 </div>
                 </div>
               </div>
@@ -536,7 +544,7 @@ if ( !isset($_SESSION['user_login']) ||
                   <h6 class="m-0 font-weight-bold text-primary">Tempat Lahir</h6>
                 </div>
                 <div class="col-sm-10">
-                  <input type="text" id="dob_place" name="dob_place" value="<?=$_SESSION['tempat_lahir'];?>"><br>
+                  <input type="text" id="fname" name="fname" value="<?=$_SESSION['tempat_lahir'];?>"><br>
                 </div>
                 </div>
               </div>
@@ -546,7 +554,7 @@ if ( !isset($_SESSION['user_login']) ||
                   <h6 class="m-0 font-weight-bold text-primary">Tanggal Lahir</h6>
                 </div>
                 <div class="col-sm-10">
-                  <input type="text" id="dob" name="dob" value="<?=$_SESSION['tanggal_lahir'];?>"><br>
+                  <input type="text" id="fname" name="fname" value="<?=$_SESSION['tanggal_lahir'];?>"><br>
                 </div>
                 </div>
               </div>
@@ -556,7 +564,7 @@ if ( !isset($_SESSION['user_login']) ||
                   <h6 class="m-0 font-weight-bold text-primary">Jenis Kelamin</h6>
                 </div>
                 <div class="col-sm-10">
-                  <input type="text" id="gender" name="gender" value="<?=$_SESSION['jenis_kelamin'];?>"><br>
+                  <input type="text" id="fname" name="fname" value="<?=$_SESSION['jenis_kelamin'];?>"><br>
                 </div>
                 </div>
               </div>
@@ -566,7 +574,7 @@ if ( !isset($_SESSION['user_login']) ||
                   <h6 class="m-0 font-weight-bold text-primary">Status Perkawinan</h6>
                 </div>
                 <div class="col-sm-10">
-                  <input type="text" id="marital" name="marital" value="<?=$_SESSION['marital'];?>"><br>
+                  <input type="text" id="fname" name="fname" value="<?=$_SESSION['marital'];?>"><br>
                 </div>
                 </div>
               </div>
@@ -576,7 +584,7 @@ if ( !isset($_SESSION['user_login']) ||
                   <h6 class="m-0 font-weight-bold text-primary">Alamat</h6>
                 </div>
                 <div class="col-sm-10">
-                  <input type="text" id="road" name="road" value="<?=$_SESSION['alamat'];?>"><br>
+                  <input type="text" id="fname" name="fname" value="<?=$_SESSION['alamat'];?>"><br>
                 </div>
                 </div>
               </div>
@@ -606,7 +614,7 @@ if ( !isset($_SESSION['user_login']) ||
                   <h6 class="m-0 font-weight-bold text-primary">Kelurahan</h6>
                 </div>
                 <div class="col-sm-10">
-                  <input type="text" id="desa" name="desa" value="<?=$_SESSION['kelurahan'];?>"><br>
+                  <input type="text" id="fname" name="fname" value="<?=$_SESSION['kelurahan'];?>"><br>
                 </div>
                 </div>
               </div>
@@ -616,7 +624,7 @@ if ( !isset($_SESSION['user_login']) ||
                   <h6 class="m-0 font-weight-bold text-primary">Kecamatan</h6>
                 </div>
                 <div class="col-sm-10">
-                  <input type="text" id="kec" name="kec" value="<?=$_SESSION['kecamatan'];?>"><br>
+                  <input type="text" id="fname" name="fname" value="<?=$_SESSION['kecamatan'];?>"><br>
                 </div>
                 </div>
               </div>
@@ -626,7 +634,7 @@ if ( !isset($_SESSION['user_login']) ||
                   <h6 class="m-0 font-weight-bold text-primary">Agama</h6>
                 </div>
                 <div class="col-sm-10">
-                  <input type="text" id="agama" name="agama" value="<?=$_SESSION['agama'];?>"><br>
+                  <input type="text" id="fname" name="fname" value="<?=$_SESSION['agama'];?>"><br>
                 </div>
                 </div>
               </div>
@@ -646,28 +654,17 @@ if ( !isset($_SESSION['user_login']) ||
                   <h6 class="m-0 font-weight-bold text-primary">Kewarga Negaraan</h6>
                 </div>
                 <div class="col-sm-10">
-                  <input type="text" id="nationality" name="nationality" value="<?=$_SESSION['nationality'];?>"><br>
+                  <input type="text" id="fname" name="fname" value="<?=$_SESSION['nationality'];?>"><br>
                 </div>
                 </div>
               </div>
               <div class="card-header py-3">
                 <div class="row">
                   <div class="col-sm-2">
-                  <h6 class="m-0 font-weight-bold text-primary">Nomor Telepon</h6>
+                  <h6 class="m-0 font-weight-bold text-primary">Kodereferal</h6>
                 </div>
                 <div class="col-sm-10">
-                  <input type="text" id="phone" name="phone" value="<?=$_SESSION['phone'];?>"><br>
-                </div>
-                </div>
-                
-              </div>
-              <div class="card-header py-3">
-                <div class="row">
-                  <div class="col-sm-2">
-                  <h6 class="m-0 font-weight-bold text-primary">Email</h6>
-                </div>
-                <div class="col-sm-10">
-                  <input type="text" id="email" name="email" value="<?=$_SESSION['email'];?>"><br>
+                  <input type="text" id="fname" name="fname" value="<?=$_SESSION['ferall'];?>"><br>
                 </div>
                 </div>
                 
@@ -1271,6 +1268,7 @@ if ( !isset($_SESSION['user_login']) ||
   <script src="js/demo/chart-pie-demo.js"></script>
   <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
   <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script> 
+  <script src="../assets/main.js"></script>
 
     <!-- Counter -->
     <script type="text/javascript" src="./js/waypoints.js"></script>
