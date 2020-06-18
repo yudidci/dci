@@ -1,4 +1,4 @@
-  <?php
+<?php
 // Start the session
 session_start();
 
@@ -528,22 +528,10 @@ if ( !isset($_SESSION['user_login']) ||
                 </div>
                 </div>
               </div>
+ 
               <div class="card-header py-3">
                 <div class="row">
                   <div class="col-sm-2">
-<<<<<<< HEAD
-                  <h6 class="m-0 font-weight-bold text-primary">No Handphone</h6>
-                </div>
-                <div class="col-sm-10">
-                  <input type="text" id="no_hp" name="no_hp" value="<?=$_SESSION['phone'];?>"><br>
-                </div>
-                </div>
-              </div>
-              <div class="card-header py-3">
-                <div class="row">
-                  <div class="col-sm-2">
-=======
->>>>>>> df68c009ac84182973f19ad59091abc0f59a81ee
                   <h6 class="m-0 font-weight-bold text-primary">Tempat Lahir</h6>
                 </div>
                 <div class="col-sm-10">
@@ -779,7 +767,10 @@ if ( !isset($_SESSION['user_login']) ||
   <div class="card-header">
   </div>
   <div class="card-body">
-    <p>Dengan menjadi member osco ("Sahabat Osco"") 
+  <H3 class="pengenalan">Pengenalan</h3>
+  <p class="pengenalan">Dalam menggunakan layanan web ini, Pengguna setuju untuk mengikatkan diri, tunduk pada dan melaksanakan syarat-syarat dan ketentuan-ketentuan penggunaan layanann web ("Ketentuan Layanan Sahabat OSCO"), sebagai berikut:
+</p>
+    <p class="pengenalan">Dengan menjadi member osco ("Sahabat Osco"") 
       berarti Anda telah setuju dengan Syarat dan Ketentuan Layanan 
       (untuk selanjutnya disebut "Syarat dan Ketentuan") berikut ini. 
       Anda bisa melihat Syarat dan Ketentuan secara lengkap di halaman ini. 
