@@ -531,20 +531,10 @@ if ( !isset($_SESSION['user_login']) ||
               <div class="card-header py-3">
                 <div class="row">
                   <div class="col-sm-2">
-                  <h6 class="m-0 font-weight-bold text-primary">No Handphone</h6>
-                </div>
-                <div class="col-sm-10">
-                  <input type="text" id="no_hp" name="no_hp"><br>
-                </div>
-                </div>
-              </div>
-              <div class="card-header py-3">
-                <div class="row">
-                  <div class="col-sm-2">
                   <h6 class="m-0 font-weight-bold text-primary">Tempat Lahir</h6>
                 </div>
                 <div class="col-sm-10">
-                  <input type="text" id="fname" name="fname" value="<?=$_SESSION['tempat_lahir'];?>"><br>
+                  <input type="text" id="dob_place" name="dob_place" value="<?=$_SESSION['tempat_lahir'];?>"><br>
                 </div>
                 </div>
               </div>
@@ -554,7 +544,7 @@ if ( !isset($_SESSION['user_login']) ||
                   <h6 class="m-0 font-weight-bold text-primary">Tanggal Lahir</h6>
                 </div>
                 <div class="col-sm-10">
-                  <input type="text" id="fname" name="fname" value="<?=$_SESSION['tanggal_lahir'];?>"><br>
+                  <input type="text" id="dob" name="dob" value="<?=$_SESSION['tanggal_lahir'];?>"><br>
                 </div>
                 </div>
               </div>
@@ -564,7 +554,7 @@ if ( !isset($_SESSION['user_login']) ||
                   <h6 class="m-0 font-weight-bold text-primary">Jenis Kelamin</h6>
                 </div>
                 <div class="col-sm-10">
-                  <input type="text" id="fname" name="fname" value="<?=$_SESSION['jenis_kelamin'];?>"><br>
+                  <input type="text" id="gender" name="gender" value="<?=$_SESSION['jenis_kelamin'];?>"><br>
                 </div>
                 </div>
               </div>
@@ -574,7 +564,7 @@ if ( !isset($_SESSION['user_login']) ||
                   <h6 class="m-0 font-weight-bold text-primary">Status Perkawinan</h6>
                 </div>
                 <div class="col-sm-10">
-                  <input type="text" id="fname" name="fname" value="<?=$_SESSION['marital'];?>"><br>
+                  <input type="text" id="marital" name="marital" value="<?=$_SESSION['marital'];?>"><br>
                 </div>
                 </div>
               </div>
@@ -584,7 +574,7 @@ if ( !isset($_SESSION['user_login']) ||
                   <h6 class="m-0 font-weight-bold text-primary">Alamat</h6>
                 </div>
                 <div class="col-sm-10">
-                  <input type="text" id="fname" name="fname" value="<?=$_SESSION['alamat'];?>"><br>
+                  <input type="text" id="road" name="road" value="<?=$_SESSION['alamat'];?>"><br>
                 </div>
                 </div>
               </div>
@@ -614,7 +604,7 @@ if ( !isset($_SESSION['user_login']) ||
                   <h6 class="m-0 font-weight-bold text-primary">Kelurahan</h6>
                 </div>
                 <div class="col-sm-10">
-                  <input type="text" id="fname" name="fname" value="<?=$_SESSION['kelurahan'];?>"><br>
+                  <input type="text" id="desa" name="desa" value="<?=$_SESSION['kelurahan'];?>"><br>
                 </div>
                 </div>
               </div>
@@ -624,7 +614,7 @@ if ( !isset($_SESSION['user_login']) ||
                   <h6 class="m-0 font-weight-bold text-primary">Kecamatan</h6>
                 </div>
                 <div class="col-sm-10">
-                  <input type="text" id="fname" name="fname" value="<?=$_SESSION['kecamatan'];?>"><br>
+                  <input type="text" id="kec" name="kec" value="<?=$_SESSION['kecamatan'];?>"><br>
                 </div>
                 </div>
               </div>
@@ -634,7 +624,7 @@ if ( !isset($_SESSION['user_login']) ||
                   <h6 class="m-0 font-weight-bold text-primary">Agama</h6>
                 </div>
                 <div class="col-sm-10">
-                  <input type="text" id="fname" name="fname" value="<?=$_SESSION['agama'];?>"><br>
+                  <input type="text" id="agama" name="agama" value="<?=$_SESSION['agama'];?>"><br>
                 </div>
                 </div>
               </div>
@@ -654,19 +644,31 @@ if ( !isset($_SESSION['user_login']) ||
                   <h6 class="m-0 font-weight-bold text-primary">Kewarga Negaraan</h6>
                 </div>
                 <div class="col-sm-10">
-                  <input type="text" id="fname" name="fname" value="<?=$_SESSION['nationality'];?>"><br>
+                  <input type="text" id="nationality" name="nationality" value="<?=$_SESSION['nationality'];?>"><br>
                 </div>
                 </div>
               </div>
               <div class="card-header py-3">
                 <div class="row">
                   <div class="col-sm-2">
-                  <h6 class="m-0 font-weight-bold text-primary">Kodereferal</h6>
+                  <h6 class="m-0 font-weight-bold text-primary">Nomor Telepon</h6>
                 </div>
                 <div class="col-sm-10">
-                  <input type="text" id="fname" name="fname" value="<?=$_SESSION['ferall'];?>"><br>
+                  <input type="text" id="phone" name="phone" value="<?=$_SESSION['phone'];?>"><br>
                 </div>
                 </div>
+                
+              </div>
+              <div class="card-header py-3">
+                <div class="row">
+                  <div class="col-sm-2">
+                  <h6 class="m-0 font-weight-bold text-primary">Email</h6>
+                </div>
+                <div class="col-sm-10">
+                  <input type="text" id="email" name="email" value="<?=$_SESSION['email'];?>"><br>
+                </div>
+                </div>
+           
                 
               </div>
   
