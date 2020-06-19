@@ -514,7 +514,7 @@ if ( !isset($_SESSION['user_login']) ||
                 </div>
                 </div>
               </div>
-              <div class="card-header py-3">
+              <!-- <div class="card-header py-3">
                 <div class="row">
                   <div class="col-sm-2">
                   <h6 class="m-0 font-weight-bold text-primary">Password</h6>
@@ -524,11 +524,11 @@ if ( !isset($_SESSION['user_login']) ||
                                 <span class="btn-show-pass">
                                   <i class="fa fa-eye"></i>
                                 </span>
-                                <input class="input100" name="password" disabled="disabled" type="password" required pattern="[A-Za-z0-9\s]{6,}" value="<?=$_SESSION['password'];?>"><br>
+                                <input class="input100" name="password" disabled="disabled" id="password" type="password" required pattern="[A-Za-z0-9\s]{6,}" value="<?=$_SESSION['password'];?>"><br>
                                 <span class="focus-input100"></span>
                 </div>
                 </div>
-              </div>
+              </div> -->
  
               <div class="card-header py-3">
                 <div class="row">
@@ -576,7 +576,7 @@ if ( !isset($_SESSION['user_login']) ||
                   <h6 class="m-0 font-weight-bold text-primary">Alamat</h6>
                 </div>
                 <div class="col-sm-10">
-                  <input type="text" id="road" name="road" value="<?=$_SESSION['alamat'];?>"><br>
+                  <input type="text" id="road_name" name="road_name" value="<?=$_SESSION['alamat'];?>"><br>
                 </div>
                 </div>
               </div>
@@ -636,7 +636,7 @@ if ( !isset($_SESSION['user_login']) ||
                   <h6 class="m-0 font-weight-bold text-primary">Pekerjaan</h6>
                 </div>
                 <div class="col-sm-10">
-                  <input type="text" id="fname" name="fname" value="<?=$_SESSION['job'];?>"><br>
+                  <input type="text" id="job" name="job" value="<?=$_SESSION['job'];?>"><br>
                 </div>
                 </div>
               </div>
