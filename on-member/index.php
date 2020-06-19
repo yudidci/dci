@@ -68,14 +68,14 @@ if ( !isset($_SESSION['user_login']) ||
       <!-- Nav Item - Charts -->
       <li class="nav-item">
         <a class="nav-link" id="klikpoint-" href="#klikpoint-">
-          <i class="fas fa-fw fa-chart-area"></i>
+          <i class="fa fa-filter"></i>
           <span>Filter</span></a>
       </li>
 
                   <!-- Nav Item - Tables -->
             <li class="nav-item">
               <a class="nav-link" id="klikfollower" href="#klikfollower">
-                <i class="fas fa-fw fa-table"></i>
+                <i class="fas fa-sort-numeric-up"></i>
                 <span>Batas Follower</span></a>
             </li>
 
@@ -174,7 +174,12 @@ if ( !isset($_SESSION['user_login']) ||
               </a>
               <!-- Dropdown - User Information -->
               <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
-
+                <a class="dropdown-item" id="klikidentitas-" href="#klikidentitas-">
+                  <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
+                  Edit Profile
+                </a>
+       
+                <div class="dropdown-divider"></div>
                 <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
                   <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
                   Logout
@@ -187,13 +192,18 @@ if ( !isset($_SESSION['user_login']) ||
         </nav>
         <!-- End of Topbar -->
 
+        <!-- Begin Page Content -->
         <div class="container-fluid" id="dashboard">
           <!-- Page Heading -->
           <div class="d-sm-flex align-items-center justify-content-between mb-4">
             <h1 class="h3 mb-0 text-gray-800">Dashboard</h1>
           </div>
+            <div class="row">
+              
+  
+ 
+  
 
-             <div class="row">
 
               <!-- Earnings (Monthly) Card Example -->
               <div class="col-xl-4 col-md-6 mb-4">
@@ -252,18 +262,375 @@ if ( !isset($_SESSION['user_login']) ||
                   </div>
                 </div>
               </div>
+
             </div>
+               
+            <div class="row">
+  
+              <!-- Area Chart -->
+              <div class="col-xl-12 col-lg-7">
+                <div class="card shadow mb-4">
+                  <!-- Card Header - Dropdown -->
+                  <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                    <h3 class="osco-title">PROGRAM OSCO</h3>
+                    <div class="dropdown no-arrow">
+                    </div>
+                  </div>
+                  <!-- Card Body -->
+                  <div class="card-body">
+                  <div class="container">
+      <div class="row">
+        <div class="col-lg-12 col-md-12 osco-program-box">
+          <div class="mu-features-area">
+            <!-- Start Title -->
+            <!-- End Title -->
+            <!-- Start features content -->
+            <div class="mu-features-content">
+              <div class="row">
+
+                <div class=" col-sm-12 text-center">
+                  <div class="mu-single-feature">
+
+                    <div class="row">
+                      <div class="col-sm-4 icon-box">
+                        <img src="./img/iconPendidikanVokasi.png" alt="img" style="width: 35%; ">
+                        <h5>Pendidikan Vokasi</h5>
+                      </div>
+                      <div class="col-sm-4 icon-box">
+                        <img src="./img/iconIndusKesehatan.png" alt="img" style="width: 35%; ">
+                        <h5>Industrialisasi Kesehatan</h5>
+                      </div>
+                      <div class="col-sm-4 icon-box">
+                        <img src="./img/iconPelatihanKewira.png" alt="img" style="width: 35%; ">
+                        <h5>Pelatihan Kewirausahaan</h5>
+                      </div>
+                    </div>
+                    <div class="row" style="margin-top: 65px;">
+                      <div class="col-sm-4 icon-box">
+                        <img src="./img/iconPameranSeni.png" alt="img" style="width: 35%; ">
+                        <h5>Pameran Seni Budaya</h5>
+                      </div>
+                      <div class="col-sm-4 icon-box">
+                        <img src="./img/iconPelatihanAtlet.png" alt="img" style="width: 35%; ">
+                        <h5>Pelatihan Atlet</h5>
+                      </div>
+                      <div class="col-sm-4 icon-box">
+                        <img src="./img/iconSportTour.png" alt="img" style="width: 35%; ">
+                        <h5>Sport Tourism</h5>
+                      </div>
+                    </div>
+                    <br>
+
+
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- End features content -->
+          </div>
+        </div>
+      </div>
+    </div>
+                  </div>
+                </div>
+              </div>
+              
+
+
+      </div>
+      <!-- End of Main Content -->   
+
+      <div  id="identitas">
+        <div class="container-fluid">
+  
+          <!-- Page Heading -->
+          <h1 class="h3 mb-4 text-gray-800">Identitas</h1>
+          <div class="mb-4">Edit Data Member</div>
+  
+          <div class="row">
+             
               </div>
   
+              <!-- Brand Buttons -->
+              <div class="card shadow mb-4">
+                <div class="card-header py-3">
+                <div class="row">
+                  <div class="col-sm-2">
+                  <h6 class="m-0 font-weight-bold text-primary">Nama</h6>
+                </div>
+                <div class="col-sm-10">
+                  <input type="text" id="fname" name="fname" value="<?=$_SESSION['nama'];?>"><br>
+                </div>
+                </div>
+              </div>
+              <div class="card-header py-3">
+                <div class="row">
+                  <div class="col-sm-2">
+                  <h6 class="m-0 font-weight-bold text-primary">NIK</h6>
+                </div>
+                <div class="col-sm-10">
+                  <input type="text" id="fname" name="fname" value="<?=$_SESSION['sess_id'];?>"><br>
+                </div>
+                </div>
+              </div>
+              <div class="card-header py-3">
+                <div class="row">
+                  <div class="col-sm-2">
+                  <h6 class="m-0 font-weight-bold text-primary">Password</h6>
+                </div>
+                <div class="col-sm-10">
+                <div class="wrap-input100 validate-input" style="margin-bottom: -20px;" data-validate = "Password is required"></div>
+                                <span class="btn-show-pass">
+                                  <i class="fa fa-eye"></i>
+                                </span>
+                                <input class="input100" name="password" disabled="disabled" type="password" required pattern="[A-Za-z0-9\s]{6,}" value="<?=$_SESSION['password'];?>"><br>
+                                <span class="focus-input100"></span>
+                </div>
+                </div>
+              </div>
+ 
+              <div class="card-header py-3">
+                <div class="row">
+                  <div class="col-sm-2">
+                  <h6 class="m-0 font-weight-bold text-primary">Tempat Lahir</h6>
+                </div>
+                <div class="col-sm-10">
+                  <input type="text" id="dob_place" name="dob_place" value="<?=$_SESSION['tempat_lahir'];?>"><br>
+                </div>
+                </div>
+              </div>
+              <div class="card-header py-3">
+                <div class="row">
+                  <div class="col-sm-2">
+                  <h6 class="m-0 font-weight-bold text-primary">Tanggal Lahir</h6>
+                </div>
+                <div class="col-sm-10">
+                  <input type="text" id="dob" name="dob" value="<?=$_SESSION['tanggal_lahir'];?>"><br>
+                </div>
+                </div>
+              </div>
+              <div class="card-header py-3">
+                <div class="row">
+                  <div class="col-sm-2">
+                  <h6 class="m-0 font-weight-bold text-primary">Jenis Kelamin</h6>
+                </div>
+                <div class="col-sm-10">
+                  <input type="text" id="gender" name="gender" value="<?=$_SESSION['jenis_kelamin'];?>"><br>
+                </div>
+                </div>
+              </div>
+              <div class="card-header py-3">
+                <div class="row">
+                  <div class="col-sm-2">
+                  <h6 class="m-0 font-weight-bold text-primary">Status Perkawinan</h6>
+                </div>
+                <div class="col-sm-10">
+                  <input type="text" id="marital" name="marital" value="<?=$_SESSION['marital'];?>"><br>
+                </div>
+                </div>
+              </div>
+              <div class="card-header py-3">
+                <div class="row">
+                  <div class="col-sm-2">
+                  <h6 class="m-0 font-weight-bold text-primary">Alamat</h6>
+                </div>
+                <div class="col-sm-10">
+                  <input type="text" id="road" name="road" value="<?=$_SESSION['alamat'];?>"><br>
+                </div>
+                </div>
+              </div>
+              <div class="card-header py-3">
+                <div class="row">
+                  <div class="col-sm-2">
+                  <h6 class="m-0 font-weight-bold text-primary">RT</h6>
+                </div>
+                <div class="col-sm-10">
+                  <input type="text" id="fname" name="fname" value="<?=$_SESSION['rt'];?>"><br>
+                </div>
+                </div>
+              </div>
+              <div class="card-header py-3">
+                <div class="row">
+                  <div class="col-sm-2">
+                  <h6 class="m-0 font-weight-bold text-primary">RW</h6>
+                </div>
+                <div class="col-sm-10">
+                  <input type="text" id="fname" name="fname" value="<?=$_SESSION['rw'];?>"><br>
+                </div>
+                </div>
+              </div>
+              <div class="card-header py-3">
+                <div class="row">
+                  <div class="col-sm-2">
+                  <h6 class="m-0 font-weight-bold text-primary">Kelurahan</h6>
+                </div>
+                <div class="col-sm-10">
+                  <input type="text" id="desa" name="desa" value="<?=$_SESSION['kelurahan'];?>"><br>
+                </div>
+                </div>
+              </div>
+              <div class="card-header py-3">
+                <div class="row">
+                  <div class="col-sm-2">
+                  <h6 class="m-0 font-weight-bold text-primary">Kecamatan</h6>
+                </div>
+                <div class="col-sm-10">
+                  <input type="text" id="kec" name="kec" value="<?=$_SESSION['kecamatan'];?>"><br>
+                </div>
+                </div>
+              </div>
+              <div class="card-header py-3">
+                <div class="row">
+                  <div class="col-sm-2">
+                  <h6 class="m-0 font-weight-bold text-primary">Agama</h6>
+                </div>
+                <div class="col-sm-10">
+                  <input type="text" id="agama" name="agama" value="<?=$_SESSION['agama'];?>"><br>
+                </div>
+                </div>
+              </div>
+              <div class="card-header py-3">
+                <div class="row">
+                  <div class="col-sm-2">
+                  <h6 class="m-0 font-weight-bold text-primary">Pekerjaan</h6>
+                </div>
+                <div class="col-sm-10">
+                  <input type="text" id="fname" name="fname" value="<?=$_SESSION['job'];?>"><br>
+                </div>
+                </div>
+              </div>
+              <div class="card-header py-3">
+                <div class="row">
+                  <div class="col-sm-2">
+                  <h6 class="m-0 font-weight-bold text-primary">Kewarga Negaraan</h6>
+                </div>
+                <div class="col-sm-10">
+                  <input type="text" id="nationality" name="nationality" value="<?=$_SESSION['nationality'];?>"><br>
+                </div>
+                </div>
+              </div>
+              <div class="card-header py-3">
+                <div class="row">
+                  <div class="col-sm-2">
+                  <h6 class="m-0 font-weight-bold text-primary">Nomor Telepon</h6>
+                </div>
+                <div class="col-sm-10">
+                  <input type="text" id="phone" name="phone" value="<?=$_SESSION['phone'];?>"><br>
+                </div>
+                </div>
+                
+              </div>
+              <div class="card-header py-3">
+                <div class="row">
+                  <div class="col-sm-2">
+                  <h6 class="m-0 font-weight-bold text-primary">Email</h6>
+                </div>
+                <div class="col-sm-10">
+                  <input type="text" id="email" name="email" value="<?=$_SESSION['email'];?>"><br>
+                </div>
+                </div>
+           
+                
+              </div>
+  
+  
+        </div>
+        <!-- /.container-fluid -->
+        <button class="button2" onclick="alert('Hello world!')">Update</button>
+      </div>
+      </div>
 
-           <div class="container-fluid" id="follower">
+      <div class="container-fluid"  id="blank">
+        <div class="d-sm-flex align-items-center justify-content-between mb-4">
+          <h1 class="h3 mb-0 text-gray-800">Visi & Misi </h1>
+     </div>
+     <div class="row">
+        <div class="row">
 
+          <div class="col-lg-7">
+
+            <!-- Default Card Example -->
+            <div class="card mb-4">
+              <div class="card-header">
+              <h3 class="osco-visi">VISI</h3>
+              </div>
+              <div class="card-body">
+                <p class="impact">"Terwujudnya Batam Bermatabat yang kuat, berdaulat, mandiri, inovatif dan berkepribadian, 
+                  belandaskan gotong-royong dengan semangat baru untuk berkarya"..
+                </p>
+              </div>
+            </div>
+
+            <!-- Basic Card Example -->
+            <div class="card shadow mb-4">
+              <div class="card-header py-3">
+                <h3 class="osco-visi">MISI</h3>
+              </div>
+              <div class="card-body">
+              <p class="impact">✓ Meningkatkan Kualitas Sumber Daya Manusia<p>
+              <p class="impact"> ✓ Mengembangkan Sistem Pendidikan dan Kesehatan yang Modern</p>
+              <p class="impact">✓ Memajukan Kualitas dan Kuantitas Industri dan Dunia Usaha</p>
+              <p class="impact">✓ Menjaga Kesetaraan Gender dan pemberdayaan Perempuan</p>
+              <p class="impact">✓ Mengedepankan Kebijikan Tata Ruang yang Terintegrasi</p>
+              <p class="impact">✓ Mendorong Kemajuan Seni Budaya dan Pariwsata</p>
+              <p class="impact">✓ Meningkatkan Prestasi Olah Raga</p>
+              <img src="./img/sahabatosco.jpg" class="img-fluid" alt="">
+              <h5 class="osco-future">"HARAPAN BATAM PERJUANGAN OSCO"</h5>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="col-lg-5">
+
+            <!-- Dropdown Card Example -->
+            <div class="card shadow mb-4">
+              <!-- Card Header - Dropdown -->
+              <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+              <h2 class="mu-title">Profile Osco</h2>
+              </div>
+              <!-- Card Body -->
+              <div class="card-body">
+              <h5 class="osco">Osco Olfriady Letunggamu, M.Sc.</h5>
+              <p class="impact">CALON WAKIL WALIKOTA BATAM 2020</p>
+              <img src="./img/osco-puasa.jpg" class="img-fluid" alt="">
+              <p class="impac">✓ Warga Batam dan mempunyai KTP Batam.</p>
+              <p class="impac">✓ Lulusan tercepat di Jerman, lulus Sarjana dalam 2 tahun 3 bulan.</p>
+              <p class="impac">✓ Ketua Komite Eropa & Rusia KADIN Indonesia.</p>
+              <p class="impac">✓ Wakil Ketua KADIN Indonesia Bidang Ekonomi dan Industri Kreatif.</p>
+              <p class="impac">✓ Executive Advisior Indonesia Business Council NSW Australia.</p>
+              <p class="impac">✓ Senior Advisor Indonesia Diaspora Network Australia.</p>
+              <p class="impac">✓ Dewan Ahli IKRAR</p>
+              <p class="impac">✓ Bendahara Umum Equestrian Indonesia Raya EQUINARA</p>
+              <p class="impac">✓ Wakil Bendahara Umum Persatuan Olahraga Berkuda Indonesia</p>
+              <p class="impac">✓ Wakil Bendahara Umum Persatuan Olahraga Berkuda Indonesia</p>
+              <p class="impac">✓ Wakil Bendahara Umum Persatuan Olahraga Berkuda Indonesia</p>
+              <p class="impac">✓ Wakil Bendahara Umum Persatuan Olahraga Berkuda Indonesia</p>
+              <p class="impac">✓ Ketua Umum Perhimpunan Alumni Jerman.</p>
+              <p class="slogan">"SEMANGAT BARU UNTUK BERKARYA"</p>
+              </div>
+            </div>
+
+           
+
+        </div>
+
+      </div>
+      <!-- /.container-fluid -->
+
+    </div>
+      </div>
+      </div>
+  
+
+
+<div class="container-fluid" id="follower">
 <!-- Page Heading -->
 <h1 class="h3 mb-2 text-gray-800">Edit Batas Follower</h1>
 <!-- DataTales Example -->
 <div class="advance">
 
-        <div class="row">
+        <div class="row1">
         <div class="card1">
           <p class="judul">Batas Follower Kota</p>
           <div class="column">
@@ -271,16 +638,17 @@ if ( !isset($_SESSION['user_login']) ||
           </div>
           <div class="column">
             <select id="cars" name="cars">
-              <option value="volvo">></option>
-              <option value="saab"><</option>
-              <option value="fiat">≥</option>
+              <option value="pilih">Pilih</option>
+              <option value="lb">></option>
+              <option value="lk"><</option>
+              <option value="lbs">≥</option>
               <option value="audi">≤</option>
             </select>
           </div>
           <div class="column">
             <input type="text" id="username" name="username" onkeypress="return hanyaAngka(event)"><br>
           </div>
-          <button type="button" class="updt-follower" id="updt-follower">update</button>
+          <button type="button" class="updt-follower" id="updt-follower">Update</button>
         </div>
         <div class="card1">
           <p class="judul">Batas Follower Camat</p>
@@ -289,6 +657,7 @@ if ( !isset($_SESSION['user_login']) ||
           </div>
           <div class="column">
           <select id="cars" name="cars">
+          <option value="pilih">Pilih</option>
             <option value="volvo">></option>
             <option value="saab"><</option>
             <option value="fiat">≥</option>
@@ -298,7 +667,7 @@ if ( !isset($_SESSION['user_login']) ||
           <div class="column">
             <input type="text" id="username" name="username" onkeypress="return hanyaAngka(event)"><br>
           </div>
-          <button type="button" class="updt-follower" id="updt-follower">update</button>
+          <button type="button" class="updt-follower" id="updt-follower">Update</button>
         </div>
         <div class="card1">
           <p class="judul">Batas Follower Lurah</p>
@@ -307,6 +676,7 @@ if ( !isset($_SESSION['user_login']) ||
           </div>
           <div class="column">
             <select id="cars" name="cars">
+            <option value="pilih">Pilih</option>
               <option value="volvo">></option>
               <option value="saab"><</option>
               <option value="fiat">≥</option>
@@ -316,8 +686,10 @@ if ( !isset($_SESSION['user_login']) ||
           <div class="column">
             <input type="text" id="username" name="username" onkeypress="return hanyaAngka(event)"><br>
           </div>
-          <button type="button" class="updt-follower" id="updt-follower">update</button>
+          <button type="button" class="updt-follower" id="updt-follower">Update</button>
         </div>
+</div>
+<div class="row1">
         <div class="card1">
           <p class="judul">Batas Follower RT</p>
           <div class="column">
@@ -325,6 +697,7 @@ if ( !isset($_SESSION['user_login']) ||
           </div>
           <div class="column">
             <select id="cars" name="cars">
+            <option value="pilih">Pilih</option>
               <option value="volvo">></option>
               <option value="saab"><</option>
               <option value="fiat">≥</option>
@@ -334,7 +707,7 @@ if ( !isset($_SESSION['user_login']) ||
           <div class="column">
             <input type="text" id="username" name="username"><br>
           </div>
-          <button type="button" class="updt-follower" id="updt-follower">update</button>
+          <button type="button" class="updt-follower" id="updt-follower">Update</button>
         </div>
         <div class="card1">
           <p class="judul">Batas Follower RW</p>
@@ -343,6 +716,7 @@ if ( !isset($_SESSION['user_login']) ||
           </div>
           <div class="column">
             <select id="cars" name="cars">
+            <option value="pilih">Pilih</option>
               <option value="volvo">></option>
               <option value="saab"><</option>
               <option value="fiat">≥</option>
@@ -352,7 +726,7 @@ if ( !isset($_SESSION['user_login']) ||
           <div class="column">
             <input type="text" id="username" name="username"><br>
           </div>
-          <button type="button" class="updt-follower" id="updt-follower">update</button>
+          <button type="button" class="updt-follower" id="updt-follower">Update</button>
         </div>
         <div class="card1">
           <p class="judul">Batas Follower Warga</p>
@@ -361,6 +735,7 @@ if ( !isset($_SESSION['user_login']) ||
         </div>
         <div class="column">
           <select id="cars" name="cars">
+          <option value="pilih">Pilih</option>
             <option value="volvo">></option>
             <option value="saab"><</option>
             <option value="fiat">≥</option>
@@ -370,7 +745,7 @@ if ( !isset($_SESSION['user_login']) ||
         <div class="column">
           <input type="text" id="username" name="username" onkeypress="return hanyaAngka(event)"><br>
         </div>
-        <button type="button" class="updt-follower" id="updt-follower">update</button>
+        <button type="button" class="updt-follower" id="updt-follower">Update</button>
       </div>
       </div>
 </div>
@@ -392,7 +767,7 @@ if ( !isset($_SESSION['user_login']) ||
   <div class="row">
     <div class="input-field">
       <div class="tengah2">
-        <h3>Batas Bawah</h3>
+        <h4>Batas Bawah</h4>
       </div>
     </div>
     <div class="input-field">
@@ -402,7 +777,7 @@ if ( !isset($_SESSION['user_login']) ||
     </div>
     <div class="input-field">
       <div class="tengah">
-       <h3>Batas Atas</h3>
+       <h4>Batas Atas</h4>
       </div>
     </div>
     <div class="input-field">
@@ -451,7 +826,7 @@ if ( !isset($_SESSION['user_login']) ||
 </div>
 
 <div class="advance-search">
-<span class="desc">List Member :<button class="button2" type="button" id="btn-tingkatan"><span> Lihat
+<span class="desc">List Member :<button class="button3" type="button" id="btn-tingkatan"><span> Lihat
     Semua</span></button>
 
 
@@ -493,125 +868,13 @@ if ( !isset($_SESSION['user_login']) ||
     </div>
     </form>
     
-
-  
- 
-
-
-
-  <!-- Modal Button -->
-  <!-- <div id="myModal" class="modal"> -->
-
-  <!-- Modal content -->
-  <!-- <div class="modal-content">
-<div class="modal-header">
-<span class="close">&times;</span>
-<h2>Sukses</h2>
-</div>
-<div class="modal-body">
-<p>Registrasi Berhasil</p>
-</div>
-<div class="modal-footer">
-<h3>Terima Kasih</h3>
-</div>
-</div>
-
-</div> -->
-
-  <!-- <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-<div class="modal-dialog modal-lg" role="document">
-<div class="modal-content">
-<div class="modal-header">
-</div>
-<div class="modal-body">
-</div>
-</div>
-</div>
-</div> -->
-  <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
-  <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
-  <script src='https://kit.fontawesome.com/a076d05399.js'></script>
-
-  <script src="assets/js/bootstrap.js"></script>
-  <script src="assets/script.js"></script>
-  <!-- button modal -->
-  <script>
-    // Get the modal
-    var modal = document.getElementById("myModal");
-
-    // Get the button that opens the modal
-    var btn = document.getElementById("myBtn");
-
-    // Get the <span> element that closes the modal
-    var span = document.getElementsByClassName("close")[0];
-
-    // When the user clicks the button, open the modal 
-    btn.onclick = function () {
-      modal.style.display = "block";
-    }
-
-    // When the user clicks on <span> (x), close the modal
-    span.onclick = function () {
-      modal.style.display = "none";
-    }
-
-    // When the user clicks anywhere outside of the modal, close it
-    window.onclick = function (event) {
-      if (event.target == modal) {
-        modal.style.display = "none";
-      }
-    }
-  </script>
-  <!-- <script>
-$(document).ready(function(){
-$("select").change(function(){
-    $(this).find("option:selected").each(function(){
-        var optionValue = $(this).attr("value");
-        if(optionValue){
-            $(".box").not("." + optionValue).hide();
-            $("." + optionValue).show();
-        } else{
-            $(".box").hide();
-        }
-    });
-}).change();
-});
-</script> -->
-  <script>
-    function hanyaAngka(evt) {
-      var charCode = (evt.which) ? evt.which : event.keyCode
-      if (charCode > 31 && (charCode < 48 || charCode > 57))
-
-        return false;
-      return true;
-    }
-  </script>
-
-</div>
-
-<!-- Footer -->
-<!-- End of Footer -->
-
-</div>
-<!-- End of Content Wrapper -->
-
-</div>
-    </div>
-
-    <!-- Footer -->
-    <footer class="sticky-footer bg-white">
-      <div class="container my-auto">
-        <div class="copyright text-center my-auto">
-          <span>© 2020 Sahabat Osco | All rights reserved.</span>
-        </div>
-      </div>
-    </footer>
     <!-- End of Footer -->
 
   </div>
   <!-- End of Content Wrapper -->
 
+</div>
+</div>
 </div>
 
  
@@ -642,6 +905,13 @@ $("select").change(function(){
       </div>
     </div>
   </div>
+
+  <script src="assets/script.js"></script>
+
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+  <script src='https://kit.fontawesome.com/a076d05399.js'></script>
   
 
   <!-- Bootstrap core JavaScript-->
@@ -676,6 +946,47 @@ $("select").change(function(){
     <!-- Page level custom scripts -->
     <script src="js/demo/datatables-demo.js"></script>
     <script src="../on-admin/js/dataklik.js"></script>
+
+      <!-- button modal -->
+  <script>
+    // Get the modal
+    var modal = document.getElementById("myModal");
+
+    // Get the button that opens the modal
+    var btn = document.getElementById("myBtn");
+
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("close")[0];
+
+    // When the user clicks the button, open the modal 
+    btn.onclick = function () {
+      modal.style.display = "block";
+    }
+
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function () {
+      modal.style.display = "none";
+    }
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function (event) {
+      if (event.target == modal) {
+        modal.style.display = "none";
+      }
+    }
+  </script>
+
+    <script>
+    function hanyaAngka(evt) {
+      var charCode = (evt.which) ? evt.which : event.keyCode
+      if (charCode > 31 && (charCode < 48 || charCode > 57))
+
+        return false;
+      return true;
+    }
+  </script>
+
+</div>
 
 
   <script>
