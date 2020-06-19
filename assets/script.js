@@ -59,7 +59,7 @@ function searchMovies() {
     
    
     $.ajax({
-        url: 'https://campaignteamv2.herokuapp.com/user/list',
+        url: 'http://localhost:3001/user/list',
         type: 'GET',
         dataType: 'json',
         data: {
@@ -122,7 +122,7 @@ function searchMovies() {
 
 function searchCamat() {
     $.ajax({
-        url: 'https://campaignteamv2.herokuapp.com/user/listCamat',
+        url: 'http://localhost:3001/user/listCamat',
         type: 'GET',
         dataType: 'json',
         data: {
@@ -186,7 +186,7 @@ function searchCamat() {
 
 function searchLurah() {
     $.ajax({
-        url: 'https://campaignteamv2.herokuapp.com/user/listLurah',
+        url: 'http://localhost:3001/user/listLurah',
         type: 'GET',
         dataType: 'json',
         data: {
@@ -249,7 +249,7 @@ function searchLurah() {
 
 function searchRW() {
     $.ajax({
-        url: 'https://campaignteamv2.herokuapp.com/user/listRW',
+        url: 'http://localhost:3001/user/listRW',
         type: 'GET',
         dataType: 'json',
         data: {
@@ -312,7 +312,7 @@ function searchRW() {
 
 function searchRT() {
     $.ajax({
-        url: 'https://campaignteamv2.herokuapp.com/user/listRT',
+        url: 'http://localhost:3001/user/listRT',
         type: 'GET',
         dataType: 'json',
         data: {
@@ -375,7 +375,7 @@ function searchRT() {
 
 function searchWarga() {
     $.ajax({
-        url: 'https://campaignteamv2.herokuapp.com/user/listWarga',
+        url: 'http://localhost:3001/user/listWarga',
         type: 'GET',
         dataType: 'json',
         data: {
@@ -438,7 +438,7 @@ function searchWarga() {
 //tingkatan list
 function searchTingkatan() {
     $.ajax({
-        url: 'https://campaignteamv2.herokuapp.com/user/followers',
+        url: 'http://localhost:3001/user/followers',
         type: 'GET',
         dataType: 'json',
         data: {
@@ -482,7 +482,7 @@ function searchTingkatan() {
 //filter
 function filterList() {
     $.ajax({
-        url: 'https://campaignteamv2.herokuapp.com/user/filter',
+        url: 'http://localhost:3001/user/filter',
         type: 'GET',
         dataType: 'json',
         data: {
@@ -546,7 +546,7 @@ function filterList() {
 //follower
 function followerList() {
     $.ajax({
-        url: 'https://campaignteamv2.herokuapp.com/user/follower',
+        url: 'http://localhost:3001/user/follower',
         type: 'GET',
         dataType: 'json',
         data: {
