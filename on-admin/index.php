@@ -1,4 +1,4 @@
-<?php
+  <?php
 // Start the session
 session_start();
 
@@ -20,8 +20,7 @@ if ( !isset($_SESSION['user_login']) ||
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <!-- <title> Admin Member</title> -->
-  <title><?php echo $_SESSION['nama'] ?>'s Profile Settings</title>
+  <title>Selamat datang, <?php echo $_SESSION['nama'] ?></title>
 
   <!-- Favicon -->
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
@@ -31,8 +30,6 @@ if ( !isset($_SESSION['user_login']) ||
   <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
   <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-
 
   <!-- Custom styles for this template-->
   <link href="css/sb-admin-2.css" rel="stylesheet">
@@ -92,6 +89,7 @@ if ( !isset($_SESSION['user_login']) ||
       </li>
 
 
+
       <!-- Divider -->
       <hr class="sidebar-divider">
 
@@ -100,22 +98,24 @@ if ( !isset($_SESSION['user_login']) ||
         Addons
       </div>
 
-      <!-- Nav Item - Charts -->
-      <li class="nav-item">
+            <!-- Nav Item - Charts -->
+            <li class="nav-item">
         <a class="nav-link" id="klikpoint-" href="#klikpoint-">
           <i class="fas fa-fw fa-chart-area"></i>
           <span>Point</span></a>
       </li>
 
-                  <!-- Nav Item - Tables -->
+
+            <!-- Nav Item - Tables -->
             <li class="nav-item">
               <a class="nav-link" id="klikfollower" href="#klikfollower">
                 <i class="fas fa-fw fa-table"></i>
                 <span>Follower</span></a>
             </li>
 
-                       <!-- Nav Item - Tables -->
-           <li class="nav-item">
+
+
+      <li class="nav-item">
               <a class="nav-link" href="../forgot-password.php">
                 <i class="fa fa-key"></i>
                 <span>Lupa Password</span></a>
@@ -480,7 +480,6 @@ if ( !isset($_SESSION['user_login']) ||
 
       </div>
       <!-- End of Main Content -->   
-
       <div  id="identitas">
         <div class="container-fluid">
         <form action='http://localhost:3001/user/<?php echo $_SESSION['sess_id']?>' method="post">
@@ -682,6 +681,7 @@ if ( !isset($_SESSION['user_login']) ||
       </div>
       </div>
 </form>
+          
       <div class="container-fluid"  id="blank">
         <div class="d-sm-flex align-items-center justify-content-between mb-4">
           <h1 class="h3 mb-0 text-gray-800">Visi & Misi </h1>
@@ -762,6 +762,8 @@ if ( !isset($_SESSION['user_login']) ||
 
     </div>
       </div>
+
+ 
 
       <div class="container-fluid" id="ketentuan">
       <h1 class="h3 mb-2 text-gray-800">Syarat Dan Ketentuan</h1>
@@ -883,153 +885,153 @@ if ( !isset($_SESSION['user_login']) ||
             </div>
           </div>
         </div>
-      </div>
+</div>
 
       </div>
 
       <div class="container-fluid" id="point">
 
-        <!-- Page Heading -->
-        <h1 class="h3 mb-2 text-gray-800">POIN</h1>
-        <h6 class="m-0 font-weight-bold text-primary1"><?=$_SESSION['followers'];?> FOLLOWER</h6>
-        <p class="mb-4">Tukar Follower anda dengan Hadiah di bawah ini</p>
+<!-- Page Heading -->
+<h1 class="h3 mb-2 text-gray-800">POIN</h1>
+<h6 class="m-0 font-weight-bold text-primary1"><?=$_SESSION['followers'];?> FOLLOWER</h6>
+<p class="mb-4">Tukar Follower anda dengan Hadiah di bawah ini</p>
 
-        <!-- Content Row -->
-        <div class="row">
+<!-- Content Row -->
+<div class="row">
 
-          <div class="col-xl-4 col-lg-7">
-            <!-- Area Chart -->
+  <div class="col-xl-4 col-lg-7">
+    <!-- Area Chart -->
 
-            <div class="card shadow mb-4">
-            <div class="card-header py-3">
-                <h6 class="m-0 font-weight-bold text-primary">Bonus 1</h6>
-              </div>
-                  
-                 <div class="card-body">
-                 <div class="card3">
-                    <img src="img/download.jpg" alt="Avatar" style="width:100%; border-radius: 27px 27px 0px 0px;">
-                    <div class="centered"><span class="currDate"></span></div>
-                    <div class="container">
-                        <h5><b>Beras 1 Karung</b></h5>
-                        <p>1000 Follower
-                        <div class="my-4 text-right"><a href="https://foto.tempo.co/read/67259/jokowi-sampaikan-pidato-di-forum-ekonomi-dunia-asean" target="blank">Tukar</a></div>
-                        </p>
-                    </div>
-                </div>
-                </div>
-              </div>
-
-              <div class="card shadow mb-4">
-            <div class="card-header py-3">
-                <h6 class="m-0 font-weight-bold text-primary">Bonus 2</h6>
-              </div>
-                 <div class="card-body">
-                 <div class="card3">
-                      <img src="img/Indomie.jpg" alt="Avatar" style="width:100%; border-radius: 27px 27px 0px 0px;">
-                      <div class="centered"><span class="currDate"></span></div>
-                      <div class="container">
-                     <h5><b>Indomie 1 Kardus</b></h5>
-                   <p>800 Follower
-                    <div class="my-4 text-right"><a href="https://foto.tempo.co/read/67259/jokowi-sampaikan-pidato-di-forum-ekonomi-dunia-asean" target="blank">Tukar</a></div>
-                    </p>
-                  </div>
-                </div>
-                </div>
-              </div>
-          </div>
-
-          <div class="col-xl-4 col-lg-7">
-        <!-- Area Chart -->
-        <div class="card shadow mb-4">
-        <div class="card-header py-3">
-       <h6 class="m-0 font-weight-bold text-primary">Bonus 3</h6>
-        </div>
-      
-     <div class="card-body">
-     <div class="card3">
-      <img src="img/sembako2.jpg" alt="Avatar" style="width:100%; border-radius: 27px 27px 0px 0px;">
-         <div class="centered"><span class="currDate"></span></div>
-          <div class="container">
-          <h5><b>Sembako2</b></h5>
-            <p>400 Follower
-                      <div class="my-4 text-right"><a href="https://foto.tempo.co/read/67259/jokowi-sampaikan-pidato-di-forum-ekonomi-dunia-asean" target="blank">Tukar</a></div>
-            </p>
+    <div class="card shadow mb-4">
+    <div class="card-header py-3">
+        <h6 class="m-0 font-weight-bold text-primary">Bonus 1</h6>
+      </div>
+          
+         <div class="card-body">
+         <div class="card3">
+            <img src="img/download.jpg" alt="Avatar" style="width:100%; border-radius: 27px 27px 0px 0px;">
+            <div class="centered"><span class="currDate"></span></div>
+            <div class="container">
+                <h5><b>Beras 1 Karung</b></h5>
+                <p>1000 Follower
+                <div class="my-4 text-right"><a href="https://foto.tempo.co/read/67259/jokowi-sampaikan-pidato-di-forum-ekonomi-dunia-asean" target="blank">Tukar</a></div>
+                </p>
+            </div>
         </div>
         </div>
-       </div>
-       </div>
+      </div>
 
-     <div class="card shadow mb-4">
-     <div class="card-header py-3">
-    <h6 class="m-0 font-weight-bold text-primary">Bonus 4</h6>
-     </div>
-     <div class="card-body">
-     <div class="card3">
-        <img src="img/sembako1.png" alt="Avatar" style="width:100%; border-radius: 27px 27px 0px 0px;">
-        <div class="centered"><span class="currDate"></span></div>
-        <div class="container">
-            <h5><b>Sembako 1</b></h5>
-            <p>600 Follower
+      <div class="card shadow mb-4">
+    <div class="card-header py-3">
+        <h6 class="m-0 font-weight-bold text-primary">Bonus 2</h6>
+      </div>
+         <div class="card-body">
+         <div class="card3">
+              <img src="img/Indomie.jpg" alt="Avatar" style="width:100%; border-radius: 27px 27px 0px 0px;">
+              <div class="centered"><span class="currDate"></span></div>
+              <div class="container">
+             <h5><b>Indomie 1 Kardus</b></h5>
+           <p>800 Follower
             <div class="my-4 text-right"><a href="https://foto.tempo.co/read/67259/jokowi-sampaikan-pidato-di-forum-ekonomi-dunia-asean" target="blank">Tukar</a></div>
             </p>
-        </div>
-       </div>
-      </div>
-      </div>
-    </div>
-
-          <!-- Donut Chart -->
-          <div class="col-xl-4 col-lg-5">
-            <div class="card shadow mb-4">
-              <!-- Card Header - Dropdown -->
-              <div class="card-header py-3">
-                <h6 class="m-0 font-weight-bold text-primary">Bonus 5</h6>
-              </div>
-              <!-- Card Body -->
-              <div class="card-body">
-                <div class="card3">
-                  <img src="img/tv.jpg" alt="Avatar" style="width:100%; border-radius: 27px 27px 0px 0px;">
-                  <div class="centered"><span class="currDate"></span></div>
-                  <div class="container">
-                      <h5><b>Televisi</b></h5>
-                      <p>2000 Follower
-                      <div class="my-4 text-right"><a href="https://foto.tempo.co/read/67259/jokowi-sampaikan-pidato-di-forum-ekonomi-dunia-asean" target="blank">Tukar</a></div>
-                      </p>
-                  </div>
-                </div>
-              </div>
-          
-              
-            </div>
-              <div class="card shadow mb-4">
-                <!-- Card Header - Dropdown -->
-                <div class="card-header py-3">
-                  <h6 class="m-0 font-weight-bold text-primary">Bonus 6</h6>
-                </div>
-                <!-- Card Body -->
-                <div class="card-body">
-                  <div class="card3">
-                    <img src="img/motor.png" alt="Avatar" style="width:100%; border-radius: 27px 27px 0px 0px;">
-                    <div class="centered"><span class="currDate"></span></div>
-                    <div class="container">
-                        <h5><b>Sepeda Motor</b></h5>
-                        <p>10000 Follower
-                        <div class="my-4 text-right"><a href="https://foto.tempo.co/read/67259/jokowi-sampaikan-pidato-di-forum-ekonomi-dunia-asean" target="blank">Tukar</a></div>
-                        </p>
-                    </div>
-                  </div>
-                </div>
-            
-                
-              </div>
-     
           </div>
-      
         </div>
+        </div>
+      </div>
+  </div>
 
+  <div class="col-xl-4 col-lg-7">
+<!-- Area Chart -->
+<div class="card shadow mb-4">
+<div class="card-header py-3">
+<h6 class="m-0 font-weight-bold text-primary">Bonus 3</h6>
+</div>
+
+<div class="card-body">
+<div class="card3">
+<img src="img/sembako2.jpg" alt="Avatar" style="width:100%; border-radius: 27px 27px 0px 0px;">
+ <div class="centered"><span class="currDate"></span></div>
+  <div class="container">
+  <h5><b>Sembako2</b></h5>
+    <p>400 Follower
+              <div class="my-4 text-right"><a href="https://foto.tempo.co/read/67259/jokowi-sampaikan-pidato-di-forum-ekonomi-dunia-asean" target="blank">Tukar</a></div>
+    </p>
+</div>
+</div>
+</div>
+</div>
+
+<div class="card shadow mb-4">
+<div class="card-header py-3">
+<h6 class="m-0 font-weight-bold text-primary">Bonus 4</h6>
+</div>
+<div class="card-body">
+<div class="card3">
+<img src="img/sembako1.png" alt="Avatar" style="width:100%; border-radius: 27px 27px 0px 0px;">
+<div class="centered"><span class="currDate"></span></div>
+<div class="container">
+    <h5><b>Sembako 1</b></h5>
+    <p>600 Follower
+    <div class="my-4 text-right"><a href="https://foto.tempo.co/read/67259/jokowi-sampaikan-pidato-di-forum-ekonomi-dunia-asean" target="blank">Tukar</a></div>
+    </p>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+  <!-- Donut Chart -->
+  <div class="col-xl-4 col-lg-5">
+    <div class="card shadow mb-4">
+      <!-- Card Header - Dropdown -->
+      <div class="card-header py-3">
+        <h6 class="m-0 font-weight-bold text-primary">Bonus 5</h6>
+      </div>
+      <!-- Card Body -->
+      <div class="card-body">
+        <div class="card3">
+          <img src="img/tv.jpg" alt="Avatar" style="width:100%; border-radius: 27px 27px 0px 0px;">
+          <div class="centered"><span class="currDate"></span></div>
+          <div class="container">
+              <h5><b>Televisi</b></h5>
+              <p>2000 Follower
+              <div class="my-4 text-right"><a href="https://foto.tempo.co/read/67259/jokowi-sampaikan-pidato-di-forum-ekonomi-dunia-asean" target="blank">Tukar</a></div>
+              </p>
+          </div>
+        </div>
+      </div>
+  
+      
+    </div>
+      <div class="card shadow mb-4">
+        <!-- Card Header - Dropdown -->
+        <div class="card-header py-3">
+          <h6 class="m-0 font-weight-bold text-primary">Bonus 6</h6>
+        </div>
+        <!-- Card Body -->
+        <div class="card-body">
+          <div class="card3">
+            <img src="img/motor.png" alt="Avatar" style="width:100%; border-radius: 27px 27px 0px 0px;">
+            <div class="centered"><span class="currDate"></span></div>
+            <div class="container">
+                <h5><b>Sepeda Motor</b></h5>
+                <p>10000 Follower
+                <div class="my-4 text-right"><a href="https://foto.tempo.co/read/67259/jokowi-sampaikan-pidato-di-forum-ekonomi-dunia-asean" target="blank">Tukar</a></div>
+                </p>
+            </div>
+          </div>
+        </div>
+    
+        
       </div>
 
-    </div>
+  </div>
+
+</div>
+
+</div>
+
+</div>
 
     <!-- Footer -->
     <footer class="sticky-footer bg-white">
@@ -1094,8 +1096,6 @@ if ( !isset($_SESSION['user_login']) ||
   <script src="js/demo/chart-area-demo.js"></script>
   <script src="js/demo/chart-pie-demo.js"></script>
   <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
-  <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script> 
-  <script src="../assets/main.js"></script>
 
     <!-- Counter -->
     <script type="text/javascript" src="./js/waypoints.js"></script>
