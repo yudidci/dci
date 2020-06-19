@@ -874,6 +874,8 @@ if ( !isset($_SESSION['user_login']) ||
   <!-- End of Content Wrapper -->
 
 </div>
+</div>
+</div>
 
  
 
