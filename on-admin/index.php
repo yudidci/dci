@@ -20,7 +20,7 @@ if ( !isset($_SESSION['user_login']) ||
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title> Admin Member</title>
+  <title>Selamat datang, <?php echo $_SESSION['nama'] ?></title>
 
   <!-- Favicon -->
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
@@ -856,7 +856,11 @@ if ( !isset($_SESSION['user_login']) ||
             <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
               
               <tr>
+<<<<<<< HEAD
               <th>Nomor Referral</th>
+=======
+              <th>Nomor Induk Penduduk</th>
+>>>>>>> update
               <th>Nama</th>
               <th>Jumlah Followers</th>
               </tr>
@@ -872,7 +876,11 @@ if ( !isset($_SESSION['user_login']) ||
               if ($result->num_rows > 0) {
               // output data of each row
               while($row = $result->fetch_assoc()) {
+<<<<<<< HEAD
               echo "<tr><td>" . $row["reg_no"]. "</td><td>"
+=======
+              echo "<tr><td>" . $row["nik"]. "</td><td>"
+>>>>>>> update
               . $row["name"]. "</td><td>" . $row["followers_count"]. "</td>
               </tr>";
               }
