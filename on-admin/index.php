@@ -20,7 +20,8 @@ if ( !isset($_SESSION['user_login']) ||
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title> Admin Member</title>
+  <!-- <title> Admin Member</title> -->
+  <title><?php echo $_SESSION['nama'] ?>'s Profile Settings</title>
 
   <!-- Favicon -->
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
@@ -482,7 +483,7 @@ if ( !isset($_SESSION['user_login']) ||
 
       <div  id="identitas">
         <div class="container-fluid">
-  
+        <form action='http://localhost:3001/user/<?php echo $_SESSION['sess_id']?>' method="post">
           <!-- Page Heading -->
           <h1 class="h3 mb-4 text-gray-800">Identitas</h1>
           <div class="mb-4">Edit Data Member</div>
@@ -499,7 +500,7 @@ if ( !isset($_SESSION['user_login']) ||
                   <h6 class="m-0 font-weight-bold text-primary">Nama</h6>
                 </div>
                 <div class="col-sm-10">
-                  <input type="text" id="fname" name="fname" value="<?=$_SESSION['nama'];?>"><br>
+                  <input type="text" id="name" name="name" value="<?php echo $_SESSION['nama'] ?>"><br>
                 </div>
                 </div>
               </div>
@@ -509,7 +510,7 @@ if ( !isset($_SESSION['user_login']) ||
                   <h6 class="m-0 font-weight-bold text-primary">NIK</h6>
                 </div>
                 <div class="col-sm-10">
-                  <input type="text" id="fname" name="fname" value="<?=$_SESSION['sess_id'];?>"><br>
+                  <input type="text" id="nik" name="nik" value="<?=$_SESSION['sess_id'];?>"><br>
                 </div>
                 </div>
               </div>
@@ -676,10 +677,11 @@ if ( !isset($_SESSION['user_login']) ||
   
         </div>
         <!-- /.container-fluid -->
-        <button class="button2" onclick="alert('Hello world!')">Update</button>
+        <button class="button2">Update</button>
+        <!-- <input type="submit" name="update_profile" value="Update Profile" /> -->
       </div>
       </div>
-
+</form>
       <div class="container-fluid"  id="blank">
         <div class="d-sm-flex align-items-center justify-content-between mb-4">
           <h1 class="h3 mb-0 text-gray-800">Visi & Misi </h1>
