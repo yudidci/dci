@@ -1,4 +1,4 @@
-<?php
+  <?php
 // Start the session
 session_start();
 
@@ -20,8 +20,7 @@ if ( !isset($_SESSION['user_login']) ||
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <!-- <title> Admin Member</title> -->
-  <title><?php echo $_SESSION['nama'] ?>'s Profile Settings</title>
+  <title>Selamat datang, <?php echo $_SESSION['nama'] ?></title>
 
   <!-- Favicon -->
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
@@ -31,8 +30,6 @@ if ( !isset($_SESSION['user_login']) ||
   <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
   <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-
 
   <!-- Custom styles for this template-->
   <link href="css/sb-admin-2.css" rel="stylesheet">
@@ -92,6 +89,7 @@ if ( !isset($_SESSION['user_login']) ||
       </li>
 
 
+
       <!-- Divider -->
       <hr class="sidebar-divider">
 
@@ -100,22 +98,24 @@ if ( !isset($_SESSION['user_login']) ||
         Addons
       </div>
 
-      <!-- Nav Item - Charts -->
-      <li class="nav-item">
+            <!-- Nav Item - Charts -->
+            <li class="nav-item">
         <a class="nav-link" id="klikpoint-" href="#klikpoint-">
           <i class="fas fa-fw fa-chart-area"></i>
           <span>Point</span></a>
       </li>
 
-                  <!-- Nav Item - Tables -->
+
+            <!-- Nav Item - Tables -->
             <li class="nav-item">
               <a class="nav-link" id="klikfollower" href="#klikfollower">
                 <i class="fas fa-fw fa-table"></i>
                 <span>Follower</span></a>
             </li>
 
-                       <!-- Nav Item - Tables -->
-           <li class="nav-item">
+
+
+      <li class="nav-item">
               <a class="nav-link" href="../forgot-password.php">
                 <i class="fa fa-key"></i>
                 <span>Lupa Password</span></a>
@@ -480,7 +480,6 @@ if ( !isset($_SESSION['user_login']) ||
 
       </div>
       <!-- End of Main Content -->   
-
       <div  id="identitas">
         <div class="container-fluid">
         <form action='http://localhost:3001/user/<?php echo $_SESSION['sess_id']?>' method="post">
@@ -682,6 +681,7 @@ if ( !isset($_SESSION['user_login']) ||
       </div>
       </div>
 </form>
+          
       <div class="container-fluid"  id="blank">
         <div class="d-sm-flex align-items-center justify-content-between mb-4">
           <h1 class="h3 mb-0 text-gray-800">Visi & Misi </h1>
@@ -762,6 +762,8 @@ if ( !isset($_SESSION['user_login']) ||
 
     </div>
       </div>
+
+ 
 
       <div class="container-fluid" id="ketentuan">
       <h1 class="h3 mb-2 text-gray-800">Syarat Dan Ketentuan</h1>
@@ -851,362 +853,185 @@ if ( !isset($_SESSION['user_login']) ||
           <div class="card-body">
           <div style="overflow-x:auto;">
             <div class="table-responsive">
-              <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
-                <thead>
-                  <tr>
-                    <th>Registration Number</th>
-                    <th>Name</th>
-                    <th>NIK</th>
-                    <th>Jenis Kelamin</th>
-                    <th>Tanggal Lahir</th>
-                    <th>Pekerjaan</th>  
-                    <th>Tingkatan</th>
-                  </tr>
-                </thead>
-                <tfoot>
-                  <tr>
-                    <th>Registration Number</th>
-                    <th>Name</th>
-                    <th>NIK</th>
-                    <th>Jenis Kelamin</th>
-                    <th>Tanggal Lahir</th>
-                    <th>Pekerjaan</th>
-                    <th>Tingkatan</th>
-                  </tr>
-                </tfoot>
-                <tbody>
-                  <tr>
-                    <td>20200506382552</td>
-                    <td>Andi</td>
-                    <td>1234567890123456</td>
-                    <td>Pria</td>
-                    <td>2011/04/25</td>
-                    <td>PNS</td>
-                    <td>Desa</td>
-                  </tr>
-                  <tr>
-                    <td>20200506382512</td>
-                    <td>Cindy</td>
-                    <td>1234567890123456</td>
-                    <td>Wanita</td>
-                    <td>2011/07/25</td>
-                    <td>Wirausaha</td>
-                    <td>Lurah</td>
-                  </tr>
-                  <tr>
-                    <td>20200506872657</td>
-                    <td>Dian</td>
-                    <td>1234567890123456</td>
-                    <td>Wanita</td>
-                    <td>2009/01/12</td>
-                    <td></td>
-                    <td>Kecamtan</td>
-                  </tr>
-                  <tr>
-                    <td>20200506872653</td>
-                    <td>Robet</td>
-                    <td>1234567890123456</td>
-                    <td>Pria</td>
-                    <td>2012/03/29</td>
-                    <td></td>
-                    <td>Warga</td>
-                  </tr>
-                  <tr>
-                    <td>20200506467229</td>
-                    <td>Erik</td>
-                    <td>1234567890123456</td>
-                    <td>Pria</td>
-                    <td>2008/11/28</td>
-                    <td></td>
-                    <td>Warga</td>
-                  </tr>
-                  <tr>
-                    <td>20200506282765</td>
-                    <td>Fira</td>
-                    <td>1234567890123456</td>
-                    <td>Wanita</td>
-                    <td>2012/12/02</td>
-                    <td></td>
-                    <td>Warga</td>
-                  </tr>
-                  <tr>
-                    <td>20200508993471</td>
-                    <td>Hella</td>
-                    <td>1234567890123456</td>
-                    <td>Wanita</td>
-                    <td>2012/08/06</td>
-                    <td>Wirausaha</td>
-                    <td>Warga</td>
-                  </tr>
-                  <tr>
-                    <td>20200508349020</td>
-                    <td>Heri</td>
-                    <td>1234567890123456</td>
-                    <td>Pria</td>
-                    <td>2010/10/14</td>
-                    <td></td>
-                    <td>Warga</td>
-                  </tr>
-                  <tr>
-                    <td>20200508462933</td>
-                    <td>Ian</td>
-                    <td>1234567890123456</td>
-                    <td>Pria</td>
-                    <td>2009/09/15</td>
-                    <td></td>
-                    <td>RT</td>
-                  </tr>
-                  <tr>
-                    <td>20200508528033</td>
-                    <td>Rocky</td>
-                    <td>Edinburgh</td>
-                    <td>Pria</td>
-                    <td>2008/12/13</td>
-                    <td>Karyawan</td>
-                    <td>Kota</td>
-                  </tr>
-                  <tr>
-                    <td>20200508777785</td>
-                    <td>Jerry</td>
-                    <td>1234567890123456</td>
-                    <td>Pria</td>
-                    <td>2008/12/19</td>
-                    <td>PNS</td>
-                    <td>RW</td>
-                  </tr>
-                  <tr>
-                    <td>20200508300654</td>
-                    <td>Lina</td>
-                    <td>1234567890123456</td>
-                    <td>Wanita</td>
-                    <td>2013/03/03</td>
-                    <td></td>
-                    <td>RW</td>
-                  </tr>
-                  <tr>
-                    <td>20200508704272</td>
-                    <td>Mia</td>
-                    <td>1234567890123456</td>
-                    <td>Wanita</td>
-                    <td>2008/10/16</td>
-                    <td>Pelajar</td>
-                    <td>Kecamatan</td>
-                  </tr>
-                  <tr>
-                    <td>20200508649092</td>
-                    <td>Nila</td>
-                    <td>1234567890123456</td>
-                    <td>Wanita</td>
-                    <td>2012/12/18</td>
-                    <td>Mahasiswa</td>
-                    <td>Kelurahan</td>
-                  </tr>
-                  <tr>
-                    <td>20200508170618</td>
-                    <td>Regi</td>
-                    <td>1234567890123456</td>
-                    <td>Pria</td>
-                    <td>2010/03/17</td>
-                    <td></td>
-                    <td>Kelurahan</td>
-                  </tr>
-                  <tr>
-                    <td>2020050815326</td>
-                    <td>Omar</td>
-                    <td>1234567890123456</td>
-                    <td>Pria</td>
-                    <td>2012/11/27</td>
-                    <td></td>
-                    <td>Kecamatan</td>
-                  </tr>
-                  <tr>
-                    <td>20200508878966</td>
-                    <td>Puan</td>
-                    <td>1234567890123456</td>
-                    <td>Pria</td>
-                    <td>2010/06/09</td>
-                    <td>Pegawai Swasta</td>
-                    <td>Warga</td>
-                  </tr>
-                  <tr>
-                    <td>20200508535269</td>
-                    <td>Qintri</td>
-                    <td>1234567890123456</td>
-                    <td>Wanita</td>
-                    <td>2009/04/10</td>
-                    <td></td>
-                    <td>Warga</td>
-                  </tr>
-                  <tr>
-                    <td>20200508676253</td>
-                    <td>Rini</td>
-                    <td>1234567890123456</td>
-                    <td>Wanita</td>
-                    <td>2012/10/13</td>
-                    <td></td>
-                    <td>Kota</td>
-                  </tr>
-                  <tr>
-                    <td>20200508463835</td>
-                    <td>Sinta</td>
-                    <td>1234567890123456</td>
-                    <td>Wanita</td>
-                    <td>2012/09/26</td>
-                    <td></td>
-                    <td>RW</td>
-                  </tr>
-                </tbody>
+            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+              
+              <tr>
+              <th>Nomor Induk Penduduk</th>
+              <th>Nama</th>
+              <th>Jumlah Followers</th>
+              </tr>
+              <?php
+              $conn = mysqli_connect("localhost", "root", "", "odalfgsm3b");
+              // Check connection
+              if ($conn->connect_error) {
+              die("Connection failed: " . $conn->connect_error);
+              }
+              $sql = "SELECT * from full where referral= '$_SESSION[reg_no]'";
+              $result = $conn->query($sql);
+             
+              if ($result->num_rows > 0) {
+              // output data of each row
+              while($row = $result->fetch_assoc()) {
+              echo "<tr><td>" . $row["nik"]. "</td><td>"
+              . $row["name"]. "</td><td>" . $row["followers_count"]. "</td>
+              </tr>";
+              }
+              echo "</table>";
+              } else { echo "0 results"; }
+              $conn->close();
+              ?>
+           
               </table>
             </div>
           </div>
         </div>
-      </div>
+</div>
 
       </div>
 
       <div class="container-fluid" id="point">
 
-        <!-- Page Heading -->
-        <h1 class="h3 mb-2 text-gray-800">POIN</h1>
-        <h6 class="m-0 font-weight-bold text-primary1"><?=$_SESSION['followers'];?> FOLLOWER</h6>
-        <p class="mb-4">Tukar Follower anda dengan Hadiah di bawah ini</p>
+<!-- Page Heading -->
+<h1 class="h3 mb-2 text-gray-800">POIN</h1>
+<h6 class="m-0 font-weight-bold text-primary1"><?=$_SESSION['followers'];?> FOLLOWER</h6>
+<p class="mb-4">Tukar Follower anda dengan Hadiah di bawah ini</p>
 
-        <!-- Content Row -->
-        <div class="row">
+<!-- Content Row -->
+<div class="row">
 
-          <div class="col-xl-4 col-lg-7">
-            <!-- Area Chart -->
+  <div class="col-xl-4 col-lg-7">
+    <!-- Area Chart -->
 
-            <div class="card shadow mb-4">
-            <div class="card-header py-3">
-                <h6 class="m-0 font-weight-bold text-primary">Bonus 1</h6>
-              </div>
-                  
-                 <div class="card-body">
-                 <div class="card3">
-                    <img src="img/download.jpg" alt="Avatar" style="width:100%; border-radius: 27px 27px 0px 0px;">
-                    <div class="centered"><span class="currDate"></span></div>
-                    <div class="container">
-                        <h5><b>Beras 1 Karung</b></h5>
-                        <p>1000 Follower
-                        <div class="my-4 text-right"><a href="https://foto.tempo.co/read/67259/jokowi-sampaikan-pidato-di-forum-ekonomi-dunia-asean" target="blank">Tukar</a></div>
-                        </p>
-                    </div>
-                </div>
-                </div>
-              </div>
-
-              <div class="card shadow mb-4">
-            <div class="card-header py-3">
-                <h6 class="m-0 font-weight-bold text-primary">Bonus 2</h6>
-              </div>
-                 <div class="card-body">
-                 <div class="card3">
-                      <img src="img/Indomie.jpg" alt="Avatar" style="width:100%; border-radius: 27px 27px 0px 0px;">
-                      <div class="centered"><span class="currDate"></span></div>
-                      <div class="container">
-                     <h5><b>Indomie 1 Kardus</b></h5>
-                   <p>800 Follower
-                    <div class="my-4 text-right"><a href="https://foto.tempo.co/read/67259/jokowi-sampaikan-pidato-di-forum-ekonomi-dunia-asean" target="blank">Tukar</a></div>
-                    </p>
-                  </div>
-                </div>
-                </div>
-              </div>
-          </div>
-
-          <div class="col-xl-4 col-lg-7">
-        <!-- Area Chart -->
-        <div class="card shadow mb-4">
-        <div class="card-header py-3">
-       <h6 class="m-0 font-weight-bold text-primary">Bonus 3</h6>
-        </div>
-      
-     <div class="card-body">
-     <div class="card3">
-      <img src="img/sembako2.jpg" alt="Avatar" style="width:100%; border-radius: 27px 27px 0px 0px;">
-         <div class="centered"><span class="currDate"></span></div>
-          <div class="container">
-          <h5><b>Sembako2</b></h5>
-            <p>400 Follower
-                      <div class="my-4 text-right"><a href="https://foto.tempo.co/read/67259/jokowi-sampaikan-pidato-di-forum-ekonomi-dunia-asean" target="blank">Tukar</a></div>
-            </p>
+    <div class="card shadow mb-4">
+    <div class="card-header py-3">
+        <h6 class="m-0 font-weight-bold text-primary">Bonus 1</h6>
+      </div>
+          
+         <div class="card-body">
+         <div class="card3">
+            <img src="img/download.jpg" alt="Avatar" style="width:100%; border-radius: 27px 27px 0px 0px;">
+            <div class="centered"><span class="currDate"></span></div>
+            <div class="container">
+                <h5><b>Beras 1 Karung</b></h5>
+                <p>1000 Follower
+                <div class="my-4 text-right"><a href="https://foto.tempo.co/read/67259/jokowi-sampaikan-pidato-di-forum-ekonomi-dunia-asean" target="blank">Tukar</a></div>
+                </p>
+            </div>
         </div>
         </div>
-       </div>
-       </div>
+      </div>
 
-     <div class="card shadow mb-4">
-     <div class="card-header py-3">
-    <h6 class="m-0 font-weight-bold text-primary">Bonus 4</h6>
-     </div>
-     <div class="card-body">
-     <div class="card3">
-        <img src="img/sembako1.png" alt="Avatar" style="width:100%; border-radius: 27px 27px 0px 0px;">
-        <div class="centered"><span class="currDate"></span></div>
-        <div class="container">
-            <h5><b>Sembako 1</b></h5>
-            <p>600 Follower
+      <div class="card shadow mb-4">
+    <div class="card-header py-3">
+        <h6 class="m-0 font-weight-bold text-primary">Bonus 2</h6>
+      </div>
+         <div class="card-body">
+         <div class="card3">
+              <img src="img/Indomie.jpg" alt="Avatar" style="width:100%; border-radius: 27px 27px 0px 0px;">
+              <div class="centered"><span class="currDate"></span></div>
+              <div class="container">
+             <h5><b>Indomie 1 Kardus</b></h5>
+           <p>800 Follower
             <div class="my-4 text-right"><a href="https://foto.tempo.co/read/67259/jokowi-sampaikan-pidato-di-forum-ekonomi-dunia-asean" target="blank">Tukar</a></div>
             </p>
-        </div>
-       </div>
-      </div>
-      </div>
-    </div>
-
-          <!-- Donut Chart -->
-          <div class="col-xl-4 col-lg-5">
-            <div class="card shadow mb-4">
-              <!-- Card Header - Dropdown -->
-              <div class="card-header py-3">
-                <h6 class="m-0 font-weight-bold text-primary">Bonus 5</h6>
-              </div>
-              <!-- Card Body -->
-              <div class="card-body">
-                <div class="card3">
-                  <img src="img/tv.jpg" alt="Avatar" style="width:100%; border-radius: 27px 27px 0px 0px;">
-                  <div class="centered"><span class="currDate"></span></div>
-                  <div class="container">
-                      <h5><b>Televisi</b></h5>
-                      <p>2000 Follower
-                      <div class="my-4 text-right"><a href="https://foto.tempo.co/read/67259/jokowi-sampaikan-pidato-di-forum-ekonomi-dunia-asean" target="blank">Tukar</a></div>
-                      </p>
-                  </div>
-                </div>
-              </div>
-          
-              
-            </div>
-              <div class="card shadow mb-4">
-                <!-- Card Header - Dropdown -->
-                <div class="card-header py-3">
-                  <h6 class="m-0 font-weight-bold text-primary">Bonus 6</h6>
-                </div>
-                <!-- Card Body -->
-                <div class="card-body">
-                  <div class="card3">
-                    <img src="img/motor.png" alt="Avatar" style="width:100%; border-radius: 27px 27px 0px 0px;">
-                    <div class="centered"><span class="currDate"></span></div>
-                    <div class="container">
-                        <h5><b>Sepeda Motor</b></h5>
-                        <p>10000 Follower
-                        <div class="my-4 text-right"><a href="https://foto.tempo.co/read/67259/jokowi-sampaikan-pidato-di-forum-ekonomi-dunia-asean" target="blank">Tukar</a></div>
-                        </p>
-                    </div>
-                  </div>
-                </div>
-            
-                
-              </div>
-     
           </div>
-      
         </div>
+        </div>
+      </div>
+  </div>
 
+  <div class="col-xl-4 col-lg-7">
+<!-- Area Chart -->
+<div class="card shadow mb-4">
+<div class="card-header py-3">
+<h6 class="m-0 font-weight-bold text-primary">Bonus 3</h6>
+</div>
+
+<div class="card-body">
+<div class="card3">
+<img src="img/sembako2.jpg" alt="Avatar" style="width:100%; border-radius: 27px 27px 0px 0px;">
+ <div class="centered"><span class="currDate"></span></div>
+  <div class="container">
+  <h5><b>Sembako2</b></h5>
+    <p>400 Follower
+              <div class="my-4 text-right"><a href="https://foto.tempo.co/read/67259/jokowi-sampaikan-pidato-di-forum-ekonomi-dunia-asean" target="blank">Tukar</a></div>
+    </p>
+</div>
+</div>
+</div>
+</div>
+
+<div class="card shadow mb-4">
+<div class="card-header py-3">
+<h6 class="m-0 font-weight-bold text-primary">Bonus 4</h6>
+</div>
+<div class="card-body">
+<div class="card3">
+<img src="img/sembako1.png" alt="Avatar" style="width:100%; border-radius: 27px 27px 0px 0px;">
+<div class="centered"><span class="currDate"></span></div>
+<div class="container">
+    <h5><b>Sembako 1</b></h5>
+    <p>600 Follower
+    <div class="my-4 text-right"><a href="https://foto.tempo.co/read/67259/jokowi-sampaikan-pidato-di-forum-ekonomi-dunia-asean" target="blank">Tukar</a></div>
+    </p>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+  <!-- Donut Chart -->
+  <div class="col-xl-4 col-lg-5">
+    <div class="card shadow mb-4">
+      <!-- Card Header - Dropdown -->
+      <div class="card-header py-3">
+        <h6 class="m-0 font-weight-bold text-primary">Bonus 5</h6>
+      </div>
+      <!-- Card Body -->
+      <div class="card-body">
+        <div class="card3">
+          <img src="img/tv.jpg" alt="Avatar" style="width:100%; border-radius: 27px 27px 0px 0px;">
+          <div class="centered"><span class="currDate"></span></div>
+          <div class="container">
+              <h5><b>Televisi</b></h5>
+              <p>2000 Follower
+              <div class="my-4 text-right"><a href="https://foto.tempo.co/read/67259/jokowi-sampaikan-pidato-di-forum-ekonomi-dunia-asean" target="blank">Tukar</a></div>
+              </p>
+          </div>
+        </div>
+      </div>
+  
+      
+    </div>
+      <div class="card shadow mb-4">
+        <!-- Card Header - Dropdown -->
+        <div class="card-header py-3">
+          <h6 class="m-0 font-weight-bold text-primary">Bonus 6</h6>
+        </div>
+        <!-- Card Body -->
+        <div class="card-body">
+          <div class="card3">
+            <img src="img/motor.png" alt="Avatar" style="width:100%; border-radius: 27px 27px 0px 0px;">
+            <div class="centered"><span class="currDate"></span></div>
+            <div class="container">
+                <h5><b>Sepeda Motor</b></h5>
+                <p>10000 Follower
+                <div class="my-4 text-right"><a href="https://foto.tempo.co/read/67259/jokowi-sampaikan-pidato-di-forum-ekonomi-dunia-asean" target="blank">Tukar</a></div>
+                </p>
+            </div>
+          </div>
+        </div>
+    
+        
       </div>
 
-    </div>
+  </div>
+
+</div>
+
+</div>
+
+</div>
 
     <!-- Footer -->
     <footer class="sticky-footer bg-white">
@@ -1271,8 +1096,6 @@ if ( !isset($_SESSION['user_login']) ||
   <script src="js/demo/chart-area-demo.js"></script>
   <script src="js/demo/chart-pie-demo.js"></script>
   <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
-  <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script> 
-  <script src="../assets/main.js"></script>
 
     <!-- Counter -->
     <script type="text/javascript" src="./js/waypoints.js"></script>
