@@ -585,7 +585,7 @@ if ( !isset($_SESSION['user_login']) ||
                   <h6 class="m-0 font-weight-bold text-primary">RT</h6>
                 </div>
                 <div class="col-sm-10">
-                  <input type="text" id="fname" name="fname" value="<?=$_SESSION['rt'];?>"><br>
+                  <input type="text" id="rt" name="rt" value="<?=$_SESSION['rt'];?>"><br>
                 </div>
                 </div>
               </div>
@@ -595,7 +595,7 @@ if ( !isset($_SESSION['user_login']) ||
                   <h6 class="m-0 font-weight-bold text-primary">RW</h6>
                 </div>
                 <div class="col-sm-10">
-                  <input type="text" id="fname" name="fname" value="<?=$_SESSION['rw'];?>"><br>
+                  <input type="text" id="rw" name="rw" value="<?=$_SESSION['rw'];?>"><br>
                 </div>
                 </div>
               </div>
