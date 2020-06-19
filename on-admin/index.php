@@ -500,7 +500,7 @@ if ( !isset($_SESSION['user_login']) ||
                   <h6 class="m-0 font-weight-bold text-primary">Nama</h6>
                 </div>
                 <div class="col-sm-10">
-                  <input type="text" id="name" name="name" value="<?php echo $_SESSION['nama'] ?>"><br>
+                  <input type="text" id="name" name="name" value="<?=$_SESSION['nama'];?>"><br>
                 </div>
                 </div>
               </div>
