@@ -870,12 +870,15 @@ if ( !isset($_SESSION['user_login']) ||
           <div style="overflow-x:auto;">
             <div class="table-responsive">
             <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
-              
+            <thead>
               <tr>
-              <th>Nomor Induk Penduduk</th>
+              <th>Nomor Referral</th>
               <th>Nama</th>
               <th>Jumlah Followers</th>
               </tr>
+              </thead>
+
+                <tbody>
               <?php
               $conn = mysqli_connect("localhost", "root", "", "odalfgsm3b");
               // Check connection
@@ -888,7 +891,7 @@ if ( !isset($_SESSION['user_login']) ||
               if ($result->num_rows > 0) {
               // output data of each row
               while($row = $result->fetch_assoc()) {
-              echo "<tr><td>" . $row["nik"]. "</td><td>"
+              echo "<tr><td>" . $row["reg_no"]. "</td><td>"
               . $row["name"]. "</td><td>" . $row["followers_count"]. "</td>
               </tr>";
               }
@@ -896,7 +899,7 @@ if ( !isset($_SESSION['user_login']) ||
               } else { echo "0 results"; }
               $conn->close();
               ?>
-           
+              </tbody>
               </table>
             </div>
           </div>
