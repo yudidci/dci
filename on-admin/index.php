@@ -853,11 +853,15 @@ if ( !isset($_SESSION['user_login']) ||
 
             <?php
               $followers = $_SESSION['followers'];
-            if ($followers < "5") {
-              echo "<p>Peringkat anda adalah Warga</p>"; 
+              $var = "Peringkat anda saat ini adalah ";
+            if ($followers >= "9") {
+              echo "<p>".$var."Kota</p>"; 
             }
-            else { 
-              echo "<p>Peringkat anda adalah RT</p>";
+            elseif($followers >= "5" ) { 
+              echo "<p>".$var." RT</p>";
+            }
+            else {
+              echo "<p>".$var. "Warga</p>";
             }
             ?>
             
