@@ -854,12 +854,15 @@ if ( !isset($_SESSION['user_login']) ||
           <div style="overflow-x:auto;">
             <div class="table-responsive">
             <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
-              
+            <thead>
               <tr>
               <th>Nomor Induk Penduduk</th>
               <th>Nama</th>
               <th>Jumlah Followers</th>
               </tr>
+              </thead>
+
+                <tbody>
               <?php
               $conn = mysqli_connect("localhost", "root", "", "odalfgsm3b");
               // Check connection
@@ -880,7 +883,7 @@ if ( !isset($_SESSION['user_login']) ||
               } else { echo "0 results"; }
               $conn->close();
               ?>
-           
+              </tbody>
               </table>
             </div>
           </div>
