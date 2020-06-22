@@ -870,14 +870,6 @@ if ( !isset($_SESSION['user_login']) ||
           <div style="overflow-x:auto;">
             <div class="table-responsive">
             <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
-<<<<<<< HEAD
-              
-              <tr>
-              <th>Nomor Induk Penduduk</th>
-              <th>Nama</th>
-              <th>Jumlah Followers</th>
-              </tr>
-=======
             <thead>
               <tr>
               <th>Nomor Referral</th>
@@ -887,7 +879,6 @@ if ( !isset($_SESSION['user_login']) ||
               </thead>
 
                 <tbody>
->>>>>>> test
               <?php
               $conn = mysqli_connect("localhost", "root", "", "odalfgsm3b");
               // Check connection
@@ -900,11 +891,7 @@ if ( !isset($_SESSION['user_login']) ||
               if ($result->num_rows > 0) {
               // output data of each row
               while($row = $result->fetch_assoc()) {
-<<<<<<< HEAD
-              echo "<tr><td>" . $row["nik"]. "</td><td>"
-=======
               echo "<tr><td>" . $row["reg_no"]. "</td><td>"
->>>>>>> test
               . $row["name"]. "</td><td>" . $row["followers_count"]. "</td>
               </tr>";
               }
@@ -912,11 +899,7 @@ if ( !isset($_SESSION['user_login']) ||
               } else { echo "0 results"; }
               $conn->close();
               ?>
-<<<<<<< HEAD
-           
-=======
               </tbody>
->>>>>>> test
               </table>
             </div>
           </div>
@@ -1022,7 +1005,6 @@ if ( !isset($_SESSION['user_login']) ||
       <!-- Card Header - Dropdown -->
       <div class="card-header py-3">
         <h6 class="m-0 font-weight-bold text-primary">Bonus 5</h6>
-<<<<<<< HEAD
       </div>
       <!-- Card Body -->
       <div class="card-body">
@@ -1037,22 +1019,6 @@ if ( !isset($_SESSION['user_login']) ||
           </div>
         </div>
       </div>
-=======
-      </div>
-      <!-- Card Body -->
-      <div class="card-body">
-        <div class="card3">
-          <img src="img/tv.jpg" alt="Avatar" style="width:100%; border-radius: 27px 27px 0px 0px;">
-          <div class="centered"><span class="currDate"></span></div>
-          <div class="container">
-              <h5><b>Televisi</b></h5>
-              <p>2000 Follower
-              <div class="my-4 text-right"><a href="https://foto.tempo.co/read/67259/jokowi-sampaikan-pidato-di-forum-ekonomi-dunia-asean" target="blank">Tukar</a></div>
-              </p>
-          </div>
-        </div>
-      </div>
->>>>>>> test
   
       
     </div>

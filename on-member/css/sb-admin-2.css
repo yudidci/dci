@@ -791,25 +791,15 @@ form.example input[type=text] {
 
 .tengah {
   margin-left: -191px;
-<<<<<<< HEAD
-  margin-top: 3px;
-=======
   margin-top: 28px;
->>>>>>> test
   color: black;
   height: 47px;
 }
 
 .s008 form .inner-form .input-field .kiri {
-<<<<<<< HEAD
-  margin-top: -3px;
-  margin-left: -77px;
-  width: 59px;
-=======
     margin-top: 15px;
     margin-left: -73px;
     width: 71px;
->>>>>>> test
   font-size: 18px;
   color: #666;
   height: 51px;
@@ -912,11 +902,7 @@ button {
   background: #4e73df !important;
   color: white;
   margin-left: 5px;
-<<<<<<< HEAD
-  width: 289px;
-=======
   width: 291px;
->>>>>>> test
   height: 30px;
   margin-bottom: 10px;
   border-radius: 3px;
@@ -1005,8 +991,6 @@ p.judul {
   margin-bottom: 58px;
 }
 
-<<<<<<< HEAD
-=======
 .row2 {
   display: flex;
   flex-wrap: wrap;
@@ -1017,7 +1001,6 @@ p.judul {
   margin-bottom: 110px;
 }
 
->>>>>>> test
 .no-gutters {
   margin-right: 0;
   margin-left: 0;
