@@ -849,6 +849,18 @@ if ( !isset($_SESSION['user_login']) ||
         <div class="card shadow mb-4">
           <div class="card-header py-3">
             <h6 class="m-0 font-weight-bold text-primary"><?=$_SESSION['followers'];?> Follower</h6>
+           
+
+            <?php
+              $followers = $_SESSION['followers'];
+            if ($followers < "5") {
+              echo "<p>Peringkat anda adalah Warga</p>"; 
+            }
+            else { 
+              echo "<p>Peringkat anda adalah RT</p>";
+            }
+            ?>
+            
           </div>
           <div class="card-body">
           <div style="overflow-x:auto;">
