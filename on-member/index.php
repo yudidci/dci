@@ -64,20 +64,8 @@
       <!-- Nav Item - Dashboard -->
       <li class="nav-item active">
         <a class="nav-link" href="./../index.php">
-<<<<<<< HEAD
-          <i class="fas fa-fw fa-tachometer-alt"></i>
-          <span>Dashboard</span></a>
-      </li>
-
-      <!-- Nav Item - Charts -->
-      <li class="nav-item">
-        <a class="nav-link" id="klikpoint-" href="#klikpoint-">
-          <i class="fa fa-filter"></i>
-          <span>Filter</span></a>
-=======
         <i class="fa fa-filter"></i>
           <span>Filter Member</span></a>
->>>>>>> test
       </li>
 
                   <!-- Nav Item - Tables -->
@@ -162,15 +150,6 @@
               </a>
               <!-- Dropdown - User Information -->
               <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
-<<<<<<< HEAD
-                <a class="dropdown-item" id="klikidentitas-" href="#klikidentitas-">
-                  <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
-                  Edit Profile
-                </a>
-       
-                <div class="dropdown-divider"></div>
-=======
->>>>>>> test
                 <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
                   <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
                   Logout
@@ -190,15 +169,6 @@
           <h1 class="h3 mb-2 text-gray-800">Data Member</h1>
           </div>
             <div class="row">
-<<<<<<< HEAD
-              
-  
- 
-  
-
-
-=======
->>>>>>> test
               <!-- Earnings (Monthly) Card Example -->
               <div class="col-xl-4 col-md-6 mb-4">
                 <div class="card border-left-primar shadow h-100 py-2">
@@ -256,88 +226,6 @@
                   </div>
                 </div>
               </div>
-<<<<<<< HEAD
-
-            </div>
-               
-            <div class="row">
-  
-              <!-- Area Chart -->
-              <div class="col-xl-12 col-lg-7">
-                <div class="card shadow mb-4">
-                  <!-- Card Header - Dropdown -->
-                  <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                    <h3 class="osco-title">PROGRAM OSCO</h3>
-                    <div class="dropdown no-arrow">
-                    </div>
-                  </div>
-                  <!-- Card Body -->
-                  <div class="card-body">
-                  <div class="container">
-      <div class="row">
-        <div class="col-lg-12 col-md-12 osco-program-box">
-          <div class="mu-features-area">
-            <!-- Start Title -->
-            <!-- End Title -->
-            <!-- Start features content -->
-            <div class="mu-features-content">
-              <div class="row">
-
-                <div class=" col-sm-12 text-center">
-                  <div class="mu-single-feature">
-
-                    <div class="row">
-                      <div class="col-sm-4 icon-box">
-                        <img src="./img/iconPendidikanVokasi.png" alt="img" style="width: 35%; ">
-                        <h5>Pendidikan Vokasi</h5>
-                      </div>
-                      <div class="col-sm-4 icon-box">
-                        <img src="./img/iconIndusKesehatan.png" alt="img" style="width: 35%; ">
-                        <h5>Industrialisasi Kesehatan</h5>
-                      </div>
-                      <div class="col-sm-4 icon-box">
-                        <img src="./img/iconPelatihanKewira.png" alt="img" style="width: 35%; ">
-                        <h5>Pelatihan Kewirausahaan</h5>
-                      </div>
-                    </div>
-                    <div class="row" style="margin-top: 65px;">
-                      <div class="col-sm-4 icon-box">
-                        <img src="./img/iconPameranSeni.png" alt="img" style="width: 35%; ">
-                        <h5>Pameran Seni Budaya</h5>
-                      </div>
-                      <div class="col-sm-4 icon-box">
-                        <img src="./img/iconPelatihanAtlet.png" alt="img" style="width: 35%; ">
-                        <h5>Pelatihan Atlet</h5>
-                      </div>
-                      <div class="col-sm-4 icon-box">
-                        <img src="./img/iconSportTour.png" alt="img" style="width: 35%; ">
-                        <h5>Sport Tourism</h5>
-                      </div>
-                    </div>
-                    <br>
-
-
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- End features content -->
-          </div>
-        </div>
-      </div>
-    </div>
-                  </div>
-                </div>
-              </div>
-              
-
-
-      </div>
-      <!-- End of Main Content -->   
-
-      <div  id="identitas">
-        <div class="container-fluid">
-=======
               
 
             </div>
@@ -473,7 +361,6 @@
                 </div>
 
 
->>>>>>> test
   
           <!-- Page Heading -->
           <h1 class="h3 mb-4 text-gray-800">Identitas</h1>
@@ -679,90 +566,8 @@
      <div class="row">
         <div class="row">
 
-<<<<<<< HEAD
-          <div class="col-lg-7">
-
-            <!-- Default Card Example -->
-            <div class="card mb-4">
-              <div class="card-header">
-              <h3 class="osco-visi">VISI</h3>
-              </div>
-              <div class="card-body">
-                <p class="impact">"Terwujudnya Batam Bermatabat yang kuat, berdaulat, mandiri, inovatif dan berkepribadian, 
-                  belandaskan gotong-royong dengan semangat baru untuk berkarya"..
-                </p>
-              </div>
-            </div>
-
-            <!-- Basic Card Example -->
-            <div class="card shadow mb-4">
-              <div class="card-header py-3">
-                <h3 class="osco-visi">MISI</h3>
-              </div>
-              <div class="card-body">
-              <p class="impact">✓ Meningkatkan Kualitas Sumber Daya Manusia<p>
-              <p class="impact"> ✓ Mengembangkan Sistem Pendidikan dan Kesehatan yang Modern</p>
-              <p class="impact">✓ Memajukan Kualitas dan Kuantitas Industri dan Dunia Usaha</p>
-              <p class="impact">✓ Menjaga Kesetaraan Gender dan pemberdayaan Perempuan</p>
-              <p class="impact">✓ Mengedepankan Kebijikan Tata Ruang yang Terintegrasi</p>
-              <p class="impact">✓ Mendorong Kemajuan Seni Budaya dan Pariwsata</p>
-              <p class="impact">✓ Meningkatkan Prestasi Olah Raga</p>
-              <img src="./img/sahabatosco.jpg" class="img-fluid" alt="">
-              <h5 class="osco-future">"HARAPAN BATAM PERJUANGAN OSCO"</h5>
-              </div>
-            </div>
-
-          </div>
-
-          <div class="col-lg-5">
-
-            <!-- Dropdown Card Example -->
-            <div class="card shadow mb-4">
-              <!-- Card Header - Dropdown -->
-              <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-              <h2 class="mu-title">Profile Osco</h2>
-              </div>
-              <!-- Card Body -->
-              <div class="card-body">
-              <h5 class="osco">Osco Olfriady Letunggamu, M.Sc.</h5>
-              <p class="impact">CALON WAKIL WALIKOTA BATAM 2020</p>
-              <img src="./img/osco-puasa.jpg" class="img-fluid" alt="">
-              <p class="impac">✓ Warga Batam dan mempunyai KTP Batam.</p>
-              <p class="impac">✓ Lulusan tercepat di Jerman, lulus Sarjana dalam 2 tahun 3 bulan.</p>
-              <p class="impac">✓ Ketua Komite Eropa & Rusia KADIN Indonesia.</p>
-              <p class="impac">✓ Wakil Ketua KADIN Indonesia Bidang Ekonomi dan Industri Kreatif.</p>
-              <p class="impac">✓ Executive Advisior Indonesia Business Council NSW Australia.</p>
-              <p class="impac">✓ Senior Advisor Indonesia Diaspora Network Australia.</p>
-              <p class="impac">✓ Dewan Ahli IKRAR</p>
-              <p class="impac">✓ Bendahara Umum Equestrian Indonesia Raya EQUINARA</p>
-              <p class="impac">✓ Wakil Bendahara Umum Persatuan Olahraga Berkuda Indonesia</p>
-              <p class="impac">✓ Wakil Bendahara Umum Persatuan Olahraga Berkuda Indonesia</p>
-              <p class="impac">✓ Wakil Bendahara Umum Persatuan Olahraga Berkuda Indonesia</p>
-              <p class="impac">✓ Wakil Bendahara Umum Persatuan Olahraga Berkuda Indonesia</p>
-              <p class="impac">✓ Ketua Umum Perhimpunan Alumni Jerman.</p>
-              <p class="slogan">"SEMANGAT BARU UNTUK BERKARYA"</p>
-              </div>
-            </div>
-
-           
-
-        </div>
-
-      </div>
-      <!-- /.container-fluid -->
-
-    </div>
-      </div>
-      </div>
-  
-
 
 <div class="container-fluid" id="follower">
-<!-- Page Heading -->
-=======
-
-<div class="container-fluid" id="follower">
->>>>>>> test
 <h1 class="h3 mb-2 text-gray-800">Edit Batas Follower</h1>
 <!-- DataTales Example -->
 
@@ -900,27 +705,6 @@
   <div class="col-xl-4 col-lg-7">
     <!-- Area Chart -->
 
-<<<<<<< HEAD
-  <div class="row">
-    <div class="input-field">
-      <div class="tengah2">
-        <h4>Batas Bawah</h4>
-      </div>
-    </div>
-    <div class="input-field">
-      <div class="input-select">
-        <input type="text" id="search-text" class="form-control" onkeypress="return hanyaAngka(event) "aria-label="Recipient's username" aria-describedby="button-addon2">
-      </div>
-    </div>
-    <div class="input-field">
-      <div class="tengah">
-       <h4>Batas Atas</h4>
-      </div>
-    </div>
-    <div class="input-field">
-      <div class="kiri">
-        <input type="text" id="search-text2" class="form-control" onkeypress="return hanyaAngka(event) "aria-label="Recipient's username" aria-describedby="button-addon2">
-=======
     <div class="card shadow mb-4">
     <div class="card-header py-3">
         <h6 class="m-0 font-weight-bold text-primary">Bonus 1</h6>
@@ -933,7 +717,6 @@
   <input class="submit" type="submit">
 </form> 
 
->>>>>>> test
       </div>
 
       <div class="card shadow mb-4">
@@ -980,60 +763,15 @@
 </div>
 </div>
 
-<<<<<<< HEAD
-<div class="advance-search">
-<span class="desc">List Member :<button class="button3" type="button" id="btn-tingkatan"><span> Lihat
-    Semua</span></button>
-
-
-<div class="row" id="movie-list">
-  <div class="col-md-4 mb-3 nikKota">
-  </div>
-  <div class="row" id="camat-list">
-    <div class="col-md-4 mb-3 nikCamat">
-    </div>
-    <div class="row" id="lurah-list">
-      <div class="col-md-4 mb-3 nikLurah">
-      </div>
-      <div class="row" id="RW-list">
-        <div class="col-md-4 mb-3 nikRW">
-        </div>
-        <div class="row" id="RT-list">
-          <div class="col-md-4 mb-3 nikRT">
-          </div>
-          <div class="row" id="warga-list">
-            <div class="col-md-4 mb-3 nikWarga">
-            </div>
-            <div class="row" id="tingkatan-list">
-              <div class="col-md-4 mb-3 nikTingkatan">
-              </div>
-              <div class="row" id="filter-list">
-                <div class="col-md-4 mb-3 filterList">
-                </div>
-
-                <div class="row" id="follower-list">
-                  <div class="col-md-4 mb-3 followerList">
-                  </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        </div>
-
-=======
   <!-- Donut Chart -->
   <div class="col-xl-4 col-lg-5">
     <div class="card shadow mb-4">
       <!-- Card Header - Dropdown -->
       <div class="card-header py-3">
         <h6 class="m-0 font-weight-bold text-primary">Bonus 5</h6>
->>>>>>> test
       </div>
       <!-- Card Body -->
     
-<<<<<<< HEAD
-    <!-- End of Footer -->
-=======
       <form action="/action_page.php">
   <label  class="editpoin" for="fname">Edit deskripsi :</label>
   <input  class="editinput" type="text" id="fname" name="fname" value="Sebako 1"><br>
@@ -1060,7 +798,6 @@
     
         
       </div>
->>>>>>> test
 
   </div>
 
@@ -1099,17 +836,6 @@
       </div>
     </div>
   </div>
-<<<<<<< HEAD
-
-  <script src="assets/script.js"></script>
-
-  <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
-  <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
-  <script src='https://kit.fontawesome.com/a076d05399.js'></script>
-  
-=======
->>>>>>> test
 
 
 
@@ -1137,49 +863,6 @@
     <script src="js/demo/datatables-demo.js"></script>
     <script src="../on-admin/js/dataklik.js"></script>
 
-<<<<<<< HEAD
-      <!-- button modal -->
-  <script>
-    // Get the modal
-    var modal = document.getElementById("myModal");
-
-    // Get the button that opens the modal
-    var btn = document.getElementById("myBtn");
-
-    // Get the <span> element that closes the modal
-    var span = document.getElementsByClassName("close")[0];
-
-    // When the user clicks the button, open the modal 
-    btn.onclick = function () {
-      modal.style.display = "block";
-    }
-
-    // When the user clicks on <span> (x), close the modal
-    span.onclick = function () {
-      modal.style.display = "none";
-    }
-
-    // When the user clicks anywhere outside of the modal, close it
-    window.onclick = function (event) {
-      if (event.target == modal) {
-        modal.style.display = "none";
-      }
-    }
-  </script>
-
-    <script>
-    function hanyaAngka(evt) {
-      var charCode = (evt.which) ? evt.which : event.keyCode
-      if (charCode > 31 && (charCode < 48 || charCode > 57))
-
-        return false;
-      return true;
-    }
-  </script>
-
-</div>
-
-=======
   <!-- Bootstrap core JavaScript-->
   <script src="vendor/jquery/jquery.min.js"></script>
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -1196,7 +879,6 @@
 
 
           <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
->>>>>>> test
 
 
           <script src="../on-member/js/script.js"></script>
