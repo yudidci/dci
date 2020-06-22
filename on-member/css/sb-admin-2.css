@@ -210,10 +210,6 @@ svg {
   vertical-align: middle;
 }
 
-table {
-  border-collapse: collapse;
-}
-
 caption {
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
@@ -693,7 +689,7 @@ pre code {
  .btn-search {
   width: 184px;
   height: 42px;
-  margin-left: -206px;
+  margin-left: -205px;
   padding: 0 15px;
   background: #ffcc28;
   white-space: nowrap;
@@ -704,6 +700,32 @@ pre code {
   border: 0;
   cursor: pointer;
   font-weight: bold;
+}
+
+table {
+  border-collapse: collapse;
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  width: 106%;
+  margin: 0 auto;
+  border: 1px solid #999;
+}
+
+table, td {
+    border: 1px solid #999;
+    padding: 8px 20px;
+}
+
+thead {
+  color: white;
+  font-size: 13px;
+}
+
+table thead tr {
+  height: 60px;
+  background: #36304a;
+  border: 1px solid #999;
 }
 
 
@@ -731,8 +753,8 @@ form.example input[type=text] {
   background: #f1f1f1;
 }
 .s008 form .inner-form .input-field input {
-  margin-left: -186px;
-  width: 381%;
+  margin-left: -176px;
+  width: 305%;
   font-size: 18px;
   height: 41px;
   color: #555;
@@ -769,15 +791,25 @@ form.example input[type=text] {
 
 .tengah {
   margin-left: -191px;
+<<<<<<< HEAD
   margin-top: 3px;
+=======
+  margin-top: 28px;
+>>>>>>> test
   color: black;
   height: 47px;
 }
 
 .s008 form .inner-form .input-field .kiri {
+<<<<<<< HEAD
   margin-top: -3px;
   margin-left: -77px;
   width: 59px;
+=======
+    margin-top: 15px;
+    margin-left: -73px;
+    width: 71px;
+>>>>>>> test
   font-size: 18px;
   color: #666;
   height: 51px;
@@ -786,7 +818,7 @@ form.example input[type=text] {
 
 .tengah2 {
   margin-left: 61px;
-  margin-top: -4px;
+  margin-top: 18px;
   font-size: 18px;
   color: black;
   height: 41px;
@@ -795,13 +827,15 @@ form.example input[type=text] {
 .input-select {
   height: 40px;
   margin-top: -16px;
+  margin-bottom: -19px;
 }
 
 .advance-search {
   background: linear-gradient(to bottom, rgb(255, 255, 255), rgba(255, 255, 255, 0.73));
-  padding: 4px;
+  padding: 20px;
   border-radius: 5px;
   margin-top: 10px;
+
   box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.15);
 }
 
@@ -861,7 +895,7 @@ form.example input[type=text] {
   justify-content: space-between;
   -ms-flex-align: center;
   align-items: center;
-  margin-bottom: 16px;
+  margin-bottom: -8px;
   margin-right: 3.25rem !important;
   margin-left: -0.75rem !important;
 }
@@ -878,7 +912,11 @@ button {
   background: #4e73df !important;
   color: white;
   margin-left: 5px;
+<<<<<<< HEAD
   width: 289px;
+=======
+  width: 291px;
+>>>>>>> test
   height: 30px;
   margin-bottom: 10px;
   border-radius: 3px;
@@ -887,6 +925,42 @@ button {
 
 .updt-follower:hover {
   background: #3652a5 !important;
+}
+
+.editpoin{
+  margin-left: 11px;
+  font-size: 16px;
+  margin-top: 19px;
+}
+
+.editpoin1{
+  margin-left: 8px;
+  font-size: 16px;
+  margin-top: 19px;
+}
+
+.editinput{
+  overflow: visible;
+  margin-left: 1px;
+  font-size: 16px;
+  width: 171px;
+  height: 27px;
+}
+
+.editfile{
+  overflow: visible;
+  margin-left: 14px;
+  font-size: 12px;
+  width: 183px;
+  height: 24px;
+}
+
+.submit {
+  margin-left: 9px;
+  font-size: 12px;
+  width: 85px;
+  height: 24px;
+  margin-bottom: 10px;
 }
 
 input {
@@ -931,6 +1005,19 @@ p.judul {
   margin-bottom: 58px;
 }
 
+<<<<<<< HEAD
+=======
+.row2 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-right: -0.75rem;
+  margin-left: -0.75rem;
+  margin-bottom: 58px;
+  margin-bottom: 110px;
+}
+
+>>>>>>> test
 .no-gutters {
   margin-right: 0;
   margin-left: 0;
@@ -1726,18 +1813,11 @@ p.judul {
    margin-top: 3%;;
 }
 
-.table {
-  width: 100%;
-  margin-bottom: 1rem;
-  color: black;
-}
+
 
 .table th,
 .table td {
-  padding: 0.75rem;
-  vertical-align: top;
-  border-top: 1px solid black;
-  color: black;
+  text-align: left;
 }
 
 .table thead th {
@@ -2668,6 +2748,8 @@ fieldset:disabled a.btn {
   color: #fff;
   background-color: #858796;
   border-color: #858796;
+  width: 342px;
+  height: 26px;
 }
 
 .btn-secondary:hover {
@@ -10089,6 +10171,8 @@ a.text-dark:hover, a.text-dark:focus {
   .table td,
   .table th {
     background-color: #fff !important;
+    padding-left: 8px;
+    color: white;
   }
   .table-bordered th,
   .table-bordered td {

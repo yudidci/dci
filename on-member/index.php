@@ -1,13 +1,17 @@
-<?php
-session_start();
 
-if ( !isset($_SESSION['user_login']) || 
-    ( isset($_SESSION['user_login']) && $_SESSION['user_login'] != 'member' ) ) {
+<!DOCTYPE html>
+<html>
 
-	header('location:./../login.php');
-	exit();
-}
-?>
+  <?php
+  session_start();
+  
+  if ( !isset($_SESSION['user_login']) || 
+      ( isset($_SESSION['user_login']) && $_SESSION['user_login'] != 'member' ) ) {
+  
+    header('location:./../login.php');
+    exit();
+  }
+  ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -38,7 +42,6 @@ if ( !isset($_SESSION['user_login']) ||
   <link href="vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
 
 </head>
-
 <body id="page-top">
 
   <!-- Page Wrapper -->
@@ -61,6 +64,7 @@ if ( !isset($_SESSION['user_login']) ||
       <!-- Nav Item - Dashboard -->
       <li class="nav-item active">
         <a class="nav-link" href="./../index.php">
+<<<<<<< HEAD
           <i class="fas fa-fw fa-tachometer-alt"></i>
           <span>Dashboard</span></a>
       </li>
@@ -70,6 +74,10 @@ if ( !isset($_SESSION['user_login']) ||
         <a class="nav-link" id="klikpoint-" href="#klikpoint-">
           <i class="fa fa-filter"></i>
           <span>Filter</span></a>
+=======
+        <i class="fa fa-filter"></i>
+          <span>Filter Member</span></a>
+>>>>>>> test
       </li>
 
                   <!-- Nav Item - Tables -->
@@ -78,6 +86,12 @@ if ( !isset($_SESSION['user_login']) ||
                 <i class="fas fa-sort-numeric-up"></i>
                 <span>Batas Follower</span></a>
             </li>
+
+            <li class="nav-item">
+        <a class="nav-link" id="klikpoint-" href="#klikpoint-">
+          <i class="fa fa-cog fa-spin"></i>
+          <span>Edit Poin</span></a>
+      </li>
 
       <li class="nav-item">
         <a class="nav-link" href="#" data-toggle="modal" data-target="#logoutModal">
@@ -139,32 +153,6 @@ if ( !isset($_SESSION['user_login']) ||
 
         
 
-            <!-- Nav Item - Messages -->
-            <!-- <li class="nav-item dropdown no-arrow mx-1">
-              <a class="nav-link dropdown-toggle" href="#" id="messagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <i class="fas fa-envelope fa-fw"></i>
-         
-                <span class="badge badge-danger badge-counter">1</span>
-              </a>
-  
-              <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="messagesDropdown">
-                <h6 class="dropdown-header">
-                  Message Center
-                </h6>
-                <a class="dropdown-item d-flex align-items-center" href="#">
-                  <div class="dropdown-list-image mr-3">
-                    <img class="rounded-circle" src="https://source.unsplash.com/fn_BT9fwg_E/60x60" alt="">
-                    <div class="status-indicator bg-success"></div>
-                  </div>
-                  <div class="font-weight-bold">
-                    <div class="text-truncate">Hi there! Test </div>
-                    <div class="small text-gray-500">Emily Fowler · 58m</div>
-                  </div>
-                </a>
-                <a class="dropdown-item text-center small text-gray-500" href="#">Read More Messages</a>
-              </div>
-            </li> -->
-
             <div class="topbar-divider d-none d-sm-block"></div>
 
             <!-- Nav Item - User Information -->
@@ -174,12 +162,15 @@ if ( !isset($_SESSION['user_login']) ||
               </a>
               <!-- Dropdown - User Information -->
               <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
+<<<<<<< HEAD
                 <a class="dropdown-item" id="klikidentitas-" href="#klikidentitas-">
                   <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
                   Edit Profile
                 </a>
        
                 <div class="dropdown-divider"></div>
+=======
+>>>>>>> test
                 <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
                   <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
                   Logout
@@ -196,15 +187,18 @@ if ( !isset($_SESSION['user_login']) ||
         <div class="container-fluid" id="dashboard">
           <!-- Page Heading -->
           <div class="d-sm-flex align-items-center justify-content-between mb-4">
-            <h1 class="h3 mb-0 text-gray-800">Dashboard</h1>
+          <h1 class="h3 mb-2 text-gray-800">Data Member</h1>
           </div>
             <div class="row">
+<<<<<<< HEAD
               
   
  
   
 
 
+=======
+>>>>>>> test
               <!-- Earnings (Monthly) Card Example -->
               <div class="col-xl-4 col-md-6 mb-4">
                 <div class="card border-left-primar shadow h-100 py-2">
@@ -262,6 +256,7 @@ if ( !isset($_SESSION['user_login']) ||
                   </div>
                 </div>
               </div>
+<<<<<<< HEAD
 
             </div>
                
@@ -342,6 +337,143 @@ if ( !isset($_SESSION['user_login']) ||
 
       <div  id="identitas">
         <div class="container-fluid">
+=======
+              
+
+            </div>
+
+
+
+
+<div class="s008">
+
+<form>
+
+<!-- <a class="navbar-brand">CARI NIK BERDASARKAN TINGKATAN</a> -->
+<div class="inner-form">
+
+<div class="advance">
+<div class="advance-search">
+  <div class="row">
+    <div class="input-field">
+      <div class="tengah2">
+        <h5> Batas Bawah <i class="fas fa-sort-numeric-down"> </i></h5>
+      </div>
+    </div>
+    <div class="input-field">
+      <div class="input-select">
+        <input type="text" id="search-text" class="form-control" onkeypress="return hanyaAngka(event) "aria-label="Recipient's username" aria-describedby="button-addon2">
+      </div>
+    </div>
+    <div class="input-field">
+      <div class="tengah">
+       <h5> Batas Atas <i class="fas fa-sort-numeric-up"> </i></h5>
+      </div>
+    </div>
+    <div class="input-field">
+      <div class="kiri">
+        <input type="text" id="search-text2" class="form-control" onkeypress="return hanyaAngka(event) "aria-label="Recipient's username" aria-describedby="button-addon2">
+      </div>
+    </div>
+    <div class="input-field">
+      <div class="input-select">
+        <button type="button" class="btn-search" id="btn-detail">Search</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- search -->
+        <form class="example">
+          <input type="text" id="search-text3" class="form-control" onkeypress="return hanyaAngka(event)"placeholder="Masukan Referral Number" aria-label="Recipient's username" aria-describedby="button-addon2">
+          <!-- <button type="button" id="btn-follower"><i class="fa fa-search"></i></button> -->
+          <button type="button" class="btn-follower" id="btn-follower">Search</button>
+        </form>
+
+
+
+
+        
+
+<!-- end dropdown menu here -->
+
+
+<div class="basic-search">
+<div align="center">
+<button class="btn btn-primary ml-2" type="button" id="btn-search">Filter NIK Kota <i class="fa fa-search"></i></button>
+<button class="btn btn-primary ml-2" type="button" id="btn-camat">Filter NIK Camat <i
+    class="fa fa-search"></i></button>
+<button class="btn btn-primary ml-2" type="button" id="btn-lurah">Filter NIK Lurah <i
+    class="fa fa-search"></i></button>
+<button class="btn btn-primary ml-2" type="button" id="btn-RW">Filter NIK RW <i
+    class="fa fa-search"></i></button>
+<button class="btn btn-primary ml-2" type="button" id="btn-RT">Filter NIK RT <i
+    class="fa fa-search"></i></button>
+<button class="btn btn-primary ml-2" type="button" id="btn-warga">Filter NIK Warga <i
+    class="fa fa-search"></i></button>
+</div>
+</div>
+
+<span class="desc">List Member :<button class="button3" type="button" id="btn-tingkatan"><span> Lihat
+    Semua</span></button>
+
+
+<div class="row" id="movie-list">
+  <div class="col-md-4 mb-3 nikKota">
+  </div>
+  <div class="row" id="camat-list">
+    <div class="col-md-4 mb-3 nikCamat">
+    </div>
+    <div class="row" id="lurah-list">
+      <div class="col-md-4 mb-3 nikLurah">
+      </div>
+      <div class="row" id="RW-list">
+        <div class="col-md-4 mb-3 nikRW">
+        </div>
+        <div class="row" id="RT-list">
+          <div class="col-md-4 mb-3 nikRT">
+          </div>
+          <div class="row" id="warga-list">
+            <div class="col-md-4 mb-3 nikWarga">
+            </div>
+            <div class="row" id="tingkatan-list">
+              <div class="col-md-4 mb-3 nikTingkatan">
+              </div>
+              <div class="row" id="filter-list">
+                <div class="col-md-4 mb-3 filterList">
+                </div>
+
+                <div class="row" id="follower-list">
+                  <div class="col-md-4 mb-3 followerList">
+                  </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        </div>
+
+      </div>
+    </div>
+    </form>
+
+    
+    
+    <!-- End of Footer -->
+
+  </div>
+ 
+  <!-- End of Content Wrapper -->
+
+</div>
+</div>
+</div>
+</div>
+</div>
+               
+
+                </div>
+
+
+>>>>>>> test
   
           <!-- Page Heading -->
           <h1 class="h3 mb-4 text-gray-800">Identitas</h1>
@@ -547,6 +679,7 @@ if ( !isset($_SESSION['user_login']) ||
      <div class="row">
         <div class="row">
 
+<<<<<<< HEAD
           <div class="col-lg-7">
 
             <!-- Default Card Example -->
@@ -626,9 +759,12 @@ if ( !isset($_SESSION['user_login']) ||
 
 <div class="container-fluid" id="follower">
 <!-- Page Heading -->
+=======
+
+<div class="container-fluid" id="follower">
+>>>>>>> test
 <h1 class="h3 mb-2 text-gray-800">Edit Batas Follower</h1>
 <!-- DataTales Example -->
-<div class="advance">
 
         <div class="row1">
         <div class="card1">
@@ -751,19 +887,20 @@ if ( !isset($_SESSION['user_login']) ||
 </div>
 </div>
 
+      
+  
 <div class="container-fluid" id="point">
 
 <!-- Page Heading -->
-<h1 class="h3 mb-2 text-gray-800">Filter Member</h1>
-<div class="s008">
+<h1 class="h3 mb-2 text-gray-800">Edit Poin</h1>
 
-<form>
+<!-- Content Row -->
+<div class="row2">
 
-<!-- <a class="navbar-brand">CARI NIK BERDASARKAN TINGKATAN</a> -->
-<div class="inner-form">
+  <div class="col-xl-4 col-lg-7">
+    <!-- Area Chart -->
 
-<div class="advance">
-
+<<<<<<< HEAD
   <div class="row">
     <div class="input-field">
       <div class="tengah2">
@@ -783,48 +920,67 @@ if ( !isset($_SESSION['user_login']) ||
     <div class="input-field">
       <div class="kiri">
         <input type="text" id="search-text2" class="form-control" onkeypress="return hanyaAngka(event) "aria-label="Recipient's username" aria-describedby="button-addon2">
+=======
+    <div class="card shadow mb-4">
+    <div class="card-header py-3">
+        <h6 class="m-0 font-weight-bold text-primary">Bonus 1</h6>
       </div>
-    </div>
-    <div class="input-field">
-      <div class="input-select">
-        <button type="button" class="btn-search" id="btn-detail">Search</button>
+      <form action="/action_page.php">
+  <label  class="editpoin" for="fname">Edit deskripsi :</label>
+  <input  class="editinput" type="text" id="fname" name="fname" value="Sebako 1"><br>
+  ​ <label  class="editpoin1" for="fname">Edit Photo            :</label>
+   <input class="editfile" type="file" id="myFile" name="filename">
+  <input class="submit" type="submit">
+</form> 
+
+>>>>>>> test
       </div>
-    </div>
+
+      <div class="card shadow mb-4">
+    <div class="card-header py-3">
+        <h6 class="m-0 font-weight-bold text-primary">Bonus 4</h6>
+      </div>
+      <form action="/action_page.php">
+  <label  class="editpoin" for="fname">Edit deskripsi :</label>
+  <input  class="editinput" type="text" id="fname" name="fname" value="Sebako 1"><br>
+  ​ <label  class="editpoin1" for="fname">Edit Photo            :</label>
+   <input class="editfile" type="file" id="myFile" name="filename">
+  <input class="submit" type="submit">
+</form> 
+  </div>
   </div>
 
-  <!-- search -->
-        <form class="example">
-          <input type="text" id="search-text3" class="form-control" onkeypress="return hanyaAngka(event)"placeholder="Masukan Referral Number" aria-label="Recipient's username" aria-describedby="button-addon2">
-          <!-- <button type="button" id="btn-follower"><i class="fa fa-search"></i></button> -->
-          <button type="button" class="btn-follower" id="btn-follower">Search</button>
-        </form>
-
-
-
+  <div class="col-xl-4 col-lg-7">
+<!-- Area Chart -->
+<div class="card shadow mb-4">
+<div class="card-header py-3">
+<h6 class="m-0 font-weight-bold text-primary">Bonus 2</h6>
 </div>
 
-        
-
-<!-- end dropdown menu here -->
-
-
-<div class="basic-search">
-<div align="center">
-<button class="btn btn-primary ml-2" type="button" id="btn-search">Filter NIK Kota <i class="fa fa-search"></i></button>
-<button class="btn btn-primary ml-2" type="button" id="btn-camat">Filter NIK Camat <i
-    class="fa fa-search"></i></button>
-<button class="btn btn-primary ml-2" type="button" id="btn-lurah">Filter NIK Lurah <i
-    class="fa fa-search"></i></button>
-<button class="btn btn-primary ml-2" type="button" id="btn-RW">Filter NIK RW <i
-    class="fa fa-search"></i></button>
-<button class="btn btn-primary ml-2" type="button" id="btn-RT">Filter NIK RT <i
-    class="fa fa-search"></i></button>
-<button class="btn btn-primary ml-2" type="button" id="btn-warga">Filter NIK Warga <i
-    class="fa fa-search"></i></button>
+<form action="/action_page.php">
+  <label  class="editpoin" for="fname">Edit deskripsi :</label>
+  <input  class="editinput" type="text" id="fname" name="fname" value="Sebako 1"><br>
+  ​ <label  class="editpoin1" for="fname">Edit Photo            :</label>
+   <input class="editfile" type="file" id="myFile" name="filename">
+  <input class="submit" type="submit">
+</form> 
 </div>
+
+<div class="card shadow mb-4">
+<div class="card-header py-3">
+<h6 class="m-0 font-weight-bold text-primary">Bonus 5</h6>
+</div>
+<form action="/action_page.php">
+  <label  class="editpoin" for="fname">Edit deskripsi :</label>
+  <input  class="editinput" type="text" id="fname" name="fname" value="Sebako 1"><br>
+  ​ <label  class="editpoin1" for="fname">Edit Photo            :</label>
+   <input class="editfile" type="file" id="myFile" name="filename">
+  <input class="submit" type="submit">
+</form> 
 </div>
 </div>
 
+<<<<<<< HEAD
 <div class="advance-search">
 <span class="desc">List Member :<button class="button3" type="button" id="btn-tingkatan"><span> Lihat
     Semua</span></button>
@@ -864,23 +1020,61 @@ if ( !isset($_SESSION['user_login']) ||
         </div>
         </div>
 
+=======
+  <!-- Donut Chart -->
+  <div class="col-xl-4 col-lg-5">
+    <div class="card shadow mb-4">
+      <!-- Card Header - Dropdown -->
+      <div class="card-header py-3">
+        <h6 class="m-0 font-weight-bold text-primary">Bonus 5</h6>
+>>>>>>> test
       </div>
-    </div>
-    </form>
+      <!-- Card Body -->
     
+<<<<<<< HEAD
     <!-- End of Footer -->
+=======
+      <form action="/action_page.php">
+  <label  class="editpoin" for="fname">Edit deskripsi :</label>
+  <input  class="editinput" type="text" id="fname" name="fname" value="Sebako 1"><br>
+  ​ <label  class="editpoin1" for="fname">Edit Photo            :</label>
+   <input class="editfile" type="file" id="myFile" name="filename">
+  <input class="submit" type="submit">
+</form> 
+  
+      
+    </div>
+      <div class="card shadow mb-4">
+        <!-- Card Header - Dropdown -->
+        <div class="card-header py-3">
+          <h6 class="m-0 font-weight-bold text-primary">Bonus 6</h6>
+        </div>
+        <!-- Card Body -->
+        <form action="/action_page.php">
+  <label  class="editpoin" for="fname">Edit deskripsi :</label>
+  <input  class="editinput" type="text" id="fname" name="fname" value="Sebako 1"><br>
+  ​ <label  class="editpoin1" for="fname">Edit Photo            :</label>
+   <input class="editfile" type="file" id="myFile" name="filename">
+  <input class="submit" type="submit">
+</form> 
+    
+        
+      </div>
+>>>>>>> test
 
   </div>
-  <!-- End of Content Wrapper -->
 
 </div>
 </div>
 </div>
 
- 
+</div>
 
-  </div>
-  <!-- End of Page Wrapper -->
+</div>
+          
+         
+
+ <!-- End of Page Wrapper -->
 
   <!-- Scroll to Top Button-->
   <a class="scroll-to-top rounded" href="#page-top">
@@ -905,6 +1099,7 @@ if ( !isset($_SESSION['user_login']) ||
       </div>
     </div>
   </div>
+<<<<<<< HEAD
 
   <script src="assets/script.js"></script>
 
@@ -913,22 +1108,17 @@ if ( !isset($_SESSION['user_login']) ||
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
   <script src='https://kit.fontawesome.com/a076d05399.js'></script>
   
+=======
+>>>>>>> test
 
-  <!-- Bootstrap core JavaScript-->
-  <script src="vendor/jquery/jquery.min.js"></script>
-  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
-  <!-- Core plugin JavaScript-->
-  <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
 
-  <!-- Custom scripts for all pages-->
-  <script src="js/sb-admin-2.min.js"></script>
+         
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+  <script src='https://kit.fontawesome.com/a076d05399.js'></script>
   
-
-  <!-- Page level plugins -->
-  <script src="vendor/chart.js/Chart.min.js"></script>
-
-  <!-- Page level custom scripts -->
   <script src="js/demo/chart-area-demo.js"></script>
   <script src="js/demo/chart-pie-demo.js"></script>
   <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
@@ -947,6 +1137,7 @@ if ( !isset($_SESSION['user_login']) ||
     <script src="js/demo/datatables-demo.js"></script>
     <script src="../on-admin/js/dataklik.js"></script>
 
+<<<<<<< HEAD
       <!-- button modal -->
   <script>
     // Get the modal
@@ -988,8 +1179,66 @@ if ( !isset($_SESSION['user_login']) ||
 
 </div>
 
+=======
+  <!-- Bootstrap core JavaScript-->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
-  <script>
+  <!-- Core plugin JavaScript-->
+  <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+  <!-- Custom scripts for all pages-->
+  <script src="js/sb-admin-2.min.js"></script>
+  
+
+  <!-- Page level plugins -->
+  <script src="vendor/chart.js/Chart.min.js"></script>
+
+
+          <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+>>>>>>> test
+
+
+          <script src="../on-member/js/script.js"></script>
+          <!-- button modal -->
+          <script>
+            // Get the modal
+            var modal = document.getElementById("myModal");
+
+            // Get the button that opens the modal
+            var btn = document.getElementById("myBtn");
+
+            // Get the <span> element that closes the modal
+            var span = document.getElementsByClassName("close")[0];
+
+            // When the user clicks the button, open the modal 
+            btn.onclick = function () {
+              modal.style.display = "block";
+            }
+
+            // When the user clicks on <span> (x), close the modal
+            span.onclick = function () {
+              modal.style.display = "none";
+            }
+
+            // When the user clicks anywhere outside of the modal, close it
+            window.onclick = function (event) {
+              if (event.target == modal) {
+                modal.style.display = "none";
+              }
+            }
+
+          <script>
+            function hanyaAngka(evt) {
+              var charCode = (evt.which) ? evt.which : event.keyCode
+              if (charCode > 31 && (charCode < 48 || charCode > 57))
+
+                return false;
+              return true;
+            }
+          </script>
+
+          <script>
     $(document).ready(function(){
     $("#klikidentitas").click(function(){
       $("#identitas").css("display","block")
@@ -1079,6 +1328,7 @@ if ( !isset($_SESSION['user_login']) ||
  })
 })
 </script>
+</body>
 </body>
 
 </html>
