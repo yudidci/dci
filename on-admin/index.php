@@ -887,8 +887,10 @@ if ( !isset($_SESSION['user_login']) ||
             <div class="centered"><span class="currDate"></span></div>
             <div class="container">
                 <h5><b>Beras 1 Karung</b></h5>
-                <p>1000 Follower
-                <div class="my-4 text-right"> <button class="button3">Tukar</button></div>
+                <p>10 Follower
+                <div class="my-4 text-right"> <input type="button" value="Tukar" <?php if ($_SESSION['followers'] < '10'){ ?> disabled <?php   }  ?> onclick="addtocart(<?php echo $_SESSION["followers"]?>)" /></div>
+                
+                <!-- <div class="my-4 text-right"> <button class="button3">Tukar</button></div> -->
                 </p>
             </div>
         </div>
@@ -906,7 +908,7 @@ if ( !isset($_SESSION['user_login']) ||
               <div class="container">
              <h5><b>Indomie 1 Kardus</b></h5>
            <p>800 Follower
-           <div class="my-4 text-right"> <button class="button3">Tukar</button></div>
+           <div class="my-4 text-right"> <input type="button" value="Tukar" <?php if ($_SESSION['followers'] < '800'){ ?> disabled <?php   }  ?> onclick="addtocart(<?php echo $_SESSION["followers"]?>)" /></div>
             </p>
           </div>
         </div>
@@ -928,7 +930,7 @@ if ( !isset($_SESSION['user_login']) ||
   <div class="container">
   <h5><b>Sembako2</b></h5>
     <p>400 Follower
-    <div class="my-4 text-right"> <button class="button3">Tukar</button></div>
+    <div class="my-4 text-right"> <input type="button" value="Tukar" <?php if ($_SESSION['followers'] < '400'){ ?> disabled <?php   }  ?> onclick="addtocart(<?php echo $_SESSION["followers"]?>)" /></div>
     </p>
 </div>
 </div>
@@ -946,7 +948,7 @@ if ( !isset($_SESSION['user_login']) ||
 <div class="container">
     <h5><b>Sembako 1</b></h5>
     <p>600 Follower
-    <div class="my-4 text-right"> <button class="button3">Tukar</button></div>
+    <div class="my-4 text-right"> <input type="button" value="Tukar" <?php if ($_SESSION['followers'] < '600'){ ?> disabled <?php   }  ?> onclick="addtocart(<?php echo $_SESSION["followers"]?>)" /></div>
     </p>
 </div>
 </div>
@@ -969,7 +971,7 @@ if ( !isset($_SESSION['user_login']) ||
           <div class="container">
               <h5><b>Televisi</b></h5>
               <p>2000 Follower
-              <div class="my-4 text-right"> <button class="button3">Tukar</button></div>
+              <div class="my-4 text-right"> <input type="button" value="Tukar" <?php if ($_SESSION['followers'] < '2000'){ ?> disabled <?php   }  ?> onclick="addtocart(<?php echo $_SESSION["followers"]?>)" /></div>
               </p>
           </div>
         </div>
@@ -990,7 +992,7 @@ if ( !isset($_SESSION['user_login']) ||
             <div class="container">
                 <h5><b>Sepeda Motor</b></h5>
                 <p>10000 Follower
-                <div class="my-4 text-right"> <button class="button3">Tukar</button></div>
+                <div class="my-4 text-right"> <input type="button" value="Tukar" <?php if ($_SESSION['followers'] < '10000'){ ?> disabled <?php   }  ?> onclick="addtocart(<?php echo $_SESSION["followers"]?>)" /></div>
                 </p>
             </div>
           </div>
