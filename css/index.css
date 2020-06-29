@@ -242,6 +242,8 @@ form.example::after {
   width: 100%;
 }
 
+
+
 .contact100-form-btn {
   justify-content: center;
   align-items: center;
@@ -263,6 +265,30 @@ form.example::after {
   -moz-transition: all 0.4s;
   transition: all 0.4s;
 }
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .contact100-form-btn {
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px;
+    width: 40%;
+    margin-left: 33%;
+    height: 50px;
+    margin-top: 80px!important;
+    background-color: #333333;
+    border-radius: 25px;
+  
+    font-family: Montserrat-Medium;
+    font-size: 16px;
+    color: #fff;
+    line-height: 1.2;
+  
+    -webkit-transition: all 0.4s;
+    -o-transition: all 0.4s;
+    -moz-transition: all 0.4s;
+    transition: all 0.4s;
+  }
+  }
 
 .contact100-form-btn i {
   -webkit-transition: all 0.4s;
@@ -485,6 +511,18 @@ float:left;
 }
 }
 
+@media only screen and (min-width: 320px) and (max-width: 568px) {
+  #kiri5
+  {
+    width:49%;
+    height:100px;
+    float:left;
+    margin-top: 118px;
+}
+}
+
+
+
 #kanan
 {
 width:49%;
@@ -512,6 +550,7 @@ margin-top: 50px;
 
 
 
+
 #kanan4
 {
       width:49%;
@@ -521,7 +560,17 @@ margin-top: 50px;
       margin-left: 14px;
 }
 
-@media(max-width: 450px){
+@media only screen and (min-width: 320px) and (max-width: 568px) {
+  #kanan4 {
+    width: 49%;
+    height: 100px;
+    float: left;
+    margin-top: -100px;
+    margin-left: 105px;
+}
+}
+
+@media only screen and (min-width: 360px) and (max-width: 640px) {
   #kanan4
   {
     width: 49%;
@@ -532,6 +581,38 @@ margin-top: 50px;
   }
 }
 
+@media only screen and (min-width: 411px) and (max-width: 731px) {
+  #kanan4
+  {
+    width: 49%;
+    height: 100px;
+    float: left;
+    margin-top: -100px;
+    margin-left: 146px;
+  }
+}
+
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+#kanan4 {
+    width: 49%;
+    height: 100px;
+    float: left;
+    margin-top: -99px;
+    margin-left: 331px;
+}
+}
+
+@media only screen and (min-width: 1024px) and (max-width: 1336px) {
+  #kanan4 {
+      width: 49%;
+      height: 100px;
+      float: left;
+      margin-top: -99px;
+      margin-left: 360px;
+  }
+  }
+
 #kanan5
     {
       width:49%;
@@ -541,13 +622,55 @@ margin-top: 50px;
       margin-top: 135px;
 }
 
-@media(max-width: 450px){
+
+@media only screen and (min-width: 360px) and (max-width: 640px) {
+  #kanan5 {
+    width: 49%;
+    height: 182px;
+    float: left;
+    margin-left: 128px !important;
+    margin-top: -100px;
+}
+}
+
+@media only screen and (min-width: 320px) and (max-width: 568px) {
+  #kanan5 {
+    width: 50%;
+    height: 182px;
+    float: left;
+    margin-left: 108px;
+    margin-top: -100px;
+}
+}
+
+
+@media only screen and (min-width: 1024px) and (max-width: 1336px) {
+  #kanan5 {
+    width: 49%;
+    height: 100px;
+    float: left;
+    margin-top: -100px;
+    margin-left: 361px !important;
+}
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  #kanan5 {
+      width: 49%;
+      height: 100px;
+      float: left;
+      margin-top: -100px;
+      margin-left: 330px;
+  }
+  }
+
+@media only screen and (min-width: 411px) and (max-width: 731px) {
   #kanan5
   {
     width:49%;
     height: 182px;
     float:left;
-    margin-left: 127px;
+    margin-left: 145px !important;
     margin-top: -100px;
 }
 }
@@ -562,13 +685,24 @@ margin-top: -234px;
 
 @media(max-width: 450px){
 #kanan12  {
-    width:49%;
+  width: 48%;
     height:100px;
     float:right;
     margin-top: -210px;
     
   }
 }
+
+@media only screen and (min-width: 320px) and (max-width: 568px) {
+  #kanan12  {
+    width: 48%;
+      height:100px;
+      float:right;
+      margin-top: -207px;
+      
+    }
+  }
+
 .status{
   margin-top: -18px;
   margin-left: 21px;
@@ -682,7 +816,7 @@ padding: 0 30px;
   transition: background 0.4s;
 }
 
-@media(max-width: 450px){
+@media only screen and (min-width: 320px) and (max-width: 640px) {
   .btn-show-pass {
     font-size: 12px;
     color: #999999;
@@ -690,7 +824,54 @@ padding: 0 30px;
     position: relative;
     height: 100%;
     top: 30px;
-    left: 98px;
+    left: 92px !important;
+    padding: 0 5px;
+    cursor: pointer;
+    transition: background 0.4s;
+}
+}
+
+
+
+@media only screen and (min-width: 320px) and (max-width: 568px) {
+  .btn-show-pass {
+    font-size: 12px;
+    color: #999999;
+    align-items: center;
+    position: relative;
+    height: 100%;
+    top: 30px;
+    margin-left: -12px;
+    padding: 0 5px;
+    cursor: pointer;
+    transition: background 0.4s;
+}
+}
+
+@media only screen and (min-width: 411px) and (max-width: 731px) {
+  .btn-show-pass {
+    font-size: 12px;
+    color: #999999;
+    align-items: center;
+    position: relative;
+    height: 100%;
+    top: 30px;
+    left: 112px !important;
+    padding: 0 5px;
+    cursor: pointer;
+    transition: background 0.4s;
+}
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .btn-show-pass {
+    font-size: 12px;
+    color: #999999;
+    align-items: center;
+    position: relative;
+    height: 43%;
+    top: 31px;
+    left: 286px;
     padding: 0 5px;
     cursor: pointer;
     transition: background 0.4s;
@@ -700,9 +881,39 @@ padding: 0 30px;
 @media(max-width: 450px){
   .date {
     height: 43px !important;
-    width: 120px;
+    width: 138px;
 }
 }
+
+@media (max-width: 600px){
+.date {
+  height: 43px !important;
+  width: 122px;
+}
+}
+
+@media only screen and (min-width: 320px) and (max-width: 568px) {
+  .date {
+    height: 43px !important;
+    width: 108px;
+}
+}
+
+
+@media only screen and (min-width: 360px) and (max-width: 640px) {
+  .date {
+    height: 43px !important;
+    width: 122px;
+}
+}
+
+@media only screen and (min-width: 411px) and (max-width: 731px){
+  .date {
+    height: 43px !important;
+    width: 140px;
+  }
+  }
+
 
 @media(max-width: 450px){
   .alamat {
@@ -741,14 +952,33 @@ label, input {
 
 
 @media(max-width: 450px){
+  .registrasi{
+    color: black;
+    font-size: 10px;
+  }
+  }
+
+@media(max-width: 450px){
 label, input {
   display: block;
-  color: white;
+  color: black;
   margin-top: 10px;
   width: 100%;
   font-size: 9px;
 }
 }
+
+
+@media only screen and (min-width: 320px) and (max-width: 528px){
+  label, input {
+    display: block;
+    color: black;
+    margin-top: 10px;
+    width: 100%;
+    font-size: 8px;
+  }
+  }
+
 input {
   box-sizing: border-box;
   border: 1px solid black;
@@ -1572,10 +1802,35 @@ legend {
   font-family: 'Roboto', sans-serif;
 }
 
+
+@media only screen and (max-width: 600px) {
+  .s008 {
+    min-height: 63vh;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: center;
+        justify-content: center;
+    -ms-flex-align: center;
+        align-items: center;
+    background:linear-gradient(to bottom, rgba(245, 246, 252, 0.52), rgba(12, 12, 12, 0.73)), url("../images/Searchs_008.png");
+    background-size: cover;
+    padding: 15px;
+    font-family: 'Roboto', sans-serif;
+  }
+}
+
 .s008 form {
   width: 100%;
   max-width: 790px;
   margin: 0;
+}
+
+@media only screen and (max-width: 600px) {
+  .s008 form {
+    width: 100%;
+    max-width: 790px;
+    margin-left: 2%;
+  }
 }
 
 .s008 form .inner-form {
