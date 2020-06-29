@@ -159,53 +159,7 @@ if ( !isset($_SESSION['user_login']) ||
           <!-- Topbar Navbar -->
           <ul class="navbar-nav ml-auto">
 
-            <!-- Nav Item - Search Dropdown (Visible Only XS) -->
-            <li class="nav-item dropdown no-arrow d-sm-none">
-              <a class="nav-link dropdown-toggle" href="#" id="searchDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <i class="fas fa-search fa-fw"></i>
-              </a>
-              <!-- Dropdown - Messages -->
-              <div class="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in" aria-labelledby="searchDropdown">
-                <form class="form-inline mr-auto w-100 navbar-search">
-                  <div class="input-group">
-                    <input type="text" class="form-control bg-light border-0 small" placeholder="Search for..." aria-label="Search" aria-describedby="basic-addon2">
-                    <div class="input-group-append">
-                      <button class="btn btn-primary" type="button">
-                        <i class="fas fa-search fa-sm"></i>
-                      </button>
-                    </div>
-                  </div>
-                </form>
-              </div>
-            </li>
-
-        
-
-            <!-- Nav Item - Messages -->
-            <!-- <li class="nav-item dropdown no-arrow mx-1">
-              <a class="nav-link dropdown-toggle" href="#" id="messagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <i class="fas fa-envelope fa-fw"></i>
-         
-                <span class="badge badge-danger badge-counter">1</span>
-              </a>
-  
-              <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="messagesDropdown">
-                <h6 class="dropdown-header">
-                  Message Center
-                </h6>
-                <a class="dropdown-item d-flex align-items-center" href="#">
-                  <div class="dropdown-list-image mr-3">
-                    <img class="rounded-circle" src="https://source.unsplash.com/fn_BT9fwg_E/60x60" alt="">
-                    <div class="status-indicator bg-success"></div>
-                  </div>
-                  <div class="font-weight-bold">
-                    <div class="text-truncate">Hi there! Test </div>
-                    <div class="small text-gray-500">Emily Fowler · 58m</div>
-                  </div>
-                </a>
-                <a class="dropdown-item text-center small text-gray-500" href="#">Read More Messages</a>
-              </div>
-            </li> -->
+            
 
             <div class="topbar-divider d-none d-sm-block"></div>
 
@@ -213,6 +167,7 @@ if ( !isset($_SESSION['user_login']) ||
             <li class="nav-item dropdown no-arrow">
               <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 <span class="mr-2 d-none d-lg-inline text-gray-600 small">Hai, <?=$_SESSION['nama'];?></span>
+                <img class="img-profile rounded-circle" src="./img/hiclipart.com.png">
               </a>
               <!-- Dropdown - User Information -->
               <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
@@ -933,7 +888,7 @@ if ( !isset($_SESSION['user_login']) ||
             <div class="container">
                 <h5><b>Beras 1 Karung</b></h5>
                 <p>1000 Follower
-                <div class="my-4 text-right"><a href="https://foto.tempo.co/read/67259/jokowi-sampaikan-pidato-di-forum-ekonomi-dunia-asean" target="blank">Tukar</a></div>
+                <div class="my-4 text-right"> <button class="button3">Tukar</button></div>
                 </p>
             </div>
         </div>
@@ -951,7 +906,7 @@ if ( !isset($_SESSION['user_login']) ||
               <div class="container">
              <h5><b>Indomie 1 Kardus</b></h5>
            <p>800 Follower
-            <div class="my-4 text-right"><a href="https://foto.tempo.co/read/67259/jokowi-sampaikan-pidato-di-forum-ekonomi-dunia-asean" target="blank">Tukar</a></div>
+           <div class="my-4 text-right"> <button class="button3">Tukar</button></div>
             </p>
           </div>
         </div>
@@ -973,7 +928,7 @@ if ( !isset($_SESSION['user_login']) ||
   <div class="container">
   <h5><b>Sembako2</b></h5>
     <p>400 Follower
-              <div class="my-4 text-right"><a href="https://foto.tempo.co/read/67259/jokowi-sampaikan-pidato-di-forum-ekonomi-dunia-asean" target="blank">Tukar</a></div>
+    <div class="my-4 text-right"> <button class="button3">Tukar</button></div>
     </p>
 </div>
 </div>
@@ -991,7 +946,7 @@ if ( !isset($_SESSION['user_login']) ||
 <div class="container">
     <h5><b>Sembako 1</b></h5>
     <p>600 Follower
-    <div class="my-4 text-right"><a href="https://foto.tempo.co/read/67259/jokowi-sampaikan-pidato-di-forum-ekonomi-dunia-asean" target="blank">Tukar</a></div>
+    <div class="my-4 text-right"> <button class="button3">Tukar</button></div>
     </p>
 </div>
 </div>
@@ -1014,7 +969,7 @@ if ( !isset($_SESSION['user_login']) ||
           <div class="container">
               <h5><b>Televisi</b></h5>
               <p>2000 Follower
-              <div class="my-4 text-right"><a href="https://foto.tempo.co/read/67259/jokowi-sampaikan-pidato-di-forum-ekonomi-dunia-asean" target="blank">Tukar</a></div>
+              <div class="my-4 text-right"> <button class="button3">Tukar</button></div>
               </p>
           </div>
         </div>
@@ -1035,7 +990,7 @@ if ( !isset($_SESSION['user_login']) ||
             <div class="container">
                 <h5><b>Sepeda Motor</b></h5>
                 <p>10000 Follower
-                <div class="my-4 text-right"><a href="https://foto.tempo.co/read/67259/jokowi-sampaikan-pidato-di-forum-ekonomi-dunia-asean" target="blank">Tukar</a></div>
+                <div class="my-4 text-right"> <button class="button3">Tukar</button></div>
                 </p>
             </div>
           </div>
