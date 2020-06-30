@@ -4504,6 +4504,8 @@ p.slogan {
 }
 }
 
+
+
 @media(max-width: 450px){
 
   .osco-title {
@@ -4518,6 +4520,7 @@ p.slogan {
     clip-path: polygon(13% 0%, 100% 0%, 87% 100%, 0% 100%);
 }
 }
+
 
 @media(max-width: 450px){
 
