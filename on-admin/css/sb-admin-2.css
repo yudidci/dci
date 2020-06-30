@@ -88,6 +88,14 @@ p {
   margin-bottom: 0.8rem;
 }
 
+@media (max-width: 450px){
+  p {
+    margin-top: 0;
+    margin-bottom: 0.2rem;
+  }
+
+}
+
 abbr[title],
 abbr[data-original-title] {
   text-decoration: underline;
@@ -270,19 +278,55 @@ textarea {
 
 @media(max-width: 450px){
   .button2 {
-  background-color: #4e73df;
-  border: none;
-  border-radius: 20px;
-  color: white;
-  padding: 4px 31px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
-  cursor: pointer;
-  width: 55%;
-  margin-left: 50%;
+    background-color: #4e73df;
+    border: none;
+    border-radius: 20px;
+    color: white;
+    padding: 4px 12px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 9px -3px;
+    cursor: pointer;
+    width: 54%;
+    margin-left: 44%;
+}
+}
+
+@media only screen and (max-width: 640px) and (min-width: 360px){
+  .button2 {
+    background-color: #4e73df;
+    border: none;
+    border-radius: 20px;
+    color: white;
+    padding: 4px 12px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 9px -3px;
+    cursor: pointer;
+    width: 54%;
+    margin-left: 44%;
+}
+}
+
+@media only screen and (max-width: 1024px) and (min-width: 768px){
+    .button2 {
+      background-color: #4e73df;
+      border: none;
+      border-radius: 20px;
+      color: white;
+      padding: 4px 12px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      margin: 8px -3px;
+      cursor: pointer;
+      width: 35%;
+      margin-left: 63%;
   }
 }
 
@@ -1458,13 +1502,26 @@ pre code {
   margin-left: 51px;
 }
 
-@media(max-width: 450px){
+@media only screen and (max-width: 1024px) and (min-width: 768px){
   .box {
     background: red;
     color: white;
-    font-size: 15px;
+    font-size: 20px;
     border-radius: 14px;
-    width: 92%;
+    width: 100%;
+    padding: 13px;
+    box-shadow: 5px 7px #888888;
+    margin-left: 0px;
+}
+}
+
+@media only screen and (max-width: 1336px) and (min-width: 1024px){
+  .box {
+    background: red;
+    color: white;
+    font-size: 20px;
+    border-radius: 14px;
+    width: 100%;
     padding: 13px;
     box-shadow: 5px 7px #888888;
     margin-left: 0px;
@@ -1487,6 +1544,28 @@ pre code {
   vertical-align: top;
   border-top: 1px solid black;
   color: black;
+}
+
+@media (max-width: 450px){
+  .table th,
+.table td {
+  padding: 0.75rem;
+  vertical-align: top;
+  border-top: 1px solid black;
+  color: black;
+  font-size: 9px;
+}
+}
+
+@media only screen and (max-width: 1024px) and (min-width: 768px){
+  .table th,
+.table td {
+  padding: 0.75rem;
+  vertical-align: top;
+  border-top: 1px solid black;
+  color: black;
+  font-size: 20px;
+}
 }
 
 .table thead th {
@@ -4457,12 +4536,29 @@ p.pengenalan {
   font-style: italic;
 }
 
+@media (max-width: 450px){
+  p.pengenalan {
+    font-size: 6px;
+    font-style: italic;
+  }
+}
+
 p.pengenalan1 {
   font-size: 15px;
   margin-left: 38px;
   margin-bottom: 6px;
   font-style: italic;
 }
+
+@media (max-width: 450px){
+  p.pengenalan1 {
+    font-size: 6px;
+    margin-left: 38px;
+    margin-bottom: 6px;
+    font-style: italic;
+}
+}
+
 
 p.judul {
   font-size: 23px;
@@ -4479,6 +4575,16 @@ p.impact {
   font-style: italic;
 }
 
+@media (max-width: 450px){
+  p.impact {
+    font-size: 9px;
+    letter-spacing: 0.3px;
+    line-height: 1.7;
+    font-weight: 700;
+    font-style: italic;
+}
+}
+
 p.impac {
   font-size: 10px;
   letter-spacing: 0.3px;
@@ -4486,6 +4592,18 @@ p.impac {
   font-weight: 900;
   margin-top: 21px;
   font-style: italic;
+}
+
+@media (max-width: 450px){
+
+p.impac {
+  font-size: 10px;
+  letter-spacing: 0.3px;
+  line-height: 1.5;
+  font-weight: 900;
+  margin-top: 1px;
+  font-style: italic;
+}
 }
 
 p.slogan {
@@ -4496,7 +4614,7 @@ p.slogan {
 
 .osco-title {
     margin-bottom: 10px;
-    margin-left: 150px !important;
+    margin-left: 150px;
     text-transform: uppercase;
     display: inline-block;
     background: #ffcc28;
@@ -4531,26 +4649,126 @@ p.slogan {
   margin-top: 22px;
 }
 
-@media(max-width: 450px){
+@media (max-width: 450px){
+  .osco-future {
+    font-size: 19px;
+    font-weight: 400;
+    margin-top: 22px;
+  }
+}
+
+
+@media (max-width: 450px){
+  .osco-future {
+    font-size: 15px;
+    font-weight: 400;
+    margin-top: 22px;
+  }
+}
+
+@media only screen and (max-width: 640px) and (min-width: 360px){  
+  .osco-future {
+  font-size: 19px;
+  font-weight: 400;
+  margin-top: 22px;
+}
+}
+
+
+@media only screen and (max-width: 640px) and (min-width: 360px){
   .mu-title {
-    font-size: 30px;
+    font-size: 13px!important;
     color: #233768;
     margin-bottom: 10px;
-    margin-left: -4px;
+    margin-left: 27px !important;
     text-transform: uppercase;
     display: inline-block;
     background: #ffcc28;
-    padding: 0 48px;
+    padding: 7px 48px;
     font-style: italic;
-    clip-path: polygon(13% 0%, 100% 0%, 87% 100%, 0% 100%);  
+    clip-path: polygon(13% 0%, 100% 0%, 87% 100%, 0% 100%);
 }
 }
 
-@media(max-width: 450px){
+@media only screen and (max-width: 1024px) and (min-width: 768px){
+  .mu-title {
+    font-size: 28px;
+    color: #233768;
+    margin-bottom: 10px;
+    margin-left: 150px !important;
+    text-transform: uppercase;
+    display: inline-block;
+    background: #ffcc28;
+    padding: 7px 48px;
+    font-style: italic;
+    clip-path: polygon(13% 0%, 100% 0%, 87% 100%, 0% 100%);
+}
+}
 
+@media only screen and (max-width: 1336px) and (min-width: 1024px){
+  .mu-title {
+    font-size: 21px!important;
+    color: #233768;
+    margin-bottom: 10px;
+    margin-left: 16px !important;
+    text-transform: uppercase;
+    display: inline-block;
+    background: #ffcc28;
+    padding: 7px 48px;
+    font-style: italic;
+    clip-path: polygon(13% 0%, 100% 0%, 87% 100%, 0% 100%);
+}
+}
+
+@media only screen and (max-width: 814px) and (min-width: 375px){
+  .mu-title {
+    font-size: 16px;
+    color: #233768;
+    margin-bottom: 10px;
+    margin-left: 22px ;
+    text-transform: uppercase;
+    display: inline-block;
+    background: #ffcc28;
+    padding: 7px 48px;
+    font-style: italic;
+    clip-path: polygon(13% 0%, 100% 0%, 87% 100%, 0% 100%);
+}
+}
+
+@media only screen and (max-width: 731px) and (min-width: 411px){
+.mu-title {
+  font-size: 14px !important;
+  color: #233768;
+  margin-bottom: 10px;
+  margin-left: 51px !important;
+  text-transform: uppercase;
+  display: inline-block;
+  background: #ffcc28;
+  padding: 7px 48px;
+  font-style: italic;
+  clip-path: polygon(13% 0%, 100% 0%, 87% 100%, 0% 100%);
+}
+}
+
+@media (max-width: 450px){
+  .mu-title {
+    font-size: 13px;
+    color: #233768;
+    margin-bottom: 10px;
+    margin-left: 4px;
+    text-transform: uppercase;
+    display: inline-block;
+    background: #ffcc28;
+    padding: 14px 29px;
+    font-style: italic;
+    clip-path: polygon(13% 0%, 100% 0%, 87% 100%, 0% 100%);
+}
+}
+
+@media (max-width: 450px){
   .osco-title {
     margin-bottom: 10px;
-    margin-left: -7px !important;
+    margin-left: -27px;
     text-transform: uppercase;
     display: inline-block;
     background: #ffcc28;
@@ -4561,41 +4779,47 @@ p.slogan {
 }
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 450px){
+  .text-primary {
+    color: #4e73df !important;
+    font-size: 11px;
+}
+}
 
+@media only screen and (max-width: 1336px) and (min-width: 1024px){
   .osco-title {
     margin-bottom: 10px;
-    margin-left: 104px !important;
+    margin-left: 44px !important;
     text-transform: uppercase;
     display: inline-block;
     background: #ffcc28;
-    padding: 6px 43px !important;
+    padding: 6px 48px ;
     text-align: center;
     font-style: italic;
     clip-path: polygon(13% 0%, 100% 0%, 87% 100%, 0% 100%);
 }
 }
 
-@media only screen and (min-width: 1024px) {
-
+@media only screen and (max-width: 1024px) and (min-width: 768px){
   .osco-title {
     margin-bottom: 10px;
-    margin-left: 48px;
+    margin-left: 76px;
     text-transform: uppercase;
     display: inline-block;
     background: #ffcc28;
-    padding: 6px 43px !important;
+    padding: 6px 48px ;
     text-align: center;
     font-style: italic;
     clip-path: polygon(13% 0%, 100% 0%, 87% 100%, 0% 100%);
 }
 }
 
-@media (max-width: 568px) {
+
+@media only screen and (max-width: 640px) and (min-width: 360px){
 
   .osco-title {
     margin-bottom: 10px;
-    margin-left: -7px  ;
+    margin-left: -6px;
     text-transform: uppercase;
     display: inline-block;
     background: #ffcc28;
@@ -4605,6 +4829,26 @@ p.slogan {
     clip-path: polygon(13% 0%, 100% 0%, 87% 100%, 0% 100%);
 }
 }
+
+
+
+@media only screen and (max-width: 731px) and (min-width: 411px) {
+.osco-title {
+  margin-bottom: 10px;
+  margin-left: -6px;
+  text-transform: uppercase;
+  display: inline-block;
+  background: #ffcc28;
+  padding: 0px 21px !important;
+  text-align: center;
+  font-style: italic;
+  clip-path: polygon(13% 0%, 100% 0%, 87% 100%, 0% 100%);
+}
+}
+
+
+
+
 
 @media(max-width: 450px){
 
@@ -4621,6 +4865,79 @@ p.slogan {
 }
 }
 
+@media only screen and (max-width: 568px) and (min-width: 320px){
+  .osco-visi {
+    margin-bottom: 10px;
+    margin-left: 26px;
+    text-transform: uppercase;
+    display: inline-block;
+    background: #ffcc28;
+    padding: 0px 30px;
+    text-align: center;
+    font-style: italic;
+    clip-path: polygon(13% 0%, 100% 0%, 87% 100%, 0% 100%);
+}
+}
+
+
+@media only screen and (max-width: 640px) and (min-width: 360px){
+  .osco-visi {
+    margin-bottom: 10px;
+    margin-left: 40px;
+    text-transform: uppercase;
+    display: inline-block;
+    background: #ffcc28;
+    padding: 0px 30px;
+    text-align: center;
+    font-style: italic;
+    clip-path: polygon(13% 0%, 100% 0%, 87% 100%, 0% 100%);
+}
+}
+
+@media only screen and (max-width: 731px) and (min-width: 411px){
+.osco-visi {
+  margin-bottom: 10px;
+  margin-left: 75px;
+  text-transform: uppercase;
+  display: inline-block;
+  background: #ffcc28;
+  padding: 0px 30px;
+  text-align: center;
+  font-style: italic;
+  clip-path: polygon(13% 0%, 100% 0%, 87% 100%, 0% 100%);
+}
+}
+
+@media only screen and (max-width: 1366px) and (min-width: 1024px){
+  .osco-visi {
+    margin-bottom: 6px;
+    margin-left: 146px !important;
+    text-transform: uppercase;
+    display: inline-block;
+    background: #ffcc28;
+    padding: 3px 35px;
+    text-align: center;
+    font-style: italic;
+    clip-path: polygon(13% 0%, 100% 0%, 87% 100%, 0% 100%);
+}
+ }
+
+ @media only screen and (max-width: 1024px) and (min-width: 768px){
+  .osco-visi {
+    margin-bottom: 6px;
+    margin-left: 192px;
+    text-transform: uppercase;
+    display: inline-block;
+    background: #ffcc28;
+    padding: 3px 35px;
+    text-align: center;
+    font-style: italic;
+    clip-path: polygon(13% 0%, 100% 0%, 87% 100%, 0% 100%);
+}
+ }
+
+
+
 .button3 {
   background-color: red ;
   border: none;
@@ -4635,6 +4952,24 @@ p.slogan {
   display: inline-block;
   text-decoration: none;
   cursor: pointer;
+}
+
+@media only screen and (max-width: 568px) and (min-width: 320px){
+  .button3 {
+    background-color: red;
+    border: none;
+    color: white;
+    padding: 15px 10px;
+    text-align: center;
+    border-radius: 10px;
+    font-size: 15px;
+    margin: 4px 2px;
+    opacity: 0.6;
+    transition: 0.3s;
+    display: inline-block;
+    text-decoration: none;
+    cursor: pointer;
+  }
 }
 
 .button3:hover {opacity: 1}
@@ -10195,6 +10530,13 @@ a:focus {
 
 .text-gray-800 {
   color: #5a5c69 !important;
+}
+
+@media(max-width: 450px){
+  .text-gray-800 {
+    color: #5a5c69 !important;
+      font-size: 21px;
+}
 }
 
 .text-white-800 {

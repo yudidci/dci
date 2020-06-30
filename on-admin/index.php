@@ -664,7 +664,7 @@ if ( !isset($_SESSION['user_login']) ||
                 <h3 class="osco-visi">MISI</h3>
               </div>
               <div class="card-body">
-              <p class="impact">✓ Meningkatkan Kualitas Sumber Daya Manusia<p>
+              <p class="impact" >✓ Meningkatkan Kualitas Sumber Daya Manusia<p>
               <p class="impact"> ✓ Mengembangkan Sistem Pendidikan dan Kesehatan yang Modern</p>
               <p class="impact">✓ Memajukan Kualitas dan Kuantitas Industri dan Dunia Usaha</p>
               <p class="impact">✓ Menjaga Kesetaraan Gender dan pemberdayaan Perempuan</p>
