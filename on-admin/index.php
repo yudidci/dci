@@ -835,13 +835,15 @@ if ( !isset($_SESSION['user_login']) ||
 
                 <tbody>
               <?php
-              $conn = mysqli_connect("localhost", "root", "", "odalfgsm3b");
-              // Check connection
-              if ($conn->connect_error) {
-              die("Connection failed: " . $conn->connect_error);
-              }
+              // $conn = mysqli_connect("localhost", "root", "", "odalfgsm3b");
+              // // Check connection
+              // if ($conn->connect_error) {
+              // die("Connection failed: " . $conn->connect_error);
+              // }
+
+              include '../config.php';
               $sql = "SELECT * from full where referral= '$_SESSION[reg_no]'";
-              $result = $conn->query($sql);
+              $result = $dbconnect->query($sql);
              
               if ($result->num_rows > 0) {
               // output data of each row
@@ -852,7 +854,7 @@ if ( !isset($_SESSION['user_login']) ||
               }
               echo "</table>";
               } else { echo "0 results"; }
-              $conn->close();
+              $dbconnect->close();
               ?>
               </tbody>
               </table>
@@ -869,18 +871,18 @@ if ( !isset($_SESSION['user_login']) ||
 <h1 class="h3 mb-2 text-gray-800">POIN</h1>
 <h6 class="m-0 font-weight-bold text-primary1"><?=$_SESSION['followers'];?> FOLLOWER</h6>
 <p class="mb-4">Tukar Follower anda dengan Hadiah di bawah ini</p>
-
+<form method="post">
 <!-- Content Row -->
 <div class="row">
 
   <div class="col-xl-4 col-lg-7">
     <!-- Area Chart -->
-
+    
     <div class="card shadow mb-4">
     <div class="card-header py-3">
         <h6 class="m-0 font-weight-bold text-primary">Bonus 1</h6>
       </div>
-          
+    
          <div class="card-body">
          <div class="card3">
             <img src="img/download.jpg" alt="Avatar" style="width:100%; border-radius: 27px 27px 0px 0px;">
@@ -888,14 +890,42 @@ if ( !isset($_SESSION['user_login']) ||
             <div class="container">
                 <h5><b>Beras 1 Karung</b></h5>
                 <p>10 Follower
-                <div class="my-4 text-right"> <input type="button" value="Tukar" <?php if ($_SESSION['followers'] < '10'){ ?> disabled <?php   }  ?> onclick="addtocart(<?php echo $_SESSION["followers"]?>)" /></div>
-                
+                <div class="my-4 text-right"> <input type="submit" name="update" value="Update" <?php if ($_SESSION['followers'] < '10'){ ?> disabled <?php   }  ?> /></div>
+               
+
                 <!-- <div class="my-4 text-right"> <button class="button3">Tukar</button></div> -->
                 </p>
             </div>
         </div>
         </div>
-      </div>
+        </div>
+        </form>
+
+<?php
+if(isset($_POST['update']))
+{
+    include '../config.php';
+  $nik=$_SESSION['sess_id'];
+
+
+  $sql="UPDATE full SET followers_count=(followers_count-10) WHERE nik='$nik'";
+  if($dbconnect->query($sql) === false)
+  { // Jika gagal meng-insert data tampilkan pesan dibawah 'Perintah SQL Salah'
+    trigger_error('Wrong SQL Command: ' . $sql . ' Error: ' . $dbconnect->error, E_USER_ERROR);
+  }  
+  else 
+  { // Jika berhasil alihkan ke halaman tampil.php
+    echo "<script>alert('Update Success!')</script>";
+  	echo "<meta http-equiv=refresh content=\"0; url=index.php\">";
+  }
+}
+
+?>   
+
+
+   
+
+
 
       <div class="card shadow mb-4">
     <div class="card-header py-3">
@@ -915,7 +945,7 @@ if ( !isset($_SESSION['user_login']) ||
         </div>
       </div>
   </div>
-
+</form>
   <div class="col-xl-4 col-lg-7">
 <!-- Area Chart -->
 <div class="card shadow mb-4">
