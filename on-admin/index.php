@@ -915,8 +915,8 @@ if(isset($_POST['update']))
   }  
   else 
   { // Jika berhasil alihkan ke halaman tampil.php
-    echo "<script>alert('Update Success!')</script>";
-  	echo "<meta http-equiv=refresh content=\"0; url=index.php\">";
+    echo "<script>alert('Poin telah berhasil ditukar! Silakan Login Kembali')</script>";
+  	echo "<meta http-equiv=refresh content=\"0; url=./../logout.php\">";
   }
 }
 
