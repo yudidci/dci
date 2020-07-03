@@ -437,7 +437,13 @@ if ( !isset($_SESSION['user_login']) ||
       <!-- End of Main Content -->   
       <div  id="identitas">
         <div class="container-fluid">
-        <form action='http://localhost:3001/user/<?php echo $_SESSION['sess_id']?>' method="post">
+        <?php
+include '../config.php';
+// $nik=$_SESSION['sess_id'];
+$a=mysqli_query($dbconnect,"SELECT * FROM full WHERE nik='$_SESSION[sess_id]'");
+$b=mysqli_fetch_array($a,MYSQLI_ASSOC)
+?>
+        <form method="post">
           <!-- Page Heading -->
           <h1 class="h3 mb-4 text-gray-800">Identitas</h1>
           <div class="mb-4">Edit Data Member</div>
@@ -454,7 +460,7 @@ if ( !isset($_SESSION['user_login']) ||
                   <h6 class="m-0 font-weight-bold text-primary">Nama</h6>
                 </div>
                 <div class="col-sm-10">
-                  <input type="text" id="name" name="name" value="<?=$_SESSION['nama'];?>"><br>
+                <input type="text" name="name" placeholder="Insert Name" value="<?=$b['name'];?>"><br>
                 </div>
                 </div>
               </div>
@@ -464,7 +470,7 @@ if ( !isset($_SESSION['user_login']) ||
                   <h6 class="m-0 font-weight-bold text-primary">NIK</h6>
                 </div>
                 <div class="col-sm-10">
-                  <input type="text" id="nik" name="nik" value="<?=$_SESSION['sess_id'];?>"><br>
+                  <input type="text" id="nik" name="nik" value="<?=$b['nik'];?>"><br>
                 </div>
                 </div>
               </div>
@@ -490,7 +496,7 @@ if ( !isset($_SESSION['user_login']) ||
                   <h6 class="m-0 font-weight-bold text-primary">Tempat Lahir</h6>
                 </div>
                 <div class="col-sm-10">
-                  <input type="text" id="dob_place" name="dob_place" value="<?=$_SESSION['tempat_lahir'];?>"><br>
+                  <input type="text" id="dob_place" name="dob_place" value="<?=$b['dob_place'];?>"><br>
                 </div>
                 </div>
               </div>
@@ -500,7 +506,7 @@ if ( !isset($_SESSION['user_login']) ||
                   <h6 class="m-0 font-weight-bold text-primary">Tanggal Lahir</h6>
                 </div>
                 <div class="col-sm-10">
-                  <input type="text" id="dob" name="dob" value="<?=$_SESSION['tanggal_lahir'];?>"><br>
+                  <input type="text" id="dob" name="dob" value="<?=$b['dob'];?>"><br>
                 </div>
                 </div>
               </div>
@@ -510,7 +516,7 @@ if ( !isset($_SESSION['user_login']) ||
                   <h6 class="m-0 font-weight-bold text-primary">Jenis Kelamin</h6>
                 </div>
                 <div class="col-sm-10">
-                  <input type="text" id="gender" name="gender" value="<?=$_SESSION['jenis_kelamin'];?>"><br>
+                  <input type="text" id="gender" name="gender" value="<?=$b['gender'];?>"><br>
                 </div>
                 </div>
               </div>
@@ -520,7 +526,7 @@ if ( !isset($_SESSION['user_login']) ||
                   <h6 class="m-0 font-weight-bold text-primary">Status Perkawinan</h6>
                 </div>
                 <div class="col-sm-10">
-                  <input type="text" id="marital" name="marital" value="<?=$_SESSION['marital'];?>"><br>
+                  <input type="text" id="marital" name="marital" value="<?=$b['marital'];?>"><br>
                 </div>
                 </div>
               </div>
@@ -530,7 +536,7 @@ if ( !isset($_SESSION['user_login']) ||
                   <h6 class="m-0 font-weight-bold text-primary">Alamat</h6>
                 </div>
                 <div class="col-sm-10">
-                  <input type="text" id="road_name" name="road_name" value="<?=$_SESSION['alamat'];?>"><br>
+                  <input type="text" id="road_name" name="road_name" value="<?=$b['road_name'];?>"><br>
                 </div>
                 </div>
               </div>
@@ -540,7 +546,7 @@ if ( !isset($_SESSION['user_login']) ||
                   <h6 class="m-0 font-weight-bold text-primary">RT</h6>
                 </div>
                 <div class="col-sm-10">
-                  <input type="text" id="rt" name="rt" value="<?=$_SESSION['rt'];?>"><br>
+                  <input type="text" id="rt" name="rt" value="<?=$b['rt'];?>"><br>
                 </div>
                 </div>
               </div>
@@ -550,7 +556,7 @@ if ( !isset($_SESSION['user_login']) ||
                   <h6 class="m-0 font-weight-bold text-primary">RW</h6>
                 </div>
                 <div class="col-sm-10">
-                  <input type="text" id="rw" name="rw" value="<?=$_SESSION['rw'];?>"><br>
+                  <input type="text" id="rw" name="rw" value="<?=$b['rw'];?>"><br>
                 </div>
                 </div>
               </div>
@@ -560,7 +566,7 @@ if ( !isset($_SESSION['user_login']) ||
                   <h6 class="m-0 font-weight-bold text-primary">Kelurahan</h6>
                 </div>
                 <div class="col-sm-10">
-                  <input type="text" id="desa" name="desa" value="<?=$_SESSION['kelurahan'];?>"><br>
+                  <input type="text" id="desa" name="desa" value="<?=$b['desa'];?>"><br>
                 </div>
                 </div>
               </div>
@@ -570,7 +576,7 @@ if ( !isset($_SESSION['user_login']) ||
                   <h6 class="m-0 font-weight-bold text-primary">Kecamatan</h6>
                 </div>
                 <div class="col-sm-10">
-                  <input type="text" id="kec" name="kec" value="<?=$_SESSION['kecamatan'];?>"><br>
+                  <input type="text" id="kec" name="kec" value="<?=$b['kec'];?>"><br>
                 </div>
                 </div>
               </div>
@@ -580,7 +586,7 @@ if ( !isset($_SESSION['user_login']) ||
                   <h6 class="m-0 font-weight-bold text-primary">Agama</h6>
                 </div>
                 <div class="col-sm-10">
-                  <input type="text" id="agama" name="agama" value="<?=$_SESSION['agama'];?>"><br>
+                  <input type="text" id="agama" name="agama" value="<?=$b['agama'];?>"><br>
                 </div>
                 </div>
               </div>
@@ -590,7 +596,7 @@ if ( !isset($_SESSION['user_login']) ||
                   <h6 class="m-0 font-weight-bold text-primary">Pekerjaan</h6>
                 </div>
                 <div class="col-sm-10">
-                  <input type="text" id="job" name="job" value="<?=$_SESSION['job'];?>"><br>
+                  <input type="text" id="job" name="job" value="<?=$b['job'];?>"><br>
                 </div>
                 </div>
               </div>
@@ -600,7 +606,7 @@ if ( !isset($_SESSION['user_login']) ||
                   <h6 class="m-0 font-weight-bold text-primary">Kewarga Negaraan</h6>
                 </div>
                 <div class="col-sm-10">
-                  <input type="text" id="nationality" name="nationality" value="<?=$_SESSION['nationality'];?>"><br>
+                  <input type="text" id="nationality" name="nationality"value="<?=$b['nationality'];?>"><br>
                 </div>
                 </div>
               </div>
@@ -610,7 +616,7 @@ if ( !isset($_SESSION['user_login']) ||
                   <h6 class="m-0 font-weight-bold text-primary">Nomor Telepon</h6>
                 </div>
                 <div class="col-sm-10">
-                  <input type="text" id="phone" name="phone" value="<?=$_SESSION['phone'];?>"><br>
+                  <input type="text" id="phone" name="phone" value="<?=$b['phone'];?>"><br>
                 </div>
                 </div>
                 
@@ -621,7 +627,7 @@ if ( !isset($_SESSION['user_login']) ||
                   <h6 class="m-0 font-weight-bold text-primary">Email</h6>
                 </div>
                 <div class="col-sm-10">
-                  <input type="text" id="email" name="email" value="<?=$_SESSION['email'];?>"><br>
+                  <input type="text" id="email" name="email" value="<?=$b['email'];?>"><br>
                 </div>
                 </div>
            
@@ -631,12 +637,49 @@ if ( !isset($_SESSION['user_login']) ||
   
         </div>
         <!-- /.container-fluid -->
-        <button class="button2">Update</button>
+        <button class="button2" name="updateprofile">Update</button>
+        <!-- <input type="submit" class="button2" name="updateprofile" value="Update"> -->
         <!-- <input type="submit" name="update_profile" value="Update Profile" /> -->
       </div>
       </div>
 </form>
-          
+<?php
+if(isset($_POST['updateprofile']))
+{
+  include '../config.php';
+                             $dob_place=$_POST['dob_place'];
+                             $gender=$_POST['gender'];
+                             $dob=$_POST['dob'];
+                             $road_name=$_POST['road_name'];
+                             $rt=$_POST['rt'];
+                             $rw=$_POST['rw'];
+                             $desa=$_POST['desa'];
+                             $kec=$_POST['kec'];
+                             $agama=$_POST['agama'];
+                             $marital=$_POST['marital'];
+                             $job=$_POST['job'];
+                             $nationality=$_POST['nationality'];
+                             $nik=$_POST['nik'];
+                             $name=$_POST['name'];
+                             $phone=$_POST['phone'];
+                             $email=$_POST['email'];
+
+  $nik=$_SESSION['sess_id'];
+
+
+  $sql="UPDATE full SET dob_place = '$dob_place', dob = '$dob', gender = '$gender', road_name = '$road_name', rt = '$rt', rw = '$rw' ,desa ='$desa', kec ='$kec', agama ='$agama', marital ='$marital', job ='$job', nationality ='$nationality',  nik = '$nik', name = '$name', phone='$phone', email='$email' WHERE nik='$nik'";
+  if($dbconnect->query($sql) === false)
+  { // Jika gagal meng-insert data tampilkan pesan dibawah 'Perintah SQL Salah'
+    trigger_error('Wrong SQL Command: ' . $sql . ' Error: ' . $dbconnect->error, E_USER_ERROR);
+  }  
+  else 
+  { // Jika berhasil alihkan ke halaman tampil.php
+    echo "<script>alert('Profil berhasil diubah! Silakan Login Kembali')</script>";
+  	echo "<meta http-equiv=refresh content=\"0; url=./../logout.php\">";
+  }
+}
+?>
+   
       <div class="container-fluid"  id="blank">
         <div class="d-sm-flex align-items-center justify-content-between mb-4">
           <h1 class="h3 mb-0 text-gray-800">Visi & Misi </h1>
