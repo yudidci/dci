@@ -438,7 +438,7 @@ if ( !isset($_SESSION['user_login']) ||
       <div  id="identitas">
         <div class="container-fluid">
         <?php
-include '../config.php';
+include '../configtoo.php';
 // $nik=$_SESSION['sess_id'];
 $a=mysqli_query($dbconnect,"SELECT * FROM full WHERE nik='$_SESSION[sess_id]'");
 $b=mysqli_fetch_array($a,MYSQLI_ASSOC)
@@ -646,7 +646,7 @@ $b=mysqli_fetch_array($a,MYSQLI_ASSOC)
 <?php
 if(isset($_POST['updateprofile']))
 {
-  include '../config.php';
+  include '../configtoo.php';
                              $dob_place=$_POST['dob_place'];
                              $gender=$_POST['gender'];
                              $dob=$_POST['dob'];
