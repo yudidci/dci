@@ -438,14 +438,11 @@ if ( !isset($_SESSION['user_login']) ||
       <div  id="identitas">
         <div class="container-fluid">
         <?php
-          include '../configtoo.php';
-          // $nik=$_SESSION['sess_id'];
-          // $a=mysqli_query($dbconnect,"SELECT * FROM full WHERE nik='$_SESSION[sess_id]'");
-          // $b=mysqli_fetch_array($a,MYSQLI_ASSOC)
-          $a = "SELECT * FROM full WHERE nik='$_SESSION[sess_id]'";
-          $result = $dbconnect->query($a);
-          $b=$result->fetch_assoc();
-          ?>
+include '../configtoo.php';
+// $nik=$_SESSION['sess_id'];
+$a=mysqli_query($dbconnect,"SELECT * FROM full WHERE nik='$_SESSION[sess_id]'");
+$b=mysqli_fetch_array($a,MYSQLI_ASSOC)
+?>
         <form method="post">
           <!-- Page Heading -->
           <h1 class="h3 mb-4 text-gray-800">Identitas</h1>
@@ -921,7 +918,7 @@ if(isset($_POST['updateprofile']))
 <!-- Content Row -->
 <div class="row">
 
-  <div class="col-xl-4 col-lg-7">
+  <div class="col-xl-4">
     <!-- Area Chart -->
     
     <div class="card shadow mb-4">
@@ -934,8 +931,8 @@ if(isset($_POST['updateprofile']))
             <img src="img/download.jpg" alt="Avatar" style="width:100%; border-radius: 27px 27px 0px 0px;">
             <div class="centered"><span class="currDate"></span></div>
             <div class="container">
-                <h5><b>Beras 1 Karung</b></h5>
-                <p>10 Follower
+                <h5 class="deskripsi"><b>Beras 1 Karung</b></h5>
+                <p class="deskripsi">10 Follower
                 <div class="my-4 text-right"> <input type="submit" name="update" value="Update" <?php if ($_SESSION['followers'] < '10'){ ?> disabled <?php   }  ?> /></div>
                
 
@@ -982,8 +979,8 @@ if(isset($_POST['update']))
               <img src="img/Indomie.jpg" alt="Avatar" style="width:100%; border-radius: 27px 27px 0px 0px;">
               <div class="centered"><span class="currDate"></span></div>
               <div class="container">
-             <h5><b>Indomie 1 Kardus</b></h5>
-           <p>800 Follower
+             <h5 class="deskripsi"><b>Indomie 1 Kardus</b></h5>
+           <p class="deskripsi">800 Follower
            <div class="my-4 text-right"> <input type="button" value="Tukar" <?php if ($_SESSION['followers'] < '800'){ ?> disabled <?php   }  ?> onclick="addtocart(<?php echo $_SESSION["followers"]?>)" /></div>
             </p>
           </div>
@@ -992,7 +989,7 @@ if(isset($_POST['update']))
       </div>
   </div>
 </form>
-  <div class="col-xl-4 col-lg-7">
+  <div class="col-xl-4">
 <!-- Area Chart -->
 <div class="card shadow mb-4">
 <div class="card-header py-3">
@@ -1004,8 +1001,8 @@ if(isset($_POST['update']))
 <img src="img/sembako2.jpg" alt="Avatar" style="width:100%; border-radius: 27px 27px 0px 0px;">
  <div class="centered"><span class="currDate"></span></div>
   <div class="container">
-  <h5><b>Sembako2</b></h5>
-    <p>400 Follower
+  <h5 class="deskripsi"><b>Sembako2</b></h5>
+    <p class="deskripsi">400 Follower
     <div class="my-4 text-right"> <input type="button" value="Tukar" <?php if ($_SESSION['followers'] < '400'){ ?> disabled <?php   }  ?> onclick="addtocart(<?php echo $_SESSION["followers"]?>)" /></div>
     </p>
 </div>
@@ -1022,8 +1019,8 @@ if(isset($_POST['update']))
 <img src="img/sembako1.png" alt="Avatar" style="width:100%; border-radius: 27px 27px 0px 0px;">
 <div class="centered"><span class="currDate"></span></div>
 <div class="container">
-    <h5><b>Sembako 1</b></h5>
-    <p>600 Follower
+    <h5 class="deskripsi"><b>Sembako 1</b></h5>
+    <p class="deskripsi">600 Follower
     <div class="my-4 text-right"> <input type="button" value="Tukar" <?php if ($_SESSION['followers'] < '600'){ ?> disabled <?php   }  ?> onclick="addtocart(<?php echo $_SESSION["followers"]?>)" /></div>
     </p>
 </div>
@@ -1033,7 +1030,7 @@ if(isset($_POST['update']))
 </div>
 
   <!-- Donut Chart -->
-  <div class="col-xl-4 col-lg-5">
+  <div class="col-xl-4">
     <div class="card shadow mb-4">
       <!-- Card Header - Dropdown -->
       <div class="card-header py-3">
@@ -1045,8 +1042,8 @@ if(isset($_POST['update']))
           <img src="img/tv.jpg" alt="Avatar" style="width:100%; border-radius: 27px 27px 0px 0px;">
           <div class="centered"><span class="currDate"></span></div>
           <div class="container">
-              <h5><b>Televisi</b></h5>
-              <p>2000 Follower
+              <h5 class="deskripsi"><b>Televisi</b></h5>
+              <p class="deskripsi">2000 Follower
               <div class="my-4 text-right"> <input type="button" value="Tukar" <?php if ($_SESSION['followers'] < '2000'){ ?> disabled <?php   }  ?> onclick="addtocart(<?php echo $_SESSION["followers"]?>)" /></div>
               </p>
           </div>
@@ -1066,8 +1063,8 @@ if(isset($_POST['update']))
             <img src="img/motor.png" alt="Avatar" style="width:100%; border-radius: 27px 27px 0px 0px;">
             <div class="centered"><span class="currDate"></span></div>
             <div class="container">
-                <h5><b>Sepeda Motor</b></h5>
-                <p>10000 Follower
+                <h5 class="deskripsi"><b>Sepeda Motor</b></h5>
+                <p class="deskripsi">10000 Follower
                 <div class="my-4 text-right"> <input type="button" value="Tukar" <?php if ($_SESSION['followers'] < '10000'){ ?> disabled <?php   }  ?> onclick="addtocart(<?php echo $_SESSION["followers"]?>)" /></div>
                 </p>
             </div>
