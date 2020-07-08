@@ -514,7 +514,7 @@ if(isset($_POST['simpan']))
             {
               //jika berhasil  
               //catat data file yang berhasil di upload
-              $sql="INSERT INTO file (nama,url) VALUES ('$nama_file','$alamatfile')";
+              $sql="UPDATE file set nama='$nama_file',url='$alamatfile' WHERE id=1";
               if($dbconnect->query($sql) === false)
               { // Jika gagal meng-insert data tampilkan pesan dibawah 'Perintah SQL Salah'
               trigger_error('Perintah SQL Salah: ' . $sql . ' Error: ' . $dbconnect->error, E_USER_ERROR);
