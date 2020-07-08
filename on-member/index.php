@@ -539,16 +539,11 @@ if(isset($_POST['simpan']))
         }          
     }
 ?>
-<form action="" method="POST" enctype="multipart/form-data"
+<form action="" method="POST" enctype="multipart/form-data"/>
   <label  class="editpoin" for="fname">Edit deskripsi :</label>
-  <!-- <input  class="editinput" type="text" id="fname" name="fname" value="Sembako 1"><br> -->
-  <!-- <input class="editinput" type="text" type="file" name="Sembako 1" value="Sembako"><br> -->
-  <input class="editinput" id="cname" name="jdl" minlength="5" type="text" required /><br>
-  ​ <label  class="editpoin1" for="fname">Edit Photo            :</label>
-   <!-- <input class="editfile" type="file" id="myFile" name="filename"> -->
-   <!-- <input class="editfile" type="submit" name="upload" value="Upload"> -->
-   <!-- <input class="editfile" type="file" name="image" /> -->
-   <input class="editfile" id="cuser" type="file" name="gmbr" required />
+  <input class="editinput" id="cname" name="jdl" minlength="5" type="text" required placeholder="Beras"/><br>
+  ​<label  class="editpoin1" for="fname">Edit Photo            :</label>
+   <input class="editfile" type="file" id="myFile" name="gmbr" required>
   <input class="submit" name="simpan" type="submit">
 </form> 
 
@@ -558,13 +553,14 @@ if(isset($_POST['simpan']))
     <div class="card-header py-3">
         <h6 class="m-0 font-weight-bold text-primary">Bonus 4</h6>
       </div>
-      <form action="/action_page.php">
+      <form action="" method="POST" enctype="multipart/form-data"/>
   <label  class="editpoin" for="fname">Edit deskripsi :</label>
-  <input  class="editinput" type="text" id="fname" name="fname" value="Sembako 1"><br>
-  ​ <label  class="editpoin1" for="fname">Edit Photo            :</label>
-   <input class="editfile" type="file" id="myFile" name="filename">
-  <input class="submit" type="submit">
+  <input class="editinput" id="cname" name="jdl" minlength="5" type="text" required placeholder="Beras"/><br>
+  ​<label  class="editpoin1" for="fname">Edit Photo            :</label>
+   <input class="editfile" type="file" id="myFile" name="gmbr" required>
+  <input class="submit" name="simpan" type="submit">
 </form> 
+
   </div>
   </div>
 
@@ -575,26 +571,28 @@ if(isset($_POST['simpan']))
 <h6 class="m-0 font-weight-bold text-primary">Bonus 2</h6>
 </div>
 
-<form action="/action_page.php">
+<form action="" method="POST" enctype="multipart/form-data"/>
   <label  class="editpoin" for="fname">Edit deskripsi :</label>
-  <input  class="editinput" type="text" id="fname" name="fname" value="Sembako 1"><br>
-  ​ <label  class="editpoin1" for="fname">Edit Photo            :</label>
-   <input class="editfile" type="file" id="myFile" name="filename">
-  <input class="submit" type="submit">
+  <input class="editinput" id="cname" name="jdl" minlength="5" type="text" required placeholder="Beras"/><br>
+  ​<label  class="editpoin1" for="fname">Edit Photo            :</label>
+   <input class="editfile" type="file" id="myFile" name="gmbr" required>
+  <input class="submit" name="simpan" type="submit">
 </form> 
+
 </div>
 
 <div class="card shadow mb-4">
 <div class="card-header py-3">
 <h6 class="m-0 font-weight-bold text-primary">Bonus 5</h6>
 </div>
-<form action="/action_page.php">
+<form action="" method="POST" enctype="multipart/form-data"/>
   <label  class="editpoin" for="fname">Edit deskripsi :</label>
-  <input  class="editinput" type="text" id="fname" name="fname" value="Sebako 1"><br>
-  ​ <label  class="editpoin1" for="fname">Edit Photo            :</label>
-   <input class="editfile" type="file" id="myFile" name="filename">
-  <input class="submit" type="submit">
+  <input class="editinput" id="cname" name="jdl" minlength="5" type="text" required placeholder="Beras"/><br>
+  ​<label  class="editpoin1" for="fname">Edit Photo            :</label>
+   <input class="editfile" type="file" id="myFile" name="gmbr" required>
+  <input class="submit" name="simpan" type="submit">
 </form> 
+
 </div>
 </div>
 
@@ -607,13 +605,14 @@ if(isset($_POST['simpan']))
       </div>
       <!-- Card Body -->
     
-      <form action="/action_page.php">
+      <form action="" method="POST" enctype="multipart/form-data"/>
   <label  class="editpoin" for="fname">Edit deskripsi :</label>
-  <input  class="editinput" type="text" id="fname" name="fname" value="Sebako 1"><br>
-  ​ <label  class="editpoin1" for="fname">Edit Photo            :</label>
-   <input class="editfile" type="file" id="myFile" name="filename">
-  <input class="submit" type="submit">
+  <input class="editinput" id="cname" name="jdl" minlength="5" type="text" required placeholder="Beras"/><br>
+  ​<label  class="editpoin1" for="fname">Edit Photo            :</label>
+   <input class="editfile" type="file" id="myFile" name="gmbr" required>
+  <input class="submit" name="simpan" type="submit">
 </form> 
+
   
       
     </div>
@@ -623,13 +622,14 @@ if(isset($_POST['simpan']))
           <h6 class="m-0 font-weight-bold text-primary">Bonus 6</h6>
         </div>
         <!-- Card Body -->
-        <form action="/action_page.php">
+        <form action="" method="POST" enctype="multipart/form-data"/>
   <label  class="editpoin" for="fname">Edit deskripsi :</label>
-  <input  class="editinput" type="text" id="fname" name="fname" value="Sebako 1"><br>
-  ​ <label  class="editpoin1" for="fname">Edit Photo            :</label>
-   <input class="editfile" type="file" id="myFile" name="filename">
-  <input class="submit" type="submit">
+  <input class="editinput" id="cname" name="jdl" minlength="5" type="text" required placeholder="Beras"/><br>
+  ​<label  class="editpoin1" for="fname">Edit Photo            :</label>
+   <input class="editfile" type="file" id="myFile" name="gmbr" required>
+  <input class="submit" name="simpan" type="submit">
 </form> 
+
     
         
       </div>
