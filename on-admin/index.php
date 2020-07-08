@@ -938,13 +938,8 @@ if(isset($_POST['updateprofile']))
            
             <div class="centered"><span class="currDate"></span></div>
             <div class="container">
-<<<<<<< HEAD
-                <h5 class="deskripsi"><b>Beras 1 Karung</b></h5>
-                <p class="deskripsi">10 Follower
-=======
                 <h5><b><?=$b['nama'];?></b></h5>
                 <p>10 Follower
->>>>>>> feature/uploadimage
                 <div class="my-4 text-right"> <input type="submit" name="update" value="Update" <?php if ($_SESSION['followers'] < '10'){ ?> disabled <?php   }  ?> /></div>
                
 
