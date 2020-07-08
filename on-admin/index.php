@@ -943,7 +943,7 @@ if(isset($_POST['updateprofile']))
             <div class="container">
                 <h5><b><?=$b['nama'];?></b></h5>
                 <p>10 Follower
-                <div class="my-4 text-right"> <input type="submit" name="update" value="Update" <?php if ($_SESSION['followers'] < '10'){ ?> disabled <?php   }  ?> /></div>
+                <div class="my-4 text-right"> <input type="submit" name="update" value="Tukar" <?php if ($_SESSION['followers'] < '10'){ ?> disabled <?php   }  ?> /></div>
                
 
                 <!-- <div class="my-4 text-right"> <button class="button3">Tukar</button></div> -->
