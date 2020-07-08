@@ -925,15 +925,22 @@ if(isset($_POST['updateprofile']))
     <div class="card-header py-3">
         <h6 class="m-0 font-weight-bold text-primary">Bonus 1</h6>
       </div>
-    
+        
          <div class="card-body">
          <div class="card3">
-            <img src="img/download.jpg" alt="Avatar" style="width:100%; border-radius: 27px 27px 0px 0px;">
+       <?php
+       include '../configpict.php';
+       $a = "SELECT * FROM file WHERE id='1'";
+       $result = $dbconnect->query($a);
+       $b=$result->fetch_assoc();
+       ?>
+            <img src="<?=$b['url'];?>" alt="Avatar" style="width:100%; border-radius: 27px 27px 0px 0px;">
+           
             <div class="centered"><span class="currDate"></span></div>
             <div class="container">
-                <h5 class="deskripsi"><b>Beras 1 Karung</b></h5>
-                <p class="deskripsi">10 Follower
-                <div class="my-4 text-right"> <input type="submit" name="update" value="Update" <?php if ($_SESSION['followers'] < '10'){ ?> disabled <?php   }  ?> /></div>
+                <h5><b><?=$b['nama'];?></b></h5>
+                <p>10 Follower
+                <div class="my-4 text-right"> <input type="submit" name="update" value="Tukar" <?php if ($_SESSION['followers'] < '10'){ ?> disabled <?php   }  ?> /></div>
                
 
                 <!-- <div class="my-4 text-right"> <button class="button3">Tukar</button></div> -->
