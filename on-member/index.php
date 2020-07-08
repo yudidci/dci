@@ -485,12 +485,66 @@
     <div class="card-header py-3">
         <h6 class="m-0 font-weight-bold text-primary">Bonus 1</h6>
       </div>
-      <form action="/action_page.php">
+      <?php
+include '../config.php';
+if(isset($_POST['simpan']))
+{
+    //periksa apakah user telah menekan submit, dengan menggunakan parameter setingan keterangan
+      $nama_file=$_POST['jdl'];
+      $ukuran=$_FILES['gmbr']['size'];
+      $jenis_gambar=$_FILES['gmbr']['type'];  
+      if($jenis_gambar=="image/jpeg" || $jenis_gambar=="image/jpg" || $jenis_gambar=="image/gif" || $jenis_gambar=="image/png")
+      {
+          //periksa jika data yang dimasukan belum lengkap
+          if ($nama_file=="")
+          {
+            //jika ada inputan yang kosong
+            ?><script>alert('Lengkapi Data Anda belum lengkap');</script><?php
+            ?><script>document.location.href='index.php?page=tambah_slide';</script><?php
+          }
+          else
+          {
+            //definisikan variabel file dan alamat file
+            // $uploaddir='./../img/slide/';
+            $uploaddir='../img/';
+
+            $alamatfile=$uploaddir.$_FILES['gmbr']['name'];;              
+            //periksa jika proses upload berjalan sukses
+            if (move_uploaded_file($_FILES['gmbr']['tmp_name'],$alamatfile))
+            {
+              //jika berhasil  
+              //catat data file yang berhasil di upload
+              $sql="INSERT INTO file (nama,url) VALUES ('$nama_file','$alamatfile')";
+              if($dbconnect->query($sql) === false)
+              { // Jika gagal meng-insert data tampilkan pesan dibawah 'Perintah SQL Salah'
+              trigger_error('Perintah SQL Salah: ' . $sql . ' Error: ' . $dbconnect->error, E_USER_ERROR);
+              }  
+              else 
+              { // Jika berhasil alihkan ke halaman tampil.php
+              echo "<script>alert('Berhasil Menyimpan!')</script>";
+              echo "<meta http-equiv=refresh content=\"0; url=index.php?page=tabel_slide\">";
+              }
+            }
+            else
+            {
+              //jika gagal
+              echo "Proses upload gagal, kode error = " . $_FILES['location']['error'];
+            }
+          }
+        }
+        else
+        {
+          ?><script language="javascript">alert('Gambar harus berformat .jpg .png .gif');</script><?php  
+          ?><script>document.location="index.php?page=tambah_galeri";</script><?php  
+        }          
+    }
+?>
+<form action="" method="POST" enctype="multipart/form-data"/>
   <label  class="editpoin" for="fname">Edit deskripsi :</label>
-  <input  class="editinput" type="text" id="fname" name="fname" value="Sebako 1"><br>
-  ​ <label  class="editpoin1" for="fname">Edit Photo            :</label>
-   <input class="editfile" type="file" id="myFile" name="filename">
-  <input class="submit" type="submit">
+  <input class="editinput" id="cname" name="jdl" minlength="5" type="text" required placeholder="Beras"/><br>
+  ​<label  class="editpoin1" for="fname">Edit Photo            :</label>
+   <input class="editfile" type="file" id="myFile" name="gmbr" required>
+  <input class="submit" name="simpan" type="submit">
 </form> 
 
       </div>
@@ -499,13 +553,14 @@
     <div class="card-header py-3">
         <h6 class="m-0 font-weight-bold text-primary">Bonus 4</h6>
       </div>
-      <form action="/action_page.php">
+      <form action="" method="POST" enctype="multipart/form-data"/>
   <label  class="editpoin" for="fname">Edit deskripsi :</label>
-  <input  class="editinput" type="text" id="fname" name="fname" value="Sebako 1"><br>
-  ​ <label  class="editpoin1" for="fname">Edit Photo            :</label>
-   <input class="editfile" type="file" id="myFile" name="filename">
-  <input class="submit" type="submit">
+  <input class="editinput" id="cname" name="jdl" minlength="5" type="text" required placeholder="Beras"/><br>
+  ​<label  class="editpoin1" for="fname">Edit Photo            :</label>
+   <input class="editfile" type="file" id="myFile" name="gmbr" required>
+  <input class="submit" name="simpan" type="submit">
 </form> 
+
   </div>
   </div>
 
@@ -516,26 +571,28 @@
 <h6 class="m-0 font-weight-bold text-primary">Bonus 2</h6>
 </div>
 
-<form action="/action_page.php">
+<form action="" method="POST" enctype="multipart/form-data"/>
   <label  class="editpoin" for="fname">Edit deskripsi :</label>
-  <input  class="editinput" type="text" id="fname" name="fname" value="Sebako 1"><br>
-  ​ <label  class="editpoin1" for="fname">Edit Photo            :</label>
-   <input class="editfile" type="file" id="myFile" name="filename">
-  <input class="submit" type="submit">
+  <input class="editinput" id="cname" name="jdl" minlength="5" type="text" required placeholder="Beras"/><br>
+  ​<label  class="editpoin1" for="fname">Edit Photo            :</label>
+   <input class="editfile" type="file" id="myFile" name="gmbr" required>
+  <input class="submit" name="simpan" type="submit">
 </form> 
+
 </div>
 
 <div class="card shadow mb-4">
 <div class="card-header py-3">
 <h6 class="m-0 font-weight-bold text-primary">Bonus 5</h6>
 </div>
-<form action="/action_page.php">
+<form action="" method="POST" enctype="multipart/form-data"/>
   <label  class="editpoin" for="fname">Edit deskripsi :</label>
-  <input  class="editinput" type="text" id="fname" name="fname" value="Sebako 1"><br>
-  ​ <label  class="editpoin1" for="fname">Edit Photo            :</label>
-   <input class="editfile" type="file" id="myFile" name="filename">
-  <input class="submit" type="submit">
+  <input class="editinput" id="cname" name="jdl" minlength="5" type="text" required placeholder="Beras"/><br>
+  ​<label  class="editpoin1" for="fname">Edit Photo            :</label>
+   <input class="editfile" type="file" id="myFile" name="gmbr" required>
+  <input class="submit" name="simpan" type="submit">
 </form> 
+
 </div>
 </div>
 
@@ -548,13 +605,14 @@
       </div>
       <!-- Card Body -->
     
-      <form action="/action_page.php">
+      <form action="" method="POST" enctype="multipart/form-data"/>
   <label  class="editpoin" for="fname">Edit deskripsi :</label>
-  <input  class="editinput" type="text" id="fname" name="fname" value="Sebako 1"><br>
-  ​ <label  class="editpoin1" for="fname">Edit Photo            :</label>
-   <input class="editfile" type="file" id="myFile" name="filename">
-  <input class="submit" type="submit">
+  <input class="editinput" id="cname" name="jdl" minlength="5" type="text" required placeholder="Beras"/><br>
+  ​<label  class="editpoin1" for="fname">Edit Photo            :</label>
+   <input class="editfile" type="file" id="myFile" name="gmbr" required>
+  <input class="submit" name="simpan" type="submit">
 </form> 
+
   
       
     </div>
@@ -564,13 +622,14 @@
           <h6 class="m-0 font-weight-bold text-primary">Bonus 6</h6>
         </div>
         <!-- Card Body -->
-        <form action="/action_page.php">
+        <form action="" method="POST" enctype="multipart/form-data"/>
   <label  class="editpoin" for="fname">Edit deskripsi :</label>
-  <input  class="editinput" type="text" id="fname" name="fname" value="Sebako 1"><br>
-  ​ <label  class="editpoin1" for="fname">Edit Photo            :</label>
-   <input class="editfile" type="file" id="myFile" name="filename">
-  <input class="submit" type="submit">
+  <input class="editinput" id="cname" name="jdl" minlength="5" type="text" required placeholder="Beras"/><br>
+  ​<label  class="editpoin1" for="fname">Edit Photo            :</label>
+   <input class="editfile" type="file" id="myFile" name="gmbr" required>
+  <input class="submit" name="simpan" type="submit">
 </form> 
+
     
         
       </div>
