@@ -928,10 +928,16 @@ if(isset($_POST['updateprofile']))
     <div class="card-header py-3">
         <h6 class="m-0 font-weight-bold text-primary">Bonus 1</h6>
       </div>
-    
+          <?php 
+          $data = mysql_query("select * from file");
+          while($d = mysql_fetch_array($data)){
+          ?>
          <div class="card-body">
          <div class="card3">
-            <img src="img/download.jpg" alt="Avatar" style="width:100%; border-radius: 27px 27px 0px 0px;">
+       
+            <!-- <img src="img/download.jpg" alt="Avatar" style="width:100%; border-radius: 27px 27px 0px 0px;"> -->
+            <img src="<?php echo "../img/".$d['nama']; ?>">
+            <?php } ?>
             <div class="centered"><span class="currDate"></span></div>
             <div class="container">
                 <h5><b>Beras 1 Karung</b></h5>
