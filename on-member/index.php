@@ -491,6 +491,7 @@ if(isset($_POST['simpan']))
 {
     //periksa apakah user telah menekan submit, dengan menggunakan parameter setingan keterangan
       $nama_file=$_POST['jdl'];
+      $poin=$_POST['poin'];
       $ukuran=$_FILES['gmbr']['size'];
       $jenis_gambar=$_FILES['gmbr']['type'];  
       if($jenis_gambar=="image/jpeg" || $jenis_gambar=="image/jpg" || $jenis_gambar=="image/gif" || $jenis_gambar=="image/png")
@@ -514,7 +515,7 @@ if(isset($_POST['simpan']))
             {
               //jika berhasil  
               //catat data file yang berhasil di upload
-              $sql="UPDATE file set nama='$nama_file',url='$alamatfile' WHERE id=1";
+              $sql="UPDATE file set nama='$nama_file',url='$alamatfile',poin='$poin' WHERE id=1";
               if($dbconnect->query($sql) === false)
               { // Jika gagal meng-insert data tampilkan pesan dibawah 'Perintah SQL Salah'
               trigger_error('Perintah SQL Salah: ' . $sql . ' Error: ' . $dbconnect->error, E_USER_ERROR);
@@ -542,6 +543,8 @@ if(isset($_POST['simpan']))
 <form action="" method="POST" enctype="multipart/form-data"/>
   <label  class="editpoin" for="fname">Edit deskripsi :</label>
   <input class="editinput" id="cname" name="jdl" minlength="5" type="text" required placeholder="Beras"/><br>
+  <label  class="editpoin" for="fname">Edit poin :</label>
+  <input class="editinput" id="cname" name="poin" type="text" required placeholder="1"/><br>
   ​<label  class="editpoin1" for="fname">Edit Photo            :</label>
    <input class="editfile" type="file" id="myFile" name="gmbr" required>
   <input class="submit" name="simpan" type="submit">

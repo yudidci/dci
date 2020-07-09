@@ -939,8 +939,8 @@ if(isset($_POST['updateprofile']))
             <div class="centered"><span class="currDate"></span></div>
             <div class="container">
                 <h5><b><?=$b['nama'];?></b></h5>
-                <p>10 Follower
-                <div class="my-4 text-right"> <input type="submit" name="update" value="Tukar" <?php if ($_SESSION['followers'] < '10'){ ?> disabled <?php   }  ?> /></div>
+                <p><?=$b['poin'];?> Follower
+                <div class="my-4 text-right"> <input type="submit" name="update" value="Tukar" <?php if ($_SESSION['followers'] < $b['poin']){ ?> disabled <?php   }  ?> /></div>
                
 
                 <!-- <div class="my-4 text-right"> <button class="button3">Tukar</button></div> -->
@@ -956,9 +956,9 @@ if(isset($_POST['update']))
 {
     include '../config.php';
   $nik=$_SESSION['sess_id'];
+  $poin=$b['poin'];
 
-
-  $sql="UPDATE full SET followers_count=(followers_count-10) WHERE nik='$nik'";
+  $sql="UPDATE full SET followers_count=(followers_count-'$poin') WHERE nik='$nik'";
   if($dbconnect->query($sql) === false)
   { // Jika gagal meng-insert data tampilkan pesan dibawah 'Perintah SQL Salah'
     trigger_error('Wrong SQL Command: ' . $sql . ' Error: ' . $dbconnect->error, E_USER_ERROR);
