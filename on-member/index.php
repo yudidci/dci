@@ -357,9 +357,9 @@
           </div>
           <div class="column">
             <select id="cars" name="cars">
-              <option value="pilih">Pilih</option>
+            <option value="lk"><</option>
               <option value="lb">></option>
-              <option value="lk"><</option>
+              
               <option value="lbs">≥</option>
               <option value="audi">≤</option>
             </select>
