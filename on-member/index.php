@@ -532,7 +532,7 @@ if(isset($_POST['simpan']))
           {
             //definisikan variabel file dan alamat file
             // $uploaddir='./../img/slide/';
-            $uploaddir='sudo ../img/';
+            $uploaddir='../img/';
 
             $alamatfile=$uploaddir.$_FILES['gmbr']['name'];;              
             //periksa jika proses upload berjalan sukses
