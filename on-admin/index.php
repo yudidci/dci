@@ -850,13 +850,17 @@ if(isset($_POST['updateprofile']))
            
 
             <?php
+            include '../configfollowers.php';
+            $querysql= "SELECT * from status where id='1'";
+            $result = $dbconnect->query($querysql);
+            $b=$result->fetch_assoc();
               $followers = $_SESSION['followers'];
               $var = "Peringkat anda saat ini adalah ";
-            if ($followers >= "9") {
+            if ($followers >= $b['batasatas']) {
               echo "<p>".$var."Kota</p>"; 
             }
-            elseif($followers >= "5" ) { 
-              echo "<p>".$var." RT</p>";
+            elseif($followers >= $b['batasbawah'] ) { 
+              echo "<p>".$var." Kota</p>";
             }
             else {
               echo "<p>".$var. "Warga</p>";
