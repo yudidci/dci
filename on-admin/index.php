@@ -848,7 +848,7 @@ if(isset($_POST['updateprofile']))
           <div class="card-header py-3">
             <h6 class="m-0 font-weight-bold text-primary"><?=$_SESSION['followers'];?> Follower</h6>
            
-
+          <!-- conditional status -->
             <?php
             include '../configfollowers.php';
             $querysql= "SELECT * from status where id='1'";
