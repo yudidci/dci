@@ -856,11 +856,8 @@ if(isset($_POST['updateprofile']))
             $b=$result->fetch_assoc();
               $followers = $_SESSION['followers'];
               $var = "Peringkat anda saat ini adalah ";
-            if ($followers >= $b['batasatas']) {
+            if ($followers >= $b['batasatas'] || $followers>= $b['batasbawah']) {
               echo "<p>".$var."Kota</p>"; 
-            }
-            elseif($followers >= $b['batasbawah'] ) { 
-              echo "<p>".$var." Kota</p>";
             }
             else {
               echo "<p>".$var. "Warga</p>";
