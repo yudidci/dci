@@ -349,24 +349,49 @@
 
         <div class="row1">
         <div class="card1">
+        <!-- update status -->
+        <form method="post">
           <p class="judul">Batas Follower Kota</p>
           <div class="column">
-            <input type="text" id="username" name="username" onkeypress="return hanyaAngka(event)"><br>
+            <input type="text" id="batasbawah" name="batasbawah" onkeypress="return hanyaAngka(event)"><br>
           </div>
           <div class="column">
             <select id="cars" name="cars">
-              <option value="pilih">Pilih</option>
+            <option value="lk"><</option>
               <option value="lb">></option>
-              <option value="lk"><</option>
+              
               <option value="lbs">≥</option>
               <option value="audi">≤</option>
             </select>
           </div>
           <div class="column">
-            <input type="text" id="username" name="username" onkeypress="return hanyaAngka(event)"><br>
+            <input type="text" id="batasatas" name="batasatas" onkeypress="return hanyaAngka(event)"><br>
           </div>
-          <button type="button" class="updt-follower" id="updt-follower">Update</button>
+          <input type="submit" class="updt-follower" id="updt-follower" name="updt-follower"value="Update"/>
+         </form>
+          <?php
+        if(isset($_POST['updt-follower']))
+        {
+          include'../configpict.php';
+          $batasbawah=$_POST['batasbawah'];
+          $batasatas=$_POST['batasatas'];
+        
+          $sql="UPDATE status SET batasbawah='$batasbawah', batasatas='$batasatas' WHERE id=1";
+          if($dbconnect->query($sql) === false)
+          { // Jika gagal meng-insert data tampilkan pesan dibawah 'Perintah SQL Salah'
+            trigger_error('Wrong SQL Command: ' . $sql . ' Error: ' . $dbconnect->error, E_USER_ERROR);
+          }  
+          else 
+          { // Jika berhasil alihkan ke halaman tampil.php
+            echo "<script>alert('Range untuk status Kota telah berhasil diubah! Silakan Login Kembali')</script>";
+            echo "<meta http-equiv=refresh content=\"0; url=./../logout.php\">";
+          }
+        }
+        
+        ?>   
         </div>
+        
+      
         <div class="card1">
           <p class="judul">Batas Follower Camat</p>
           <div class="column">
