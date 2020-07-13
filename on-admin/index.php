@@ -804,51 +804,29 @@ if(isset($_POST['updateprofile']))
                   </tr>
                 </thead>
                 <tbody>
-                <?php
-                  include '../configsdk.php';
-                  $table="status";
-                  $querysql= "SELECT * from $table where id='1'";
-                  $quesrycamat= "SELECT * from $table where id='2'";
-                  $quesrylurah= "SELECT * from $table where id='3'";
-                  $quesryrt= "SELECT * from $table where id='4'";
-                  $quesryrw= "SELECT * from $table where id='5'";
-                  $quesrywarga= "SELECT * from $table where id='6'";
-                  $result = $dbconnect->query($querysql);
-                  $resultcamat = $dbconnect ->query($quesrycamat);
-                  $resultlurah = $dbconnect ->query($quesrycamat);
-                  $resultrt = $dbconnect ->query($quesryrt);
-                  $resultrw = $dbconnect ->query($quesryrw);
-                  $resultwarga = $dbconnect ->query($quesrywarga);
-                  $b=$result->fetch_assoc();
-                  $c=$resultcamat->fetch_assoc();
-                  $d=$resultlurah->fetch_assoc();
-                  $e=$resultrt->fetch_assoc();
-                  $f=$resultrw->fetch_assoc();
-                  $g=$resultwarga->fetch_assoc();
-                  ?>
                 <tr>
                     <td><div class="keterangan">Untuk mencapai tingkatan KOTA anda harus mempunyai<div></td>
-                    <td><div class="box text-center"><?=$b['batasbawah'];?><br>Follower</div></td>
+                    <td><div class="box text-center">10000 <br>Follower</div></td>
                   </tr>
                 <tr>
                     <td><div class="keterangan">Untuk mencapai tingkatan KECAMATAN anda harus mempunyai<div></td>
-                    <td><div class="box text-center"><?=$c['batasbawah'];?><br>Follower</div></td>
+                    <td><div class="box text-center">2500 <br>Follower</div></td>
                   </tr>
                 <tr>
                     <td><div class="keterangan">Untuk mencapai tingkatan KELURAHAN anda harus mempunyai<div></td>
-                    <td><div class="box text-center"><?=$d['batasbawah'];?><br>Follower</div></td>
+                    <td><div class="box text-center">1500 <br>Follower</div></td>
                   </tr>
                 <tr>
                     <td><div class="keterangan">Untuk mencapai tingkatan RW anda harus mempunyai<div></td>
-                    <td><div class="box text-center"><?=$e['batasbawah'];?> <br>Follower</div></td>
+                    <td><div class="box text-center">800 <br>Follower</div></td>
                   </tr>
                 <tr>
                     <td><div class="keterangan">Untuk mencapai tingkatan RT anda harus mempunyai<div></td>
-                    <td><div class="box text-center"><?=$f['batasbawah'];?> <br>Follower</dic></td>
+                    <td><div class="box text-center">200 <br>Follower</dic></td>
                   </tr>
                   <tr>
                     <td><div class="keterangan">Jika member baru anda akan menjadi tingkatan WARGA <div></td>
-                    <td><div class="box text-center"><?=$g['batasbawah'];?> <br>Follower</div></td>
+                    <td><div class="box text-center">0 <br>Follower</div></td>
                   </tr>
                  
                 </tbody>
@@ -962,7 +940,7 @@ if(isset($_POST['updateprofile']))
        $result = $dbconnect->query($a);
        $b=$result->fetch_assoc();
        ?>
-            <img src="<?=$b['url'];?>" alt="Avatar" style="width:100%; border-radius: 27px 27px 0px 0px;">
+            <img src="<?=$b['url'];?>" alt="Avatar" style="width:100%; height: 168px; border-radius: 27px 27px 0px 0px;">
            
             <div class="centered"><span class="currDate"></span></div>
             <div class="container">
