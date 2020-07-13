@@ -874,6 +874,7 @@ if(isset($_POST['updateprofile']))
               <th>Nomor Referral</th>
               <th>Nama</th>
               <th>Jumlah Followers</th>
+              <th>Tingkat Followers</th>
               </tr>
               </thead>
 
@@ -882,27 +883,28 @@ if(isset($_POST['updateprofile']))
               include '../config.php';
               $sql = "SELECT * from full where referral= '$_SESSION[reg_no]'";
               $result = $dbconnect->query($sql);
+              $querysql= "SELECT * from status where id='1'";
+              $resultcondition = $dbconnect->query($querysql);
+              $b=$resultcondition->fetch_assoc();
               // output data of each row
-              while($row = mysql_fetch_array($result)){ 
-              echo "<tr> 
-              <td>" . $row['reg_no'] . "</td> 
-              <td>" . $row['name'] . "</td> 
-              <td>" . $row['followers_count'] . "</td>
-              <td style='padding-left: 30%;'>";
-
-                  if ($row['followers_count'] >= 10) {
-                      echo "Kota";
-                  } elseif ($row['followers_count'] > 3) { 
-                      echo "RT";
-                  } else { 
-                      echo "Warga";
-                  }
-
-                  echo "</td>
-
-              </tr>"; 
-              }
-              ?>
+              while($row = $result->fetch_assoc()){ 
+                echo "<tr> 
+                <td>" . $row['reg_no'] . "</td> 
+                <td>" . $row['name'] . "</td>
+                <td>" . $row['followers_count'] . "</td> 
+                <td>";
+                if ($row['followers_count'] >= $b['batasatas'] || $row['followers_count']>= $b['batasbawah']) {
+                  echo "<p>Kota</p>"; 
+                }
+                else {
+                  echo "<p>Warga</p>";
+                }
+          
+                    echo "</td>
+          
+                </tr>"; 
+                }
+                ?>
               </tbody>
               </table>
             </div>
