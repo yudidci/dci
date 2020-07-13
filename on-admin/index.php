@@ -962,15 +962,38 @@ if(isset($_POST['updateprofile']))
        include '../configpict.php';
        $a = "SELECT * FROM file WHERE id='1'";
        $result = $dbconnect->query($a);
-       $b=$result->fetch_assoc();
+       $aa=$result->fetch_assoc();
+
+       $b = "SELECT * FROM file WHERE id='2'";
+       $result = $dbconnect->query($b);
+       $bb=$result->fetch_assoc();
+
+       $c = "SELECT * FROM file WHERE id='3'";
+       $result = $dbconnect->query($c);
+       $cc=$result->fetch_assoc();
+
+       $d = "SELECT * FROM file WHERE id='4'";
+       $result = $dbconnect->query($d);
+       $dd=$result->fetch_assoc();
+
+       $e = "SELECT * FROM file WHERE id='5'";
+       $result = $dbconnect->query($e);
+       $ee=$result->fetch_assoc();
+
+       $f = "SELECT * FROM file WHERE id='6'";
+       $result = $dbconnect->query($f);
+       $ff=$result->fetch_assoc();
+
+       
        ?>
-            <img src="<?=$b['url'];?>" alt="Avatar" style="width:100%; height: 168px; border-radius: 27px 27px 0px 0px;">
+            <img src="<?=$aa['url'];?>" alt="Avatar" style="width:100%; height: 168px; border-radius: 27px 27px 0px 0px;">
            
             <div class="centered"><span class="currDate"></span></div>
             <div class="container">
-                <h5><b><?=$b['nama'];?></b></h5>
-                <p><?=$b['poin'];?> Follower
-                <div class="my-4 text-right"> <input type="submit" name="update" value="Tukar" <?php if ($_SESSION['followers'] < $b['poin']){ ?> disabled <?php   }  ?> /></div>
+                <h5><b><?=$aa['nama'];?></b></h5>
+                <p><?=$aa['poin'];?> Follower
+                <input type="hidden" name="poin" value="<?=$aa['poin'];?>" />
+                <div class="my-4 text-right"> <input type="submit" name="update" value="Tukar" <?php if ($_SESSION['followers'] < $aa['poin']){ ?> disabled <?php   }  ?> /></div>
                
 
                 <!-- <div class="my-4 text-right"> <button class="button3">Tukar</button></div> -->
@@ -986,7 +1009,7 @@ if(isset($_POST['update']))
 {
     include '../config.php';
   $nik=$_SESSION['sess_id'];
-  $poin=$b['poin'];
+  $poin=$_POST['poin'];
 
   $sql="UPDATE full SET followers_count=(followers_count-'$poin') WHERE nik='$nik'";
   if($dbconnect->query($sql) === false)
@@ -1013,12 +1036,13 @@ if(isset($_POST['update']))
       </div>
          <div class="card-body">
          <div class="card3">
-              <img src="img/Indomie.jpg" alt="Avatar" style="width:100%; border-radius: 27px 27px 0px 0px;">
+              <img src="<?=$bb['url'];?>" alt="Avatar" style="width:100%; height: 168px; border-radius: 27px 27px 0px 0px;">
               <div class="centered"><span class="currDate"></span></div>
               <div class="container">
-             <h5 class="deskripsi"><b>Indomie 1 Kardus</b></h5>
-           <p class="deskripsi">800 Follower
-           <div class="my-4 text-right"> <input type="button" value="Tukar" <?php if ($_SESSION['followers'] < '800'){ ?> disabled <?php   }  ?> onclick="addtocart(<?php echo $_SESSION["followers"]?>)" /></div>
+              <h5><b><?=$bb['nama'];?></b></h5>
+                <p><?=$bb['poin'];?> Follower
+                <input type="hidden" name="poin" value="<?=$bb['poin'];?>" />
+                <div class="my-4 text-right"> <input type="submit" name="update" value="Tukar" <?php if ($_SESSION['followers'] < $bb['poin']){ ?> disabled <?php   }  ?> /></div>
             </p>
           </div>
         </div>
@@ -1035,12 +1059,13 @@ if(isset($_POST['update']))
 
 <div class="card-body">
 <div class="card3">
-<img src="img/sembako2.jpg" alt="Avatar" style="width:100%; border-radius: 27px 27px 0px 0px;">
+<img src="<?=$cc['url'];?>" alt="Avatar" style="width:100%; height: 168px; border-radius: 27px 27px 0px 0px;">
  <div class="centered"><span class="currDate"></span></div>
   <div class="container">
-  <h5 class="deskripsi"><b>Sembako2</b></h5>
-    <p class="deskripsi">400 Follower
-    <div class="my-4 text-right"> <input type="button" value="Tukar" <?php if ($_SESSION['followers'] < '400'){ ?> disabled <?php   }  ?> onclick="addtocart(<?php echo $_SESSION["followers"]?>)" /></div>
+  <h5><b><?=$cc['nama'];?></b></h5>
+                <p><?=$cc['poin'];?> Follower
+                <input type="hidden" name="poin" value="<?=$cc['poin'];?>" />
+                <div class="my-4 text-right"> <input type="submit" name="update" value="Tukar" <?php if ($_SESSION['followers'] < $cc['poin']){ ?> disabled <?php   }  ?> /></div>
     </p>
 </div>
 </div>
@@ -1053,12 +1078,13 @@ if(isset($_POST['update']))
 </div>
 <div class="card-body">
 <div class="card3">
-<img src="img/sembako1.png" alt="Avatar" style="width:100%; border-radius: 27px 27px 0px 0px;">
+<img src="<?=$dd['url'];?>" alt="Avatar" style="width:100%; height: 168px; border-radius: 27px 27px 0px 0px;">
 <div class="centered"><span class="currDate"></span></div>
 <div class="container">
-    <h5 class="deskripsi"><b>Sembako 1</b></h5>
-    <p class="deskripsi">600 Follower
-    <div class="my-4 text-right"> <input type="button" value="Tukar" <?php if ($_SESSION['followers'] < '600'){ ?> disabled <?php   }  ?> onclick="addtocart(<?php echo $_SESSION["followers"]?>)" /></div>
+<h5><b><?=$dd['nama'];?></b></h5>
+                <p><?=$dd['poin'];?> Follower
+                <input type="hidden" name="poin" value="<?=$dd['poin'];?>" />
+                <div class="my-4 text-right"> <input type="submit" name="update" value="Tukar" <?php if ($_SESSION['followers'] < $dd['poin']){ ?> disabled <?php   }  ?> /></div>
     </p>
 </div>
 </div>
@@ -1076,12 +1102,13 @@ if(isset($_POST['update']))
       <!-- Card Body -->
       <div class="card-body">
         <div class="card3">
-          <img src="img/tv.jpg" alt="Avatar" style="width:100%; border-radius: 27px 27px 0px 0px;">
+        <img src="<?=$ee['url'];?>" alt="Avatar" style="width:100%; height: 168px; border-radius: 27px 27px 0px 0px;">
           <div class="centered"><span class="currDate"></span></div>
           <div class="container">
-              <h5 class="deskripsi"><b>Televisi</b></h5>
-              <p class="deskripsi">2000 Follower
-              <div class="my-4 text-right"> <input type="button" value="Tukar" <?php if ($_SESSION['followers'] < '2000'){ ?> disabled <?php   }  ?> onclick="addtocart(<?php echo $_SESSION["followers"]?>)" /></div>
+          <h5><b><?=$ee['nama'];?></b></h5>
+                <p><?=$ee['poin'];?> Follower
+                <input type="hidden" name="poin" value="<?=$ee['poin'];?>" />
+                <div class="my-4 text-right"> <input type="submit" name="update" value="Tukar" <?php if ($_SESSION['followers'] < $ee['poin']){ ?> disabled <?php   }  ?> /></div>
               </p>
           </div>
         </div>
@@ -1097,12 +1124,13 @@ if(isset($_POST['update']))
         <!-- Card Body -->
         <div class="card-body">
           <div class="card3">
-            <img src="img/motor.png" alt="Avatar" style="width:100%; border-radius: 27px 27px 0px 0px;">
+          <img src="<?=$ff['url'];?>" alt="Avatar" style="width:100%; height: 168px; border-radius: 27px 27px 0px 0px;">
             <div class="centered"><span class="currDate"></span></div>
             <div class="container">
-                <h5 class="deskripsi"><b>Sepeda Motor</b></h5>
-                <p class="deskripsi">10000 Follower
-                <div class="my-4 text-right"> <input type="button" value="Tukar" <?php if ($_SESSION['followers'] < '10000'){ ?> disabled <?php   }  ?> onclick="addtocart(<?php echo $_SESSION["followers"]?>)" /></div>
+            <h5><b><?=$ff['nama'];?></b></h5>
+                <p><?=$ff['poin'];?> Follower
+                <input type="hidden" name="poin" value="<?=$ff['poin'];?>" />
+                <div class="my-4 text-right"> <input type="submit" name="update" value="Tukar" <?php if ($_SESSION['followers'] < $ff['poin']){ ?> disabled <?php   }  ?> /></div>
                 </p>
             </div>
           </div>

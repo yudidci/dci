@@ -648,7 +648,7 @@ if(isset($_POST['simpan']))
   <label  class="editpoin" for="fname">Edit deskripsi :</label>
   <input class="editinput" id="cname" name="jdl" minlength="6" type="text" required placeholder="Beras"/><br>
   <label  class="editpoin" for="fname" >Edit poin :</label>
-  <input type="hidden" name="idpoin" value="1" />
+  <input type="hidden" name="idpoin" value="3" />
   <input class="editinput" id="cname" name="poin" type="text" required placeholder="1"/><br>
   ​<label  class="editpoin1" for="fname">Edit Photo            :</label>
    <input class="editfile" type="file" id="myFile" name="gmbr" required>
@@ -668,7 +668,7 @@ if(isset($_POST['simpan']))
   <label  class="editpoin" for="fname">Edit deskripsi :</label>
   <input class="editinput" id="cname" name="jdl" minlength="7" type="text" required placeholder="Beras"/><br>
   <label  class="editpoin" for="fname" >Edit poin :</label>
-  <input type="hidden" name="idpoin" value="1" />
+  <input type="hidden" name="idpoin" value="6" />
   <input class="editinput" id="cname" name="poin" type="text" required placeholder="1"/><br>
   ​<label  class="editpoin1" for="fname">Edit Photo            :</label>
    <input class="editfile" type="file" id="myFile" name="gmbr" required>
