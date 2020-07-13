@@ -804,6 +804,7 @@ if(isset($_POST['updateprofile']))
                   </tr>
                 </thead>
                 <tbody>
+                <!-- new query -->
                 <?php
                   include '../configsdk.php';
                   $table="status";
