@@ -879,26 +879,29 @@ if(isset($_POST['updateprofile']))
 
                 <tbody>
               <?php
-              // $conn = mysqli_connect("localhost", "root", "", "odalfgsm3b");
-              // // Check connection
-              // if ($conn->connect_error) {
-              // die("Connection failed: " . $conn->connect_error);
-              // }
-
               include '../config.php';
               $sql = "SELECT * from full where referral= '$_SESSION[reg_no]'";
               $result = $dbconnect->query($sql);
-             
-              if ($result->num_rows > 0) {
               // output data of each row
-              while($row = $result->fetch_assoc()) {
-              echo "<tr><td>" . $row["reg_no"]. "</td><td>"
-              . $row["name"]. "</td><td>" . $row["followers_count"]. "</td>
-              </tr>";
+              while($row = mysql_fetch_array($result)){ 
+              echo "<tr> 
+              <td>" . $row['reg_no'] . "</td> 
+              <td>" . $row['name'] . "</td> 
+              <td>" . $row['followers_count'] . "</td>
+              <td style='padding-left: 30%;'>";
+
+                  if ($row['followers_count'] >= 10) {
+                      echo "Kota";
+                  } elseif ($row['followers_count'] > 3) { 
+                      echo "RT";
+                  } else { 
+                      echo "Warga";
+                  }
+
+                  echo "</td>
+
+              </tr>"; 
               }
-              echo "</table>";
-              } else { echo "0 results"; }
-              $dbconnect->close();
               ?>
               </tbody>
               </table>
