@@ -816,7 +816,7 @@ if(isset($_POST['updateprofile']))
                   $quesrywarga= "SELECT * from $table where id='6'";
                   $result = $dbconnect->query($querysql);
                   $resultcamat = $dbconnect ->query($quesrycamat);
-                  $resultlurah = $dbconnect ->query($quesrycamat);
+                  $resultlurah = $dbconnect ->query($quesrylurah);
                   $resultrt = $dbconnect ->query($quesryrt);
                   $resultrw = $dbconnect ->query($quesryrw);
                   $resultwarga = $dbconnect ->query($quesrywarga);
@@ -842,11 +842,11 @@ if(isset($_POST['updateprofile']))
                   </tr>
                 <tr>
                     <td><div class="keterangan">Untuk mencapai tingkatan RW anda harus mempunyai<div></td>
-                    <td><div class="box text-center"><?=$e['batasbawah'];?> <br>Follower</div></td>
+                    <td><div class="box text-center"><?=$f['batasbawah'];?> <br>Follower</div></td>
                   </tr>
                 <tr>
                     <td><div class="keterangan">Untuk mencapai tingkatan RT anda harus mempunyai<div></td>
-                    <td><div class="box text-center"><?=$f['batasbawah'];?> <br>Follower</dic></td>
+                    <td><div class="box text-center"><?=$e['batasbawah'];?> <br>Follower</dic></td>
                   </tr>
                   <tr>
                     <td><div class="keterangan">Jika member baru anda akan menjadi tingkatan WARGA <div></td>
@@ -883,8 +883,20 @@ if(isset($_POST['updateprofile']))
             if ($followers >= $b['batasatas'] || $followers>= $b['batasbawah']) {
               echo "<p>".$var."Kota</p>"; 
             }
+            elseif ($followers >= $c['batasatas'] || $followers>= $c['batasbawah']) {
+              echo "<p>".$var. "camat</p>";
+            }
+            elseif ($followers >= $d['batasatas'] || $followers>= $d['batasbawah']) {
+              echo "<p>".$var. "lurah</p>";
+            }
+            elseif ($followers >= $f['batasatas'] || $followers>= $f['batasbawah']) {
+              echo "<p>".$var. "RW</p>";
+            }
+            elseif ($followers >= $e['batasatas'] || $followers>= $e['batasbawah']) {
+              echo "<p>".$var. "RT</p>";
+            }
             else {
-              echo "<p>".$var. "Warga</p>";
+              echo "<p>".$var. "warga</p>";
             }
             ?>
             
@@ -919,6 +931,18 @@ if(isset($_POST['updateprofile']))
                 <td>";
                 if ($row['followers_count'] >= $b['batasatas'] || $row['followers_count']>= $b['batasbawah']) {
                   echo "<p>Kota</p>"; 
+                }
+                elseif ($row['followers_count'] >= $c['batasatas'] || $row['followers_count']>= $c['batasbawah']) {
+                  echo "<p>camat</p>"; 
+                }
+                elseif ($row['followers_count'] >= $d['batasatas'] || $row['followers_count']>= $d['batasbawah']) {
+                  echo "<p>lurah</p>"; 
+                }
+                elseif ($row['followers_count'] >= $f['batasatas'] || $row['followers_count']>= $f['batasbawah']) {
+                  echo "<p>rw</p>"; 
+                }
+                elseif ($row['followers_count'] >= $e['batasatas'] || $row['followers_count']>= $e['batasbawah']) {
+                  echo "<p>RT</p>"; 
                 }
                 else {
                   echo "<p>Warga</p>";

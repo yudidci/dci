@@ -353,10 +353,10 @@
         <form method="post">
           <p class="judul">Batas Follower <select id="tingkatan" name="tingkatan">
             <option value="1">Kota</option>
-              <option value="2">Lurah</option>
-              <option value="3">Camat</option>
-              <option value="4">RT</option>
-              <option value="5">RW</option>
+              <option value="2">Camat</option>
+              <option value="3">Lurah</option>
+              <option value="4">RW</option>
+              <option value="5">RT</option>
               <option value="6">Warga</option>
             </select></p>
           
