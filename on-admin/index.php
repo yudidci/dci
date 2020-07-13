@@ -848,7 +848,7 @@ if(isset($_POST['updateprofile']))
           <div class="card-header py-3">
             <h6 class="m-0 font-weight-bold text-primary"><?=$_SESSION['followers'];?> Follower</h6>
            
-
+          <!-- conditional status -->
             <?php
             include '../configfollowers.php';
             $querysql= "SELECT * from status where id='1'";
@@ -856,11 +856,8 @@ if(isset($_POST['updateprofile']))
             $b=$result->fetch_assoc();
               $followers = $_SESSION['followers'];
               $var = "Peringkat anda saat ini adalah ";
-            if ($followers >= $b['batasatas']) {
+            if ($followers >= $b['batasatas'] || $followers>= $b['batasbawah']) {
               echo "<p>".$var."Kota</p>"; 
-            }
-            elseif($followers >= $b['batasbawah'] ) { 
-              echo "<p>".$var." Kota</p>";
             }
             else {
               echo "<p>".$var. "Warga</p>";
@@ -877,32 +874,37 @@ if(isset($_POST['updateprofile']))
               <th>Nomor Referral</th>
               <th>Nama</th>
               <th>Jumlah Followers</th>
+              <th>Tingkat Followers</th>
               </tr>
               </thead>
 
                 <tbody>
               <?php
-              // $conn = mysqli_connect("localhost", "root", "", "odalfgsm3b");
-              // // Check connection
-              // if ($conn->connect_error) {
-              // die("Connection failed: " . $conn->connect_error);
-              // }
-
               include '../config.php';
               $sql = "SELECT * from full where referral= '$_SESSION[reg_no]'";
               $result = $dbconnect->query($sql);
-             
-              if ($result->num_rows > 0) {
+              $querysql= "SELECT * from status where id='1'";
+              $resultcondition = $dbconnect->query($querysql);
+              $b=$resultcondition->fetch_assoc();
               // output data of each row
-              while($row = $result->fetch_assoc()) {
-              echo "<tr><td>" . $row["reg_no"]. "</td><td>"
-              . $row["name"]. "</td><td>" . $row["followers_count"]. "</td>
-              </tr>";
-              }
-              echo "</table>";
-              } else { echo "0 results"; }
-              $dbconnect->close();
-              ?>
+              while($row = $result->fetch_assoc()){ 
+                echo "<tr> 
+                <td>" . $row['reg_no'] . "</td> 
+                <td>" . $row['name'] . "</td>
+                <td>" . $row['followers_count'] . "</td> 
+                <td>";
+                if ($row['followers_count'] >= $b['batasatas'] || $row['followers_count']>= $b['batasbawah']) {
+                  echo "<p>Kota</p>"; 
+                }
+                else {
+                  echo "<p>Warga</p>";
+                }
+          
+                    echo "</td>
+          
+                </tr>"; 
+                }
+                ?>
               </tbody>
               </table>
             </div>
