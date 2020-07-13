@@ -804,15 +804,9 @@ if(isset($_POST['updateprofile']))
                   </tr>
                 </thead>
                 <tbody>
-                <?php
-                  include '../configsdk.php';
-                  $querysql= "SELECT * from status where id='1'";
-                  $result = $dbconnect->query($querysql);
-                  $b=$result->fetch_assoc();
-                  ?>
                 <tr>
                     <td><div class="keterangan">Untuk mencapai tingkatan KOTA anda harus mempunyai<div></td>
-                    <td><div class="box text-center"><?=$b['batasbawah'];?><br>Follower</div></td>
+                    <td><div class="box text-center">10000 <br>Follower</div></td>
                   </tr>
                 <tr>
                     <td><div class="keterangan">Untuk mencapai tingkatan KECAMATAN anda harus mempunyai<div></td>
@@ -946,7 +940,7 @@ if(isset($_POST['updateprofile']))
        $result = $dbconnect->query($a);
        $b=$result->fetch_assoc();
        ?>
-            <img src="<?=$b['url'];?>" alt="Avatar" style="width:100%; border-radius: 27px 27px 0px 0px;">
+            <img src="<?=$b['url'];?>" alt="Avatar" style="width:100%; height: 168px; border-radius: 27px 27px 0px 0px;">
            
             <div class="centered"><span class="currDate"></span></div>
             <div class="container">
