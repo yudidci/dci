@@ -827,6 +827,7 @@ if(isset($_POST['updateprofile']))
                   $f=$resultrw->fetch_assoc();
                   $g=$resultwarga->fetch_assoc();
                   ?>
+                  <!-- new variable -->
                 <tr>
                     <td><div class="keterangan">Untuk mencapai tingkatan KOTA anda harus mempunyai<div></td>
                     <td><div class="box text-center"><?=$b['batasbawah'];?><br>Follower</div></td>
