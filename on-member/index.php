@@ -351,7 +351,15 @@
         <div class="card1">
         <!-- update status -->
         <form method="post">
-          <p class="judul">Batas Follower Kota</p>
+          <p class="judul">Batas Follower <select id="tingkatan" name="tingkatan">
+            <option value="1">Kota</option>
+              <option value="2">Lurah</option>
+              <option value="3">Camat</option>
+              <option value="4">RT</option>
+              <option value="5">RW</option>
+              <option value="6">Warga</option>
+            </select></p>
+          
           <div class="column">
             <input type="text" id="batasbawah" name="batasbawah" onkeypress="return hanyaAngka(event)"><br>
           </div>
@@ -359,7 +367,6 @@
             <select id="cars" name="cars">
             <option value="lk"><</option>
               <option value="lb">></option>
-              
               <option value="lbs">≥</option>
               <option value="audi">≤</option>
             </select>
@@ -375,121 +382,22 @@
           include'../configpict.php';
           $batasbawah=$_POST['batasbawah'];
           $batasatas=$_POST['batasatas'];
+          $tingkatan=$_POST['tingkatan'];
         
-          $sql="UPDATE status SET batasbawah='$batasbawah', batasatas='$batasatas' WHERE id=1";
+          $sql="UPDATE status SET batasbawah='$batasbawah', batasatas='$batasatas' WHERE id='$tingkatan'";
           if($dbconnect->query($sql) === false)
           { // Jika gagal meng-insert data tampilkan pesan dibawah 'Perintah SQL Salah'
             trigger_error('Wrong SQL Command: ' . $sql . ' Error: ' . $dbconnect->error, E_USER_ERROR);
           }  
           else 
           { // Jika berhasil alihkan ke halaman tampil.php
-            echo "<script>alert('Range untuk status Kota telah berhasil diubah! Silakan Login Kembali')</script>";
+            echo "<script>alert('Range status telah berhasil diubah! Silakan Login Kembali')</script>";
             echo "<meta http-equiv=refresh content=\"0; url=./../logout.php\">";
           }
         }
         
         ?>   
         </div>
-        
-      
-        <div class="card1">
-          <p class="judul">Batas Follower Camat</p>
-          <div class="column">
-            <input type="text" id="username" name="username" onkeypress="return hanyaAngka(event)"><br>
-          </div>
-          <div class="column">
-          <select id="cars" name="cars">
-          <option value="pilih">Pilih</option>
-            <option value="volvo">></option>
-            <option value="saab"><</option>
-            <option value="fiat">≥</option>
-            <option value="audi">≤</option>
-          </select>
-          </div>
-          <div class="column">
-            <input type="text" id="username" name="username" onkeypress="return hanyaAngka(event)"><br>
-          </div>
-          <button type="button" class="updt-follower" id="updt-follower">Update</button>
-        </div>
-        <div class="card1">
-          <p class="judul">Batas Follower Lurah</p>
-          <div class="column">
-            <input type="text" id="username" name="username" onkeypress="return hanyaAngka(event)"><br>
-          </div>
-          <div class="column">
-            <select id="cars" name="cars">
-            <option value="pilih">Pilih</option>
-              <option value="volvo">></option>
-              <option value="saab"><</option>
-              <option value="fiat">≥</option>
-              <option value="audi">≤</option>
-            </select>
-          </div>
-          <div class="column">
-            <input type="text" id="username" name="username" onkeypress="return hanyaAngka(event)"><br>
-          </div>
-          <button type="button" class="updt-follower" id="updt-follower">Update</button>
-        </div>
-</div>
-<div class="row1">
-        <div class="card1">
-          <p class="judul">Batas Follower RT</p>
-          <div class="column">
-            <input type="text" id="username" name="username"><br>
-          </div>
-          <div class="column">
-            <select id="cars" name="cars">
-            <option value="pilih">Pilih</option>
-              <option value="volvo">></option>
-              <option value="saab"><</option>
-              <option value="fiat">≥</option>
-              <option value="audi">≤</option>
-            </select>
-          </div>
-          <div class="column">
-            <input type="text" id="username" name="username"><br>
-          </div>
-          <button type="button" class="updt-follower" id="updt-follower">Update</button>
-        </div>
-        <div class="card1">
-          <p class="judul">Batas Follower RW</p>
-          <div class="column">
-            <input type="text" id="username" name="username"><br>
-          </div>
-          <div class="column">
-            <select id="cars" name="cars">
-            <option value="pilih">Pilih</option>
-              <option value="volvo">></option>
-              <option value="saab"><</option>
-              <option value="fiat">≥</option>
-              <option value="audi">≤</option>
-            </select>
-          </div>
-          <div class="column">
-            <input type="text" id="username" name="username"><br>
-          </div>
-          <button type="button" class="updt-follower" id="updt-follower">Update</button>
-        </div>
-        <div class="card1">
-          <p class="judul">Batas Follower Warga</p>
-        <div class="column">
-          <input type="text" id="username" name="username" onkeypress="return hanyaAngka(event)"><br>
-        </div>
-        <div class="column">
-          <select id="cars" name="cars">
-          <option value="pilih">Pilih</option>
-            <option value="volvo">></option>
-            <option value="saab"><</option>
-            <option value="fiat">≥</option>
-            <option value="audi">≤</option>
-          </select>
-        </div>
-        <div class="column">
-          <input type="text" id="username" name="username" onkeypress="return hanyaAngka(event)"><br>
-        </div>
-        <button type="button" class="updt-follower" id="updt-follower">Update</button>
-      </div>
-      </div>
 </div>
 </div>
 
