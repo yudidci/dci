@@ -4658,7 +4658,7 @@ p.slogan {
 
 .osco-visi {
   margin-bottom: 10px;
-  margin-left: 210px;
+  margin-left: 244px !important;
   text-transform: uppercase;
   display: inline-block;
   background: #ffcc28;
@@ -4939,13 +4939,10 @@ p.slogan {
 }
 }
 
-
-
-
- @media only screen and (max-width: 1024px) and (min-width: 768px){
+@media only screen and (max-width: 1366px) and (min-width: 1024px){
   .osco-visi {
     margin-bottom: 6px;
-    margin-left: 165px;
+    margin-left: 146px ;
     text-transform: uppercase;
     display: inline-block;
     background: #ffcc28;
@@ -4956,7 +4953,19 @@ p.slogan {
 }
  }
 
-
+ @media only screen and (max-width: 1024px) and (min-width: 768px){
+  .osco-visi {
+    margin-bottom: 6px;
+    margin-left: 149px !important;
+    text-transform: uppercase;
+    display: inline-block;
+    background: #ffcc28;
+    padding: 3px 35px;
+    text-align: center;
+    font-style: italic;
+    clip-path: polygon(13% 0%, 100% 0%, 87% 100%, 0% 100%);
+}
+ }
 
 
 
