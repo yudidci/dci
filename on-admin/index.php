@@ -811,8 +811,8 @@ if(isset($_POST['updateprofile']))
                   $querysql= "SELECT * from $table where id='1'";
                   $quesrycamat= "SELECT * from $table where id='2'";
                   $quesrylurah= "SELECT * from $table where id='3'";
-                  $quesryrt= "SELECT * from $table where id='4'";
-                  $quesryrw= "SELECT * from $table where id='5'";
+                  $quesryrw= "SELECT * from $table where id='4'";
+                  $quesryrt= "SELECT * from $table where id='5'";
                   $quesrywarga= "SELECT * from $table where id='6'";
                   $result = $dbconnect->query($querysql);
                   $resultcamat = $dbconnect ->query($quesrycamat);
@@ -823,8 +823,8 @@ if(isset($_POST['updateprofile']))
                   $b=$result->fetch_assoc();
                   $c=$resultcamat->fetch_assoc();
                   $d=$resultlurah->fetch_assoc();
-                  $e=$resultrt->fetch_assoc();
-                  $f=$resultrw->fetch_assoc();
+                  $e=$resultrw->fetch_assoc();
+                  $f=$resultrt->fetch_assoc();
                   $g=$resultwarga->fetch_assoc();
                   ?>
                   <!-- new variable -->
@@ -842,11 +842,11 @@ if(isset($_POST['updateprofile']))
                   </tr>
                 <tr>
                     <td><div class="keterangan">Untuk mencapai tingkatan RW anda harus mempunyai<div></td>
-                    <td><div class="box text-center"><?=$f['batasbawah'];?> <br>Follower</div></td>
+                    <td><div class="box text-center"><?=$e['batasbawah'];?> <br>Follower</div></td>
                   </tr>
                 <tr>
                     <td><div class="keterangan">Untuk mencapai tingkatan RT anda harus mempunyai<div></td>
-                    <td><div class="box text-center"><?=$e['batasbawah'];?> <br>Follower</dic></td>
+                    <td><div class="box text-center"><?=$f['batasbawah'];?> <br>Follower</dic></td>
                   </tr>
                   <tr>
                     <td><div class="keterangan">Jika member baru anda akan menjadi tingkatan WARGA <div></td>
@@ -889,14 +889,17 @@ if(isset($_POST['updateprofile']))
             elseif ($followers >= $d['batasatas'] || $followers>= $d['batasbawah']) {
               echo "<p>".$var. "lurah</p>";
             }
-            elseif ($followers >= $f['batasatas'] || $followers>= $f['batasbawah']) {
+            elseif ($followers >= $e['batasatas'] || $followers>= $e['batasbawah']) {
               echo "<p>".$var. "RW</p>";
             }
-            elseif ($followers >= $e['batasatas'] || $followers>= $e['batasbawah']) {
+            elseif ($followers >= $f['batasatas'] || $followers>= $f['batasbawah']) {
               echo "<p>".$var. "RT</p>";
             }
+            elseif ($followers >= $g['batasatas'] || $followers>= $g['batasbawah']) {
+              echo "<p>".$var. "Warga</p>";
+            }
             else {
-              echo "<p>".$var. "warga</p>";
+              echo "<p>".$var. "Member Baru</p>";
             }
             ?>
             
@@ -933,19 +936,22 @@ if(isset($_POST['updateprofile']))
                   echo "<p>Kota</p>"; 
                 }
                 elseif ($row['followers_count'] >= $c['batasatas'] || $row['followers_count']>= $c['batasbawah']) {
-                  echo "<p>camat</p>"; 
+                  echo "<p>Camat</p>"; 
                 }
                 elseif ($row['followers_count'] >= $d['batasatas'] || $row['followers_count']>= $d['batasbawah']) {
-                  echo "<p>lurah</p>"; 
-                }
-                elseif ($row['followers_count'] >= $f['batasatas'] || $row['followers_count']>= $f['batasbawah']) {
-                  echo "<p>rw</p>"; 
+                  echo "<p>Lurah</p>"; 
                 }
                 elseif ($row['followers_count'] >= $e['batasatas'] || $row['followers_count']>= $e['batasbawah']) {
+                  echo "<p>RW</p>"; 
+                }
+                elseif ($row['followers_count'] >= $f['batasatas'] || $row['followers_count']>= $f['batasbawah']) {
                   echo "<p>RT</p>"; 
                 }
+                elseif ($row['followers_count'] >= $g['batasatas'] || $row['followers_count']>= $g['batasbawah']) {
+                  echo "<p>Warga</p>"; 
+                }
                 else {
-                  echo "<p>Warga</p>";
+                  echo "<p>Member Baru</p>";
                 }
           
                     echo "</td>

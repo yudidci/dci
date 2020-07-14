@@ -391,8 +391,8 @@
           }  
           else 
           { // Jika berhasil alihkan ke halaman tampil.php
-            echo "<script>alert('Range status telah berhasil diubah! Silakan Login Kembali')</script>";
-            echo "<meta http-equiv=refresh content=\"0; url=./../logout.php\">";
+            echo "<script>alert('Range status telah berhasil diubah!')</script>";
+            echo "<meta http-equiv=refresh content=\"0; url=./index.php\">";
           }
         }
         
