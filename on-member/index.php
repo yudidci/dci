@@ -477,6 +477,24 @@
       </div>
       <?php
 include '../config.php';
+$querypoin1 = "SELECT * from file where id=1";
+$result1 = $dbconnect->query($querypoin1);
+$file1=$result1->fetch_assoc();
+$querypoin2 = "SELECT * from file where id=2";
+$result2 = $dbconnect->query($querypoin2);
+$file2=$result2->fetch_assoc();
+$querypoin3 = "SELECT * from file where id=3";
+$result3 = $dbconnect->query($querypoin3);
+$file3=$result3->fetch_assoc();
+$querypoin4 = "SELECT * from file where id=4";
+$result4 = $dbconnect->query($querypoin4);
+$file4=$result4->fetch_assoc();
+$querypoin5 = "SELECT * from file where id=5";
+$result5 = $dbconnect->query($querypoin5);
+$file5=$result5->fetch_assoc();
+$querypoin6 = "SELECT * from file where id=6";
+$result6 = $dbconnect->query($querypoin6);
+$file6=$result6->fetch_assoc();
 if(isset($_POST['simpan']))
 {
     //periksa apakah user telah menekan submit, dengan menggunakan parameter setingan keterangan
@@ -533,10 +551,10 @@ if(isset($_POST['simpan']))
 ?>
 <form action="" method="POST" enctype="multipart/form-data"/>
   <label  class="editpoin" for="fname">Edit deskripsi :</label>
-  <input class="editinput" id="cname" name="jdl" minlength="5" type="text" required placeholder="Beras"/><br>
+  <input class="editinput" id="cname" name="jdl" minlength="5" type="text" required placeholder="<?=$file1['nama'];?>"/><br>
   <label  class="editpoin" for="fname" >Edit poin :</label>
   <input type="hidden" name="idpoin" value="1" />
-  <input class="editinput" id="cname" name="poin" type="text" required placeholder="1"/><br>
+  <input class="editinput" id="cname" name="poin" type="text" required placeholder="<?=$file1['poin'];?>"/><br>
   ​<label  class="editpoin1" for="fname">Edit Photo            :</label>
    <input class="editfile" type="file" id="myFile" name="gmbr" required>
   <input class="submit" name="simpan" type="submit">
@@ -550,10 +568,10 @@ if(isset($_POST['simpan']))
       </div>
       <form action="" method="POST" enctype="multipart/form-data"/>
   <label  class="editpoin" for="fname">Edit deskripsi :</label>
-  <input class="editinput" id="cname" name="jdl" minlength="5" type="text" required placeholder="Beras"/><br>
+  <input class="editinput" id="cname" name="jdl" minlength="5" type="text" required placeholder="<?=$file4['nama'];?>"/><br>
   <label  class="editpoin" for="fname" >Edit poin :</label>
   <input type="hidden" name="idpoin" value="4" />
-  <input class="editinput" id="cname" name="poin" type="text" required placeholder="1"/><br>
+  <input class="editinput" id="cname" name="poin" type="text" required placeholder="<?=$file4['poin'];?>"/><br>
   ​<label  class="editpoin1" for="fname">Edit Photo            :</label>
    <input class="editfile" type="file" id="myFile" name="gmbr" required>
   <input class="submit" name="simpan" type="submit">
@@ -571,10 +589,10 @@ if(isset($_POST['simpan']))
 
 <form action="" method="POST" enctype="multipart/form-data"/>
   <label  class="editpoin" for="fname">Edit deskripsi :</label>
-  <input class="editinput" id="cname" name="jdl" minlength="5" type="text" required placeholder="Beras"/><br>
+  <input class="editinput" id="cname" name="jdl" minlength="5" type="text" required placeholder="<?=$file2['nama'];?>"/><br>
   <label  class="editpoin" for="fname" >Edit poin :</label>
   <input type="hidden" name="idpoin" value="2" />
-  <input class="editinput" id="cname" name="poin" type="text" required placeholder="1"/><br>
+  <input class="editinput" id="cname" name="poin" type="text" required placeholder="<?=$file2['poin'];?>"/><br>
   ​<label  class="editpoin1" for="fname">Edit Photo            :</label>
    <input class="editfile" type="file" id="myFile" name="gmbr" required>
   <input class="submit" name="simpan" type="submit">
@@ -588,10 +606,10 @@ if(isset($_POST['simpan']))
 </div>
 <form action="" method="POST" enctype="multipart/form-data"/>
   <label  class="editpoin" for="fname">Edit deskripsi :</label>
-  <input class="editinput" id="cname" name="jdl" minlength="5" type="text" required placeholder="Beras"/><br>
+  <input class="editinput" id="cname" name="jdl" minlength="5" type="text" required placeholder="<?=$file5['nama'];?>"/><br>
   <label  class="editpoin" for="fname" >Edit poin :</label>
   <input type="hidden" name="idpoin" value="5" />
-  <input class="editinput" id="cname" name="poin" type="text" required placeholder="1"/><br>
+  <input class="editinput" id="cname" name="poin" type="text" required placeholder="<?=$file5['poin'];?>"/><br>
   ​<label  class="editpoin1" for="fname">Edit Photo            :</label>
    <input class="editfile" type="file" id="myFile" name="gmbr" required>
   <input class="submit" name="simpan" type="submit">
@@ -611,10 +629,10 @@ if(isset($_POST['simpan']))
     
       <form action="" method="POST" enctype="multipart/form-data"/>
   <label  class="editpoin" for="fname">Edit deskripsi :</label>
-  <input class="editinput" id="cname" name="jdl" minlength="6" type="text" required placeholder="Beras"/><br>
+  <input class="editinput" id="cname" name="jdl" minlength="6" type="text" required placeholder="<?=$file3['nama'];?>"/><br>
   <label  class="editpoin" for="fname" >Edit poin :</label>
   <input type="hidden" name="idpoin" value="3" />
-  <input class="editinput" id="cname" name="poin" type="text" required placeholder="1"/><br>
+  <input class="editinput" id="cname" name="poin" type="text" required placeholder="<?=$file3['poin'];?>"/><br>
   ​<label  class="editpoin1" for="fname">Edit Photo            :</label>
    <input class="editfile" type="file" id="myFile" name="gmbr" required>
   <input class="submit" name="simpan" type="submit">
@@ -631,10 +649,10 @@ if(isset($_POST['simpan']))
         <!-- Card Body -->
         <form action="" method="POST" enctype="multipart/form-data"/>
   <label  class="editpoin" for="fname">Edit deskripsi :</label>
-  <input class="editinput" id="cname" name="jdl" minlength="7" type="text" required placeholder="Beras"/><br>
+  <input class="editinput" id="cname" name="jdl" minlength="7" type="text" required placeholder="<?=$file6['nama'];?>"/><br>
   <label  class="editpoin" for="fname" >Edit poin :</label>
   <input type="hidden" name="idpoin" value="6" />
-  <input class="editinput" id="cname" name="poin" type="text" required placeholder="1"/><br>
+  <input class="editinput" id="cname" name="poin" type="text" required placeholder="<?=$file6['poin'];?>"/><br>
   ​<label  class="editpoin1" for="fname">Edit Photo            :</label>
    <input class="editfile" type="file" id="myFile" name="gmbr" required>
   <input class="submit" name="simpan" type="submit">
