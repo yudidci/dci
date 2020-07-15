@@ -347,9 +347,66 @@
 <h1 class="h3 mb-2 text-gray-800">Edit Batas Follower</h1>
 <!-- DataTales Example -->
 
+<div class="container">
+  <div class="roww">
+   
+    <div class="col-md-4">
+      <div class="card card-2">
+      <form method="post">
+          <p class="judul">Batas Follower <select id="tingkatan" name="tingkatan">
+          <option value="1">Kota</option>
+              <option value="2">Camat</option>
+              <option value="3">Lurah</option>
+              <option value="4">RW</option>
+              <option value="5">RT</option>
+              <option value="6">Warga</option>
+            </select></p>
+            <div class="column">
+            <input type="text" id="batasbawah" name="batasbawah" onkeypress="return hanyaAngka(event)"><br>
+          </div>
+          <div class="column">
+            <select id="cars" name="cars">
+            <option value="lk"><</option>
+              <option value="lb">></option>
+              <option value="lbs">≥</option>
+              <option value="audi">≤</option>
+            </select>
+          </div>
+          <div class="column">
+            <input type="text" id="batasatas" name="batasatas" onkeypress="return hanyaAngka(event)"><br>
+          </div>
+          <input type="submit" class="updt-follower" id="updt-follower" name="updt-follower"value="Update"/>
+         </form>
+         <?php
+        if(isset($_POST['updt-follower']))
+        {
+          include'../configpict.php';
+          $batasbawah=$_POST['batasbawah'];
+          $batasatas=$_POST['batasatas'];
+          $tingkatan=$_POST['tingkatan'];
+        
+          $sql="UPDATE status SET batasbawah='$batasbawah', batasatas='$batasatas' WHERE id='$tingkatan'";
+          if($dbconnect->query($sql) === false)
+          { // Jika gagal meng-insert data tampilkan pesan dibawah 'Perintah SQL Salah'
+            trigger_error('Wrong SQL Command: ' . $sql . ' Error: ' . $dbconnect->error, E_USER_ERROR);
+          }  
+          else 
+          { // Jika berhasil alihkan ke halaman tampil.php
+            echo "<script>alert('Range status telah berhasil diubah!')</script>";
+            echo "<meta http-equiv=refresh content=\"0; url=./index.php\">";
+          }
+        }
+        
+        ?>   
+      </div>
+
+    </div>
+  </div>
+</div>
+<!-- 
         <div class="row1">
         <div class="card1">
-        <!-- update status -->
+ 
         <form method="post">
           <p class="judul">Batas Follower <select id="tingkatan" name="tingkatan">
             <option value="1">Kota</option>
@@ -397,7 +454,7 @@
         }
         
         ?>   
-        </div>
+        </div> -->
 </div>
 </div>
 
