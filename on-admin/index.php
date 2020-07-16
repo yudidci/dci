@@ -489,7 +489,16 @@ $b=mysqli_fetch_array($a,MYSQLI_ASSOC)
                 </div>
                 </div>
               </div> -->
- 
+              <div class="card-header py-3">
+                <div class="row">
+                  <div class="col-sm-2">
+                  <h6 class="m-0 font-weight-bold text-primary">Nomor Referral</h6>
+                </div>
+                <div class="col-sm-10">
+                  <input type="text" id="ref" name="red" value="<?=$_SESSION['reg_no'];?>" readonly><br>
+                </div>
+                </div>
+              </div>
               <div class="card-header py-3">
                 <div class="row">
                   <div class="col-sm-2">
