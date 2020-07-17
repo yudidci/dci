@@ -1532,6 +1532,15 @@ button {
   }
 }
 
+@media only screen and (max-width: 1024px) and (min-width: 768px){
+  .editinput{
+    width: 405px;
+    margin-left: -12px;
+    font-size: 15px;
+    height: 26px;
+  }
+}
+
 .editfile{
   overflow: visible;
   margin-left: -8px;
@@ -1596,6 +1605,25 @@ button {
   font-weight: bold;
 }
 }
+
+@media only screen and (max-width: 1024px) and (min-width: 768px){
+  .submit {
+    margin-top: 16px;
+    margin-left: -10px;
+    font-size: 12px;
+    width: 399px;
+    height: 31px;
+    margin-bottom: 10px;
+    background: #ffcc28;
+    white-space: nowrap;
+    border-radius: 3px;
+    color: #fff;
+    transition: all .2s ease-out, color .2s ease-out;
+    border: 0;
+    cursor: pointer;
+    font-weight: bold;
+  }
+  }
 
 .submit:hover {
   margin-top: 16px;
