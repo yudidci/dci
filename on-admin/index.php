@@ -923,6 +923,7 @@ if(isset($_POST['updateprofile']))
               <th>Nama</th>
               <th>Jumlah Followers</th>
               <th>Tingkat Followers</th>
+              <th>Detail</th>
               </tr>
               </thead>
 
@@ -963,8 +964,14 @@ if(isset($_POST['updateprofile']))
                   echo "<p>Member Baru</p>";
                 }
           
-                    echo "</td>
-          
+                    echo 
+                //     "</td>
+                // <td><button >Detail</button></td> 
+                // "<tr> 
+
+                // <td><a href=detailpage.php?id=" . $row['reg_no'] . "<button>View Details</button></a></td> 
+                "<td><a href='detail.php?did=".$row['reg_no']."'>Detail</a></td>
+                
                 </tr>"; 
                 }
                 ?>
