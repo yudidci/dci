@@ -351,9 +351,10 @@
   <div class="roww">
    
     <div class="col-md-4">
-      <div class="card card-2">
+      <div class="card2 card-2">
       <form method="post">
-          <p class="judul">Batas Follower <select id="tingkatan" name="tingkatan">
+          <p class="judul">Batas Follower</p> 
+          <select class="tingkatan" id="tingkatan" name="tingkatan">
           <option value="1">Kota</option>
               <option value="2">Camat</option>
               <option value="3">Lurah</option>
@@ -372,7 +373,7 @@
               <option value="audi">≤</option>
             </select>
           </div>
-          <div class="column">
+          <div class="column2">
             <input type="text" id="batasatas" name="batasatas" onkeypress="return hanyaAngka(event)"><br>
           </div>
           <input type="submit" class="updt-follower" id="updt-follower" name="updt-follower"value="Update"/>
@@ -433,25 +434,25 @@
           </div>
           <input type="submit" class="updt-follower" id="updt-follower" name="updt-follower"value="Update"/>
          </form>
-          <?php
-        if(isset($_POST['updt-follower']))
-        {
-          include'../configpict.php';
-          $batasbawah=$_POST['batasbawah'];
-          $batasatas=$_POST['batasatas'];
-          $tingkatan=$_POST['tingkatan'];
+          <!-- <?php
+        // if(isset($_POST['updt-follower']))
+        // {
+        //   include'../configpict.php';
+        //   $batasbawah=$_POST['batasbawah'];
+        //   $batasatas=$_POST['batasatas'];
+        //   $tingkatan=$_POST['tingkatan'];
         
-          $sql="UPDATE status SET batasbawah='$batasbawah', batasatas='$batasatas' WHERE id='$tingkatan'";
-          if($dbconnect->query($sql) === false)
-          { // Jika gagal meng-insert data tampilkan pesan dibawah 'Perintah SQL Salah'
-            trigger_error('Wrong SQL Command: ' . $sql . ' Error: ' . $dbconnect->error, E_USER_ERROR);
-          }  
-          else 
-          { // Jika berhasil alihkan ke halaman tampil.php
-            echo "<script>alert('Range status telah berhasil diubah!')</script>";
-            echo "<meta http-equiv=refresh content=\"0; url=./index.php\">";
-          }
-        }
+        //   $sql="UPDATE status SET batasbawah='$batasbawah', batasatas='$batasatas' WHERE id='$tingkatan'";
+        //   if($dbconnect->query($sql) === false)
+        //   { 
+        //     trigger_error('Wrong SQL Command: ' . $sql . ' Error: ' . $dbconnect->error, E_USER_ERROR);
+        //   }  
+        //   else 
+        //   { 
+        //     echo "<script>alert('Range status telah berhasil diubah!')</script>";
+        //     echo "<meta http-equiv=refresh content=\"0; url=./index.php\">";
+        //   }
+        // }
         
         ?>   
         </div> -->
@@ -471,7 +472,7 @@
   <div class="col-xl-4 col-lg-7">
     <!-- Area Chart -->
 
-    <div class="card shadow mb-4">
+    <div class="card2 shadow mb-4">
     <div class="card-header py-3">
         <h6 class="m-0 font-weight-bold text-primary">Bonus 1</h6>
       </div>
@@ -544,7 +545,7 @@ if(isset($_POST['simpan']))
 
       </div>
 
-      <div class="card shadow mb-4">
+      <div class="card2 shadow mb-4">
     <div class="card-header py-3">
         <h6 class="m-0 font-weight-bold text-primary">Bonus 4</h6>
       </div>
@@ -564,7 +565,7 @@ if(isset($_POST['simpan']))
 
   <div class="col-xl-4 col-lg-7">
 <!-- Area Chart -->
-<div class="card shadow mb-4">
+<div class="card2 shadow mb-4">
 <div class="card-header py-3">
 <h6 class="m-0 font-weight-bold text-primary">Bonus 2</h6>
 </div>
@@ -582,7 +583,7 @@ if(isset($_POST['simpan']))
 
 </div>
 
-<div class="card shadow mb-4">
+<div class="card2 shadow mb-4">
 <div class="card-header py-3">
 <h6 class="m-0 font-weight-bold text-primary">Bonus 5</h6>
 </div>
@@ -602,7 +603,7 @@ if(isset($_POST['simpan']))
 
   <!-- Donut Chart -->
   <div class="col-xl-4 col-lg-5">
-    <div class="card shadow mb-4">
+    <div class="card2 shadow mb-4">
       <!-- Card Header - Dropdown -->
       <div class="card-header py-3">
         <h6 class="m-0 font-weight-bold text-primary">Bonus 3</h6>
@@ -623,7 +624,7 @@ if(isset($_POST['simpan']))
   
       
     </div>
-      <div class="card shadow mb-4">
+      <div class="card2 shadow mb-4">
         <!-- Card Header - Dropdown -->
         <div class="card-header py-3">
           <h6 class="m-0 font-weight-bold text-primary">Bonus 6</h6>
