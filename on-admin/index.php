@@ -924,6 +924,7 @@ if(isset($_POST['updateprofile']))
               <th>Jumlah Followers</th>
               <th>Tingkat Followers</th>
               <th>Detail</th>
+              <th>Delete</th>
               </tr>
               </thead>
 
@@ -972,6 +973,7 @@ if(isset($_POST['updateprofile']))
                 // <td><a href=detailpage.php?id=" . $row['reg_no'] . "<button>View Details</button></a></td> 
                 "<td><a href='detail.php?did=".$row['reg_no']."'>Detail</a></td>
                 
+                <td><a href='delete.php?did=".$row['reg_no']."'>Delete</a></td>
                 </tr>"; 
                 }
                 ?>
