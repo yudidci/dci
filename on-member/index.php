@@ -472,7 +472,7 @@
   <div class="col-xl-4 col-lg-7">
     <!-- Area Chart -->
 
-    <div class="card2 shadow mb-4">
+    <div class="card4 shadow mb-4">
     <div class="card-header py-3">
         <h6 class="m-0 font-weight-bold text-primary">Bonus 1</h6>
       </div>
@@ -545,7 +545,7 @@ if(isset($_POST['simpan']))
 
       </div>
 
-      <div class="card2 shadow mb-4">
+      <div class="card4 shadow mb-4">
     <div class="card-header py-3">
         <h6 class="m-0 font-weight-bold text-primary">Bonus 4</h6>
       </div>
@@ -565,7 +565,7 @@ if(isset($_POST['simpan']))
 
   <div class="col-xl-4 col-lg-7">
 <!-- Area Chart -->
-<div class="card2 shadow mb-4">
+<div class="card4 shadow mb-4">
 <div class="card-header py-3">
 <h6 class="m-0 font-weight-bold text-primary">Bonus 2</h6>
 </div>
@@ -583,7 +583,7 @@ if(isset($_POST['simpan']))
 
 </div>
 
-<div class="card2 shadow mb-4">
+<div class="card4 shadow mb-4">
 <div class="card-header py-3">
 <h6 class="m-0 font-weight-bold text-primary">Bonus 5</h6>
 </div>
@@ -603,7 +603,7 @@ if(isset($_POST['simpan']))
 
   <!-- Donut Chart -->
   <div class="col-xl-4 col-lg-5">
-    <div class="card2 shadow mb-4">
+    <div class="card4 shadow mb-4">
       <!-- Card Header - Dropdown -->
       <div class="card-header py-3">
         <h6 class="m-0 font-weight-bold text-primary">Bonus 3</h6>
@@ -624,7 +624,7 @@ if(isset($_POST['simpan']))
   
       
     </div>
-      <div class="card2 shadow mb-4">
+      <div class="card4 shadow mb-4">
         <!-- Card Header - Dropdown -->
         <div class="card-header py-3">
           <h6 class="m-0 font-weight-bold text-primary">Bonus 6</h6>
