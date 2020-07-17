@@ -474,7 +474,7 @@
 
     <div class="card4 shadow mb-4">
     <div class="card-header py-3">
-        <h6 class="m-0 font-weight-bold text-primary">Bonus 1</h6>
+        <h6 class="m-0 font-weight-bold1 text-primary">Bonus 1</h6>
       </div>
       <?php
 include '../config.php';
@@ -547,7 +547,7 @@ if(isset($_POST['simpan']))
 
       <div class="card4 shadow mb-4">
     <div class="card-header py-3">
-        <h6 class="m-0 font-weight-bold text-primary">Bonus 4</h6>
+        <h6 class="m-0 font-weight-bold1 text-primary">Bonus 4</h6>
       </div>
       <form action="" method="POST" enctype="multipart/form-data"/>
   <label  class="editpoin" for="fname">Edit deskripsi :</label>
@@ -567,7 +567,7 @@ if(isset($_POST['simpan']))
 <!-- Area Chart -->
 <div class="card4 shadow mb-4">
 <div class="card-header py-3">
-<h6 class="m-0 font-weight-bold text-primary">Bonus 2</h6>
+<h6 class="m-0 font-weight-bold1 text-primary">Bonus 2</h6>
 </div>
 
 <form action="" method="POST" enctype="multipart/form-data"/>
@@ -585,7 +585,7 @@ if(isset($_POST['simpan']))
 
 <div class="card4 shadow mb-4">
 <div class="card-header py-3">
-<h6 class="m-0 font-weight-bold text-primary">Bonus 5</h6>
+<h6 class="m-0 font-weight-bold1 text-primary">Bonus 5</h6>
 </div>
 <form action="" method="POST" enctype="multipart/form-data"/>
   <label  class="editpoin" for="fname">Edit deskripsi :</label>
@@ -606,7 +606,7 @@ if(isset($_POST['simpan']))
     <div class="card4 shadow mb-4">
       <!-- Card Header - Dropdown -->
       <div class="card-header py-3">
-        <h6 class="m-0 font-weight-bold text-primary">Bonus 3</h6>
+        <h6 class="m-0 font-weight-bold1 text-primary">Bonus 3</h6>
       </div>
       <!-- Card Body -->
     
@@ -627,7 +627,7 @@ if(isset($_POST['simpan']))
       <div class="card4 shadow mb-4">
         <!-- Card Header - Dropdown -->
         <div class="card-header py-3">
-          <h6 class="m-0 font-weight-bold text-primary">Bonus 6</h6>
+          <h6 class="m-0 font-weight-bold1 text-primary">Bonus 6</h6>
         </div>
         <!-- Card Body -->
         <form action="" method="POST" enctype="multipart/form-data"/>
