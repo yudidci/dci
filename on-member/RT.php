@@ -18,6 +18,20 @@
 
   <link href="vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
 
+  <style>
+
+.next {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.next:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+</style>
+
 </head>
 
 
@@ -118,7 +132,7 @@ while($row = $fetchresult->fetch_assoc()){
 </tbody>
               </table>
 
-              <button onclick="goBack()">Kembali</button>
+              <button class="next" onclick="goBack()">&laquo;Kembali</button>
               </html>
 
               

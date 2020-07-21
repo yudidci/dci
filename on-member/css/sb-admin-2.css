@@ -2589,7 +2589,7 @@ p.judul {
 
 .table th,
 .table td {
-  text-align: left;
+  text-align: center;
 }
 
 .table thead th {
@@ -2624,7 +2624,7 @@ p.judul {
 
 .table-bordered th,
 .table-bordered td {
-  border: 1px solid black;
+  border: 1px solid white;
 }
 
 .table-bordered thead th,
