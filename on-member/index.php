@@ -266,15 +266,18 @@
 
 <div class="basic-search">
 <div align="center">
-<button class="btn btn-primary ml-2" type="button" id="btn-search">Filter NIK Kota <i class="fa fa-search"></i></button>
+<!-- <button class="btn btn-primary ml-2" a href='kota.php' type="button" >Filter NIK Kota <i class="fa fa-search"></i></button> -->
+<a href='kota.php' class="btn btn-primary ml-2">Filter NIK Kota</a>
 <button class="btn btn-primary ml-2" type="button" id="btn-camat">Filter NIK Camat <i
     class="fa fa-search"></i></button>
+
 <button class="btn btn-primary ml-2" type="button" id="btn-lurah">Filter NIK Lurah <i
     class="fa fa-search"></i></button>
 <button class="btn btn-primary ml-2" type="button" id="btn-RW">Filter NIK RW <i
     class="fa fa-search"></i></button>
-<button class="btn btn-primary ml-2" type="button" id="btn-RT">Filter NIK RT <i
-    class="fa fa-search"></i></button>
+<!-- <button class="btn btn-primary ml-2" type="button" id="btn-RT">Filter NIK RT <i
+    class="fa fa-search"></i></button> -->
+<a href='RT.php' class="btn btn-primary ml-2">Filter NIK RT</a>
 <button class="btn btn-primary ml-2" type="button" id="btn-warga">Filter NIK Warga <i
     class="fa fa-search"></i></button>
 </div>
@@ -351,9 +354,10 @@
   <div class="roww">
    
     <div class="col-md-4">
-      <div class="card card-2">
+      <div class="card2 card-2">
       <form method="post">
-          <p class="judul">Batas Follower <select id="tingkatan" name="tingkatan">
+          <p class="judul">Batas Follower</p> 
+          <select class="tingkatan" id="tingkatan" name="tingkatan">
           <option value="1">Kota</option>
               <option value="2">Camat</option>
               <option value="3">Lurah</option>
@@ -372,7 +376,7 @@
               <option value="audi">≤</option>
             </select>
           </div>
-          <div class="column">
+          <div class="column2">
             <input type="text" id="batasatas" name="batasatas" onkeypress="return hanyaAngka(event)"><br>
           </div>
           <input type="submit" class="updt-follower" id="updt-follower" name="updt-follower"value="Update"/>
@@ -433,25 +437,25 @@
           </div>
           <input type="submit" class="updt-follower" id="updt-follower" name="updt-follower"value="Update"/>
          </form>
-          <?php
-        if(isset($_POST['updt-follower']))
-        {
-          include'../configpict.php';
-          $batasbawah=$_POST['batasbawah'];
-          $batasatas=$_POST['batasatas'];
-          $tingkatan=$_POST['tingkatan'];
+          <!-- <?php
+        // if(isset($_POST['updt-follower']))
+        // {
+        //   include'../configpict.php';
+        //   $batasbawah=$_POST['batasbawah'];
+        //   $batasatas=$_POST['batasatas'];
+        //   $tingkatan=$_POST['tingkatan'];
         
-          $sql="UPDATE status SET batasbawah='$batasbawah', batasatas='$batasatas' WHERE id='$tingkatan'";
-          if($dbconnect->query($sql) === false)
-          { // Jika gagal meng-insert data tampilkan pesan dibawah 'Perintah SQL Salah'
-            trigger_error('Wrong SQL Command: ' . $sql . ' Error: ' . $dbconnect->error, E_USER_ERROR);
-          }  
-          else 
-          { // Jika berhasil alihkan ke halaman tampil.php
-            echo "<script>alert('Range status telah berhasil diubah!')</script>";
-            echo "<meta http-equiv=refresh content=\"0; url=./index.php\">";
-          }
-        }
+        //   $sql="UPDATE status SET batasbawah='$batasbawah', batasatas='$batasatas' WHERE id='$tingkatan'";
+        //   if($dbconnect->query($sql) === false)
+        //   { 
+        //     trigger_error('Wrong SQL Command: ' . $sql . ' Error: ' . $dbconnect->error, E_USER_ERROR);
+        //   }  
+        //   else 
+        //   { 
+        //     echo "<script>alert('Range status telah berhasil diubah!')</script>";
+        //     echo "<meta http-equiv=refresh content=\"0; url=./index.php\">";
+        //   }
+        // }
         
         ?>   
         </div> -->
@@ -471,30 +475,12 @@
   <div class="col-xl-4 col-lg-7">
     <!-- Area Chart -->
 
-    <div class="card shadow mb-4">
+    <div class="card4 shadow mb-4">
     <div class="card-header py-3">
-        <h6 class="m-0 font-weight-bold text-primary">Bonus 1</h6>
+        <h6 class="m-0 font-weight-bold1 text-primary">Bonus 1</h6>
       </div>
       <?php
 include '../config.php';
-$querypoin1 = "SELECT * from file where id=1";
-$result1 = $dbconnect->query($querypoin1);
-$file1=$result1->fetch_assoc();
-$querypoin2 = "SELECT * from file where id=2";
-$result2 = $dbconnect->query($querypoin2);
-$file2=$result2->fetch_assoc();
-$querypoin3 = "SELECT * from file where id=3";
-$result3 = $dbconnect->query($querypoin3);
-$file3=$result3->fetch_assoc();
-$querypoin4 = "SELECT * from file where id=4";
-$result4 = $dbconnect->query($querypoin4);
-$file4=$result4->fetch_assoc();
-$querypoin5 = "SELECT * from file where id=5";
-$result5 = $dbconnect->query($querypoin5);
-$file5=$result5->fetch_assoc();
-$querypoin6 = "SELECT * from file where id=6";
-$result6 = $dbconnect->query($querypoin6);
-$file6=$result6->fetch_assoc();
 if(isset($_POST['simpan']))
 {
     //periksa apakah user telah menekan submit, dengan menggunakan parameter setingan keterangan
@@ -551,10 +537,10 @@ if(isset($_POST['simpan']))
 ?>
 <form action="" method="POST" enctype="multipart/form-data"/>
   <label  class="editpoin" for="fname">Edit deskripsi :</label>
-  <input class="editinput" id="cname" name="jdl" minlength="5" type="text" required placeholder="<?=$file1['nama'];?>"/><br>
+  <input class="editinput" id="cname" name="jdl" minlength="5" type="text" required placeholder="Beras"/><br>
   <label  class="editpoin" for="fname" >Edit poin :</label>
   <input type="hidden" name="idpoin" value="1" />
-  <input class="editinput" id="cname" name="poin" type="text" required placeholder="<?=$file1['poin'];?>"/><br>
+  <input class="editinput" id="cname" name="poin" type="text" required placeholder="1"/><br>
   ​<label  class="editpoin1" for="fname">Edit Photo            :</label>
    <input class="editfile" type="file" id="myFile" name="gmbr" required>
   <input class="submit" name="simpan" type="submit">
@@ -562,16 +548,16 @@ if(isset($_POST['simpan']))
 
       </div>
 
-      <div class="card shadow mb-4">
+      <div class="card4 shadow mb-4">
     <div class="card-header py-3">
-        <h6 class="m-0 font-weight-bold text-primary">Bonus 4</h6>
+        <h6 class="m-0 font-weight-bold1 text-primary">Bonus 4</h6>
       </div>
       <form action="" method="POST" enctype="multipart/form-data"/>
   <label  class="editpoin" for="fname">Edit deskripsi :</label>
-  <input class="editinput" id="cname" name="jdl" minlength="5" type="text" required placeholder="<?=$file4['nama'];?>"/><br>
+  <input class="editinput" id="cname" name="jdl" minlength="5" type="text" required placeholder="Beras"/><br>
   <label  class="editpoin" for="fname" >Edit poin :</label>
   <input type="hidden" name="idpoin" value="4" />
-  <input class="editinput" id="cname" name="poin" type="text" required placeholder="<?=$file4['poin'];?>"/><br>
+  <input class="editinput" id="cname" name="poin" type="text" required placeholder="1"/><br>
   ​<label  class="editpoin1" for="fname">Edit Photo            :</label>
    <input class="editfile" type="file" id="myFile" name="gmbr" required>
   <input class="submit" name="simpan" type="submit">
@@ -582,17 +568,17 @@ if(isset($_POST['simpan']))
 
   <div class="col-xl-4 col-lg-7">
 <!-- Area Chart -->
-<div class="card shadow mb-4">
+<div class="card4 shadow mb-4">
 <div class="card-header py-3">
-<h6 class="m-0 font-weight-bold text-primary">Bonus 2</h6>
+<h6 class="m-0 font-weight-bold1 text-primary">Bonus 2</h6>
 </div>
 
 <form action="" method="POST" enctype="multipart/form-data"/>
   <label  class="editpoin" for="fname">Edit deskripsi :</label>
-  <input class="editinput" id="cname" name="jdl" minlength="5" type="text" required placeholder="<?=$file2['nama'];?>"/><br>
+  <input class="editinput" id="cname" name="jdl" minlength="5" type="text" required placeholder="Beras"/><br>
   <label  class="editpoin" for="fname" >Edit poin :</label>
   <input type="hidden" name="idpoin" value="2" />
-  <input class="editinput" id="cname" name="poin" type="text" required placeholder="<?=$file2['poin'];?>"/><br>
+  <input class="editinput" id="cname" name="poin" type="text" required placeholder="1"/><br>
   ​<label  class="editpoin1" for="fname">Edit Photo            :</label>
    <input class="editfile" type="file" id="myFile" name="gmbr" required>
   <input class="submit" name="simpan" type="submit">
@@ -600,16 +586,16 @@ if(isset($_POST['simpan']))
 
 </div>
 
-<div class="card shadow mb-4">
+<div class="card4 shadow mb-4">
 <div class="card-header py-3">
-<h6 class="m-0 font-weight-bold text-primary">Bonus 5</h6>
+<h6 class="m-0 font-weight-bold1 text-primary">Bonus 5</h6>
 </div>
 <form action="" method="POST" enctype="multipart/form-data"/>
   <label  class="editpoin" for="fname">Edit deskripsi :</label>
-  <input class="editinput" id="cname" name="jdl" minlength="5" type="text" required placeholder="<?=$file5['nama'];?>"/><br>
+  <input class="editinput" id="cname" name="jdl" minlength="5" type="text" required placeholder="Beras"/><br>
   <label  class="editpoin" for="fname" >Edit poin :</label>
   <input type="hidden" name="idpoin" value="5" />
-  <input class="editinput" id="cname" name="poin" type="text" required placeholder="<?=$file5['poin'];?>"/><br>
+  <input class="editinput" id="cname" name="poin" type="text" required placeholder="1"/><br>
   ​<label  class="editpoin1" for="fname">Edit Photo            :</label>
    <input class="editfile" type="file" id="myFile" name="gmbr" required>
   <input class="submit" name="simpan" type="submit">
@@ -620,19 +606,19 @@ if(isset($_POST['simpan']))
 
   <!-- Donut Chart -->
   <div class="col-xl-4 col-lg-5">
-    <div class="card shadow mb-4">
+    <div class="card4 shadow mb-4">
       <!-- Card Header - Dropdown -->
       <div class="card-header py-3">
-        <h6 class="m-0 font-weight-bold text-primary">Bonus 3</h6>
+        <h6 class="m-0 font-weight-bold1 text-primary">Bonus 3</h6>
       </div>
       <!-- Card Body -->
     
       <form action="" method="POST" enctype="multipart/form-data"/>
   <label  class="editpoin" for="fname">Edit deskripsi :</label>
-  <input class="editinput" id="cname" name="jdl" minlength="6" type="text" required placeholder="<?=$file3['nama'];?>"/><br>
+  <input class="editinput" id="cname" name="jdl" minlength="6" type="text" required placeholder="Beras"/><br>
   <label  class="editpoin" for="fname" >Edit poin :</label>
   <input type="hidden" name="idpoin" value="3" />
-  <input class="editinput" id="cname" name="poin" type="text" required placeholder="<?=$file3['poin'];?>"/><br>
+  <input class="editinput" id="cname" name="poin" type="text" required placeholder="1"/><br>
   ​<label  class="editpoin1" for="fname">Edit Photo            :</label>
    <input class="editfile" type="file" id="myFile" name="gmbr" required>
   <input class="submit" name="simpan" type="submit">
@@ -641,18 +627,18 @@ if(isset($_POST['simpan']))
   
       
     </div>
-      <div class="card shadow mb-4">
+      <div class="card4 shadow mb-4">
         <!-- Card Header - Dropdown -->
         <div class="card-header py-3">
-          <h6 class="m-0 font-weight-bold text-primary">Bonus 6</h6>
+          <h6 class="m-0 font-weight-bold1 text-primary">Bonus 6</h6>
         </div>
         <!-- Card Body -->
         <form action="" method="POST" enctype="multipart/form-data"/>
   <label  class="editpoin" for="fname">Edit deskripsi :</label>
-  <input class="editinput" id="cname" name="jdl" minlength="7" type="text" required placeholder="<?=$file6['nama'];?>"/><br>
+  <input class="editinput" id="cname" name="jdl" minlength="7" type="text" required placeholder="Beras"/><br>
   <label  class="editpoin" for="fname" >Edit poin :</label>
   <input type="hidden" name="idpoin" value="6" />
-  <input class="editinput" id="cname" name="poin" type="text" required placeholder="<?=$file6['poin'];?>"/><br>
+  <input class="editinput" id="cname" name="poin" type="text" required placeholder="1"/><br>
   ​<label  class="editpoin1" for="fname">Edit Photo            :</label>
    <input class="editfile" type="file" id="myFile" name="gmbr" required>
   <input class="submit" name="simpan" type="submit">
