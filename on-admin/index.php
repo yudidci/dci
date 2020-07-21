@@ -489,7 +489,16 @@ $b=mysqli_fetch_array($a,MYSQLI_ASSOC)
                 </div>
                 </div>
               </div> -->
- 
+              <div class="card-header py-3">
+                <div class="row">
+                  <div class="col-sm-2">
+                  <h6 class="m-0 font-weight-bold text-primary">Nomor Referral</h6>
+                </div>
+                <div class="col-sm-10">
+                  <input type="text" id="ref" name="red" value="<?=$_SESSION['reg_no'];?>" readonly><br>
+                </div>
+                </div>
+              </div>
               <div class="card-header py-3">
                 <div class="row">
                   <div class="col-sm-2">
@@ -914,6 +923,8 @@ if(isset($_POST['updateprofile']))
               <th>Nama</th>
               <th>Jumlah Followers</th>
               <th>Tingkat Followers</th>
+              <th>Detail</th>
+              <th>Delete</th>
               </tr>
               </thead>
 
@@ -954,8 +965,15 @@ if(isset($_POST['updateprofile']))
                   echo "<p>Member Baru</p>";
                 }
           
-                    echo "</td>
-          
+                    echo 
+                //     "</td>
+                // <td><button >Detail</button></td> 
+                // "<tr> 
+
+                // <td><a href=detailpage.php?id=" . $row['reg_no'] . "<button>View Details</button></a></td> 
+                "<td><a href='detail.php?did=".$row['reg_no']."'>Detail</a></td>
+                
+                <td><a href='delete.php?did=".$row['reg_no']."'>Delete</a></td>
                 </tr>"; 
                 }
                 ?>
