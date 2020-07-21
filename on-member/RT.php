@@ -59,8 +59,8 @@ $result = $dbconnect->query($querysql);
 // camat
 $resultcamat = $dbconnect ->query($quesrycamat);
 $resultlurah = $dbconnect ->query($quesrylurah);
-$resultrt = $dbconnect ->query($quesryrt);
 $resultrw = $dbconnect ->query($quesryrw);
+$resultrt = $dbconnect ->query($quesryrt);
 $resultwarga = $dbconnect ->query($quesrywarga);
 // kota
 $b=$result->fetch_assoc();
@@ -73,12 +73,11 @@ $g=$resultwarga->fetch_assoc();
 // kota 
 $fdown=$f['batasbawah'];
 $fup=$f['batasatas'];
-$fetchnow = "SELECT * FROM full where followers_count>='$fdown' OR followers_count>='$fup'";
+$fetchnow = "SELECT * FROM full where followers_count BETWEEN '$fdown' AND '$fup'";
 $fetchresult = $dbconnect ->query($fetchnow);
 $h=$fetchresult->fetch_assoc();
 // output data of each row
 while($row = $fetchresult->fetch_assoc()){ 
-
   echo "<tr>
   <td>" . $row['reg_no'] . "</td>
   <td>" . $row['name'] . "</td>
@@ -87,8 +86,10 @@ while($row = $fetchresult->fetch_assoc()){
   <td>" ."<a href='../on-admin/delete.php?did=".$row['reg_no']."'>Hapus</a>"."</td>
   </tr>"; 
   }
-  
+
+
+
 ?>
 </tbody>
-              </table>
-              </html>
+</table>
+</html>
