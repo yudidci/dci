@@ -35,8 +35,11 @@
               <th>Nomor Referral</th>
               <th>Nama</th>
               <th>Jumlah Followers</th>
-              <th>Detail</th>
-              <th>Hapus</th>
+              <th>NIK</th>
+              <th>Tempat Lahir</th>
+              <th>Tanggal Lahir</th>
+              <th>Alamat</th>
+
               </tr>
               </thead>
 
@@ -45,51 +48,22 @@
 <?php
 
 include '../config.php';
-$table="status";
-// kota
-$querysql= "SELECT * from $table where id='1'";
-// camat
-$quesrycamat= "SELECT * from $table where id='2'";
-$quesrylurah= "SELECT * from $table where id='3'";
-$quesryrw= "SELECT * from $table where id='4'";
-$quesryrt= "SELECT * from $table where id='5'";
-$quesrywarga= "SELECT * from $table where id='6'";
-// kota 
-$result = $dbconnect->query($querysql);
-// camat
-$resultcamat = $dbconnect ->query($quesrycamat);
-$resultlurah = $dbconnect ->query($quesrylurah);
-$resultrw = $dbconnect ->query($quesryrw);
-$resultrt = $dbconnect ->query($quesryrt);
-$resultwarga = $dbconnect ->query($quesrywarga);
-// kota
-$b=$result->fetch_assoc();
-// camat
-$c=$resultcamat->fetch_assoc();
-$d=$resultlurah->fetch_assoc();
-$e=$resultrw->fetch_assoc();
-$f=$resultrt->fetch_assoc();
-$g=$resultwarga->fetch_assoc();
-// kota 
-$fdown=$f['batasbawah'];
-$fup=$f['batasatas'];
-$fetchnow = "SELECT * FROM full where followers_count BETWEEN '$fdown' AND '$fup'";
-$fetchresult = $dbconnect ->query($fetchnow);
-$h=$fetchresult->fetch_assoc();
+$detail_id = ($_GET['did']);
+$sql = "SELECT * from full where reg_no= '$detail_id'";
+$result = $dbconnect->query($sql);
 // output data of each row
-while($row = $fetchresult->fetch_assoc()){ 
+while($row = $result->fetch_assoc()){ 
   echo "<tr>
   <td>" . $row['reg_no'] . "</td>
   <td>" . $row['name'] . "</td>
   <td>" . $row['followers_count'] . "</td>
-  <td>" ."<a href='../on-admin/detail.php?did=".$row['reg_no']."'>Detail</a>"."</td>
-  <td>" ."<a href='../on-admin/delete.php?did=".$row['reg_no']."'>Hapus</a>"."</td>
+  <td>" . $row['nik'] . "</td>
+  <td>" . $row['dob_place'] . "</td>
+  <td>" . $row['dob'] . "</td>
+  <td>" . $row['road_name'] . "</td>
   </tr>"; 
   }
-
-
-
 ?>
 </tbody>
-</table>
-</html>
+              </table>
+              </html>

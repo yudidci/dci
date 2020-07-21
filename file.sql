@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 09, 2020 at 06:44 AM
+-- Generation Time: Jul 21, 2020 at 07:24 AM
 -- Server version: 10.4.11-MariaDB
 -- PHP Version: 7.4.2
 
@@ -40,7 +40,12 @@ CREATE TABLE `file` (
 --
 
 INSERT INTO `file` (`nama`, `url`, `id`, `poin`) VALUES
-('Beras', '../img/beras1kg.jpg', '1', 1);
+('Sepatu', '../img/sepatu.jpg', '1', 15),
+('Beras 5KG', '../img/beras1kg.jpg', '2', 24),
+('Susu Kotak', '../img/susu.png', '3', 26),
+('Tupperware', '../img/tupperware.jpg', '4', 30),
+('Laptop', '../img/laptop.jpg', '5', 35),
+('Motor Matic', '../img/motor.jpg', '6', 300);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
