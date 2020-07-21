@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 
@@ -11,6 +12,7 @@
     exit();
   }
   ?>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -40,7 +42,6 @@
   <link href="vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
 
 </head>
-
 <body id="page-top">
   
   <!-- Page Wrapper -->
@@ -219,8 +220,6 @@
 
 
 <div class="s008">
-
- 
 
 <form>
 
@@ -764,49 +763,9 @@ if(isset($_POST['simpan']))
     </div>
   </div>
 
-  <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 
 
-<script src="../on-member/js/script.js"></script>
-<!-- button modal -->
-<script>
-  // Get the modal
-  var modal = document.getElementById("myModal");
-
-  // Get the button that opens the modal
-  var btn = document.getElementById("myBtn");
-
-  // Get the <span> element that closes the modal
-  var span = document.getElementsByClassName("close")[0];
-
-  // When the user clicks the button, open the modal 
-  btn.onclick = function () {
-    modal.style.display = "block";
-  }
-
-  // When the user clicks on <span> (x), close the modal
-  span.onclick = function () {
-    modal.style.display = "none";
-  }
-
-  // When the user clicks anywhere outside of the modal, close it
-  window.onclick = function (event) {
-    if (event.target == modal) {
-      modal.style.display = "none";
-    }
-  }
-
-<script>
-  function hanyaAngka(evt) {
-    var charCode = (evt.which) ? evt.which : event.keyCode
-    if (charCode > 31 && (charCode < 48 || charCode > 57))
-
-      return false;
-    return true;
-  }
-</script>
-
-
+         
   <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
   <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
@@ -818,48 +777,79 @@ if(isset($_POST['simpan']))
   <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script> 
   <script src="../assets/main.js"></script>
 
-      <!-- Counter -->
-      <script type="text/javascript" src="./js/waypoints.js"></script>
+    <!-- Counter -->
+    <script type="text/javascript" src="./js/waypoints.js"></script>
     <script type="text/javascript" src="./js/jquery.counterup.js"></script>
-
-  <!-- Bootstrap core JavaScript-->
-  <script src="vendor/jquery/jquery.min.js"></script>
-  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-
-    <!-- Bootstrap core JavaScript-->
-    <script src="vendor/jquery/jquery.min.js"></script>
-  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-
-     <!-- Page level custom scripts -->
-    <script src="js/demo/datatables-demo.js"></script>
-
-<!-- Core plugin JavaScript-->
-<script src="vendor/jquery-easing/jquery.easing.min.js"></script>
-
-<!-- Custom scripts for all pages-->
-<script src="js/sb-admin-2.min.js"></script>
-
-
-<!-- Page level plugins -->
-<script src="vendor/chart.js/Chart.min.js"></script>
-
-  <!-- Page level custom scripts -->
-  <script src="js/demo/chart-area-demo.js"></script>
-  <script src="js/demo/chart-pie-demo.js"></script>
-  <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
-
   
     <!-- Page level plugins -->
     <script src="vendor/datatables/jquery.dataTables.min.js"></script>
     <script src="vendor/datatables/dataTables.bootstrap4.min.js"></script>
+
+    <!-- Page level custom scripts -->
+    <script src="js/demo/datatables-demo.js"></script>
+    <script src="../on-admin/js/dataklik.js"></script>
+
+  <!-- Bootstrap core JavaScript-->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   
     <!-- Page level custom scripts -->
     <script src="js/demo/datatables-demo.js"></script>
 
-    
+  <!-- Core plugin JavaScript-->
+  <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+  <!-- Custom scripts for all pages-->
+  <script src="js/sb-admin-2.min.js"></script>
+  
+
+  <!-- Page level plugins -->
+  <script src="vendor/chart.js/Chart.min.js"></script>
 
 
-  <script>
+          <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+
+
+          <script src="../on-member/js/script.js"></script>
+          <!-- button modal -->
+          <script>
+            // Get the modal
+            var modal = document.getElementById("myModal");
+
+            // Get the button that opens the modal
+            var btn = document.getElementById("myBtn");
+
+            // Get the <span> element that closes the modal
+            var span = document.getElementsByClassName("close")[0];
+
+            // When the user clicks the button, open the modal 
+            btn.onclick = function () {
+              modal.style.display = "block";
+            }
+
+            // When the user clicks on <span> (x), close the modal
+            span.onclick = function () {
+              modal.style.display = "none";
+            }
+
+            // When the user clicks anywhere outside of the modal, close it
+            window.onclick = function (event) {
+              if (event.target == modal) {
+                modal.style.display = "none";
+              }
+            }
+
+          <script>
+            function hanyaAngka(evt) {
+              var charCode = (evt.which) ? evt.which : event.keyCode
+              if (charCode > 31 && (charCode < 48 || charCode > 57))
+
+                return false;
+              return true;
+            }
+          </script>
+
+          <script>
     $(document).ready(function(){
     $("#klikidentitas").click(function(){
       $("#identitas").css("display","block")
@@ -867,6 +857,7 @@ if(isset($_POST['simpan']))
       $("#dashboard").css("display","none")
       $("#follower").css("display","none")
       $("#point").css("display","none")
+      $("#blank").css("display","none")
    })
   })
   </script>
@@ -879,6 +870,7 @@ if(isset($_POST['simpan']))
     $("#dashboard").css("display","none")
     $("#follower").css("display","none")
     $("#point").css("display","none")
+    $("#blank").css("display","none")
  })
 })
 </script>
@@ -891,6 +883,7 @@ if(isset($_POST['simpan']))
     $("#dashboard").css("display","none")
     $("#follower").css("display","none")
     $("#point").css("display","none")
+    $("#blank").css("display","none")
  })
 })
 </script>
@@ -903,6 +896,7 @@ if(isset($_POST['simpan']))
     $("#dashboard").css("display","none")
     $("#follower").css("display","none")
     $("#point").css("display","none")
+    $("#blank").css("display","none")
  })
 })
 </script>
@@ -945,6 +939,7 @@ if(isset($_POST['simpan']))
  })
 })
 </script>
+</body>
 </body>
 
 </html>
