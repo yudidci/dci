@@ -366,14 +366,30 @@
               <th>Nomor Referral</th>
               <th>Nama</th>
               <th>Jumlah Followers</th>
-              <th>Tingkat Followers</th>
               <th>Detail</th>
               <th>Delete</th>
               </tr>
               </thead>
 
                 <tbody>
-             
+                <!-- list all member -->
+                <?php
+                include '../configtoo.php';
+                // list all member query
+                $fetchnow = "SELECT * FROM full";
+                $fetchresult = $dbconnect ->query($fetchnow);
+
+                // output data of each row
+                while($row = $fetchresult->fetch_assoc()){ 
+                  echo "<tr>
+                  <td>" . $row['reg_no'] . "</td>
+                  <td>" . $row['name'] . "</td>
+                  <td>" ."<a href='../on-member/followers.php?did=".$row['reg_no']."'>".$row['followers_count']."</a>". "</td>
+                  <td>" ."<a href='../on-member/detail.php?did=".$row['reg_no']."'>Detail</a>"."</td>
+                  <td>" ."<a href='../on-member/delete.php?did=".$row['reg_no']."'>Hapus</a>"."</td>
+                  </tr>"; 
+                  }
+                ?>
               </tbody>
               </table>
             </div>
@@ -520,6 +536,9 @@
       </div>
       <?php
 include '../config.php';
+// list all member query
+$fetchnow = "SELECT * FROM full";
+$fetchresult = $dbconnect ->query($fetchnow);
 $querypoin1 = "SELECT * from file where id=1";		
  $result1 = $dbconnect->query($querypoin1);		
  $file1=$result1->fetch_assoc();		

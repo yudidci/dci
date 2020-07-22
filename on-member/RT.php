@@ -121,9 +121,9 @@ while($row = $fetchresult->fetch_assoc()){
   echo "<tr>
   <td>" . $row['reg_no'] . "</td>
   <td>" . $row['name'] . "</td>
-  <td>" . $row['followers_count'] . "</td>
-  <td>" ."<a href='../on-admin/detail.php?did=".$row['reg_no']."'>Detail</a>"."</td>
-  <td>" ."<a href='../on-admin/delete.php?did=".$row['reg_no']."'>Hapus</a>"."</td>
+  <td>" ."<a href='../on-admin/followers.php?did=".$row['reg_no']."'>".$row['followers_count']."</a>". "</td>
+  <td>" ."<a href='../on-member/detail.php?did=".$row['reg_no']."'>Detail</a>"."</td>
+  <td>" ."<a href='../on-member/delete.php?did=".$row['reg_no']."'>Hapus</a>"."</td>
   </tr>"; 
   }
 
