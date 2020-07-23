@@ -85,25 +85,25 @@
 
                 <tbody>
 
-<?php
+                <?php
 
-include '../config.php';
-$detail_id = ($_GET['did']);
-$sql = "SELECT * from full where reg_no= '$detail_id'";
-$result = $dbconnect->query($sql);
-// output data of each row
-while($row = $result->fetch_assoc()){ 
-  echo "<tr>
-  <td>" . $row['reg_no'] . "</td>
-  <td>" . $row['name'] . "</td>
-  <td>" ."<a href='../on-admin/followers.php?did=".$row['reg_no']."'>".$row['followers_count']."</a>". "</td>
-  <td>" . $row['nik'] . "</td>
-  <td>" . $row['dob_place'] . "</td>
-  <td>" . $row['dob'] . "</td>
-  <td>" . $row['road_name'] . "</td>
-  </tr>"; 
-  }
-?>
-</tbody>
+                include '../config.php';
+                $detail_id = ($_GET['did']);
+                $sql = "SELECT * from full where reg_no= '$detail_id'";
+                $result = $dbconnect->query($sql);
+                // output data of each row
+                while($row = $result->fetch_assoc()){ 
+                  echo "<tr>
+                  <td>" . $row['reg_no'] . "</td>
+                  <td>" . $row['name'] . "</td>
+                  <td>" ."<a href='../on-member/followers.php?did=".$row['reg_no']."'>".$row['followers_count']."</a>". "</td>
+                  <td>" . $row['nik'] . "</td>
+                  <td>" . $row['dob_place'] . "</td>
+                  <td>" . $row['dob'] . "</td>
+                  <td>" . $row['road_name'] . "</td>
+                  </tr>"; 
+                  }
+                ?>
+                </tbody>
               </table>
               </html>

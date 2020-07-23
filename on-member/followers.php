@@ -66,4 +66,17 @@ while($row = $result->fetch_assoc()){
 ?>
 </tbody>
               </table>
+
+
+              <button class="next" onclick="goBack()">&laquo;Kembali</button>
+
+              
+<script>
+function goBack() {
+  window.history.back();
+}
+</script>
+
+</html>
+
               </html>
