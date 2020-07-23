@@ -443,6 +443,8 @@
           $batasbawah=$_POST['batasbawah'];
           $batasatas=$_POST['batasatas'];
           $tingkatan=$_POST['tingkatan'];
+
+          
         
           $sql="UPDATE status SET batasbawah='$batasbawah', batasatas='$batasatas' WHERE id='$tingkatan'";
           if($dbconnect->query($sql) === false)
@@ -458,6 +460,37 @@
         
         ?>   
       </div>
+<br>
+</br>
+      <!-- table poin followers -->
+      <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+            <thead>
+              <tr>
+              <th>Tingkat</th>
+              <th>Batas Bawah</th>
+              <th>Batas Atas</th>
+
+              </tr>
+              </thead>
+
+                <tbody>
+
+              <?php
+              include '../configsdk.php';
+              $sqlfollowers = "SELECT * from status";
+              $resultfollowers = $dbconnect->query($sqlfollowers);
+              // output data of each row
+              while($row = $resultfollowers->fetch_assoc()){ 
+                echo "<tr>
+                <td>" . $row['tingkatan'] . "</td>
+                <td>" . $row['batasbawah'] . "</td>
+                <td>" . $row['batasatas'] . "</td>
+                </tr>"; 
+                }
+              ?>
+              </tbody>
+              </table>
+      <!-- end table poin followers -->
 
     </div>
   </div>
