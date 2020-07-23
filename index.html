@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html>
+  
+<head>
+    <title>Rest API</title>
+    <link rel="stylesheet" href="assets/css/bootstrap.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="css/index.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+   
+  <link rel="stylesheet" href="alert/dist/sweetalert.css">
+    
+</head>
+
+
+<body>
+  <div class="s008">
+    <form>
+      <!-- <a class="navbar-brand">CARI NIK BERDASARKAN TINGKATAN</a> -->
+      <h1 align="center"></h1>
+      <div class="inner-form">
+       
+          </form>
+                
+            
+            <!-- end dropdown menu here -->
+            <div class="signup-form">
+              <div class="advance-search">
+                
+
+                      <div class="warga box">
+                          <form action='http://localhost:3001/user/regkota' method="post">
+                            <h2 class="registrasi"><img src="./images/OscoOk64.png" width="60" height="60"> Registrasi Berdasarkan KTP</h2> 
+                              <label for="name"><i class="fa fa-user"></i> Nama</label>
+                              <input name="name" placeholder="Masukan Nama Anda"  id="name" required pattern="[A-Za-z\s]{3,}" title="Nama harus lebih dari 2 karakter">
+                            <div>
+                              <label for="nik"><i class="fa fa-address-card"></i> NIK</label>
+                              <input name="nik" onkeypress="return hanyaAngka(event)" placeholder="Masukan NIK Anda"  id="nik" required pattern="[0-9]{16}" title="NIK harus 16 Digit" >
+                            </div>
+                            
+                            <div id="kiri">
+                              <label for="email"><i class="fa fa-envelope"></i> EMail</label>
+                              <input name="email" placeholder="Masukan Email anda" id="email" title="Email harus lebih dari 3 Karakter">
+                              
+                              <label for="password"><i class="fa fa-lock"></i> Password</label>
+                              <div class="wrap-input100 validate-input" style="margin-bottom: -20px;" data-validate = "Password is required"></div>
+                                <span class="btn-show-pass">
+                                  <i class="fa fa-eye"></i>
+                                </span>
+                                <input class="input100"placeholder="Masukan Password" type="password" required pattern="[A-Za-z0-9\s]{6,}" title="Password Minimal 6 Karakter" >
+                                <span class="focus-input100"></span>
+                            </div>
+                            
+                            <div id="kanan">
+                              <label for="phone"><i class="fas fa-mobile-alt" ></i> No.Handphone</label>
+                              <input name="phone" placeholder="Masukan Nomer HP" id="phone" title="Nomor HP harus lebih dari 3 Karakter">
+                                </label>
+                                <label for="password"><i class="fa fa-lock"></i> Ulangi Password</label>
+                              <div class="wrap-input100 validate-input" style="margin-bottom: -20px;" data-validate = "Password is required"></div>
+                                <span class="btn-show-pass">
+                                  <i class="fa fa-eye"></i>
+                                </span>
+                                <input class="input100" name="password" placeholder="Ulangi Password" type="password" required pattern="[A-Za-z0-9\s]{6,}" title="Password Minimal 6 Karakter" >
+                                <span class="focus-input100"></span>
+                              </div>
+                            
+                            <div id="kiri4">
+                              <label for="dob_place"><i class="fa fa-calendar-check-o"></i> Tempat Lahir</label>
+                              <input name="dob_place" placeholder="Masukan Tempat Lahir" id="dob_place" required pattern="[A-Za-z\s]{2,}" title="Tempat harus lebih dari 3 Karakter">
+                              <div class="label-flex">
+                                <label for="gender"><i class="fa fa-intersex" style="font-size:15px"></i> Jenis Kelamin</label>
+                            </div>
+                            <div class="column">
+                            <label class="container" for="pria">Pria
+                              <input type="radio" checked="checked" name="gender" id="pria" value="pria" checked></input>
+                              <span class="checkmark"></span>
+                            </label>
+                          </div>
+                          <div class="column">
+                            <label class="container" for="wanita">Wanita
+                              <input type="radio" name="gender" id="wanita" value="wanita"></input>
+                              <span class="checkmark"></span>
+                            </label>
+                          </div>
+                          </div>
+                            <div id="kanan4">
+                              <label for="dob"><i class="fa fa-calendar"></i> Tanggal Lahir</label>
+                                 <input class="date" type="date" style="height: 47px;" title="Enter a date in this format YYYY/MM/DD" name="dob" id="dob"  />
+                                </label>
+                              <div class="label-flex">
+                                <label for="marital"><i class="material-icons" style="font-size:15px">wc</i><div class="status">Status</div></label>
+                            </div>
+                            <div class="column">
+                            <label class="container" for="belum_menikah" style="margin-top:11px;">Belum Menikah
+                              <input type="radio" checked="checked" name="marital" id="belum_menikah" value="Belum Menikah" checked></input>
+                              <span class="checkmark"></span>
+                            </label>
+                          </div>
+                          <div class="column">
+                            <label class="container" for="menikah">Menikah
+                              <input type="radio" name="marital" id="menikah" value="Menikah"></input>
+                              <span class="checkmark"></span>
+                            </label>
+                            </div>
+                          </div>
+                 
+                          <div id="kiri1">
+                            <label for="road_name"><i class="fa fa-home" style="font-size:15px"></i> Alamat</label>
+                            <textarea class="alamat" name="road_name" placeholder="Masukan Alamat Anda" id="road_name" style="width:100%; height:206px; border-radius: 5px; padding: 10px 0px 0px 5px;" required pattern="[A-Za-z0-9\s]{4,}"></textarea>
+                            </div>
+                            <div id="kanan1">
+                              <label for="rt">RT</label>
+                              <input name="rt" placeholder="003" onkeypress="return hanyaAngka(event)" id="rt" required pattern="[0-9\/ ]{2,7}" title="Masukan RT/RW" style="width: 49%;">
+                              
+                              <label for="desa">Kelurahan</label>
+                              <input name="desa" placeholder="Masukan Kelurahan" id="desa" required pattern="[A-Za-z0-9\s]{2,}" title="Masukan Lurah">
+          
+                              <label for="kec">Kecamatan</label>
+                              <input name="kec" placeholder="Masukan Kecamatan" id="kec" required pattern="[A-Za-z]{2,}" title="masukan kecamatan">
+                         
+                              <div id="kanan12">
+                                <label for="rw">RW</label>
+                              <input name="rw" placeholder="003" onkeypress="return hanyaAngka(event)" id="rw" required pattern="[0-9\/ ]{2,7}" title="Masukan RT/RW">
+                             </div>
+                            </div>
+
+                            <div id="kiri5">
+                              <label for="agama"><i class='fas fa-praying-hands'></i> Agama</label>
+                              <input name="agama" id="agama" required placeholder="Islam/Kristen/Katolik/Hindu/Buddha/Kong Hu Cu" id="agama" pattern="Islam|islam|Kritsten|kristen|Katolik|katolik|Hindu|hindu|Buddha|budha|Kong Hu Cu|kong hu cu" title="Masukan agama anda"></input>
+                              
+                              <label for="nationality"><i class='fa fa-flag'></i> Kewarganegaraan</label>
+                              <input name="nationality" placeholder="WNI/WNA" id="nationality" required pattern="WNI|wni|WNA|wna" title="silakan ketik WNI / WNA"></input>
+                            </div>
+                            <div id="kanan5">
+                              
+                              <label for="job"><i class="fa fa-suitcase"></i> Pekerjaan</label>
+                              <input name="job" placeholder="Masukan Pekerjaan Anda" id="job" required pattern="[A-Za-z\s]{2,}" title="Masukan Pekerjaan Anda">
+
+                              <label for="referral"><i class="fa fa-users"></i> Kode Referral</label>
+                              <input name="referral" placeholder="Masukan Kode Referral (Jika Anda Punya)" id="referral" pattern="[0-9]{6,}" title="Masukkan Referral">
+                            </div>
+                            <div>
+                              <button class="contact100-form-btn"  onclick="location.href = ''" id="btnSubmitModal" name="btnSubmitModal" onclick="document.getElementById('id01').style.display='block'" class="w3-button w3-black">
+                                <span>
+                                  Kirim
+                                  <i class="fa fa-long-arrow-right m-l-7"></i>
+                                </span>
+                              </button>
+                            </div>
+                            </div>
+                           </form>
+                </div>
+                </div>
+                
+      
+
+    </div>
+
+
+  <div id="myModal" class="modal"> -->
+
+    <div class="modal-content">
+      <div class="modal-header">
+        <span class="close">&times;</span>
+        <h2></h2>
+      </div>
+      <div class="modal-body">
+        <h4>Terimakasih sudah menjadi bagian dari Sahabat Osco<br>
+          Login anda adalah No id (NIK)! Anda</h4>
+        
+      </div>
+      <div class="modal-footer">
+      </div>
+    </div>
+  
+  </div>
+
+  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+        </div>
+        <div class="modal-body">
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script> -->
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+  <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+  
+  <script src="assets/main.js"></script>
+  <script src="assets/jquery-3.2.1.min.js"></script>
+  <script src="assets/js/bootstrap.js"></script>
+  <script src="assets/script.js"></script>
+  <script> $( "#btnSubmitModal" ).click(function() {
+    var nik = $( "#nik" ).val()
+    alert( `Terimakasih sudah menjadi bagian dari Sahabat Osco, Login dengan nomor : ` + nik);
+   
+    window.Location="http://localhost/20200617/login.php";
+  }); </script>
+    <script>
+      // Get the modal
+      var modal = document.getElementById('id01');
+      
+      // When the user clicks anywhere outside of the modal, close it
+      window.onclick = function(event) {
+        if (event.target == modal) {
+          modal.style.display = "none";
+        }
+      }
+      </script>
+  <!-- button modal -->
+  <script>
+    // Get the modal
+    var modal = document.getElementById("myModal");
+    
+    // Get the button that opens the modal
+    var btn = document.getElementById("myBtn");
+    
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("close")[0];
+    
+    // When the user clicks the button, open the modal 
+    btn.onclick = function() {
+      modal.style.display = "block";
+    }
+    
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function() {
+      modal.style.display = "none";
+    }
+    
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+      if (event.target == modal) {
+        modal.style.display = "none";
+      }
+    }
+    </script>
+     <script>
+      function hanyaAngka(evt) {
+        var charCode = (evt.which) ? evt.which : event.keyCode
+         if (charCode > 31 && (charCode < 48 || charCode > 57))
+   
+          return false;
+        return true;
+      }
+    </script>
+</body>
+</html>

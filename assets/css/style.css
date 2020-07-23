@@ -1,0 +1,61 @@
+body{
+    background: #F8DA56;
+}
+.form-login{
+    margin-top: 13%;
+}
+
+.form-group {
+    margin-bottom: 13px !important;
+}
+
+.outter-form-login {
+    padding: 10px;
+    background: #EEEEEE;
+    position: relative;
+    height: 266px;
+    border-radius: 5px;
+}
+.logo-login {
+    position: absolute;
+    font-size: 35px;
+    background: #21A957;
+    color: #FFFFFF;
+    padding: 10px 18px;
+    top: -40px;
+    border-radius: 50%;
+    left: 40%;
+}
+.inner-login .form-control {
+    background: #D3D3D3;
+}
+h3.title-login {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.row {
+    margin-right: 0px !important;
+    margin-left: 0px !important;
+  }
+
+.forget {
+    margin-top: 14px;
+    color: #ADADAD;
+}
+
+.member {
+    margin-top: 52px;
+    color: #ADADAD;
+}
+
+p.register {
+    font-size: 16px;
+    letter-spacing: 0.3px;
+    font-weight: 700;
+}
+
+.btn-custom-green {
+    background: #21A957;
+    color: #fff;
+}
