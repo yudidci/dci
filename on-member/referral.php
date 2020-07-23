@@ -86,10 +86,9 @@
                 <tbody>
 
                 <?php
-
                 include '../config.php';
-                $detail_id = ($_GET['did']);
-                $sql = "SELECT * from full where reg_no= '$detail_id'";
+                $detail_id = $_POST['referral'];
+                $sql = "SELECT * from full where referral= '$detail_id'";
                 $result = $dbconnect->query($sql);
                 // output data of each row
                 while($row = $result->fetch_assoc()){ 

@@ -258,12 +258,18 @@
   </div>
 
   <!-- search -->
-        <form class="example">
-          <input type="text" id="search-text3" class="form-control" onkeypress="return hanyaAngka(event)"placeholder="Masukan Referral Number" aria-label="Recipient's username" aria-describedby="button-addon2">
-          <!-- <button type="button" id="btn-follower"><i class="fa fa-search"></i></button> -->
-          <button type="button" class="btn-follower" id="btn-follower">Search</button>
-        </form>
 
+  <p hidden>
+          <form action="referral.php" method="post">  
+          <input type="text" id="referral" name="referral" class="form-control" onkeypress="return hanyaAngka(event)"placeholder="Masukan Referral Number">
+          <input type="submit" class="btn-follower" id="btn-referral" name="btn-referral" value="Search"/>
+         </form>
+  </p>
+
+         <form action="referral.php" method="post">  
+            <input type="text" name="referral" id="referral"class="form-control"  ><br>  
+            <input type="submit" Value="Search" class="btn-follower">
+          </form> 
 
 
 
