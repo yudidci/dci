@@ -1077,10 +1077,11 @@ form.example input[type=text] {
   width: 183px;
   padding: 9px;
   background: #ffcc28;
-  margin-top: -51px;
+  margin-top: -75px;
   margin-right: 74px;
   border-radius: 1px;
   color: white;
+  height: 39px;
   font-size: 14px;
   border: 0px solid grey;
   border-left: none;
@@ -1140,11 +1141,12 @@ form.example input[type=text] {
   float: right;
   width: 183px;
   padding: 9px;
-  background: #a3831a;
-  margin-top: -51px;
+  background: #ffd752;
+  margin-top: -75px;
   margin-right: 74px;
   border-radius: 1px;
   color: white;
+  height: 39px;
   font-size: 14px;
   border: 0px solid grey;
   border-left: none;

@@ -556,7 +556,7 @@
 </div>
 </div>
 
-      
+     
   
 <div class="container-fluid" id="point">
 
@@ -759,19 +759,12 @@ if(isset($_POST['simpan']))
   <input class="submit" name="simpan" type="submit">
 </form> 
 
-    
-        
       </div>
-
   </div>
-
+</div>
+</div>
 </div>
 
-</div>
-
-</div>
-          
-         
 
  <!-- End of Page Wrapper -->
 
@@ -799,84 +792,19 @@ if(isset($_POST['simpan']))
     </div>
   </div>
 
-  <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-
-
-<script src="../on-member/js/script.js"></script>
-<!-- button modal -->
-<script>
-  // Get the modal
-  var modal = document.getElementById("myModal");
-
-  // Get the button that opens the modal
-  var btn = document.getElementById("myBtn");
-
-  // Get the <span> element that closes the modal
-  var span = document.getElementsByClassName("close")[0];
-
-  // When the user clicks the button, open the modal 
-  btn.onclick = function () {
-    modal.style.display = "block";
-  }
-
-  // When the user clicks on <span> (x), close the modal
-  span.onclick = function () {
-    modal.style.display = "none";
-  }
-
-  // When the user clicks anywhere outside of the modal, close it
-  window.onclick = function (event) {
-    if (event.target == modal) {
-      modal.style.display = "none";
-    }
-  }
-
-<script>
-  function hanyaAngka(evt) {
-    var charCode = (evt.which) ? evt.which : event.keyCode
-    if (charCode > 31 && (charCode < 48 || charCode > 57))
-
-      return false;
-    return true;
-  }
-</script>
-
-
-  <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
-  <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
-  <script src='https://kit.fontawesome.com/a076d05399.js'></script>
-  
-  <script src="js/demo/chart-area-demo.js"></script>
-  <script src="js/demo/chart-pie-demo.js"></script>
-  <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
-  <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script> 
-  <script src="../assets/main.js"></script>
-
-      <!-- Counter -->
-      <script type="text/javascript" src="./js/waypoints.js"></script>
-    <script type="text/javascript" src="./js/jquery.counterup.js"></script>
-
   <!-- Bootstrap core JavaScript-->
   <script src="vendor/jquery/jquery.min.js"></script>
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
-    <!-- Bootstrap core JavaScript-->
-    <script src="vendor/jquery/jquery.min.js"></script>
-  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <!-- Core plugin JavaScript-->
+  <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
 
-     <!-- Page level custom scripts -->
-    <script src="js/demo/datatables-demo.js"></script>
+  <!-- Custom scripts for all pages-->
+  <script src="js/sb-admin-2.min.js"></script>
+  
 
-<!-- Core plugin JavaScript-->
-<script src="vendor/jquery-easing/jquery.easing.min.js"></script>
-
-<!-- Custom scripts for all pages-->
-<script src="js/sb-admin-2.min.js"></script>
-
-
-<!-- Page level plugins -->
-<script src="vendor/chart.js/Chart.min.js"></script>
+  <!-- Page level plugins -->
+  <script src="vendor/chart.js/Chart.min.js"></script>
 
   <!-- Page level custom scripts -->
   <script src="js/demo/chart-area-demo.js"></script>
@@ -890,8 +818,6 @@ if(isset($_POST['simpan']))
   
     <!-- Page level custom scripts -->
     <script src="js/demo/datatables-demo.js"></script>
-
-    
 
 
   <script>

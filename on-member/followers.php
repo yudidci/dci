@@ -18,19 +18,6 @@
 
   <link href="vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
 
-  <style>
-
-.next {
-  background-color: #4CAF50;
-  color: white;
-}
-
-.next:hover {
-  background-color: #ddd;
-  color: black;
-}
-
-</style>
 
 </head>
 
