@@ -817,7 +817,21 @@ background-image: url(https://ionicframework.com/img/getting-started/ionic-nativ
   padding: 15px;
   font-family: 'Roboto', sans-serif;
 }
+.next1 {
+  border-color: #4CAF50;
+  color: white;
+  background-color: #4CAF50 ;
+  border-radius: 10px;
+  height: 39px;
+}
 
+.next1:hover {
+  border-color: #8dfa91;
+  color: white;
+  background-color: #8dfa91;
+  border-radius: 10px;
+  height: 39px;
+}
  .btn-search {
   width: 184px;
   height: 42px;

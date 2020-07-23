@@ -133,7 +133,7 @@ while($row = $fetchresult->fetch_assoc()){
 </tbody>
               </table>
 
-              <button class="next" onclick="goBack()">&laquo;Kembali</button>
+              <button class="next1" onclick="goBack()">&laquo;Kembali</button>
 
               
 <script>

@@ -68,7 +68,7 @@ while($row = $result->fetch_assoc()){
               </table>
 
 
-              <button class="next" onclick="goBack()">&laquo;Kembali</button>
+              <button class="next1" onclick="goBack()">&laquo;Kembali</button>
 
               
 <script>
