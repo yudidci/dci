@@ -1136,6 +1136,10 @@ form.example input[type=text] {
 }
 }
 
+.basic-search{
+  margin-top: 20px;
+}
+
 
 .btn-follower:hover {
   float: right;

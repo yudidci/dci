@@ -229,8 +229,16 @@
 
 <div class="advance">
 <div class="advance-search">
-  <div class="row">
-  <form action="filter.php" method="post">  
+
+         <form action="referral.php" method="post">  
+         <input type="text" id="referral" name="referral" class="form-control" onkeypress="return hanyaAngka(event)"placeholder="Masukan Referral Number">
+            <input type="submit" Value="Search" class="btn-follower">
+          </form> 
+
+ <!-- index -->
+ 
+ <form action="filter.php" method="post">  
+ <div class="row">
     <div class="input-field">
       <div class="tengah2">
         <h5 class="bawah"> Batas Bawah <i class="fas fa-sort-numeric-down"> </i></h5>
@@ -238,7 +246,7 @@
     </div>
     <div class="input-field">
       <div class="input-select">
-      <input type="text" name="batasbawah" id="batasbawah" placeholder="Batas Bawah" ><br> 
+      <input type="text" name="batasbawah" id="batasbawah" placeholder="Batas Bawah" >
       </div>
     </div>
     <div class="input-field">
@@ -248,33 +256,17 @@
     </div>
     <div class="input-field">
       <div class="kiri">
-      <input type="text" name="batasatas" id="batasatas" placeholder="Batas Atas" ><br> 
+      <input type="text" name="batasatas" id="batasatas" placeholder="Batas Atas" >
       </div>
     </div>
     <div class="input-field">
       <div class="input-select">
-        <input  class="btn-search" type="submit" Value="Search">
+      <input class="btn-search" type="submit" Value="Search">
+        
       </div>
     </div>
-  </div>
+    </div>
   </form> 
-
- 
-
-  <!-- search -->
-
-
-         <form action="referral.php" method="post">  
-         <input type="text" id="referral" name="referral" class="form-control" onkeypress="return hanyaAngka(event)"placeholder="Masukan Referral Number">
-            <input type="submit" Value="Search" class="btn-follower">
-          </form> 
-
- <!-- index -->
- <!-- <form action="filter.php" method="post">  
-            <input type="text" name="batasbawah" id="batasbawah" placeholder="Batas Bawah" ><br> 
-            <input type="text" name="batasatas" id="batasatas" placeholder="Batas Atas" ><br> 
-            <input type="submit" Value="Search">
-  </form>  -->
 
         
 
