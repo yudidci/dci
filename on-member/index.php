@@ -257,6 +257,8 @@
     </div>
   </div>
 
+ 
+
   <!-- search -->
 
   <p hidden>
@@ -271,7 +273,12 @@
             <input type="submit" Value="Search" class="btn-follower">
           </form> 
 
-
+ <!-- index -->
+ <form action="filter.php" method="post">  
+            <input type="text" name="batasbawah" id="batasbawah" placeholder="Batas Bawah" ><br> 
+            <input type="text" name="batasatas" id="batasatas" placeholder="Batas Atas" ><br> 
+            <input type="submit" Value="Search">
+  </form> 
 
         
 

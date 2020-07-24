@@ -111,9 +111,9 @@ $e=$resultrw->fetch_assoc();
 $f=$resultrt->fetch_assoc();
 $g=$resultwarga->fetch_assoc();
 // kota 
-$fdown=$f['batasbawah'];
-$fup=$f['batasatas'];
-$fetchnow = "SELECT * FROM full where followers_count BETWEEN '$fdown' AND '$fup'";
+$edown=$e['batasbawah'];
+$eup=$e['batasatas'];
+$fetchnow = "SELECT * FROM full where followers_count BETWEEN '$edown' AND '$eup'";
 $fetchresult = $dbconnect ->query($fetchnow);
 $h=$fetchresult->fetch_assoc();
 // output data of each row
