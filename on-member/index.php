@@ -230,10 +230,7 @@
 <div class="advance">
 <div class="advance-search">
 
-         <form action="referral.php" method="post">  
-         <input type="text" id="referral" name="referral" class="form-control" onkeypress="return hanyaAngka(event)"placeholder="Masukan Referral Number">
-            <input type="submit" Value="Search" class="btn-follower">
-          </form> 
+         
 
  <!-- index -->
  
@@ -269,7 +266,10 @@
   </form> 
 
         
-
+  <form action="referral.php" method="post">  
+         <input type="text" id="referral" name="referral" class="form-control" onkeypress="return hanyaAngka(event)"placeholder="Masukan Referral Number">
+            <input type="submit" Value="Search" class="btn-follower">
+          </form> 
 <!-- end dropdown menu here -->
 
 
