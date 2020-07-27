@@ -229,8 +229,17 @@
 
 <div class="advance">
 <div class="advance-search">
+<p hidden>
+          <form action="referral.php" method="post">  
+          <input type="text" id="referral" name="referral" class="form-control" onkeypress="return hanyaAngka(event)"placeholder="Masukan Referral Number">
+          <input type="submit" class="btn-follower" id="btn-referral" name="btn-referral" value="Search"/>
+         </form>
+  </p>  
+         <form action="referral.php" method="post">  
+         <input type="text" id="referral" name="referral" class="form-control" onkeypress="return hanyaAngka(event)"placeholder="Masukan Referral Number">
+            <input type="submit" Value="Search" class="btn-follower">
+          </form> 
 
-         
 
  <!-- index -->
  
@@ -265,11 +274,8 @@
     </div>
   </form> 
 
-        
-  <form action="referral.php" method="post">  
-         <input type="text" id="referral" name="referral" class="form-control" onkeypress="return hanyaAngka(event)"placeholder="Masukan Referral Number">
-            <input type="submit" Value="Search" class="btn-follower">
-          </form> 
+   
+
 <!-- end dropdown menu here -->
 
 
