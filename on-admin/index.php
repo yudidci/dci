@@ -989,7 +989,7 @@ if(isset($_POST['updateprofile']))
 <h1 class="h3 mb-2 text-gray-800">POIN</h1>
 <h6 class="m-0 font-weight-bold text-primary1"><?=$_SESSION['followers'];?> FOLLOWER</h6>
 <p class="mb-4">Tukar Follower anda dengan Hadiah di bawah ini</p>
-<form method="post">
+
 <!-- Content Row -->
 <div class="row">
 
@@ -1031,16 +1031,16 @@ if(isset($_POST['updateprofile']))
 
        
        ?>
+       <form action="" method="post">
             <img src="<?=$aa['url'];?>" alt="Avatar" style="width:100%; height: 168px; border-radius: 27px 27px 0px 0px;">
            
             <div class="centered"><span class="currDate"></span></div>
             <div class="container">
-                <h5><b><?=$aa['nama'];?></b></h5>
+            <h5><b><?=$aa['nama'];?></b></h5>
                 <p><?=$aa['poin'];?> Follower
-                <input type="hidden" name="poin" value="<?=$aa['poin'];?>" />
-                <div class="my-4 text-right"> <input type="submit" name="update" value="Tukar" <?php if ($_SESSION['followers'] < $aa['poin']){ ?> disabled <?php   }  ?> /></div>
-               
-
+                <input type="hidden" name="poin" id="poin" value="<?=$aa['poin'];?>" />
+                <input type="hidden" name="hadiah" id="hadiah" value="<?=$aa['nama'];?>" />
+                <div class="my-4 text-right"> <input type="submit" id="redeem" name="redeem" value="Tukar" <?php if ($_SESSION['followers'] < $aa['poin']){ ?> disabled <?php   }  ?> /></div>
                 <!-- <div class="my-4 text-right"> <button class="button3">Tukar</button></div> -->
                 </p>
             </div>
@@ -1049,26 +1049,56 @@ if(isset($_POST['updateprofile']))
         </div>
         </form>
 
-<?php
-if(isset($_POST['update']))
-{
-    include '../config.php';
-  $nik=$_SESSION['sess_id'];
-  $poin=$_POST['poin'];
+        <?php
+include '../configredeem.php';
+$nik=$_SESSION['sess_id'];
+$poin=$_POST['poin'];
+$sql = "SELECT * FROM FULL where nik='$nik'";
+$sqlupdate="UPDATE full SET followers_count=(followers_count-'$poin') WHERE nik='$nik'";
+$resultupdate = $dbconnect->query($sqlupdate);
+$result = $dbconnect->query($sql);
+$row = $result->fetch_assoc();
 
-  $sql="UPDATE full SET followers_count=(followers_count-'$poin') WHERE nik='$nik'";
-  if($dbconnect->query($sql) === false)
-  { // Jika gagal meng-insert data tampilkan pesan dibawah 'Perintah SQL Salah'
-    trigger_error('Wrong SQL Command: ' . $sql . ' Error: ' . $dbconnect->error, E_USER_ERROR);
-  }  
-  else 
-  { // Jika berhasil alihkan ke halaman tampil.php
-    echo "<script>alert('Poin telah berhasil ditukar! Silakan Login Kembali')</script>";
-  	echo "<meta http-equiv=refresh content=\"0; url=./../logout.php\">";
-  }
+if(isset($_POST['redeem']))
+{
+    $output='<p>Dear, '.$row['name'].'</p>';
+    $output.='<p>Terima kasih sudah menjadi bagian dari website kami.</p>';
+    $output.='<p>-------------------------------------------------------------</p>';
+    $output.='<p>Silakan tunggu email balasan kami untuk penukaran voucher lebih lanjut. Terimakasih karena sudah menukan poin anda. NIK yang terdaftar dalam website kami adalah '.$row['nik'].'. Poin anda akan ditukar dengan hadiah '.$_POST['hadiah'].', dan sisa poin anda adalah '.$row['followers_count'].'</p>';		
+    $output.='<p>-------------------------------------------------------------</p>'; 	
+    $output.='<p>Terima kasih,</p>';
+    $body = $output; 
+    $subject = "Redeem Poin";
+    $email_to = $row['email'];
+    $fromserver = "hello@mail.com"; 
+    require("../PHPMailer/PHPMailerAutoload.php");
+    $mail = new PHPMailer();
+    $mail->IsSMTP();
+    $mail->Host = "smtp.mailtrap.io"; // Enter your host here
+    $mail->SMTPAuth = true;
+    $mail->Username = "c5a0d6ea74b770"; // Enter your email here
+    $mail->Password = "7f5c27bd1e55fd"; //Enter your passwrod here
+    
+    $mail->Port = 2525;
+    $mail->IsHTML(true);
+    $mail->From = "noreply@yourwebsite.com";
+    $mail->FromName = "Redeem Poin";
+    $mail->Sender = $fromserver; // indicates ReturnPath header
+    $mail->Subject = $subject;
+    $mail->Body = $body;
+    $mail->AddAddress($email_to);
+
+if(!$mail->send()) {
+    echo 'Message could not be sent.';
+    echo 'Mailer Error: ' . $mail->ErrorInfo;
+} else {
+    echo "<script>alert('Poin telah berhasil ditukar! Silakan cek email anda')</script>";
 }
 
-?>   
+}
+
+?>
+
 
 
    
