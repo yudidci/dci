@@ -340,23 +340,27 @@
     <!-- End of Footer -->
 
   </div>
-<!-- form notifikasi -->
-  <p> Kirim Notifikasi </p>
-<form method="post" action="">
+
+  <div class="col-xl-5 col-md-6 mb-4">
+                <div class="card border-left-succes shadow h-100 py-2">
+                  <div class="card-body">
+                    <div class="row no-gutters align-items-center">
+                      <div class="col mr-2">
+                        <div class="h5 mb-0 font-weight-bold text-white-800">  <p> Kirim Notifikasi </p></div>
+                        <form method="post" action="">
     <div class="form-group">
-     <label>Enter Subject</label>
-     <input type="text" name="subject" id="subject" class="form-control">
+     <label>Judul</label>
+     <input type="text" name="subject" id="subject" class="form-control1">
     </div>
     <div class="form-group">
-     <label>Enter Comment</label>
-     <textarea name="comment" id="comment" class="form-control" rows="5"></textarea>
+     <label>Isi Notifikasi</label>
+     <textarea name="comment" id="comment" class="form-control2" rows="5"></textarea>
     </div>
     <div class="form-group">
-     <input type="submit" name="post" id="post" class="btn btn-info" value="Post" />
+     <input type="submit" name="post" id="post" class="btn btn-info" value="Kirim" />
     </div>
    </form>
-
-<?php
+   <?php
         if(isset($_POST['post']))
         {
           include'../config.php';
@@ -374,6 +378,49 @@
             echo "<meta http-equiv=refresh content=\"0; url=./index.php\">";
           }
         }
+        
+        ?>   
+                      </div>
+                      <div class="col-auto">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+<!-- form notifikasi -->
+  <!-- <p> Kirim Notifikasi </p>
+<form method="post" action="">
+    <div class="form-group">
+     <label>Enter Subject</label>
+     <input type="text" name="subject" id="subject" class="form-control">
+    </div>
+    <div class="form-group">
+     <label>Enter Comment</label>
+     <textarea name="comment" id="comment" class="form-control" rows="5"></textarea>
+    </div>
+    <div class="form-group">
+     <input type="submit" name="post" id="post" class="btn btn-info" value="Post" />
+    </div>
+   </form> -->
+
+<?php
+        // if(isset($_POST['post']))
+        // {
+        //   include'../config.php';
+        //   $subject = $_POST['subject'];
+        //   $comment = $_POST["comment"];
+        //   $sql="INSERT INTO comments(comment_subject, comment_text)
+        //   VALUES ('$subject', '$comment')";
+        //   if($dbconnect->query($sql) === false)
+        //   { // Jika gagal meng-insert data tampilkan pesan dibawah 'Perintah SQL Salah'
+        //     trigger_error('Wrong SQL Command: ' . $sql . ' Error: ' . $dbconnect->error, E_USER_ERROR);
+        //   }  
+        //   else 
+        //   { // Jika berhasil alihkan ke halaman tampil.php
+        //     echo "<script>alert('Notifikasi dikirim!')</script>";
+        //     echo "<meta http-equiv=refresh content=\"0; url=./index.php\">";
+        //   }
+        // }
         
         ?>   
  <!-- end form notifikasi -->

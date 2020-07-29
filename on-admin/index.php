@@ -21,8 +21,8 @@ if ( !isset($_SESSION['user_login']) ||
   <meta name="author" content="">
 <!-- notification -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> -->
 <!-- end notif -->
   <title>Selamat datang, <?php echo $_SESSION['nama'] ?></title>
 
@@ -116,9 +116,7 @@ if ( !isset($_SESSION['user_login']) ||
                 <i class="fas fa-fw fa-table"></i>
                 <span>Follower</span></a>
             </li>
-
-
-
+            
       <li class="nav-item">
               <a class="nav-link" href="../forgot-password.php">
                 <i class="fa fa-key"></i>
@@ -165,7 +163,10 @@ if ( !isset($_SESSION['user_login']) ||
 <!-- notification -->
           <ul class="nav navbar-nav navbar-right">
       <li class="dropdown">
-       <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="label label-pill label-danger count" style="border-radius:10px;"></span> <span class="glyphicon glyphicon-bell" style="font-size:18px;"></span></a>
+      <!-- <i class="fa fa-bell"></i> -->
+       <a href="#" class="fa fa-bell" data-toggle="dropdown" style="margin-top: 25px;">
+       <span class="label label-pill label-danger count" style="border-radius:10px;"></span>
+       <span class="glyphicon glyphicon-bell" style="font-size:18px;"></span></a>
        <ul class="dropdown-menu"></ul>
       </li>
      </ul>
