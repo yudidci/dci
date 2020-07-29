@@ -337,11 +337,46 @@
     </form>
 
     
-    
     <!-- End of Footer -->
 
   </div>
- 
+<!-- form notifikasi -->
+  <p> Kirim Notifikasi </p>
+<form method="post" action="">
+    <div class="form-group">
+     <label>Enter Subject</label>
+     <input type="text" name="subject" id="subject" class="form-control">
+    </div>
+    <div class="form-group">
+     <label>Enter Comment</label>
+     <textarea name="comment" id="comment" class="form-control" rows="5"></textarea>
+    </div>
+    <div class="form-group">
+     <input type="submit" name="post" id="post" class="btn btn-info" value="Post" />
+    </div>
+   </form>
+
+<?php
+        if(isset($_POST['post']))
+        {
+          include'../config.php';
+          $subject = $_POST['subject'];
+          $comment = $_POST["comment"];
+          $sql="INSERT INTO comments(comment_subject, comment_text)
+          VALUES ('$subject', '$comment')";
+          if($dbconnect->query($sql) === false)
+          { // Jika gagal meng-insert data tampilkan pesan dibawah 'Perintah SQL Salah'
+            trigger_error('Wrong SQL Command: ' . $sql . ' Error: ' . $dbconnect->error, E_USER_ERROR);
+          }  
+          else 
+          { // Jika berhasil alihkan ke halaman tampil.php
+            echo "<script>alert('Notifikasi dikirim!')</script>";
+            echo "<meta http-equiv=refresh content=\"0; url=./index.php\">";
+          }
+        }
+        
+        ?>   
+ <!-- end form notifikasi -->
   <!-- End of Content Wrapper -->
 
 </div>
@@ -450,9 +485,6 @@
           $batasbawah=$_POST['batasbawah'];
           $batasatas=$_POST['batasatas'];
           $tingkatan=$_POST['tingkatan'];
-
-          
-        
           $sql="UPDATE status SET batasbawah='$batasbawah', batasatas='$batasatas' WHERE id='$tingkatan'";
           if($dbconnect->query($sql) === false)
           { // Jika gagal meng-insert data tampilkan pesan dibawah 'Perintah SQL Salah'
@@ -907,6 +939,9 @@ if(isset($_POST['simpan']))
  })
 })
 </script>
+<!-- notification script -->
+
+
 </body>
 
 </html>
