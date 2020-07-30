@@ -74,6 +74,13 @@
           <span>Table Semua Member</span></a>
       </li>
 
+      <li class="nav-item active">
+        <a class="nav-link" id="klikredeem" href="#klikredeem">
+          
+        <i class="fa fa-table"></i>
+          <span>Table History Tukar Poin</span></a>
+      </li>
+
                   <!-- Nav Item - Tables -->
             <li class="nav-item">
               <a class="nav-link" id="klikfollower" href="#klikfollower">
@@ -487,8 +494,60 @@
 </div>
 
       </div> 
-  
+  <!-- redeem -->
+      <div class="container-fluid"  id="redeem">
 
+<!-- Page Heading -->
+<h1 class="h3 mb-2 text-gray-800">Table History Tukar Poin</h1>
+<!-- DataTales Example -->
+<div class="card shadow mb-4">
+  <div class="card-header py-3">
+    
+    
+  </div>
+  <div class="card-body">
+  <div style="overflow-x:auto;">
+    <div class="table-responsive">
+    <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+    <thead>
+      <tr>
+      <th>Nomor Referral</th>
+      <th>NIK</th>
+      <th>Nama</th>
+      <th>Alamat</th>
+      <th>Tanggal Penukaran</th>
+      <th>Hadiah</th>
+      </tr>
+      </thead>
+
+        <tbody>
+        <!-- list all member -->
+        <?php
+        include '../configredeem.php';
+        // list all member query
+        $fetchredeem = "SELECT * FROM full JOIN redeem ON full.reg_no= redeem.reg_no ";
+        $fetchresultRD = $dbconnect ->query($fetchredeem);
+
+        // output data of each row
+        while($row = $fetchresultRD->fetch_assoc()){ 
+          echo "<tr>
+          <td>" . $row['reg_no'] . "</td>
+          <td>" . $row['nik'] . "</td>
+          <td>" . $row['name'] . "</td>
+          <td>" . $row['road_name'] . "</td>
+          <td>" . $row['tgl_ditukar'] . "</td>
+          <td>" . $row['hadiah'] . "</td>
+          </tr>"; 
+          }
+        ?>
+      </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+</div>
+
+</div> 
 
 <div class="container-fluid" id="follower">
 <h1 class="h3 mb-2 text-gray-800">Edit Batas Follower</h1>
@@ -908,6 +967,7 @@ if(isset($_POST['simpan']))
       $("#dashboard").css("display","none")
       $("#follower").css("display","none")
       $("#point").css("display","none")
+      $("#redeem").css("display","none")
    })
   })
   </script>
@@ -920,6 +980,7 @@ if(isset($_POST['simpan']))
     $("#dashboard").css("display","none")
     $("#follower").css("display","none")
     $("#point").css("display","none")
+    $("#redeem").css("display","none")
  })
 })
 </script>
@@ -932,6 +993,7 @@ if(isset($_POST['simpan']))
     $("#dashboard").css("display","none")
     $("#follower").css("display","none")
     $("#point").css("display","none")
+    $("#redeem").css("display","none")
  })
 })
 </script>
@@ -944,6 +1006,7 @@ if(isset($_POST['simpan']))
     $("#dashboard").css("display","none")
     $("#follower").css("display","none")
     $("#point").css("display","none")
+    $("#redeem").css("display","none")
  })
 })
 </script>
@@ -957,6 +1020,21 @@ if(isset($_POST['simpan']))
     $("#dashboard").css("display","none")
     $("#follower").css("display","none")
     $("#point").css("display","none")
+    $("#redeem").css("display","none")
+ })
+})
+</script>
+
+<script>
+  $(document).ready(function(){
+  $("#klikredeem").click(function(){
+    $("#redeem").css("display","block")
+    $("#ketentuan").css("display","none")
+    $("#identitas").css("display","none")
+    $("#dashboard").css("display","none")
+    $("#follower").css("display","none")
+    $("#point").css("display","none")
+    $("#blank").css("display","none")
  })
 })
 </script>
@@ -970,6 +1048,7 @@ if(isset($_POST['simpan']))
     $("#identitas").css("display","none")
     $("#dashboard").css("display","none")
     $("#point").css("display","none")
+    $("#redeem").css("display","none")
  })
 })
 </script>
@@ -983,6 +1062,7 @@ if(isset($_POST['simpan']))
     $("#ketentuan").css("display","none")
     $("#identitas").css("display","none")
     $("#dashboard").css("display","none")
+    $("#redeem").css("display","none")
  })
 })
 </script>
