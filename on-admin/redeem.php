@@ -13,10 +13,15 @@ if ( !isset($_SESSION['user_login']) ||
 include '../config.php';
 $nik=$_SESSION['sess_id'];
 $poin=$_POST['poin'];
+$gift= $_POST['hadiah'];
+$reg_no= $_SESSION['reg_no'];
+$today = date("yymd");
 $sql = "SELECT * FROM FULL where nik='$nik'";
 $sqlupdate="UPDATE full SET followers_count=(followers_count-'$poin') WHERE nik='$nik'";
+$redeemhistory="INSERT INTO redeem SET reg_no='$reg_no', nik='$nik', hadiah='$gift', tgl_ditukar='$today'";
 $resultupdate = $dbconnect->query($sqlupdate);
 $result = $dbconnect->query($sql);
+$resultredeeem = $dbconnect->query($redeemhistory);
 $row = $result->fetch_assoc();
 
 if(isset($_POST['redeem']))
