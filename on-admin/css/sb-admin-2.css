@@ -3154,6 +3154,35 @@ input[type="button"].btn-block {
   border-radius: 0.35rem;
 }
 
+.dropdown-menu1 {
+  display: none;
+  top: 100%;
+  left: 0;
+  float: left;
+  z-index: 3000 !important;
+  position: absolute;
+  color: #858796;
+  min-width: 12rem;
+  padding: 0.5rem 0;
+  margin: 0.125rem 0 0;
+  font-size: 0.85rem;
+  list-style: none;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #e3e6f0;
+  border-radius: 0.35rem;
+  overflow: auto;
+
+}
+
+.dropdown:hover .dropdown-menu1 {
+  display: block;
+}
+
+
+
+
+
 .dropdown-menu-left {
   right: auto;
   left: 0;
@@ -3214,6 +3243,14 @@ input[type="button"].btn-block {
   margin-top: 0;
   margin-bottom: 0.125rem;
 }
+
+.dropup .dropdown-menu1 {
+  top: auto;
+  bottom: 100%;
+  margin-top: 0;
+  margin-bottom: 0.125rem;
+}
+
 
 .dropup .dropdown-toggle::after {
   display: inline-block;
@@ -4301,6 +4338,8 @@ input[type="button"].btn-block {
   .navbar-expand-sm .navbar-nav .dropdown-menu {
     position: absolute;
   }
+
+  
   .navbar-expand-sm .navbar-nav .nav-link {
     padding-right: 0.5rem;
     padding-left: 0.5rem;
