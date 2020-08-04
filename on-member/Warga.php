@@ -75,39 +75,65 @@
               <th>Nomor Referral</th>
               <th>Nama</th>
               <th>Jumlah Followers</th>
-              <th>NIK</th>
-              <th>Tempat Lahir</th>
-              <th>Tanggal Lahir</th>
-              <th>Alamat</th>
-
+              <th>Detail</th>
+              <th>Hapus</th>
               </tr>
               </thead>
 
                 <tbody>
 
-                <?php
+<?php
 
-                include '../config.php';
-                $detail_id = ($_GET['did']);
-                $sql = "SELECT * from full where reg_no= '$detail_id'";
-                $result = $dbconnect->query($sql);
-                // output data of each row
-                while($row = $result->fetch_assoc()){ 
-                  echo "<tr>
-                  <td>" . $row['reg_no'] . "</td>
-                  <td>" . $row['name'] . "</td>
-                  <td>" ."<a href='../on-member/followers.php?did=".$row['reg_no']."'>".$row['followers_count']."</a>". "</td>
-                  <td>" . $row['nik'] . "</td>
-                  <td>" . $row['dob_place'] . "</td>
-                  <td>" . $row['dob'] . "</td>
-                  <td>" . $row['road_name'] . "</td>
-                  </tr>"; 
-                  }
-                ?>
-                </tbody>
+include '../config.php';
+$table="status";
+// kota
+$querysql= "SELECT * from $table where id='1'";
+// camat
+$quesrycamat= "SELECT * from $table where id='2'";
+$quesrylurah= "SELECT * from $table where id='3'";
+$quesryrw= "SELECT * from $table where id='4'";
+$quesryrt= "SELECT * from $table where id='5'";
+$quesrywarga= "SELECT * from $table where id='6'";
+// kota 
+$result = $dbconnect->query($querysql);
+// camat
+$resultcamat = $dbconnect ->query($quesrycamat);
+$resultlurah = $dbconnect ->query($quesrylurah);
+$resultrw = $dbconnect ->query($quesryrw);
+$resultrt = $dbconnect ->query($quesryrt);
+$resultwarga = $dbconnect ->query($quesrywarga);
+// kota
+$b=$result->fetch_assoc();
+// camat
+$c=$resultcamat->fetch_assoc();
+$d=$resultlurah->fetch_assoc();
+$e=$resultrw->fetch_assoc();
+$f=$resultrt->fetch_assoc();
+$g=$resultwarga->fetch_assoc();
+// kota 
+$gdown=$g['batasbawah'];
+$gup=$g['batasatas'];
+$fetchnow = "SELECT * FROM full where followers_count BETWEEN '$gdown' AND '$gup'";
+$fetchresult = $dbconnect ->query($fetchnow);
+$h=$fetchresult->fetch_assoc();
+// output data of each row
+while($row = $fetchresult->fetch_assoc()){ 
+  echo "<tr>
+  <td>" . $row['reg_no'] . "</td>
+  <td>" . $row['name'] . "</td>
+  <td>" ."<a href='../on-member/followers.php?did=".$row['reg_no']."'>".$row['followers_count']."</a>". "</td>
+  <td>" ."<a href='../on-member/detail.php?did=".$row['reg_no']."'>Detail</a>"."</td>
+  <td>" ."<a onclick=\"return confirm('Apakah anda yakin ingin menghapus member ini?')\" href='../on-member/delete.php?did=".$row['reg_no']."'>Hapus</a> "."</td>
+ 
+  </tr>"; 
+  }
+
+
+
+?>
+</tbody>
               </table>
 
-              
               <button class="next1" onclick="goBack()">&laquo;Kembali</button>
 
               
@@ -118,4 +144,3 @@ function goBack() {
 </script>
 
 </html>
-              </html>

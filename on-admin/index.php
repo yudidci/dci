@@ -19,7 +19,11 @@ if ( !isset($_SESSION['user_login']) ||
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="">
   <meta name="author" content="">
-
+<!-- notification -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+  <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> -->
+<!-- end notif -->
   <title>Selamat datang, <?php echo $_SESSION['nama'] ?></title>
 
   <!-- Favicon -->
@@ -112,9 +116,7 @@ if ( !isset($_SESSION['user_login']) ||
                 <i class="fas fa-fw fa-table"></i>
                 <span>Follower</span></a>
             </li>
-
-
-
+            
       <li class="nav-item">
               <a class="nav-link" href="../forgot-password.php">
                 <i class="fa fa-key"></i>
@@ -158,8 +160,16 @@ if ( !isset($_SESSION['user_login']) ||
 
           <!-- Topbar Navbar -->
           <ul class="navbar-nav ml-auto">
-
-            
+<!-- notification -->
+          <ul class="nav navbar-nav navbar-right">
+      <li class="dropdown">
+      <!-- <i class="fa fa-bell"></i> -->
+       <a href="#" class="fa fa-bell" data-toggle="dropdown" style="margin-top: 25px;">
+       <span class="label label-pill label-danger count" style="border-radius:10px;"></span>
+       <span class="glyphicon glyphicon-bell" style="font-size:18px;"></span></a>
+       <ul class="dropdown-menu1"></ul>
+      </li>
+     </ul>
 
             <div class="topbar-divider d-none d-sm-block"></div>
 
@@ -924,7 +934,6 @@ if(isset($_POST['updateprofile']))
               <th>Jumlah Followers</th>
               <th>Tingkat Followers</th>
               <th>Detail</th>
-              <th>Delete</th>
               </tr>
               </thead>
 
@@ -972,8 +981,6 @@ if(isset($_POST['updateprofile']))
 
                 // <td><a href=detailpage.php?id=" . $row['reg_no'] . "<button>View Details</button></a></td> 
                 "<td><a href='detail.php?did=".$row['reg_no']."'>Detail</a></td>
-                
-                <td><a href='delete.php?did=".$row['reg_no']."'>Delete</a></td>
                 </tr>"; 
                 }
                 ?>
@@ -992,7 +999,6 @@ if(isset($_POST['updateprofile']))
 <h1 class="h3 mb-2 text-gray-800">POIN</h1>
 <h6 class="m-0 font-weight-bold text-primary1"><?=$_SESSION['followers'];?> FOLLOWER</h6>
 <p class="mb-4">Tukar Follower anda dengan Hadiah di bawah ini</p>
-<form method="post">
 <!-- Content Row -->
 <div class="row">
 
@@ -1034,16 +1040,16 @@ if(isset($_POST['updateprofile']))
 
        
        ?>
+       <form action="redeem.php" method="post">
             <img src="<?=$aa['url'];?>" alt="Avatar" style="width:100%; height: 168px; border-radius: 27px 27px 0px 0px;">
            
             <div class="centered"><span class="currDate"></span></div>
             <div class="container">
-                <h5><b><?=$aa['nama'];?></b></h5>
+            <h5><b><?=$aa['nama'];?></b></h5>
                 <p><?=$aa['poin'];?> Follower
-                <input type="hidden" name="poin" value="<?=$aa['poin'];?>" />
-                <div class="my-4 text-right"> <input type="submit" name="update" value="Tukar" <?php if ($_SESSION['followers'] < $aa['poin']){ ?> disabled <?php   }  ?> /></div>
-               
-
+                <input type="hidden" name="poin" id="poin" value="<?=$aa['poin'];?>" />
+                <input type="hidden" name="hadiah" id="hadiah" value="<?=$aa['nama'];?>" />
+                <div class="my-4 text-right"> <input type="submit" id="redeem" name="redeem" value="Tukar" <?php if ($_SESSION['followers'] < $aa['poin']){ ?> disabled <?php   }  ?> /></div>
                 <!-- <div class="my-4 text-right"> <button class="button3">Tukar</button></div> -->
                 </p>
             </div>
@@ -1052,26 +1058,7 @@ if(isset($_POST['updateprofile']))
         </div>
         </form>
 
-<?php
-if(isset($_POST['update']))
-{
-    include '../config.php';
-  $nik=$_SESSION['sess_id'];
-  $poin=$_POST['poin'];
-
-  $sql="UPDATE full SET followers_count=(followers_count-'$poin') WHERE nik='$nik'";
-  if($dbconnect->query($sql) === false)
-  { // Jika gagal meng-insert data tampilkan pesan dibawah 'Perintah SQL Salah'
-    trigger_error('Wrong SQL Command: ' . $sql . ' Error: ' . $dbconnect->error, E_USER_ERROR);
-  }  
-  else 
-  { // Jika berhasil alihkan ke halaman tampil.php
-    echo "<script>alert('Poin telah berhasil ditukar! Silakan Login Kembali')</script>";
-  	echo "<meta http-equiv=refresh content=\"0; url=./../logout.php\">";
-  }
-}
-
-?>   
+        
 
 
    
@@ -1084,20 +1071,24 @@ if(isset($_POST['update']))
       </div>
          <div class="card-body">
          <div class="card3">
+         <form action="redeem.php" method="post">
               <img src="<?=$bb['url'];?>" alt="Avatar" style="width:100%; height: 168px; border-radius: 27px 27px 0px 0px;">
               <div class="centered"><span class="currDate"></span></div>
               <div class="container">
               <h5><b><?=$bb['nama'];?></b></h5>
                 <p><?=$bb['poin'];?> Follower
                 <input type="hidden" name="poin" value="<?=$bb['poin'];?>" />
-                <div class="my-4 text-right"> <input type="submit" name="update" value="Tukar" <?php if ($_SESSION['followers'] < $bb['poin']){ ?> disabled <?php   }  ?> /></div>
+                <!-- new to input -->
+                <input type="hidden" name="hadiah" id="hadiah" value="<?=$bb['nama'];?>" />
+                <div class="my-4 text-right"> <input type="submit" id="redeem" name="redeem" value="Tukar" <?php if ($_SESSION['followers'] < $bb['poin']){ ?> disabled <?php   }  ?> /></div>
             </p>
           </div>
         </div>
         </div>
       </div>
+      </form>
   </div>
-</form>
+
   <div class="col-xl-4">
 <!-- Area Chart -->
 <div class="card shadow mb-4">
@@ -1107,14 +1098,16 @@ if(isset($_POST['update']))
 
 <div class="card-body">
 <div class="card3">
+<form action="redeem.php" method="post">
 <img src="<?=$cc['url'];?>" alt="Avatar" style="width:100%; height: 168px; border-radius: 27px 27px 0px 0px;">
  <div class="centered"><span class="currDate"></span></div>
   <div class="container">
   <h5><b><?=$cc['nama'];?></b></h5>
                 <p><?=$cc['poin'];?> Follower
                 <input type="hidden" name="poin" value="<?=$cc['poin'];?>" />
-                <div class="my-4 text-right"> <input type="submit" name="update" value="Tukar" <?php if ($_SESSION['followers'] < $cc['poin']){ ?> disabled <?php   }  ?> /></div>
-    </p>
+                <input type="hidden" name="hadiah" id="hadiah" value="<?=$cc['nama'];?>" />
+                <div class="my-4 text-right"> <input type="submit" id="redeem" name="redeem" value="Tukar" <?php if ($_SESSION['followers'] < $cc['poin']){ ?> disabled <?php   }  ?> /></div>
+              </form>
 </div>
 </div>
 </div>
@@ -1126,14 +1119,16 @@ if(isset($_POST['update']))
 </div>
 <div class="card-body">
 <div class="card3">
+<form action="redeem.php" method="post">
 <img src="<?=$dd['url'];?>" alt="Avatar" style="width:100%; height: 168px; border-radius: 27px 27px 0px 0px;">
 <div class="centered"><span class="currDate"></span></div>
 <div class="container">
 <h5><b><?=$dd['nama'];?></b></h5>
                 <p><?=$dd['poin'];?> Follower
                 <input type="hidden" name="poin" value="<?=$dd['poin'];?>" />
-                <div class="my-4 text-right"> <input type="submit" name="update" value="Tukar" <?php if ($_SESSION['followers'] < $dd['poin']){ ?> disabled <?php   }  ?> /></div>
-    </p>
+                <input type="hidden" name="hadiah" id="hadiah" value="<?=$dd['nama'];?>" />
+                <div class="my-4 text-right"> <input type="submit" id="redeem" name="redeem" value="Tukar" <?php if ($_SESSION['followers'] < $dd['poin']){ ?> disabled <?php   }  ?> /></div>
+              </form>
 </div>
 </div>
 </div>
@@ -1150,14 +1145,16 @@ if(isset($_POST['update']))
       <!-- Card Body -->
       <div class="card-body">
         <div class="card3">
+        <form action="redeem.php" method="post">
         <img src="<?=$ee['url'];?>" alt="Avatar" style="width:100%; height: 168px; border-radius: 27px 27px 0px 0px;">
           <div class="centered"><span class="currDate"></span></div>
           <div class="container">
           <h5><b><?=$ee['nama'];?></b></h5>
                 <p><?=$ee['poin'];?> Follower
                 <input type="hidden" name="poin" value="<?=$ee['poin'];?>" />
-                <div class="my-4 text-right"> <input type="submit" name="update" value="Tukar" <?php if ($_SESSION['followers'] < $ee['poin']){ ?> disabled <?php   }  ?> /></div>
-              </p>
+                <input type="hidden" name="hadiah" id="hadiah" value="<?=$ee['nama'];?>" />
+                <div class="my-4 text-right"> <input type="submit" id="redeem" name="redeem" value="Tukar" <?php if ($_SESSION['followers'] < $ee['poin']){ ?> disabled <?php   }  ?> /></div>
+              </form>
           </div>
         </div>
       </div>
@@ -1172,14 +1169,16 @@ if(isset($_POST['update']))
         <!-- Card Body -->
         <div class="card-body">
           <div class="card3">
+          <form action="redeem.php" method="post">
           <img src="<?=$ff['url'];?>" alt="Avatar" style="width:100%; height: 168px; border-radius: 27px 27px 0px 0px;">
             <div class="centered"><span class="currDate"></span></div>
             <div class="container">
             <h5><b><?=$ff['nama'];?></b></h5>
                 <p><?=$ff['poin'];?> Follower
                 <input type="hidden" name="poin" value="<?=$ff['poin'];?>" />
-                <div class="my-4 text-right"> <input type="submit" name="update" value="Tukar" <?php if ($_SESSION['followers'] < $ff['poin']){ ?> disabled <?php   }  ?> /></div>
-                </p>
+                <input type="hidden" name="hadiah" id="hadiah" value="<?=$ff['nama'];?>" />
+                <div class="my-4 text-right"> <input type="submit" id="redeem" name="redeem" value="Tukar" <?php if ($_SESSION['followers'] < $ff['poin']){ ?> disabled <?php   }  ?> /></div>
+              </form>
             </div>
           </div>
         </div>
@@ -1361,6 +1360,41 @@ if(isset($_POST['update']))
     $("#dashboard").css("display","none")
  })
 })
+</script>
+<!-- notification -->
+<script>
+$(document).ready(function(){
+ 
+ function load_unseen_notification(view = '')
+ {
+  $.ajax({
+   url:"fetch.php",
+   method:"POST",
+   data:{view:view},
+   dataType:"json",
+   success:function(data)
+   {
+    $('.dropdown-menu1').html(data.notification);
+    if(data.unseen_notification > 0)
+    {
+     $('.count').html(data.unseen_notification);
+    }
+   }
+  });
+ }
+ 
+ load_unseen_notification();
+ 
+ $(document).on('click', '.dropdown-toggle', function(){
+  $('.count').html('');
+  load_unseen_notification('yes');
+ });
+ 
+ setInterval(function(){ 
+  load_unseen_notification();; 
+ }, 5000);
+ 
+});
 </script>
 </body>
 

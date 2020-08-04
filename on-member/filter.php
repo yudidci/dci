@@ -86,10 +86,10 @@
                 <tbody>
 
                 <?php
-
                 include '../config.php';
-                $detail_id = ($_GET['did']);
-                $sql = "SELECT * from full where reg_no= '$detail_id'";
+                $batasbawah = $_POST['batasbawah'];
+                $batasatas = $_POST['batasatas'];
+                $sql = "SELECT * from full where followers_count between '$batasbawah' AND '$batasatas' ";
                 $result = $dbconnect->query($sql);
                 // output data of each row
                 while($row = $result->fetch_assoc()){ 

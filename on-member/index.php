@@ -74,6 +74,13 @@
           <span>Table Semua Member</span></a>
       </li>
 
+      <li class="nav-item active">
+        <a class="nav-link" id="klikredeem" href="#klikredeem">
+          
+        <i class="fa fa-table"></i>
+          <span>Table History Tukar Poin</span></a>
+      </li>
+
                   <!-- Nav Item - Tables -->
             <li class="nav-item">
               <a class="nav-link" id="klikfollower" href="#klikfollower">
@@ -229,7 +236,22 @@
 
 <div class="advance">
 <div class="advance-search">
-  <div class="row">
+<p hidden>
+          <form action="referral.php" method="post">  
+          <input type="text" id="referral" name="referral" class="form-control" onkeypress="return hanyaAngka(event)"placeholder="Masukan Referral Number">
+          <input type="submit" class="btn-follower" id="btn-referral" name="btn-referral" value="Search"/>
+         </form>
+  </p>  
+         <form action="referral.php" method="post">  
+         <input type="text" id="referral" name="referral" class="form-control" onkeypress="return hanyaAngka(event)"placeholder="Masukan Referral Number">
+            <input type="submit" Value="Search" class="btn-follower">
+          </form> 
+
+
+ <!-- index -->
+ 
+ <form action="filter.php" method="post">  
+ <div class="row">
     <div class="input-field">
       <div class="tengah2">
         <h5 class="bawah"> Batas Bawah <i class="fas fa-sort-numeric-down"> </i></h5>
@@ -237,7 +259,7 @@
     </div>
     <div class="input-field">
       <div class="input-select">
-        <input type="text" id="search-text" class="form-control" onkeypress="return hanyaAngka(event) "aria-label="Recipient's username" aria-describedby="button-addon2">
+      <input type="text" name="batasbawah" id="batasbawah" placeholder="Batas Bawah" >
       </div>
     </div>
     <div class="input-field">
@@ -247,27 +269,19 @@
     </div>
     <div class="input-field">
       <div class="kiri">
-        <input type="text" id="search-text2" class="form-control" onkeypress="return hanyaAngka(event) "aria-label="Recipient's username" aria-describedby="button-addon2">
+      <input type="text" name="batasatas" id="batasatas" placeholder="Batas Atas" >
       </div>
     </div>
     <div class="input-field">
       <div class="input-select">
-        <button type="button" class="btn-search" id="btn-detail">Search</button>
+      <input class="btn-search" type="submit" Value="Search">
+        
       </div>
     </div>
-  </div>
+    </div>
+  </form> 
 
-  <!-- search -->
-        <form class="example">
-          <input type="text" id="search-text3" class="form-control" onkeypress="return hanyaAngka(event)"placeholder="Masukan Referral Number" aria-label="Recipient's username" aria-describedby="button-addon2">
-          <!-- <button type="button" id="btn-follower"><i class="fa fa-search"></i></button> -->
-          <button type="button" class="btn-follower" id="btn-follower">Search</button>
-        </form>
-
-
-
-
-        
+   
 
 <!-- end dropdown menu here -->
 
@@ -330,11 +344,93 @@
     </form>
 
     
-    
     <!-- End of Footer -->
 
   </div>
- 
+
+  <div class="col-xl-5 col-md-6 mb-4">
+                <div class="card border-left-succes shadow h-100 py-2">
+                  <div class="card-body">
+                    <div class="row no-gutters align-items-center">
+                      <div class="col mr-2">
+                        <div class="h5 mb-0 font-weight-bold text-white-800">  <p> Kirim Notifikasi </p></div>
+                        <form method="post" action="">
+    <div class="form-group">
+     <label>Judul</label>
+     <input type="text" name="subject" id="subject" class="form-control1">
+    </div>
+    <div class="form-group">
+     <label>Isi Notifikasi</label>
+     <textarea name="comment" id="comment" class="form-control2" rows="5"></textarea>
+    </div>
+    <div class="form-group">
+     <input type="submit" name="post" id="post" class="btn btn-info" value="Kirim" />
+    </div>
+   </form>
+   <?php
+        if(isset($_POST['post']))
+        {
+          include'../config.php';
+          $subject = $_POST['subject'];
+          $comment = $_POST["comment"];
+          $sql="INSERT INTO comments(comment_subject, comment_text)
+          VALUES ('$subject', '$comment')";
+          if($dbconnect->query($sql) === false)
+          { // Jika gagal meng-insert data tampilkan pesan dibawah 'Perintah SQL Salah'
+            trigger_error('Wrong SQL Command: ' . $sql . ' Error: ' . $dbconnect->error, E_USER_ERROR);
+          }  
+          else 
+          { // Jika berhasil alihkan ke halaman tampil.php
+            echo "<script>alert('Notifikasi dikirim!')</script>";
+            echo "<meta http-equiv=refresh content=\"0; url=./index.php\">";
+          }
+        }
+        
+        ?>   
+                      </div>
+                      <div class="col-auto">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+<!-- form notifikasi -->
+  <!-- <p> Kirim Notifikasi </p>
+<form method="post" action="">
+    <div class="form-group">
+     <label>Enter Subject</label>
+     <input type="text" name="subject" id="subject" class="form-control">
+    </div>
+    <div class="form-group">
+     <label>Enter Comment</label>
+     <textarea name="comment" id="comment" class="form-control" rows="5"></textarea>
+    </div>
+    <div class="form-group">
+     <input type="submit" name="post" id="post" class="btn btn-info" value="Post" />
+    </div>
+   </form> -->
+
+<?php
+        // if(isset($_POST['post']))
+        // {
+        //   include'../config.php';
+        //   $subject = $_POST['subject'];
+        //   $comment = $_POST["comment"];
+        //   $sql="INSERT INTO comments(comment_subject, comment_text)
+        //   VALUES ('$subject', '$comment')";
+        //   if($dbconnect->query($sql) === false)
+        //   { // Jika gagal meng-insert data tampilkan pesan dibawah 'Perintah SQL Salah'
+        //     trigger_error('Wrong SQL Command: ' . $sql . ' Error: ' . $dbconnect->error, E_USER_ERROR);
+        //   }  
+        //   else 
+        //   { // Jika berhasil alihkan ke halaman tampil.php
+        //     echo "<script>alert('Notifikasi dikirim!')</script>";
+        //     echo "<meta http-equiv=refresh content=\"0; url=./index.php\">";
+        //   }
+        // }
+        
+        ?>   
+ <!-- end form notifikasi -->
   <!-- End of Content Wrapper -->
 
 </div>
@@ -360,7 +456,7 @@
           <div class="card-body">
           <div style="overflow-x:auto;">
             <div class="table-responsive">
-            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+            <table class="table table-bordered" id="dataTable1" width="100%" cellspacing="0">
             <thead>
               <tr>
               <th>Nomor Referral</th>
@@ -386,7 +482,7 @@
                   <td>" . $row['name'] . "</td>
                   <td>" ."<a href='../on-member/followers.php?did=".$row['reg_no']."'>".$row['followers_count']."</a>". "</td>
                   <td>" ."<a href='../on-member/detail.php?did=".$row['reg_no']."'>Detail</a>"."</td>
-                  <td>" ."<a href='../on-member/delete.php?did=".$row['reg_no']."'>Hapus</a>"."</td>
+                  <td>" ."<a onclick=\"return confirm('Apakah anda yakin ingin menghapus member ini?')\" href='../on-member/delete.php?did=".$row['reg_no']."&ref=".$row['referral']."'>Hapus</a> "."</td>
                   </tr>"; 
                   }
                 ?>
@@ -398,8 +494,60 @@
 </div>
 
       </div> 
-  
+  <!-- redeem -->
+      <div class="container-fluid"  id="redeem">
 
+<!-- Page Heading -->
+<h1 class="h3 mb-2 text-gray-800">Table History Tukar Poin</h1>
+<!-- DataTales Example -->
+<div class="card shadow mb-4">
+  <div class="card-header py-3">
+    
+    
+  </div>
+  <div class="card-body">
+  <div style="overflow-x:auto;">
+    <div class="table-responsive">
+    <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+    <thead>
+      <tr>
+      <th>Nomor Referral</th>
+      <th>NIK</th>
+      <th>Nama</th>
+      <th>Alamat</th>
+      <th>Tanggal Penukaran</th>
+      <th>Hadiah</th>
+      </tr>
+      </thead>
+
+        <tbody>
+        <!-- list all member -->
+        <?php
+        include '../configredeem.php';
+        // list all member query
+        $fetchredeem = "SELECT * FROM full JOIN redeem ON full.reg_no= redeem.reg_no ";
+        $fetchresultRD = $dbconnect ->query($fetchredeem);
+
+        // output data of each row
+        while($row = $fetchresultRD->fetch_assoc()){ 
+          echo "<tr>
+          <td>" . $row['reg_no'] . "</td>
+          <td>" . $row['nik'] . "</td>
+          <td>" . $row['name'] . "</td>
+          <td>" . $row['road_name'] . "</td>
+          <td>" . $row['tgl_ditukar'] . "</td>
+          <td>" . $row['hadiah'] . "</td>
+          </tr>"; 
+          }
+        ?>
+      </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+</div>
+
+</div> 
 
 <div class="container-fluid" id="follower">
 <h1 class="h3 mb-2 text-gray-800">Edit Batas Follower</h1>
@@ -443,7 +591,6 @@
           $batasbawah=$_POST['batasbawah'];
           $batasatas=$_POST['batasatas'];
           $tingkatan=$_POST['tingkatan'];
-        
           $sql="UPDATE status SET batasbawah='$batasbawah', batasatas='$batasatas' WHERE id='$tingkatan'";
           if($dbconnect->query($sql) === false)
           { // Jika gagal meng-insert data tampilkan pesan dibawah 'Perintah SQL Salah'
@@ -458,6 +605,37 @@
         
         ?>   
       </div>
+<br>
+</br>
+      <!-- table poin followers -->
+      <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+            <thead>
+              <tr>
+              <th>Tingkat</th>
+              <th>Batas Bawah</th>
+              <th>Batas Atas</th>
+
+              </tr>
+              </thead>
+
+                <tbody>
+
+              <?php
+              include '../configsdk.php';
+              $sqlfollowers = "SELECT * from status";
+              $resultfollowers = $dbconnect->query($sqlfollowers);
+              // output data of each row
+              while($row = $resultfollowers->fetch_assoc()){ 
+                echo "<tr>
+                <td>" . $row['tingkatan'] . "</td>
+                <td>" . $row['batasbawah'] . "</td>
+                <td>" . $row['batasatas'] . "</td>
+                </tr>"; 
+                }
+              ?>
+              </tbody>
+              </table>
+      <!-- end table poin followers -->
 
     </div>
   </div>
@@ -517,7 +695,7 @@
 </div>
 </div>
 
-      
+     
   
 <div class="container-fluid" id="point">
 
@@ -720,19 +898,12 @@ if(isset($_POST['simpan']))
   <input class="submit" name="simpan" type="submit">
 </form> 
 
-    
-        
       </div>
-
   </div>
-
+</div>
+</div>
 </div>
 
-</div>
-
-</div>
-          
-         
 
  <!-- End of Page Wrapper -->
 
@@ -760,84 +931,19 @@ if(isset($_POST['simpan']))
     </div>
   </div>
 
-  <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-
-
-<script src="../on-member/js/script.js"></script>
-<!-- button modal -->
-<script>
-  // Get the modal
-  var modal = document.getElementById("myModal");
-
-  // Get the button that opens the modal
-  var btn = document.getElementById("myBtn");
-
-  // Get the <span> element that closes the modal
-  var span = document.getElementsByClassName("close")[0];
-
-  // When the user clicks the button, open the modal 
-  btn.onclick = function () {
-    modal.style.display = "block";
-  }
-
-  // When the user clicks on <span> (x), close the modal
-  span.onclick = function () {
-    modal.style.display = "none";
-  }
-
-  // When the user clicks anywhere outside of the modal, close it
-  window.onclick = function (event) {
-    if (event.target == modal) {
-      modal.style.display = "none";
-    }
-  }
-
-<script>
-  function hanyaAngka(evt) {
-    var charCode = (evt.which) ? evt.which : event.keyCode
-    if (charCode > 31 && (charCode < 48 || charCode > 57))
-
-      return false;
-    return true;
-  }
-</script>
-
-
-  <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
-  <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
-  <script src='https://kit.fontawesome.com/a076d05399.js'></script>
-  
-  <script src="js/demo/chart-area-demo.js"></script>
-  <script src="js/demo/chart-pie-demo.js"></script>
-  <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
-  <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script> 
-  <script src="../assets/main.js"></script>
-
-      <!-- Counter -->
-      <script type="text/javascript" src="./js/waypoints.js"></script>
-    <script type="text/javascript" src="./js/jquery.counterup.js"></script>
-
   <!-- Bootstrap core JavaScript-->
   <script src="vendor/jquery/jquery.min.js"></script>
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
-    <!-- Bootstrap core JavaScript-->
-    <script src="vendor/jquery/jquery.min.js"></script>
-  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <!-- Core plugin JavaScript-->
+  <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
 
-     <!-- Page level custom scripts -->
-    <script src="js/demo/datatables-demo.js"></script>
+  <!-- Custom scripts for all pages-->
+  <script src="js/sb-admin-2.min.js"></script>
+  
 
-<!-- Core plugin JavaScript-->
-<script src="vendor/jquery-easing/jquery.easing.min.js"></script>
-
-<!-- Custom scripts for all pages-->
-<script src="js/sb-admin-2.min.js"></script>
-
-
-<!-- Page level plugins -->
-<script src="vendor/chart.js/Chart.min.js"></script>
+  <!-- Page level plugins -->
+  <script src="vendor/chart.js/Chart.min.js"></script>
 
   <!-- Page level custom scripts -->
   <script src="js/demo/chart-area-demo.js"></script>
@@ -852,8 +958,6 @@ if(isset($_POST['simpan']))
     <!-- Page level custom scripts -->
     <script src="js/demo/datatables-demo.js"></script>
 
-    
-
 
   <script>
     $(document).ready(function(){
@@ -863,6 +967,7 @@ if(isset($_POST['simpan']))
       $("#dashboard").css("display","none")
       $("#follower").css("display","none")
       $("#point").css("display","none")
+      $("#redeem").css("display","none")
    })
   })
   </script>
@@ -875,6 +980,7 @@ if(isset($_POST['simpan']))
     $("#dashboard").css("display","none")
     $("#follower").css("display","none")
     $("#point").css("display","none")
+    $("#redeem").css("display","none")
  })
 })
 </script>
@@ -887,6 +993,7 @@ if(isset($_POST['simpan']))
     $("#dashboard").css("display","none")
     $("#follower").css("display","none")
     $("#point").css("display","none")
+    $("#redeem").css("display","none")
  })
 })
 </script>
@@ -899,6 +1006,7 @@ if(isset($_POST['simpan']))
     $("#dashboard").css("display","none")
     $("#follower").css("display","none")
     $("#point").css("display","none")
+    $("#redeem").css("display","none")
  })
 })
 </script>
@@ -912,6 +1020,21 @@ if(isset($_POST['simpan']))
     $("#dashboard").css("display","none")
     $("#follower").css("display","none")
     $("#point").css("display","none")
+    $("#redeem").css("display","none")
+ })
+})
+</script>
+
+<script>
+  $(document).ready(function(){
+  $("#klikredeem").click(function(){
+    $("#redeem").css("display","block")
+    $("#ketentuan").css("display","none")
+    $("#identitas").css("display","none")
+    $("#dashboard").css("display","none")
+    $("#follower").css("display","none")
+    $("#point").css("display","none")
+    $("#blank").css("display","none")
  })
 })
 </script>
@@ -925,6 +1048,7 @@ if(isset($_POST['simpan']))
     $("#identitas").css("display","none")
     $("#dashboard").css("display","none")
     $("#point").css("display","none")
+    $("#redeem").css("display","none")
  })
 })
 </script>
@@ -938,9 +1062,13 @@ if(isset($_POST['simpan']))
     $("#ketentuan").css("display","none")
     $("#identitas").css("display","none")
     $("#dashboard").css("display","none")
+    $("#redeem").css("display","none")
  })
 })
 </script>
+<!-- notification script -->
+
+
 </body>
 
 </html>
