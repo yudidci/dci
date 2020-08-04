@@ -482,7 +482,7 @@
                   <td>" . $row['name'] . "</td>
                   <td>" ."<a href='../on-member/followers.php?did=".$row['reg_no']."'>".$row['followers_count']."</a>". "</td>
                   <td>" ."<a href='../on-member/detail.php?did=".$row['reg_no']."'>Detail</a>"."</td>
-                  <td>" ."<a href='../on-member/delete.php?did=".$row['reg_no']."'>Hapus</a>"."</td>
+                  <td>" ."<a onclick=\"return confirm('Apakah anda yakin ingin menghapus member ini?')\" href='../on-member/delete.php?did=".$row['reg_no']."&ref=".$row['referral']."'>Hapus</a> "."</td>
                   </tr>"; 
                   }
                 ?>

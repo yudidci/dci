@@ -18,6 +18,19 @@
 
   <link href="vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
 
+  <style>
+
+.next {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.next:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+</style>
 
 </head>
 
@@ -66,7 +79,7 @@
               <th>Tempat Lahir</th>
               <th>Tanggal Lahir</th>
               <th>Alamat</th>
-
+              <th>Hapus</th>
               </tr>
               </thead>
 
@@ -88,6 +101,8 @@ while($row = $result->fetch_assoc()){
   <td>" . $row['dob_place'] . "</td>
   <td>" . $row['dob'] . "</td>
   <td>" . $row['road_name'] . "</td>
+  <td hidden>" . $row['referral'] . "</td>
+  <td>" ."<a onclick=\"return confirm('Apakah anda yakin ingin menghapus member ini?')\" href='../on-member/delete.php?did=".$row['reg_no']."&ref=".$row['referral']."'>Hapus</a> "."</td>
   </tr>"; 
   }
 ?>
