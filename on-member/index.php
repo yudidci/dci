@@ -481,6 +481,7 @@
                   <td>" . $row['reg_no'] . "</td>
                   <td>" . $row['name'] . "</td>
                   <td>" ."<a href='../on-member/followers.php?did=".$row['reg_no']."'>".$row['followers_count']."</a>". "</td>
+                  
                   <td>" ."<a href='../on-member/detail.php?did=".$row['reg_no']."'>Detail</a>"."</td>
                   <td>" ."<a onclick=\"return confirm('Apakah anda yakin ingin menghapus member ini?')\" href='../on-member/delete.php?did=".$row['reg_no']."&ref=".$row['referral']."'>Hapus</a> "."</td>
                   </tr>"; 
@@ -517,6 +518,7 @@
       <th>Alamat</th>
       <th>Tanggal Penukaran</th>
       <th>Hadiah</th>
+      <th>Tingkat saat ini</th>
       </tr>
       </thead>
 
@@ -526,6 +528,25 @@
         include '../configredeem.php';
         // list all member query
         $fetchredeem = "SELECT * FROM full JOIN redeem ON full.reg_no= redeem.reg_no ";
+        $table="status";
+                  $querysql= "SELECT * from $table where id='1'";
+                  $quesrycamat= "SELECT * from $table where id='2'";
+                  $quesrylurah= "SELECT * from $table where id='3'";
+                  $quesryrw= "SELECT * from $table where id='4'";
+                  $quesryrt= "SELECT * from $table where id='5'";
+                  $quesrywarga= "SELECT * from $table where id='6'";
+                  $result = $dbconnect->query($querysql);
+                  $resultcamat = $dbconnect ->query($quesrycamat);
+                  $resultlurah = $dbconnect ->query($quesrylurah);
+                  $resultrt = $dbconnect ->query($quesryrt);
+                  $resultrw = $dbconnect ->query($quesryrw);
+                  $resultwarga = $dbconnect ->query($quesrywarga);
+                  $b=$result->fetch_assoc();
+                  $c=$resultcamat->fetch_assoc();
+                  $d=$resultlurah->fetch_assoc();
+                  $e=$resultrw->fetch_assoc();
+                  $f=$resultrt->fetch_assoc();
+                  $g=$resultwarga->fetch_assoc();
         $fetchresultRD = $dbconnect ->query($fetchredeem);
 
         // output data of each row
@@ -537,6 +558,32 @@
           <td>" . $row['road_name'] . "</td>
           <td>" . $row['tgl_ditukar'] . "</td>
           <td>" . $row['hadiah'] . "</td>
+          <td>";
+                if ($row['followers_count'] >= $b['batasatas'] || $row['followers_count']>= $b['batasbawah']) {
+                  echo "<p>Kota</p>"; 
+                }
+                elseif ($row['followers_count'] >= $c['batasatas'] || $row['followers_count']>= $c['batasbawah']) {
+                  echo "<p>Camat</p>"; 
+                }
+                elseif ($row['followers_count'] >= $d['batasatas'] || $row['followers_count']>= $d['batasbawah']) {
+                  echo "<p>Lurah</p>"; 
+                }
+                elseif ($row['followers_count'] >= $e['batasatas'] || $row['followers_count']>= $e['batasbawah']) {
+                  echo "<p>RW</p>"; 
+                }
+                elseif ($row['followers_count'] >= $f['batasatas'] || $row['followers_count']>= $f['batasbawah']) {
+                  echo "<p>RT</p>"; 
+                }
+                elseif ($row['followers_count'] >= $g['batasatas'] || $row['followers_count']>= $g['batasbawah']) {
+                  echo "<p>Warga</p>"; 
+                }
+                else {
+                  echo "<p>Member Baru</p>";
+                }
+          
+                    echo 
+                    "<td hidden><a href='detail.php?did=".$row['reg_no']."'>Detail</a></td>
+                
           </tr>"; 
           }
         ?>
