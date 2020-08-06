@@ -79,6 +79,7 @@
               <th>Tempat Lahir</th>
               <th>Tanggal Lahir</th>
               <th>Alamat</th>
+              <th hidden>Referral</th>
               <th>Hapus</th>
               </tr>
               </thead>
