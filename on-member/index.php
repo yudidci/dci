@@ -61,20 +61,20 @@
       <hr class="sidebar-divider my-0">
 
       <!-- Nav Item - Dashboard -->
-      <li class="nav-item active">
+      <li class="nav-item">
         <a class="nav-link" href="./../index.php">
         <i class="fa fa-filter"></i>
           <span>Filter Member</span></a>
       </li>
 
-      <li class="nav-item active">
+      <li class="nav-item">
         <a class="nav-link" id="klikblank" href="#klikblank">
           
         <i class="fa fa-table"></i>
           <span>Table Semua Member</span></a>
       </li>
 
-      <li class="nav-item active">
+      <li class="nav-item">
         <a class="nav-link" id="klikredeem" href="#klikredeem">
           
         <i class="fa fa-table"></i>
@@ -82,6 +82,13 @@
       </li>
 
                   <!-- Nav Item - Tables -->
+
+                  <li class="nav-item">
+              <a class="nav-link" id="klikidentitas" href="#klikidentitas">
+                <i class="far fa-bell  "></i>
+                <span>Kirim Notifikasi</span></a>
+            </li>
+
             <li class="nav-item">
               <a class="nav-link" id="klikfollower" href="#klikfollower">
                 <i class="fas fa-sort-numeric-up"></i>
@@ -272,12 +279,10 @@
       <input type="text" name="batasatas" id="batasatas" placeholder="Batas Atas" >
       </div>
     </div>
-    <div class="input-field">
-      <div class="input-select">
+
       <input class="btn-search" type="submit" Value="Search">
         
-      </div>
-    </div>
+     
     </div>
   </form> 
 
@@ -348,90 +353,8 @@
 
   </div>
 
-  <div class="col-xl-5 col-md-6 mb-4">
-                <div class="card border-left-succes shadow h-100 py-2">
-                  <div class="card-body">
-                    <div class="row no-gutters align-items-center">
-                      <div class="col mr-2">
-                        <div class="h5 mb-0 font-weight-bold text-white-800">  <p> Kirim Notifikasi </p></div>
-                        <form method="post" action="">
-    <div class="form-group">
-     <label>Judul</label>
-     <input type="text" name="subject" id="subject" class="form-control1">
-    </div>
-    <div class="form-group">
-     <label>Isi Notifikasi</label>
-     <textarea name="comment" id="comment" class="form-control2" rows="5"></textarea>
-    </div>
-    <div class="form-group">
-     <input type="submit" name="post" id="post" class="btn btn-info" value="Kirim" />
-    </div>
-   </form>
-   <?php
-        if(isset($_POST['post']))
-        {
-          include'../config.php';
-          $subject = $_POST['subject'];
-          $comment = $_POST["comment"];
-          $sql="INSERT INTO comments(comment_subject, comment_text)
-          VALUES ('$subject', '$comment')";
-          if($dbconnect->query($sql) === false)
-          { // Jika gagal meng-insert data tampilkan pesan dibawah 'Perintah SQL Salah'
-            trigger_error('Wrong SQL Command: ' . $sql . ' Error: ' . $dbconnect->error, E_USER_ERROR);
-          }  
-          else 
-          { // Jika berhasil alihkan ke halaman tampil.php
-            echo "<script>alert('Notifikasi dikirim!')</script>";
-            echo "<meta http-equiv=refresh content=\"0; url=./index.php\">";
-          }
-        }
-        
-        ?>   
-                      </div>
-                      <div class="col-auto">
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-<!-- form notifikasi -->
-  <!-- <p> Kirim Notifikasi </p>
-<form method="post" action="">
-    <div class="form-group">
-     <label>Enter Subject</label>
-     <input type="text" name="subject" id="subject" class="form-control">
-    </div>
-    <div class="form-group">
-     <label>Enter Comment</label>
-     <textarea name="comment" id="comment" class="form-control" rows="5"></textarea>
-    </div>
-    <div class="form-group">
-     <input type="submit" name="post" id="post" class="btn btn-info" value="Post" />
-    </div>
-   </form> -->
+ 
 
-<?php
-        // if(isset($_POST['post']))
-        // {
-        //   include'../config.php';
-        //   $subject = $_POST['subject'];
-        //   $comment = $_POST["comment"];
-        //   $sql="INSERT INTO comments(comment_subject, comment_text)
-        //   VALUES ('$subject', '$comment')";
-        //   if($dbconnect->query($sql) === false)
-        //   { // Jika gagal meng-insert data tampilkan pesan dibawah 'Perintah SQL Salah'
-        //     trigger_error('Wrong SQL Command: ' . $sql . ' Error: ' . $dbconnect->error, E_USER_ERROR);
-        //   }  
-        //   else 
-        //   { // Jika berhasil alihkan ke halaman tampil.php
-        //     echo "<script>alert('Notifikasi dikirim!')</script>";
-        //     echo "<meta http-equiv=refresh content=\"0; url=./index.php\">";
-        //   }
-        // }
-        
-        ?>   
- <!-- end form notifikasi -->
-  <!-- End of Content Wrapper -->
 
 </div>
 </div>
@@ -442,6 +365,32 @@
 
                 </div>
 
+                <div  id="identitas">
+        <div class="container-fluid">
+          <!-- Page Heading -->
+          <h1 class="h3 mb-4 text-gray-800">Kirim Notifikasi</h1>
+          <div class="container">
+  <div class="roww">
+   
+    <div class="col-md-4">
+      <div class="card2 card-2">
+          <p class="judul">Kirim Notifikasi</p> 
+          <form method="post" action="">
+    <div class="form-group">
+     <label>Judul</label>
+     <input type="text" name="subject" id="subject" class="form-control1">
+    </div>
+          <div class="form-group">
+     <label>Isi Notifikasi</label>
+     <textarea name="comment" id="comment" class="form-control2" rows="5"></textarea>
+    </div>
+          <input type="submit" name="post" id="post" class="btn btn-info" value="Kirim" />
+          </div>
+          </div>
+          </div>
+          </div>
+          </div>
+          </div>
 
       <div class="container-fluid"  id="blank">
 
@@ -525,7 +474,7 @@
                 }
           
                     echo 
-                    "<td hidden><a href='detail.php?did=".$row['reg_no']."'>Detail</a></td>
+                    "<a href='detail.php?did=".$row['reg_no']."'></td>
 
                   <td>" ."<a href='../on-member/detail.php?did=".$row['reg_no']."'>Detail</a>"."</td>
                   <td>" ."<a onclick=\"return confirm('Apakah anda yakin ingin menghapus member ini?')\" href='../on-member/delete.php?did=".$row['reg_no']."&ref=".$row['referral']."'>Hapus</a> "."</td>
@@ -627,7 +576,7 @@
                 }
           
                     echo 
-                    "<td hidden><a href='detail.php?did=".$row['reg_no']."'>Detail</a></td>
+                    "<a href='detail.php?did=".$row['reg_no']."'></td>
                 
           </tr>"; 
           }
@@ -732,58 +681,6 @@
     </div>
   </div>
 </div>
-<!-- 
-        <div class="row1">
-        <div class="card1">
- 
-        <form method="post">
-          <p class="judul">Batas Follower <select id="tingkatan" name="tingkatan">
-            <option value="1">Kota</option>
-              <option value="2">Camat</option>
-              <option value="3">Lurah</option>
-              <option value="4">RW</option>
-              <option value="5">RT</option>
-              <option value="6">Warga</option>
-            </select></p>
-          
-          <div class="column">
-            <input type="text" id="batasbawah" name="batasbawah" onkeypress="return hanyaAngka(event)"><br>
-          </div>
-          <div class="column">
-            <select id="cars" name="cars">
-            <option value="lk"><</option>
-              <option value="lb">></option>
-              <option value="lbs">≥</option>
-              <option value="audi">≤</option>
-            </select>
-          </div>
-          <div class="column">
-            <input type="text" id="batasatas" name="batasatas" onkeypress="return hanyaAngka(event)"><br>
-          </div>
-          <input type="submit" class="updt-follower" id="updt-follower" name="updt-follower"value="Update"/>
-         </form>
-          <!-- <?php
-        // if(isset($_POST['updt-follower']))
-        // {
-        //   include'../configpict.php';
-        //   $batasbawah=$_POST['batasbawah'];
-        //   $batasatas=$_POST['batasatas'];
-        //   $tingkatan=$_POST['tingkatan'];
-        
-        //   $sql="UPDATE status SET batasbawah='$batasbawah', batasatas='$batasatas' WHERE id='$tingkatan'";
-        //   if($dbconnect->query($sql) === false)
-        //   { 
-        //     trigger_error('Wrong SQL Command: ' . $sql . ' Error: ' . $dbconnect->error, E_USER_ERROR);
-        //   }  
-        //   else 
-        //   { 
-        //     echo "<script>alert('Range status telah berhasil diubah!')</script>";
-        //     echo "<meta http-equiv=refresh content=\"0; url=./index.php\">";
-        //   }
-        // }
-        
-        ?>   
-        </div> -->
 </div>
 </div>
 
@@ -1060,6 +957,7 @@ if(isset($_POST['simpan']))
       $("#follower").css("display","none")
       $("#point").css("display","none")
       $("#redeem").css("display","none")
+      $("#blank").css("display","none")
    })
   })
   </script>
@@ -1073,6 +971,7 @@ if(isset($_POST['simpan']))
     $("#follower").css("display","none")
     $("#point").css("display","none")
     $("#redeem").css("display","none")
+    $("#blank").css("display","none")
  })
 })
 </script>
