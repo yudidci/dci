@@ -87,7 +87,7 @@ if ($pass1!=$pass2){
 		echo "<div class='error'>".$error."</div><br />";
 		}else{
 
-$pass1 = $pass1;
+$pass1 = md5($pass1);
 mysqli_query($dbconnect,
 "UPDATE `full` SET `password`='".$pass1."', `trn_date`='".$curDate."' WHERE `email`='".$email."';");	
 

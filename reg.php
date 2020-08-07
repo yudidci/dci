@@ -1,6 +1,7 @@
 <?php
 
 include 'config.php';
+
 $today = date("yymd");
 $random=(rand(1, 1000));
 $join=$today . $random;
@@ -17,9 +18,9 @@ $join;
                              $marital=$_POST['marital'];
                              $job=$_POST['job'];
                              $nationality=$_POST['nationality'];
-                             $nik=$_POST['nik'];
+                             $nik=($_POST['nik']);
                              $name=$_POST['name'];
-                             $password=$_POST['password'];
+                             $password=md5($_POST['password']);
                              $gender=$_POST['gender'];
                              $email=$_POST['email'];
                              $phone=$_POST['phone'];

@@ -49,10 +49,11 @@
                               
                               <label for="password"><i class="fa fa-lock"></i> Password</label>
                               <div class="wrap-input100 validate-input" style="margin-bottom: -20px;" data-validate = "Password is required"></div>
+                              
                                 <span class="btn-show-pass">
                                   <i class="fa fa-eye"></i>
                                 </span>
-                                <input class="input100"placeholder="Masukan Password" type="password" required pattern="[A-Za-z0-9\s]{6,}" title="Password Minimal 6 Karakter" >
+                                <input class="input100" name="password" id="password" placeholder="Masukan Password" type="password" required pattern="[A-Za-z0-9\s]{6,}" title="Password Minimal 6 Karakter" onkeyup='check();' >
                                 <span class="focus-input100"></span>
                             </div>
                             
@@ -60,13 +61,15 @@
                               <label for="phone"><i class="fas fa-mobile-alt" ></i> No.Handphone</label>
                               <input name="phone" placeholder="Masukan Nomer HP" id="phone" title="Nomor HP harus lebih dari 3 Karakter">
                                 </label>
-                                <label for="password"><i class="fa fa-lock"></i> Ulangi Password</label>
+                                <label for="password" ><i class="fa fa-lock"></i> Ulangi Password </label>
                               <div class="wrap-input100 validate-input" style="margin-bottom: -20px;" data-validate = "Password is required"></div>
                                 <span class="btn-show-pass">
                                   <i class="fa fa-eye"></i>
                                 </span>
-                                <input class="input100" name="password" placeholder="Ulangi Password" type="password" required pattern="[A-Za-z0-9\s]{6,}" title="Password Minimal 6 Karakter" >
+                                <input class="input100" name="confirm_password" id="confirm_password" name="password" placeholder="Ulangi Password" type="password" required pattern="[A-Za-z0-9\s]{6,}" title="Password Minimal 6 Karakter" onkeyup='check();' >
+                                <span id='message'></span>
                                 <span class="focus-input100"></span>
+                                
                               </div>
                             
                             <div id="kiri4">
@@ -253,5 +256,19 @@
         return true;
       }
     </script>
+    <!-- check password -->
+    <script>
+      var check = function() {
+      if (document.getElementById('password').value ==
+        document.getElementById('confirm_password').value) {
+        document.getElementById('message').style.color = 'green';
+        document.getElementById('message').innerHTML = 'Password Cocok';
+      } else {
+        document.getElementById('message').style.color = 'red';
+        document.getElementById('message').innerHTML = 'Password tidak sama';
+      }
+    }
+    </script>
+    
 </body>
 </html>
