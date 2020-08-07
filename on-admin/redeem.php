@@ -30,7 +30,7 @@ if(isset($_POST['redeem']))
     $output='<p>Dear, '.$row['name'].'</p>';
     $output.='<p>Terima kasih sudah menjadi bagian dari website kami.</p>';
     $output.='<p>-------------------------------------------------------------</p>';
-    $output.='<p>Silakan tunggu email balasan kami untuk penukaran voucher lebih lanjut. Terimakasih karena sudah menukan poin anda. NIK yang terdaftar dalam website kami adalah '.$row['nik'].'. Poin anda akan ditukar dengan hadiah '.$_POST['hadiah'].', dan sisa poin anda adalah '.$row['followers_count'].'</p>';		
+    $output.='<p>Silakan tunggu email balasan kami untuk penukaran voucher lebih lanjut. Terimakasih karena sudah menukar poin anda. NIK yang terdaftar dalam website kami adalah '.$row['nik'].'. Poin anda akan ditukar dengan hadiah '.$_POST['hadiah'].', dan sisa poin anda adalah '.$row['followers_count'].'</p>';		
     $output.='<p>-------------------------------------------------------------</p>'; 	
     $output.='<p>Terima kasih,</p>';
     $body = $output; 
