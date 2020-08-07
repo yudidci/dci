@@ -51,3 +51,4 @@ img
 
 # ENV variable
 env.php
+/on-admin/env.php
