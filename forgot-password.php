@@ -76,12 +76,17 @@ $fromserver = "hello@mail.com";
 require("PHPMailer/PHPMailerAutoload.php");
 $mail = new PHPMailer();
 $mail->IsSMTP();
-$mail->Host = "smtp.mailtrap.io"; // Enter your host here
-$mail->SMTPAuth = true;
-$mail->Username = "c5a0d6ea74b770"; // Enter your email here
-$mail->Password = "7f5c27bd1e55fd"; //Enter your passwrod here
-
-$mail->Port = 2525;
+$mail->SMTPDebug = 2;
+    $mail->Debugoutput = 'html';
+    $mail->Host = "smtp.gmail.com"; // Enter your host here
+    $mail->SMTPAuth = true;
+    $mail->Username = 'devwebbatam@gmail.com'; // Enter your email here
+    $passwordsmtp = '22helloworld';
+    $mail->Password = "$passwordsmtp"; //Enter your passwrod here
+    
+    $mail->Port = 587;
+    $mail->SMTPSecure = 'tls';
+    $mail->SMTPAuth = true;
 $mail->IsHTML(true);
 $mail->From = "noreply@yourwebsite.com";
 $mail->FromName = "Forgot Password";
