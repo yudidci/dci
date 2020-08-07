@@ -385,6 +385,26 @@
      <textarea name="comment" id="comment" class="form-control2" rows="5"></textarea>
     </div>
           <input type="submit" name="post" id="post" class="btn btn-info" value="Kirim" />
+          <?php
+        if(isset($_POST['post']))
+        {
+          include'../config.php';
+          $subject = $_POST['subject'];
+          $comment = $_POST["comment"];
+          $sql="INSERT INTO comments(comment_subject, comment_text)
+          VALUES ('$subject', '$comment')";
+          if($dbconnect->query($sql) === false)
+          { // Jika gagal meng-insert data tampilkan pesan dibawah 'Perintah SQL Salah'
+            trigger_error('Wrong SQL Command: ' . $sql . ' Error: ' . $dbconnect->error, E_USER_ERROR);
+          }  
+          else 
+          { // Jika berhasil alihkan ke halaman tampil.php
+            echo "<script>alert('Notifikasi dikirim!')</script>";
+            echo "<meta http-equiv=refresh content=\"0; url=./index.php\">";
+          }
+        }
+        
+        ?>
           </div>
           </div>
           </div>
