@@ -38,12 +38,12 @@ if (!$email) {
   
 	$row = mysqli_num_rows($results);
 	if ($row==""){
-		$error .= "No user is registered with this email address!";
+		$errornot .= "No user is registered with this email address!";
 		}
   }
-  
-	if($error!=""){
-	echo "<div class='error'>".$error."</div>
+
+	if($errornot!=""){
+	echo "<div class='error'>".$errornot."</div>
 	<br /><a class='btn btn-primar btn-user' href='javascript:history.go(-1)'>〱Kembali</a>";
 		}else{
 	$expFormat = mktime(date("H"), date("i"), date("s"), date("m")  , date("d")+1, date("Y"));

@@ -91,7 +91,10 @@ $pass1 = md5($pass1);
 mysqli_query($dbconnect,
 "UPDATE `full` SET `password`='".$pass1."', `trn_date`='".$curDate."' WHERE `email`='".$email."';");	
 
-mysqli_query($dbconnect,"DELETE FROM `password_reset_temp` WHERE `email`='".$email."';");		
+mysqli_query($dbconnect,"DELETE FROM `password_reset_temp` WHERE `email`='".$email."';");	
+	
+	echo "<script>alert('Password Berhasi dirubah')</script>";
+    echo "<meta http-equiv=refresh content=\"0; url=login.php\">";	
 	
 		}		
 }
