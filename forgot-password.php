@@ -23,6 +23,7 @@
 <body class="bg-gradient-primary">
 <?php
 include('config.php');
+include 'autoload.php';
 if(isset($_POST["email"]) && (!empty($_POST["email"]))){
 $email = $_POST["email"];
 $email = filter_var($email, FILTER_SANITIZE_EMAIL);
@@ -76,17 +77,17 @@ $fromserver = "hello@mail.com";
 require("PHPMailer/PHPMailerAutoload.php");
 $mail = new PHPMailer();
 $mail->IsSMTP();
+
 $mail->SMTPDebug = 2;
-    $mail->Debugoutput = 'html';
-    $mail->Host = "smtp.gmail.com"; // Enter your host here
-    $mail->SMTPAuth = true;
-    $mail->Username = 'raharjayudi@gmail.com'; // Enter your email here
-    $passwordsmtp = '22raharja';
-    $mail->Password = "$passwordsmtp"; //Enter your passwrod here
-    
-    $mail->Port = 587;
-    $mail->SMTPSecure = 'tls';
-    $mail->SMTPAuth = true;
+$mail->Debugoutput = 'html';
+$mail->Host = "smtp.gmail.com"; // Enter your host here
+$mail->SMTPAuth = true;
+$mail->Username = env('username'); // Enter your email here
+$mail->Password = env('password'); //Enter your passwrod here
+
+$mail->Port = 587;
+$mail->SMTPSecure = 'tls';
+$mail->SMTPAuth = true;
 $mail->IsHTML(true);
 $mail->From = "noreply@yourwebsite.com";
 $mail->FromName = "Lupa Password";

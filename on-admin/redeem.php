@@ -11,6 +11,7 @@ if ( !isset($_SESSION['user_login']) ||
 ?>
 <?php
 include '../config.php';
+include './autoload.php';
 $nik=$_SESSION['sess_id'];
 $poin=$_POST['poin'];
 $gift= $_POST['hadiah'];
@@ -43,9 +44,8 @@ if(isset($_POST['redeem']))
     $mail->Debugoutput = 'html';
     $mail->Host = "smtp.gmail.com"; // Enter your host here
     $mail->SMTPAuth = true;
-    $mail->Username = 'devwebbatam@gmail.com'; // Enter your email here
-    $passwordsmtp = '22helloworld';
-    $mail->Password = $passwordsmtp; //Enter your passwrod here
+    $mail->Username = env('username'); // Enter your email here
+    $mail->Password = env('password'); //Enter your passwrod here
     
     $mail->Port = 587;
     $mail->SMTPSecure = 'tls';
