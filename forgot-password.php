@@ -51,25 +51,25 @@ if (!$email) {
 	$key = (2418*2);
 	$addKey = substr(md5(uniqid(rand(),1)),3,10);
   $key = $key . $addKey;
-  
+  $bodyemail = "SELECT * FROM full where email='".$email."'";
+  $fetchemail = $dbconnect ->query($bodyemail);
+  $mailresult=$fetchemail->fetch_assoc();
 // Insert Temp Table
 mysqli_query($dbconnect,
 "INSERT INTO `password_reset_temp` (`email`, `key`, `expDate`)
 VALUES ('".$email."', '".$key."', '".$expDate."');");
 
-$output='<p>Dear user,</p>';
-$output.='<p>Please click on the following link to reset your password.</p>';
+$output='<p>Dear '.$mailresult['name'].'</p>';
+$output.='<p>Silakan klik link dibawah ini untuk mengganti password</p>';
 $output.='<p>-------------------------------------------------------------</p>';
-$output.='<p><a href="http://localhost/oscobatam1/reset-password.php?key='.$key.'&email='.$email.'&action=reset" target="_blank">http://localhost/oscobatam1/reset-password.php?key='.$key.'&email='.$email.'&action=reset</a></p>';		
+$output.='<p><a href="http://localhost/dci-development3/reset-password.php?key='.$key.'&email='.$email.'&action=reset" target="_blank">http://localhost/oscobatam1/reset-password.php?key='.$key.'&email='.$email.'&action=reset</a></p>';		
 $output.='<p>-------------------------------------------------------------</p>';
-$output.='<p>Please be sure to copy the entire link into your browser.
-The link will expire after 1 day for security reason.</p>';
-$output.='<p>If you did not request this forgotten password email, no action 
-is needed, your password will not be reset. However, you may want to log into 
-your account and change your security password as someone may have guessed it.</p>';   	
-$output.='<p>Thanks,</p>';
+$output.='<p>Atau silakan salin kode diatas ke alamat browser anda.
+Link ini akan kadaluarsa setelah 24 jam.</p>';
+$output.='<p>Abaikan email ini jika anda tidak ingin mengganti kata sandi anda.</p>';   	
+$output.='<p>Terimakasih,</p>';
 $body = $output; 
-$subject = "Password Recovery";
+$subject = "Lupa Password";
 
 $email_to = $email;
 $fromserver = "hello@mail.com"; 
@@ -80,8 +80,8 @@ $mail->SMTPDebug = 2;
     $mail->Debugoutput = 'html';
     $mail->Host = "smtp.gmail.com"; // Enter your host here
     $mail->SMTPAuth = true;
-    $mail->Username = 'devwebbatam@gmail.com'; // Enter your email here
-    $passwordsmtp = '22helloworld';
+    $mail->Username = 'raharjayudi@gmail.com'; // Enter your email here
+    $passwordsmtp = '22raharja';
     $mail->Password = "$passwordsmtp"; //Enter your passwrod here
     
     $mail->Port = 587;
@@ -89,7 +89,7 @@ $mail->SMTPDebug = 2;
     $mail->SMTPAuth = true;
 $mail->IsHTML(true);
 $mail->From = "noreply@yourwebsite.com";
-$mail->FromName = "Forgot Password";
+$mail->FromName = "Lupa Password";
 $mail->Sender = $fromserver; // indicates ReturnPath header
 $mail->Subject = $subject;
 $mail->Body = $body;
@@ -97,9 +97,11 @@ $mail->AddAddress($email_to);
 if(!$mail->Send()){
 echo "Mailer Error: " . $mail->ErrorInfo;
 }else{
-echo "<div class='error'>
-<p>Email telah dikirimkan kepada Anda dengan instruksi<br> tentang cara mengatur ulang kata sandi Anda!</p>
-</div><br /><br /><br />";
+// echo "<div class='error'>
+// <p>Email telah dikirimkan kepada Anda dengan instruksi<br> tentang cara mengatur ulang kata sandi Anda!</p>
+// </div><br /><br /><br />";
+echo "<script>alert('Email Lupa Password Berhasil dikirim!')</script>";
+echo "<meta http-equiv=refresh content=\"0; url=login.php\">";
 	}
 
 		}	
