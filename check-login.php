@@ -2,7 +2,7 @@
 session_start();
 require 'config.php';
 
-if ( isset($_POST['nik']) && isset($_POST['password']) ) {
+if ( isset($_POST['nik']) && isset ($_POST['password']) ) {
     
     $sql_check = "SELECT name,
                          level_user,
@@ -36,7 +36,7 @@ if ( isset($_POST['nik']) && isset($_POST['password']) ) {
     $check_log->bind_param('ss', $nik, $password);
 
     $nik = $_POST['nik'];
-    $password = $_POST['password'];
+    $password = md5($_POST['password']);
 
     $check_log->execute();
 
