@@ -245,12 +245,12 @@
 <div class="advance-search">
 <p hidden>
           <form action="referral.php" method="post">  
-          <input type="text" id="referral" name="referral" class="form-control" onkeypress="return hanyaAngka(event)"placeholder="Masukan Referral Number">
-          <input type="submit" class="btn-follower" id="btn-referral" name="btn-referral" value="Search"/>
+          <input type="text" id="referral" name="referral" class="form-control" onkeypress="return hanyaAngka(event)"placeholder="Masukan Referral Number" required>
+          <input type="submit" class="btn-follower" id="btn-referral" name="btn-referral" value="Search" />
          </form>
   </p>  
          <form action="referral.php" method="post">  
-         <input type="text" id="referral" name="referral" class="form-control" onkeypress="return hanyaAngka(event)"placeholder="Masukan Referral Number">
+         <input type="text" id="referral" name="referral" class="form-control" onkeypress="return hanyaAngka(event)"placeholder="Masukan Nomor Referral" required>
             <input type="submit" Value="Search" class="btn-follower">
           </form> 
 
@@ -266,7 +266,7 @@
     </div>
     <div class="input-field">
       <div class="input-select">
-      <input type="text" name="batasbawah" id="batasbawah" placeholder="Batas Bawah" >
+      <input type="text" name="batasbawah" id="batasbawah" placeholder="Batas Bawah" required >
       </div>
     </div>
     <div class="input-field">
@@ -276,7 +276,7 @@
     </div>
     <div class="input-field">
       <div class="kiri">
-      <input type="text" name="batasatas" id="batasatas" placeholder="Batas Atas" >
+      <input type="text" name="batasatas" id="batasatas" placeholder="Batas Atas" required>
       </div>
     </div>
 
