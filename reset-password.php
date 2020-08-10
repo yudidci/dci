@@ -18,7 +18,7 @@
 <div class="p-3">
 <div class="text-center">
 
-<h1 class="h4 text-gray-900 mb-2">Reset Password</h1>   
+<h1 class="h4 text-gray-900 mb-2">Lupa Sandi</h1>   
 </div>
 <?php
 include('config.php');
@@ -32,7 +32,7 @@ $query = mysqli_query($dbconnect,"
 SELECT * FROM `password_reset_temp` WHERE `key`='".$key."' and `email`='".$email."';");
 $row = mysqli_num_rows($query);
 if ($row==""){
-$error .= '<h2>Tautan Tidak Valid </h2>
+$error.= '<h2>Tautan Tidak Valid </h2>
 <p> Tautan tidak valid / kedaluwarsa. Entah Anda tidak menyalin tautan yang benar dari email,
 atau Anda telah menggunakan kunci untuk menonaktifkannya.</p>';
 	}else{
@@ -43,11 +43,12 @@ atau Anda telah menggunakan kunci untuk menonaktifkannya.</p>';
 	<form method="post" action="" name="update">
 	<input type="hidden" name="action" value="update" />
 	<br /><br />
-	<label><strong>Enter New Password:</strong></label><br />
-	<input type="password" name="pass1" id="pass1" maxlength="15" required />
+	<label><strong>Masukan Sandi Baru:</strong></label><br />
+	<input type="password" name="pass1" id="pass1" maxlength="15" required onkeyup='check();'/>
     <br /><br />
-	<label><strong>Re-Enter New Password:</strong></label><br />
-	<input type="password" name="pass2" id="pass2" maxlength="15" required/>
+	<label><strong>Ulangi Sandi Baru:</strong></label><br />
+	<input type="password" name="pass2" id="pass2" maxlength="15" required onkeyup='check();'/>
+	<span id='message'></span>
 	<br></br>
 	<input class="bts" type="checkbox" onclick="myFunction()">
 	<p class="show">Show Password</p>
@@ -64,12 +65,13 @@ atau Anda telah menggunakan kunci untuk menonaktifkannya.</p>';
 	</div>
 <?php
 }else{
-$error .= "<h2>Link Expired</h2>
-<p>The link is expired. You are trying to use the expired link which as valid only 24 hours (1 days after request).<br /><br /></p>";
+	$error.= "<h2>Link Expired</h2>
+		<p>The link is expired. You are trying to use the expired link which as valid only 24 hours (1 days after request).<br /><br /></p>";
 				}
 		}
+$error = "";
 if($error!=""){
-	echo "<div class='error'>".$error."</div><br />";
+	echo "<div hidden class='error'>".$error."</div><br />";
 	}			
 } // isset email key validate end
 
@@ -81,10 +83,13 @@ $pass2 = mysqli_real_escape_string($dbconnect,$_POST["pass2"]);
 $email = $_POST["email"];
 $curDate = date("Y-m-d H:i:s");
 if ($pass1!=$pass2){
-		$error .= "<p>Password do not match, both password should be same.<br /><br /></p>";
+		$error.= "<p>Password do not match, both password should be same.<br /><br /></p>";
 		}
 	if($error!=""){
-		echo "<div class='error'>".$error."</div><br />";
+		
+		echo "<script>alert('Password Tidak Sama')</script>";
+		echo "<meta http-equiv=refresh content=\"0; url=login.php\">";
+		
 		}else{
 
 $pass1 = md5($pass1);
@@ -107,11 +112,26 @@ mysqli_query($dbconnect,"DELETE FROM `password_reset_temp` WHERE `email`='".$ema
 <script>
 function myFunction() {
   var x = document.getElementById("pass1");
-  if (x.type === "password") {
+  var y = document.getElementById("pass2");
+  if (x.type && y.type === "password") {
     x.type = "text";
+	y.type = "text";
   } else {
     x.type = "password";
+	y.type = "password";
   }
 }
 </script>
+<script>
+      var check = function() {
+      if (document.getElementById('pass1').value ==
+        document.getElementById('pass2').value) {
+        document.getElementById('message').style.color = 'green';
+        document.getElementById('message').innerHTML = 'Password Cocok';
+      } else {
+        document.getElementById('message').style.color = 'red';
+        document.getElementById('message').innerHTML = 'Password tidak sama';
+      }
+    }
+    </script>
 </html>
