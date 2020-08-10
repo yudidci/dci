@@ -32,6 +32,8 @@ $query = mysqli_query($dbconnect,"
 SELECT * FROM `password_reset_temp` WHERE `key`='".$key."' and `email`='".$email."';");
 $row = mysqli_num_rows($query);
 if ($row==""){
+$error="<h2>Link tidak valid</h2>";
+echo $error;
 $error.= '<h2>Tautan Tidak Valid </h2>
 <p> Tautan tidak valid / kedaluwarsa. Entah Anda tidak menyalin tautan yang benar dari email,
 atau Anda telah menggunakan kunci untuk menonaktifkannya.</p>';
@@ -51,9 +53,9 @@ atau Anda telah menggunakan kunci untuk menonaktifkannya.</p>';
 	<span id='message'></span>
 	<br></br>
 	<input class="bts" type="checkbox" onclick="myFunction()">
-	<p class="show">Show Password</p>
+	<p class="show">Lihat Sandi</p>
 	<input  type="hidden" name="email" value="<?php echo $email;?>"/>
-	<input class="btn btn-primary btn-user btn-block" type="submit" id="reset" value="Reset Password" />
+	<input class="btn btn-primary btn-user btn-block" type="submit" id="reset" value="Ganti Sandi" />
 	</form>
 	</div>
 	</div>
