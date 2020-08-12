@@ -10,7 +10,7 @@
  * Copyright 2011-2019 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
-:root {
+ :root {
   --blue: #4e73df;
   --indigo: #6610f2;
   --purple: #6f42c1;
@@ -717,6 +717,44 @@ pre code {
   padding-left: 0.75rem;
   margin-right: auto;
   margin-left: auto;
+}
+
+.roww {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-right: -45.75rem;
+  margin-left: 17.25rem;
+}
+
+@media only screen and (max-width: 640px) and (min-width: 360px){
+.roww {
+display: flex;
+flex-wrap: wrap;
+justify-content: space-between;
+margin-right: -45.75rem;
+margin-left: -4.30rem;
+}
+}
+
+@media only screen and (max-width: 568px) and (min-width: 320px){
+.roww {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-right: -45.75rem;
+  margin-left: -4.30rem;
+}
+}
+
+@media only screen and (max-width: 1024px) and (min-width: 768px){
+  .roww {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-right: -47.75rem;
+    margin-left: -0.3rem;
+  }
 }
 
 .row {
@@ -5057,6 +5095,11 @@ p.slogan {
   display:none;
 }
 
+#verifikasi {
+  display:none;
+}
+
+
 #ketentuan {
   display:none;
 }
@@ -5089,13 +5132,39 @@ p.slogan {
   border: 1px solid #e3e6f0;
   border-radius: 0.35rem;
 }
-.card2 {
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-    transition: 0.3s;
-    border-radius: 28px;
-    border: 1px solid grey;
-    width: 100%;
+.card2{
+  border-radius: 4px;
+  background: #fff;
+  box-shadow: 0 6px 10px rgba(0,0,0,.08), 0 0 6px rgba(0,0,0,.05);
+    transition: .3s transform cubic-bezier(.155,1.105,.295,1.12),.3s box-shadow,.3s -webkit-transform cubic-bezier(.155,1.105,.295,1.12);
+    padding: 14px 92px 18px 28px;
+cursor: pointer;
 }
+
+
+@media only screen and (max-width: 640px) and (min-width: 360px){
+.card2{
+  border-radius: 4px;
+  background: #fff;
+  box-shadow: 0 6px 10px rgba(0,0,0,.08), 0 0 6px rgba(0,0,0,.05);
+    transition: .3s transform cubic-bezier(.155,1.105,.295,1.12),.3s box-shadow,.3s -webkit-transform cubic-bezier(.155,1.105,.295,1.12);
+    padding: 14px 5px 18px 34px !important;
+cursor: pointer;
+}
+}
+
+
+
+@media only screen and (max-width: 568px) and (min-width: 320px){
+  .card2{
+    border-radius: 4px;
+    background: #fff;
+    box-shadow: 0 6px 10px rgba(0,0,0,.08), 0 0 6px rgba(0,0,0,.05);
+      transition: .3s transform cubic-bezier(.155,1.105,.295,1.12),.3s box-shadow,.3s -webkit-transform cubic-bezier(.155,1.105,.295,1.12);
+      padding: 14px 1px 18px 0px;
+  cursor: pointer;
+  }
+  }
 
 .card3 {
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);

@@ -1,4 +1,4 @@
-  <?php
+<?php
 // Start the session
 session_start();
 
@@ -86,6 +86,7 @@ if ( !isset($_SESSION['user_login']) ||
           <div class="bg-white py-2 collapse-inner rounded">
             <h6 class="collapse-header">Components:</h6>
             <a class="collapse-item" id="klikidentitas" href="#klikidentitas">Identitas</a>
+            <a class="collapse-item" id="klikverifikasi" href="#klikverifikasi">Upload KTP</a>
             <a class="collapse-item" id="klikblank" href="#klikblank">Visi & Misi</a>
             <a class="collapse-item" id="klikketentuan" href="#klikketentuan">Syarat & Ketentuan</a>
           </div>
@@ -444,6 +445,49 @@ if ( !isset($_SESSION['user_login']) ||
 
 
       </div>
+
+
+      <div  id="verifikasi">
+        <div class="container-fluid">
+          <!-- Page Heading -->
+          <h1 class="h3 mb-4 text-gray-800">Verifikasi Data Member</h1>
+          <div class="container">
+  <div class="roww">
+   
+    <div class="col-md-4">
+      <div class="card2 card-2">
+          <p class="judul">Upload File Foto KTP</p> 
+         
+    <div class="form-group">
+    <form method="post" action="uploadktp.php" enctype="multipart/form-data">
+        <label>NO KTP</label>
+        <input type="text" name="nik" id="nik" class="form-control1">
+        <input hidden type="text" name="reg_no" id="reg_no" value="<?=$_SESSION['reg_no']?>"class="form-control1">
+        </div>
+        <div class="form-group">
+        <label  class="editpoin1" for="fname">Edit Photo KTP           :</label>
+        <input class="editfile" type="file" id="myFile" name="gmbr" required>
+        </div>
+        <input type="submit" name="simpan" id="simpan" class="btn btn-info" value="Upload" />
+    </form>
+    <!-- <form action="" method="POST" enctype="multipart/form-data"/>
+  <label  class="editpoin" for="fname">Edit deskripsi :</label>
+  <input class="editinput" id="cname" name="jdl" minlength="5" type="text" required placeholder="<?=$file1['nama'];?>"/><br>
+  <label  class="editpoin" for="fname" >Edit poin :</label>
+  <input type="hidden" name="idpoin" value="1" />
+  <input class="editinput" id="cname" name="poin" type="text" required placeholder="<?=$file1['poin'];?>"/><br>
+  ​<label  class="editpoin1" for="fname">Edit Photo            :</label>
+   <input class="editfile" type="file" id="myFile" name="gmbr" required>
+  <input class="submit" name="simpan" type="submit">
+</form> -->
+  
+    
+          </div>
+          </div>
+          </div>
+          </div>
+          </div>
+          </div>
       <!-- End of Main Content -->   
       <div  id="identitas">
         <div class="container-fluid">
@@ -1280,6 +1324,7 @@ if(isset($_POST['updateprofile']))
       $("#follower").css("display","none")
       $("#point").css("display","none")
       $("#blank").css("display","none")
+      $("#verifikasi").css("display","none")
    })
   })
   </script>
@@ -1288,6 +1333,21 @@ if(isset($_POST['updateprofile']))
   $(document).ready(function(){
   $("#klikidentitas-").click(function(){
     $("#identitas").css("display","block")
+    $("#ketentuan").css("display","none")
+    $("#dashboard").css("display","none")
+    $("#follower").css("display","none")
+    $("#point").css("display","none")
+    $("#blank").css("display","none")
+    $("#verifikasi").css("display","none")
+ })
+})
+</script>
+
+<script>
+  $(document).ready(function(){
+  $("#klikverifikasi").click(function(){
+    $("#verifikasi").css("display","block")
+    $("#identitas").css("display","none")
     $("#ketentuan").css("display","none")
     $("#dashboard").css("display","none")
     $("#follower").css("display","none")
@@ -1306,6 +1366,7 @@ if(isset($_POST['updateprofile']))
     $("#follower").css("display","none")
     $("#point").css("display","none")
     $("#blank").css("display","none")
+    $("#verifikasi").css("display","none")
  })
 })
 </script>
@@ -1319,6 +1380,7 @@ if(isset($_POST['updateprofile']))
     $("#follower").css("display","none")
     $("#point").css("display","none")
     $("#blank").css("display","none")
+    $("#verifikasi").css("display","none")
  })
 })
 </script>
@@ -1332,6 +1394,7 @@ if(isset($_POST['updateprofile']))
     $("#dashboard").css("display","none")
     $("#follower").css("display","none")
     $("#point").css("display","none")
+    $("#verifikasi").css("display","none")
  })
 })
 </script>
@@ -1345,6 +1408,7 @@ if(isset($_POST['updateprofile']))
     $("#identitas").css("display","none")
     $("#dashboard").css("display","none")
     $("#point").css("display","none")
+    $("#verifikasi").css("display","none")
  })
 })
 </script>
@@ -1358,6 +1422,7 @@ if(isset($_POST['updateprofile']))
     $("#ketentuan").css("display","none")
     $("#identitas").css("display","none")
     $("#dashboard").css("display","none")
+    $("#verifikasi").css("display","none")
  })
 })
 </script>

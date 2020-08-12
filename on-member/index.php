@@ -69,16 +69,20 @@
 
       <li class="nav-item">
         <a class="nav-link" id="klikblank" href="#klikblank">
-          
         <i class="fa fa-table"></i>
           <span>Table Semua Member</span></a>
       </li>
 
       <li class="nav-item">
         <a class="nav-link" id="klikredeem" href="#klikredeem">
-          
         <i class="fa fa-table"></i>
           <span>Table History Tukar Poin</span></a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" id="klikverifikasi" href="#klikverifikasi">
+      <i class="fa fa-check-square-o"></i>
+          <span>Cek Verikasi Member</span></a>
       </li>
 
                   <!-- Nav Item - Tables -->
@@ -590,6 +594,61 @@
 
 </div> 
 
+<div class="container-fluid"  id="verifikasi">
+
+<!-- Page Heading -->
+<h1 class="h3 mb-2 text-gray-800">Verifikasi Akun</h1>
+<!-- DataTales Example -->
+<div class="card shadow mb-4">
+  <div class="card-header py-3">
+    
+    
+  </div>
+  <div class="card-body">
+  <div style="overflow-x:auto;">
+    <div class="table-responsive">
+    <table class="table table-bordered" id="dataTable3" width="100%" cellspacing="0">
+    <thead>
+      <tr>
+      <th>Nomor Referral</th>
+      <th>NIK</th>
+      <th>Nama</th>
+      <th>Foto KTP</th>
+      <th>Verifikasi</th>
+      <th>Hapus</th>
+      </tr>
+      </thead>
+
+        <tbody>
+        <!-- list verifikasi ktp -->
+        <?php
+        include '../configsdk.php';
+        // list all member query
+        $fetchktp = "SELECT * FROM full JOIN ktp ON full.nik= ktp.nik ";
+        $fetchresultKTP = $dbconnect ->query($fetchktp);
+
+        // output data of each row
+        while($row = $fetchresultKTP->fetch_assoc()){ 
+          echo "<tr>
+          <td>" . $row['reg_no'] . "</td>
+          <td>" . $row['nik'] . "</td>
+          <td>" . $row['name'] . "</td>
+          <td>" ."<img width=60 height=60 src=".$row['url'].">". "</td>
+          <td>" ."<a onclick=\"return confirm('Apakah anda yakin ingin verifikasi member ini?')\" href='../on-member/validasi.php?did=".$row['reg_no']."'>Verifikasi</a> "."</td>
+          <td>" ."<a onclick=\"return confirm('Apakah anda yakin ingin menghapus member ini?')\" href='../on-member/delete.php?did=".$row['reg_no']."&ref=".$row['referral']."'>Hapus</a> "."</td>
+                
+          </tr>"; 
+          }
+        ?>
+      </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+</div>
+
+</div> 
+
 <div class="container-fluid" id="follower">
 <h1 class="h3 mb-2 text-gray-800">Edit Batas Follower</h1>
 <!-- DataTales Example -->
@@ -958,6 +1017,7 @@ if(isset($_POST['simpan']))
       $("#point").css("display","none")
       $("#redeem").css("display","none")
       $("#blank").css("display","none")
+      $("#verifikasi").css("display","none")
    })
   })
   </script>
@@ -972,6 +1032,7 @@ if(isset($_POST['simpan']))
     $("#point").css("display","none")
     $("#redeem").css("display","none")
     $("#blank").css("display","none")
+    $("#verifikasi").css("display","none")
  })
 })
 </script>
@@ -985,6 +1046,7 @@ if(isset($_POST['simpan']))
     $("#follower").css("display","none")
     $("#point").css("display","none")
     $("#redeem").css("display","none")
+    $("#verifikasi").css("display","none")
  })
 })
 </script>
@@ -998,6 +1060,7 @@ if(isset($_POST['simpan']))
     $("#follower").css("display","none")
     $("#point").css("display","none")
     $("#redeem").css("display","none")
+    $("#verifikasi").css("display","none")
  })
 })
 </script>
@@ -1012,6 +1075,7 @@ if(isset($_POST['simpan']))
     $("#follower").css("display","none")
     $("#point").css("display","none")
     $("#redeem").css("display","none")
+    $("#verifikasi").css("display","none")
  })
 })
 </script>
@@ -1026,6 +1090,7 @@ if(isset($_POST['simpan']))
     $("#follower").css("display","none")
     $("#point").css("display","none")
     $("#blank").css("display","none")
+    $("#verifikasi").css("display","none")   
  })
 })
 </script>
@@ -1040,6 +1105,7 @@ if(isset($_POST['simpan']))
     $("#dashboard").css("display","none")
     $("#point").css("display","none")
     $("#redeem").css("display","none")
+    $("#verifikasi").css("display","none") 
  })
 })
 </script>
@@ -1054,9 +1120,26 @@ if(isset($_POST['simpan']))
     $("#identitas").css("display","none")
     $("#dashboard").css("display","none")
     $("#redeem").css("display","none")
+    $("#verifikasi").css("display","none") 
  })
 })
 </script>
+
+<script>
+  $(document).ready(function(){
+  $("#klikverifikasi").click(function(){
+    $("#verifikasi").css("display","block") 
+    $("#point").css("display","none")
+    $("#follower").css("display","none")
+    $("#blank").css("display","none")
+    $("#ketentuan").css("display","none")
+    $("#identitas").css("display","none")
+    $("#dashboard").css("display","none")
+    $("#redeem").css("display","none")
+ })
+})
+</script>
+
 <!-- notification script -->
 
 
