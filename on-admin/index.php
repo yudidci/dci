@@ -460,15 +460,14 @@ if ( !isset($_SESSION['user_login']) ||
          
     <div class="form-group">
     <form method="post" action="uploadktp.php" enctype="multipart/form-data">
-        <label>NO KTP</label>
-        <input type="text" name="nik" id="nik" class="form-control1">
+        <input hidden type="text" name="nik" id="nik" value="<?=$_SESSION['sess_id']?>" class="form-control1">
         <input hidden type="text" name="reg_no" id="reg_no" value="<?=$_SESSION['reg_no']?>"class="form-control1">
         </div>
         <div class="form-group">
-        <label  class="editpoin1" for="fname">Edit Photo KTP           :</label>
+        <label  class="editpoin1" for="fname">Unggah Foto KTP           :</label>
         <input class="editfile" type="file" id="myFile" name="gmbr" required>
         </div>
-        <input type="submit" name="simpan" id="simpan" class="btn btn-info" value="Upload" />
+        <input type="submit" name="simpan" id="simpan" class="btn btn-info" value="Unggah" />
     </form>
     <!-- <form action="" method="POST" enctype="multipart/form-data"/>
   <label  class="editpoin" for="fname">Edit deskripsi :</label>
