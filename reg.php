@@ -43,7 +43,7 @@ if(mysqli_num_rows($fetchquery) > 0){
 }else{
 
    $sql="INSERT INTO full SET dob_place = '$dob_place', dob = '$dob', gender = '$gender', road_name = '$road_name', rt = '$rt', rw = '$rw' ,desa ='$desa', kec ='$kec', agama ='$agama', marital ='$marital', job ='$job', nationality ='$nationality', followers_count = 0, nik = '$nik', name = '$name', password = '$password', reg_no = '$join', referral='$referral', level_user='admin', phone='$phone', email='$email'";
-   $updatefollowers = "UPDATE full set followers_count=followers_count+1 where reg_no='$referral'";
+   $updatefollowers = "UPDATE full set followers_count=followers_count+1 where reg_no='$referral', verifikasi=''";
        
    $sqlq = $dbconnect->query($sql);
    $updateq = $dbconnect->query($updatefollowers);

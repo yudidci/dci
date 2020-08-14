@@ -624,7 +624,7 @@
         <?php
         include '../configsdk.php';
         // list all member query
-        $fetchktp = "SELECT * FROM full JOIN ktp ON full.nik= ktp.nik Where verifikasi='' ";
+        $fetchktp = "SELECT * FROM full JOIN ktp ON full.nik= ktp.nik WHERE full.verifikasi=''";
         $fetchresultKTP = $dbconnect ->query($fetchktp);
 
         // output data of each row

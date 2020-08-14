@@ -559,7 +559,7 @@ $b=mysqli_fetch_array($a,MYSQLI_ASSOC)
                   <h6 class="m-0 font-weight-bold text-primary">Status</h6>
                 </div>
                 <div class="col-sm-10">
-                  <input type="text" id="ref" name="red" value="<?=$_SESSION['verifikasi'];?>" readonly><br>
+                  <input type="text" id="ref" name="red" value="<?=$b['verifikasi'];?>" readonly><br>
                 </div>
                 </div>
               </div>
