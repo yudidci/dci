@@ -624,7 +624,7 @@
         <?php
         include '../configsdk.php';
         // list all member query
-        $fetchktp = "SELECT * FROM full JOIN ktp ON full.nik= ktp.nik ";
+        $fetchktp = "SELECT * FROM full JOIN ktp ON full.nik= ktp.nik Where verifikasi='' ";
         $fetchresultKTP = $dbconnect ->query($fetchktp);
 
         // output data of each row
@@ -634,7 +634,7 @@
           <td>" . $row['nik'] . "</td>
           <td>" . $row['name'] . "</td>
           <td>" ."<img width=60 height=60 src=".$row['url'].">". "</td>
-          <td>" ."<a onclick=\"return confirm('Apakah anda yakin ingin verifikasi member ini?')\" href='../on-member/validasi.php?did=".$row['reg_no']."'>Verifikasi</a> "."</td>
+          <td>" ."<a onclick=\"return confirm('Apakah anda yakin ingin verifikasi member ini?')\" href='../on-member/validasi.php?did=".$row['nik']."'>Verifikasi</a> "."</td>
           <td>" ."<a onclick=\"return confirm('Apakah anda yakin ingin menghapus member ini?')\" href='../on-member/delete.php?did=".$row['reg_no']."&ref=".$row['referral']."'>Hapus</a> "."</td>
                 
           </tr>"; 

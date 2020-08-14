@@ -24,7 +24,8 @@ if ( isset($_POST['nik']) && isset ($_POST['password']) ) {
                          phone,
                          email,
                          password,
-                         reg_no
+                         reg_no,
+                         verifikasi
                   FROM full 
                   WHERE 
                        nik=? 
@@ -44,7 +45,7 @@ if ( isset($_POST['nik']) && isset ($_POST['password']) ) {
 
     if ( $check_log->num_rows == 1 ) {
         $check_log->bind_result($name, $level_user, $nik, $dob_place, $dob, $gender, $marital, $road_name, $rt, $rw, 
-        $desa, $kec, $agama, $job, $nationality, $referral, $followers_count,$phone,$email, $password, $reg_no );
+        $desa, $kec, $agama, $job, $nationality, $referral, $followers_count,$phone,$email, $password, $reg_no, $verifikasi );
 
         while ( $check_log->fetch() ) {
             $_SESSION['user_login'] = $level_user;
@@ -69,6 +70,7 @@ if ( isset($_POST['nik']) && isset ($_POST['password']) ) {
             $_SESSION['email']       = $email;
             $_SESSION['password']       = $password;
             $_SESSION['reg_no']         = $reg_no;
+            $_SESSION['verifikasi']         = $verifikasi;
             
         }
 

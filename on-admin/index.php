@@ -556,6 +556,16 @@ $b=mysqli_fetch_array($a,MYSQLI_ASSOC)
               <div class="card-header py-3">
                 <div class="row">
                   <div class="col-sm-2">
+                  <h6 class="m-0 font-weight-bold text-primary">Status</h6>
+                </div>
+                <div class="col-sm-10">
+                  <input type="text" id="ref" name="red" value="<?=$_SESSION['verifikasi'];?>" readonly><br>
+                </div>
+                </div>
+              </div>
+              <div class="card-header py-3">
+                <div class="row">
+                  <div class="col-sm-2">
                   <h6 class="m-0 font-weight-bold text-primary">Tempat Lahir</h6>
                 </div>
                 <div class="col-sm-10">
@@ -1093,7 +1103,7 @@ if(isset($_POST['updateprofile']))
                 <p><?=$aa['poin'];?> Follower
                 <input type="hidden" name="poin" id="poin" value="<?=$aa['poin'];?>" />
                 <input type="hidden" name="hadiah" id="hadiah" value="<?=$aa['nama'];?>" />
-                <div class="my-4 text-right"> <input type="submit" id="redeem" name="redeem" value="Tukar" <?php if ($_SESSION['followers'] < $aa['poin']){ ?> disabled <?php   }  ?> /></div>
+                <div class="my-4 text-right"> <input type="submit" id="redeem" name="redeem" value="Tukar" <?php if ($_SESSION['verifikasi'] != 'Aktif' & $_SESSION['followers'] < $aa['poin'] ){ ?> disabled <?php   }  ?> /></div>
                 <!-- <div class="my-4 text-right"> <button class="button3">Tukar</button></div> -->
                 </p>
             </div>
