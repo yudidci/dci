@@ -1067,6 +1067,7 @@ if(isset($_POST['updateprofile']))
          <div class="card3">
        <?php
        include '../configpict.php';
+       $reg_no=$_SESSION['reg_no'];
        $a = "SELECT * FROM file WHERE id='1'";
        $result = $dbconnect->query($a);
        $aa=$result->fetch_assoc();
@@ -1091,6 +1092,10 @@ if(isset($_POST['updateprofile']))
        $result = $dbconnect->query($f);
        $ff=$result->fetch_assoc();
 
+       $ver = "SELECT * FROM full WHERE reg_no='$reg_no'";
+       $result = $dbconnect->query($ver);
+       $verif=$result->fetch_assoc();
+       $check='Aktif';
        
        ?>
        <form action="redeem.php" method="post">
@@ -1102,7 +1107,7 @@ if(isset($_POST['updateprofile']))
                 <p><?=$aa['poin'];?> Follower
                 <input type="hidden" name="poin" id="poin" value="<?=$aa['poin'];?>" />
                 <input type="hidden" name="hadiah" id="hadiah" value="<?=$aa['nama'];?>" />
-                <div class="my-4 text-right"> <input type="submit" id="redeem" name="redeem" value="Tukar" <?php if ($_SESSION['verifikasi'] != 'Aktif' & $_SESSION['followers'] < $aa['poin'] ){ ?> disabled <?php   }  ?> /></div>
+                <div class="my-4 text-right"> <input  <?php if ($_SESSION['followers'] < $aa['poin']){ ?> disabled <?php   }  ?>type="submit" id="redeem" name="redeem" value="Tukar" <?php if ($_SESSION['verifikasi'] != 'Aktif'){ ?> disabled <?php   }  ?> /></div>
                 <!-- <div class="my-4 text-right"> <button class="button3">Tukar</button></div> -->
                 </p>
             </div>
@@ -1133,7 +1138,7 @@ if(isset($_POST['updateprofile']))
                 <input type="hidden" name="poin" value="<?=$bb['poin'];?>" />
                 <!-- new to input -->
                 <input type="hidden" name="hadiah" id="hadiah" value="<?=$bb['nama'];?>" />
-                <div class="my-4 text-right"> <input type="submit" id="redeem" name="redeem" value="Tukar" <?php if ($_SESSION['followers'] < $bb['poin']){ ?> disabled <?php   }  ?> /></div>
+                <div class="my-4 text-right"> <input type="submit" id="redeem" name="redeem" value="Tukar" <?php if ($_SESSION['verifikasi'] != $check){ ?> disabled <?php   }  ?> /></div>
             </p>
           </div>
         </div>
@@ -1159,7 +1164,7 @@ if(isset($_POST['updateprofile']))
                 <p><?=$cc['poin'];?> Follower
                 <input type="hidden" name="poin" value="<?=$cc['poin'];?>" />
                 <input type="hidden" name="hadiah" id="hadiah" value="<?=$cc['nama'];?>" />
-                <div class="my-4 text-right"> <input type="submit" id="redeem" name="redeem" value="Tukar" <?php if ($_SESSION['followers'] < $cc['poin']){ ?> disabled <?php   }  ?> /></div>
+                <div class="my-4 text-right"> <input type="submit" id="redeem" name="redeem" value="Tukar" <?php if ($_SESSION['verifikasi'] != $check){ ?> disabled <?php   }  ?> /></div>
               </form>
 </div>
 </div>
@@ -1180,7 +1185,7 @@ if(isset($_POST['updateprofile']))
                 <p><?=$dd['poin'];?> Follower
                 <input type="hidden" name="poin" value="<?=$dd['poin'];?>" />
                 <input type="hidden" name="hadiah" id="hadiah" value="<?=$dd['nama'];?>" />
-                <div class="my-4 text-right"> <input type="submit" id="redeem" name="redeem" value="Tukar" <?php if ($_SESSION['followers'] < $dd['poin']){ ?> disabled <?php   }  ?> /></div>
+                <div class="my-4 text-right"> <input type="submit" id="redeem" name="redeem" value="Tukar" <?php if ($_SESSION['verifikasi'] != $check){ ?> disabled <?php   }  ?> /></div>
               </form>
 </div>
 </div>
@@ -1206,7 +1211,7 @@ if(isset($_POST['updateprofile']))
                 <p><?=$ee['poin'];?> Follower
                 <input type="hidden" name="poin" value="<?=$ee['poin'];?>" />
                 <input type="hidden" name="hadiah" id="hadiah" value="<?=$ee['nama'];?>" />
-                <div class="my-4 text-right"> <input type="submit" id="redeem" name="redeem" value="Tukar" <?php if ($_SESSION['followers'] < $ee['poin']){ ?> disabled <?php   }  ?> /></div>
+                <div class="my-4 text-right"> <input type="submit" id="redeem" name="redeem" value="Tukar" <?php if ($_SESSION['verifikasi'] != $check){ ?> disabled <?php   }  ?> /></div>
               </form>
           </div>
         </div>
@@ -1230,7 +1235,7 @@ if(isset($_POST['updateprofile']))
                 <p><?=$ff['poin'];?> Follower
                 <input type="hidden" name="poin" value="<?=$ff['poin'];?>" />
                 <input type="hidden" name="hadiah" id="hadiah" value="<?=$ff['nama'];?>" />
-                <div class="my-4 text-right"> <input type="submit" id="redeem" name="redeem" value="Tukar" <?php if ($_SESSION['followers'] < $ff['poin']){ ?> disabled <?php   }  ?> /></div>
+                <div class="my-4 text-right"> <input type="submit" id="redeem" name="redeem" value="Tukar" <?php if ($_SESSION['verifikasi'] != $check){ ?> disabled <?php   }  ?> /></div>
               </form>
             </div>
           </div>

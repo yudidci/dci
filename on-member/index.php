@@ -32,11 +32,12 @@
   <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+  
 
 
   <!-- Custom styles for this template-->
   <link href="css/sb-admin-2.css" rel="stylesheet">
-
+  <link rel="stylesheet" type="text/css" href="css/zoom.css">
   <link href="vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
 
 </head>
@@ -633,7 +634,7 @@
           <td>" . $row['reg_no'] . "</td>
           <td>" . $row['nik'] . "</td>
           <td>" . $row['name'] . "</td>
-          <td>" ."<img id='myImg' width=60 height=60 src=".$row['url'].">". "</td>
+          <td> " ."<img data-action='zoom' width=60 height=60 src=".$row['url'].">". "</td>
           <td>" ."<a onclick=\"return confirm('Apakah anda yakin ingin verifikasi member ini?')\" href='../on-member/validasi.php?did=".$row['nik']."'>Verifikasi</a> "."</td>
           <td>" ."<a onclick=\"return confirm('Apakah anda yakin ingin menghapus member ini?')\" href='../on-member/delete.php?did=".$row['reg_no']."&ref=".$row['referral']."'>Hapus</a> "."</td>
                 
@@ -644,14 +645,9 @@
       </table>
     </div>
   </div>
+  </div>
 </div>
 </div>
-<div id="myModal" class="modal">
-  <span class="close">&times;</span>
-  <img class="modal-content" id="img01">
-  <div id="caption"></div>
-</div>
-</div> 
 
 <div class="container-fluid" id="follower">
 <h1 class="h3 mb-2 text-gray-800">Edit Batas Follower</h1>
@@ -1008,33 +1004,12 @@ if(isset($_POST['simpan']))
     <!-- Page level plugins -->
     <script src="vendor/datatables/jquery.dataTables.min.js"></script>
     <script src="vendor/datatables/dataTables.bootstrap4.min.js"></script>
+    
   
     <!-- Page level custom scripts -->
     <script src="js/demo/datatables-demo.js"></script>
+  <script src="js/zoom.js"></script>
 
-
-    <script>
-// Get the modal
-var modal = document.getElementById("myModal");
-
-// Get the image and insert it inside the modal - use its "alt" text as a caption
-var img = document.getElementById("myImg");
-var modalImg = document.getElementById("img01");
-var captionText = document.getElementById("caption");
-img.onclick = function(){
-  modal.style.display = "block";
-  modalImg.src = this.src;
-  captionText.innerHTML = this.alt;
-}
-
-// Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close")[0];
-
-// When the user clicks on <span> (x), close the modal
-span.onclick = function() { 
-  modal.style.display = "none";
-}
-</script>
 
   <script>
     $(document).ready(function(){
