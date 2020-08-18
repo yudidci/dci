@@ -1138,7 +1138,7 @@ if(isset($_POST['updateprofile']))
                 <input type="hidden" name="poin" value="<?=$bb['poin'];?>" />
                 <!-- new to input -->
                 <input type="hidden" name="hadiah" id="hadiah" value="<?=$bb['nama'];?>" />
-                <div class="my-4 text-right"> <input type="submit" id="redeem" name="redeem" value="Tukar" <?php if ($_SESSION['verifikasi'] != $check){ ?> disabled <?php   }  ?> /></div>
+                <div class="my-4 text-right"> <input <?php if ($_SESSION['followers'] < $bb['poin']){ ?> disabled <?php   }  ?> type="submit" id="redeem" name="redeem" value="Tukar" <?php if ($_SESSION['verifikasi'] != 'Aktif'){ ?> disabled <?php   }  ?> /></div>
             </p>
           </div>
         </div>
@@ -1164,7 +1164,7 @@ if(isset($_POST['updateprofile']))
                 <p><?=$cc['poin'];?> Follower
                 <input type="hidden" name="poin" value="<?=$cc['poin'];?>" />
                 <input type="hidden" name="hadiah" id="hadiah" value="<?=$cc['nama'];?>" />
-                <div class="my-4 text-right"> <input type="submit" id="redeem" name="redeem" value="Tukar" <?php if ($_SESSION['verifikasi'] != $check){ ?> disabled <?php   }  ?> /></div>
+                <div class="my-4 text-right"> <input <?php if ($_SESSION['followers'] < $cc['poin']){ ?> disabled <?php   }  ?> type="submit" id="redeem" name="redeem" value="Tukar" <?php if ($_SESSION['verifikasi'] != 'Aktif'){ ?> disabled <?php   }  ?> /></div>
               </form>
 </div>
 </div>
@@ -1185,7 +1185,7 @@ if(isset($_POST['updateprofile']))
                 <p><?=$dd['poin'];?> Follower
                 <input type="hidden" name="poin" value="<?=$dd['poin'];?>" />
                 <input type="hidden" name="hadiah" id="hadiah" value="<?=$dd['nama'];?>" />
-                <div class="my-4 text-right"> <input type="submit" id="redeem" name="redeem" value="Tukar" <?php if ($_SESSION['verifikasi'] != $check){ ?> disabled <?php   }  ?> /></div>
+                <div class="my-4 text-right"> <input <?php if ($_SESSION['followers'] < $dd['poin']){ ?> disabled <?php   }  ?>type="submit" id="redeem" name="redeem" value="Tukar" <?php if ($_SESSION['verifikasi'] != 'Aktif'){ ?> disabled <?php   }  ?> /></div>
               </form>
 </div>
 </div>
@@ -1211,7 +1211,7 @@ if(isset($_POST['updateprofile']))
                 <p><?=$ee['poin'];?> Follower
                 <input type="hidden" name="poin" value="<?=$ee['poin'];?>" />
                 <input type="hidden" name="hadiah" id="hadiah" value="<?=$ee['nama'];?>" />
-                <div class="my-4 text-right"> <input type="submit" id="redeem" name="redeem" value="Tukar" <?php if ($_SESSION['verifikasi'] != $check){ ?> disabled <?php   }  ?> /></div>
+                <div class="my-4 text-right"> <input <?php if ($_SESSION['followers'] < $ee['poin']){ ?> disabled <?php   }  ?> type="submit" id="redeem" name="redeem" value="Tukar" <?php if ($_SESSION['verifikasi'] != 'Aktif'){ ?> disabled <?php   }  ?> /></div>
               </form>
           </div>
         </div>
@@ -1235,7 +1235,7 @@ if(isset($_POST['updateprofile']))
                 <p><?=$ff['poin'];?> Follower
                 <input type="hidden" name="poin" value="<?=$ff['poin'];?>" />
                 <input type="hidden" name="hadiah" id="hadiah" value="<?=$ff['nama'];?>" />
-                <div class="my-4 text-right"> <input type="submit" id="redeem" name="redeem" value="Tukar" <?php if ($_SESSION['verifikasi'] != $check){ ?> disabled <?php   }  ?> /></div>
+                <div class="my-4 text-right"> <input <?php if ($_SESSION['followers'] < $ff['poin']){ ?> disabled <?php   }  ?> type="submit" id="redeem" name="redeem" value="Tukar" <?php if ($_SESSION['verifikasi'] != 'Aktif'){ ?> disabled <?php   }  ?> /></div>
               </form>
             </div>
           </div>
