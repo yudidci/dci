@@ -623,7 +623,7 @@
         <tbody>
         <!-- list verifikasi ktp -->
         <?php
-        include '../configsdk.php';
+        include '../configtable.php';
         // list all member query
         $fetchktp = "SELECT * FROM full JOIN ktp ON full.nik= ktp.nik WHERE full.verifikasi=''";
         $fetchresultKTP = $dbconnect ->query($fetchktp);
