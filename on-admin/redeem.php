@@ -23,48 +23,48 @@ $redeemhistory="INSERT INTO redeem SET reg_no='$reg_no', nik='$nik', hadiah='$gi
 $resultupdate = $dbconnect->query($sqlupdate);
 $result = $dbconnect->query($sql);
 $resultredeeem = $dbconnect->query($redeemhistory);
-$row = $result->fetch_assoc();
+// $row = $result->fetch_assoc();
 
 if(isset($_POST['redeem']))
 {
-    $output='<p>Dear, '.$row['name'].'</p>';
-    $output.='<p>Terima kasih sudah menjadi bagian dari website kami.</p>';
-    $output.='<p>-------------------------------------------------------------</p>';
-    $output.='<p>Silakan tunggu email balasan kami untuk penukaran voucher lebih lanjut. Terimakasih karena sudah menukar poin anda. NIK yang terdaftar dalam website kami adalah '.$row['nik'].'. Poin anda akan ditukar dengan hadiah '.$_POST['hadiah'].', dan sisa poin anda adalah '.$row['followers_count'].'</p>';		
-    $output.='<p>-------------------------------------------------------------</p>'; 	
-    $output.='<p>Terima kasih,</p>';
-    $body = $output; 
-    $subject = "Redeem Poin";
-    $email_to = $row['email'];
-    $fromserver = "hello@mail.com"; 
-    require("../PHPMailer/PHPMailerAutoload.php");
-    $mail = new PHPMailer();
-    $mail->IsSMTP();
-    $mail->SMTPDebug = 2;
-    $mail->Debugoutput = 'html';
-    $mail->Host = "smtp.gmail.com"; // Enter your host here
-    $mail->SMTPAuth = true;
-    $mail->Username = env('username'); // Enter your email here
-    $mail->Password = env('password'); //Enter your passwrod here
+    // $output='<p>Dear, '.$row['name'].'</p>';
+    // $output.='<p>Terima kasih sudah menjadi bagian dari website kami.</p>';
+    // $output.='<p>-------------------------------------------------------------</p>';
+    // $output.='<p>Silakan tunggu email balasan kami untuk penukaran voucher lebih lanjut. Terimakasih karena sudah menukar poin anda. NIK yang terdaftar dalam website kami adalah '.$row['nik'].'. Poin anda akan ditukar dengan hadiah '.$_POST['hadiah'].', dan sisa poin anda adalah '.$row['followers_count'].'</p>';		
+    // $output.='<p>-------------------------------------------------------------</p>'; 	
+    // $output.='<p>Terima kasih,</p>';
+    // $body = $output; 
+    // $subject = "Redeem Poin";
+    // $email_to = $row['email'];
+    // $fromserver = "hello@mail.com"; 
+    // require("../PHPMailer/PHPMailerAutoload.php");
+    // $mail = new PHPMailer();
+    // $mail->IsSMTP();
+    // $mail->SMTPDebug = 2;
+    // $mail->Debugoutput = 'html';
+    // $mail->Host = "smtp.gmail.com"; // Enter your host here
+    // $mail->SMTPAuth = true;
+    // $mail->Username = env('username'); // Enter your email here
+    // $mail->Password = env('password'); //Enter your passwrod here
     
-    $mail->Port = 587;
-    $mail->SMTPSecure = 'tls';
-    $mail->SMTPAuth = true;
-    $mail->IsHTML(true);
-    $mail->From = "hello@admin.com";
-    $mail->FromName = "Redeem Poin";
-    $mail->Sender = $fromserver; // indicates ReturnPath header
-    $mail->Subject = $subject;
-    $mail->Body = $body;
-    $mail->AddAddress($email_to);
+    // $mail->Port = 587;
+    // $mail->SMTPSecure = 'tls';
+    // $mail->SMTPAuth = true;
+    // $mail->IsHTML(true);
+    // $mail->From = "hello@admin.com";
+    // $mail->FromName = "Redeem Poin";
+    // $mail->Sender = $fromserver; // indicates ReturnPath header
+    // $mail->Subject = $subject;
+    // $mail->Body = $body;
+    // $mail->AddAddress($email_to);
 
-if(!$mail->send()) {
-    echo 'Message could not be sent.';
-    echo 'Mailer Error: ' . $mail->ErrorInfo;
-} else {
-    echo "<script>alert('Poin telah berhasil ditukar! Silakan cek email anda')</script>";
+// if(!$mail->send()) {
+//     echo 'Message could not be sent.';
+//     echo 'Mailer Error: ' . $mail->ErrorInfo;
+// } else {
+    echo "<script>alert('Poin telah berhasil ditukar!')</script>";
     echo "<meta http-equiv=refresh content=\"0; url=./\">";
-}
+// }
 
 }
 
