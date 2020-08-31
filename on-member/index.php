@@ -299,22 +299,22 @@
 <div class="basic-search">
 <div align="center">
 <!-- <button class="btn btn-primary ml-2" a href='kota.php' type="button" >Filter NIK Kota <i class="fa fa-search"></i></button> -->
-<a href='kota.php' class="btn btn-primary ml-2">Filter NIK Kota</a>
+<a href='Kota.php' class="btn btn-primary ml-2">Filter NIK Kota</a>
 <!-- <button class="btn btn-primary ml-2" type="button" id="btn-camat">Filter NIK Camat <i
     class="fa fa-search"></i></button> -->
-<a href='camat.php' class="btn btn-primary ml-2">Filter NIK Camat</a>
+<a href='Camat.php' class="btn btn-primary ml-2">Filter NIK Camat</a>
 <!-- <button class="btn btn-primary ml-2" type="button" id="btn-lurah">Filter NIK Lurah <i
     class="fa fa-search"></i></button> -->
-<a href='lurah.php' class="btn btn-primary ml-2">Filter NIK Lurah</a>
+<a href='Lurah.php' class="btn btn-primary ml-2">Filter NIK Lurah</a>
 <!-- <button class="btn btn-primary ml-2" type="button" id="btn-RW">Filter NIK RW <i
     class="fa fa-search"></i></button> -->
-<a href='rw.php' class="btn btn-primary ml-2">Filter NIK RW</a>
+<a href='RW.php' class="btn btn-primary ml-2">Filter NIK RW</a>
 <!-- <button class="btn btn-primary ml-2" type="button" id="btn-RT">Filter NIK RT <i
     class="fa fa-search"></i></button> -->
 <a href='RT.php' class="btn btn-primary ml-2">Filter NIK RT</a>
 <!-- <button class="btn btn-primary ml-2" type="button" id="btn-warga">Filter NIK Warga <i
     class="fa fa-search"></i></button> -->
-<a href='warga.php' class="btn btn-primary ml-2">Filter NIK Warga</a>
+<a href='Warga.php' class="btn btn-primary ml-2">Filter NIK Warga</a>
 </div>
 </div>
 
