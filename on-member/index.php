@@ -582,8 +582,9 @@
           
                     echo 
                     "<a href='detail.php?did=".$row['reg_no']."'></td>
-                    <td>"."<input type='button' name='buysell' value='Dikirim'>"."</td>
-                    <td>" ."<a onclick=\"return confirm('Apakah anda yakin ingin verifikasi member ini?')\" href='../on-member/validasi.php?did=".$row['nik']."'>Verifikasi</a> "."</td>
+                    <td>" ."<a onclick=\"return confirm('Apakah anda yakin ingin Merubah Status Kirim untuk member ini?')\" href='../on-member/kirim.php?did=".$row['reg_no']."'>Kirim</a> "."</td>
+                   
+                    <td>" . $row['status'] . "</td>
                 
           </tr>"; 
           }
