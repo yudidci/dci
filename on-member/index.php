@@ -553,6 +553,7 @@
         while($row = $fetchresultRD->fetch_assoc()){ 
           echo "<tr>
           <td>" . $row['reg_no'] . "</td>
+          <td hidden>" . $row['id'] . "</td>
           <td>" . $row['name'] . "</td>
           <td>" . $row['road_name'] . "</td>
           <td>" . $row['tgl_ditukar'] . "</td>
@@ -582,7 +583,7 @@
           
                     echo 
                     "<a href='detail.php?did=".$row['reg_no']."'></td>
-                    <td>" ."<a onclick=\"return confirm('Apakah anda yakin ingin Merubah Status Kirim untuk member ini?')\" href='../on-member/kirim.php?did=".$row['reg_no']."'>Kirim</a> "."</td>
+                    <td>" ."<a onclick=\"return confirm('Apakah anda yakin ingin Merubah Status Kirim untuk member ini?')\" href='../on-member/kirim.php?did=".$row['id']."'>Kirim</a> "."</td>
                    
                     <td>" . $row['status'] . "</td>
                 

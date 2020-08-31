@@ -2,7 +2,7 @@
 
 include '../config.php';
 $detail_id = ($_GET['did']);
-$update = "UPDATE redeem set status='Dikirim' WHERE reg_no='$detail_id'";
+$update = "UPDATE redeem set status='Dikirim' WHERE id='$detail_id'";
 $resultupdate = $dbconnect->query($update);
 // output data of each row
 if($resultupdate){ 
