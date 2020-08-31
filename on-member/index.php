@@ -512,12 +512,13 @@
     <thead>
       <tr>
       <th>Nomor Referral</th>
-      <th>NIK</th>
       <th>Nama</th>
       <th>Alamat</th>
       <th>Tanggal Penukaran</th>
       <th>Hadiah</th>
       <th>Tingkat saat ini</th>
+      <th>Dikirim</th>
+      <th>Status</th>
       </tr>
       </thead>
 
@@ -552,7 +553,6 @@
         while($row = $fetchresultRD->fetch_assoc()){ 
           echo "<tr>
           <td>" . $row['reg_no'] . "</td>
-          <td>" . $row['nik'] . "</td>
           <td>" . $row['name'] . "</td>
           <td>" . $row['road_name'] . "</td>
           <td>" . $row['tgl_ditukar'] . "</td>
@@ -582,6 +582,8 @@
           
                     echo 
                     "<a href='detail.php?did=".$row['reg_no']."'></td>
+                    <td>"."<input type='button' name='buysell' value='Dikirim'>"."</td>
+                    <td>" ."<a onclick=\"return confirm('Apakah anda yakin ingin verifikasi member ini?')\" href='../on-member/validasi.php?did=".$row['nik']."'>Verifikasi</a> "."</td>
                 
           </tr>"; 
           }
