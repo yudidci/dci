@@ -5090,6 +5090,20 @@ p.slogan {
     color: #c61010;
 }
 
+#myDIV {
+  width: 88%;
+  font-size: 13px;
+  font-weight: bold;
+  margin-left: 10px;
+  text-align: center;
+  background-color: lightblue;
+  margin-top: -12px;
+  border-radius: 14px;
+}
+
+#myDIV {
+  display:none;
+}
 
 #identitas {
   display:none;

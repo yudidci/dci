@@ -766,6 +766,10 @@ width: 100%;
 padding: 0 30px;
 }
 
+.kecamatan {
+width: 346px;
+height: 48px;
+}
 
 .focus-input100 {
   display: block;

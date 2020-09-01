@@ -110,6 +110,10 @@ if ( !isset($_SESSION['user_login']) ||
           <span>Point</span></a>
       </li>
 
+      <div id="myDIV">
+Jika belum verifikasi KTP anda tidak dapat Tukar Poin! Terimakasih Sahabat Osco
+</div>
+
 
             <!-- Nav Item - Tables -->
             <li class="nav-item">
@@ -1328,7 +1332,6 @@ if(isset($_POST['updateprofile']))
     <script src="js/demo/datatables-demo.js"></script>
     <script src="../on-admin/js/dataklik.js"></script>
 
-
   <script>
     $(document).ready(function(){
     $("#klikidentitas").click(function(){
@@ -1339,6 +1342,7 @@ if(isset($_POST['updateprofile']))
       $("#point").css("display","none")
       $("#blank").css("display","none")
       $("#verifikasi").css("display","none")
+      $("#myDIV").css("display","none")
    })
   })
   </script>
@@ -1353,6 +1357,7 @@ if(isset($_POST['updateprofile']))
     $("#point").css("display","none")
     $("#blank").css("display","none")
     $("#verifikasi").css("display","none")
+    $("#myDIV").css("display","none")
  })
 })
 </script>
@@ -1367,6 +1372,7 @@ if(isset($_POST['updateprofile']))
     $("#follower").css("display","none")
     $("#point").css("display","none")
     $("#blank").css("display","none")
+    $("#myDIV").css("display","none")
  })
 })
 </script>
@@ -1381,6 +1387,7 @@ if(isset($_POST['updateprofile']))
     $("#point").css("display","none")
     $("#blank").css("display","none")
     $("#verifikasi").css("display","none")
+    $("#myDIV").css("display","none")
  })
 })
 </script>
@@ -1395,6 +1402,7 @@ if(isset($_POST['updateprofile']))
     $("#point").css("display","none")
     $("#blank").css("display","none")
     $("#verifikasi").css("display","none")
+    $("#myDIV").css("display","none")
  })
 })
 </script>
@@ -1409,6 +1417,7 @@ if(isset($_POST['updateprofile']))
     $("#follower").css("display","none")
     $("#point").css("display","none")
     $("#verifikasi").css("display","none")
+    $("#myDIV").css("display","none")
  })
 })
 </script>
@@ -1423,6 +1432,7 @@ if(isset($_POST['updateprofile']))
     $("#dashboard").css("display","none")
     $("#point").css("display","none")
     $("#verifikasi").css("display","none")
+    $("#myDIV").css("display","none")
  })
 })
 </script>
@@ -1437,6 +1447,7 @@ if(isset($_POST['updateprofile']))
     $("#identitas").css("display","none")
     $("#dashboard").css("display","none")
     $("#verifikasi").css("display","none")
+    $("#myDIV").css("display","block")
  })
 })
 </script>

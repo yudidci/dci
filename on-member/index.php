@@ -519,6 +519,7 @@
       <th>Tingkat saat ini</th>
       <th>Dikirim</th>
       <th>Status</th>
+      <th hidden></th>
       </tr>
       </thead>
 
