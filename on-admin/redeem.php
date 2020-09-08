@@ -63,7 +63,7 @@ if(isset($_POST['redeem']))
 //     echo 'Message could not be sent.';
 //     echo 'Mailer Error: ' . $mail->ErrorInfo;
 // } else {
-    echo "<script>alert('Poin telah berhasil ditukar!')</script>";
+    echo "<script>alert('Poin telah berhasil ditukar, Admin Sahabat Osco akan segera mengirimkan Hadiah anda, Silahkan Login Kembali untuk Tukar Poin!')</script>";
     // echo "<meta http-equiv=refresh content=\"0; url=./\">";
     echo "<meta http-equiv=refresh content=\"0; url=./../logout.php\">";
 // }
