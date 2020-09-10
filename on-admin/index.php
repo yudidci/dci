@@ -105,13 +105,14 @@ if ( !isset($_SESSION['user_login']) ||
 
             <!-- Nav Item - Charts -->
             <li class="nav-item">
-        <a class="nav-link" id="klikpoint-" href="#klikpoint-">
+        <a class="nav-link" id="klikpoint-">
           <i class="fas fa-fw fa-chart-area"></i>
           <span>Point</span></a>
       </li>
 
+      
       <div id="myDIV">
-Jika belum verifikasi KTP anda tidak dapat Tukar Poin! Terimakasih Sahabat Osco
+Account yang belum Terverifikasi <br> tidak dapat Tukar Poin. 
 </div>
 
 
@@ -1299,14 +1300,32 @@ if(isset($_POST['updateprofile']))
       </div>
     </div>
   </div>
+
+    <!-- Logout Modal-->
+    <div class="modal fade" id="poinModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Sahabat Osco</h5>
+          <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">×</span>
+          </button>
+        </div>
+        <div class="modal-body">Account Anda Belum Terverifikasi.<br>Silahkan Upload KTP Anda Untuk Tukar Poin.</div>
+        <div class="modal-footer">
+        </div>
+      </div>
+    </div>
+  </div>
   
 
   <!-- Bootstrap core JavaScript-->
-  <script src="vendor/jquery/jquery.min.js"></script>
-  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-
+  
   <!-- Core plugin JavaScript-->
   <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
   <!-- Custom scripts for all pages-->
   <script src="js/sb-admin-2.min.js"></script>
@@ -1318,7 +1337,7 @@ if(isset($_POST['updateprofile']))
   <!-- Page level custom scripts -->
   <script src="js/demo/chart-area-demo.js"></script>
   <script src="js/demo/chart-pie-demo.js"></script>
-  <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+  <!-- <script src="https://code.jquery.com/jquery-3.5.1.js"></script> -->
 
     <!-- Counter -->
     <script type="text/javascript" src="./js/waypoints.js"></script>
@@ -1437,20 +1456,31 @@ if(isset($_POST['updateprofile']))
 })
 </script>
 
-<script>
-  $(document).ready(function(){
-  $("#klikpoint-").click(function(){
-    $("#point").css("display","block")
-    $("#follower").css("display","none")
-    $("#blank").css("display","none")
-    $("#ketentuan").css("display","none")
-    $("#identitas").css("display","none")
-    $("#dashboard").css("display","none")
-    $("#verifikasi").css("display","none")
-    $("#myDIV").css("display","block")
- })
-})
-</script>
+<?php if ($_SESSION['verifikasi'] == 'Non Aktif'){ ?>
+  <script> 
+  /* Sudah Terverifikasi */
+  $(document).ready(function() {
+		$("#klikpoint-").click(function() {
+    	$("#poinModal").modal("show");
+      $("#myDIV").css('display',"block");
+    });
+  });
+  </script>
+ <?php   }  ?>
+  <script> 
+  /* Belum Terverifikasi */
+  $(document).ready(function() {
+     $("#klikpoint-").click(function() {
+      $("#point").css('display',"block");
+      $("#follower").css('display',"none");
+      $("#blank").css('display',"none");
+      $("#ketentuan").css('display',"none");
+      $("#identitas").css('display',"none");
+       $("#dashboard").css('display',"none");
+      $("#verifikasi").css('display',"none");
+    });
+  });
+  </script>
 <!-- notification -->
 <script>
 $(document).ready(function(){
