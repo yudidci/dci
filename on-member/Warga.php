@@ -113,23 +113,10 @@ $g=$resultwarga->fetch_assoc();
 // kota 
 $gdown=$g['batasbawah'];
 $gup=$g['batasatas'];
-$fetchnow = "SELECT * FROM full where followers_count BETWEEN '$gdown' AND '$gup'";
+$fetchnow = "SELECT * FROM full where followers_count BETWEEN '$gdown' AND '$gup' order BY followers_count";
 $fetchresult = $dbconnect ->query($fetchnow);
-$h=$fetchresult->fetch_assoc();
+// $h=$fetchresult->fetch_assoc();
 // output data of each row
-// while($row = $fetchresult->fetch_assoc()){ 
-//   echo "<tr>
-//   <td>" . $row['reg_no'] . "</td>
-//   <td>" . $row['name'] . "</td>
-//   <td>" ."<a href='../on-member/followers.php?did=".$row['reg_no']."'>".$row['followers_count']."</a>". "</td>
-//   <td>" ."<a href='../on-member/detail.php?did=".$row['reg_no']."'>Detail</a>"."</td>
-//   <td>" ."<a onclick=\"return confirm('Apakah anda yakin ingin menghapus member ini?')\" href='../on-member/delete.php?did=".$row['reg_no']."'>Hapus</a> "."</td>
- 
-//   </tr>"; 
-//   }
-
-if ($fetchresult->num_rows != 0) {
-  // output data of each row
 while($row = $fetchresult->fetch_assoc()){ 
   echo "<tr>
   <td>" . $row['reg_no'] . "</td>
@@ -140,9 +127,6 @@ while($row = $fetchresult->fetch_assoc()){
  
   </tr>"; 
   }
-} else {
-  echo "0 results";
-}
 
 
 

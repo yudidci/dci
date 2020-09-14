@@ -85,63 +85,52 @@
 <?php
 
 include '../config.php';
-$fetchnow = "SELECT * FROM full";
-                $table="status";
-                $querysql= "SELECT * from $table where id='1'";
-                $quesrycamat= "SELECT * from $table where id='2'";
-                $quesrylurah= "SELECT * from $table where id='3'";
-                $quesryrw= "SELECT * from $table where id='4'";
-                $quesryrt= "SELECT * from $table where id='5'";
-                $quesrywarga= "SELECT * from $table where id='6'";
-                $result = $dbconnect->query($querysql);
-                $resultcamat = $dbconnect ->query($quesrycamat);
-                $resultlurah = $dbconnect ->query($quesrylurah);
-                $resultrt = $dbconnect ->query($quesryrt);
-                $resultrw = $dbconnect ->query($quesryrw);
-                $resultwarga = $dbconnect ->query($quesrywarga);
-                $b=$result->fetch_assoc();
-                $c=$resultcamat->fetch_assoc();
-                $d=$resultlurah->fetch_assoc();
-                $e=$resultrw->fetch_assoc();
-                $f=$resultrt->fetch_assoc();
-                $g=$resultwarga->fetch_assoc();
-                $fetchresult = $dbconnect ->query($fetchnow);
+$table="status";
+// kota
+$querysql= "SELECT * from $table where id='1'";
+// camat
+$quesrycamat= "SELECT * from $table where id='2'";
+$quesrylurah= "SELECT * from $table where id='3'";
+$quesryrw= "SELECT * from $table where id='4'";
+$quesryrt= "SELECT * from $table where id='5'";
+$quesrywarga= "SELECT * from $table where id='6'";
+// kota 
+$result = $dbconnect->query($querysql);
+// camat
+$resultcamat = $dbconnect ->query($quesrycamat);
+$resultlurah = $dbconnect ->query($quesrylurah);
+$resultrw = $dbconnect ->query($quesryrw);
+$resultrt = $dbconnect ->query($quesryrt);
+$resultwarga = $dbconnect ->query($quesrywarga);
+// kota
+$b=$result->fetch_assoc();
+// camat
+$c=$resultcamat->fetch_assoc();
+$d=$resultlurah->fetch_assoc();
+$e=$resultrw->fetch_assoc();
+$f=$resultrt->fetch_assoc();
+$g=$resultwarga->fetch_assoc();
+// kota 
+$edown=$e['batasbawah'];
+$eup=$e['batasatas'];
+$fetchnow = "SELECT * FROM full where followers_count BETWEEN '$edown' AND '$eup' order BY followers_count";
+$fetchresult = $dbconnect ->query($fetchnow);
+// $h=$fetchresult->fetch_assoc();
+// output data of each row
+while($row = $fetchresult->fetch_assoc()){ 
+  echo "<tr>
+  <td>" . $row['reg_no'] . "</td>
+  <td>" . $row['name'] . "</td>
+  <td>" ."<a href='../on-member/followers.php?did=".$row['reg_no']."'>".$row['followers_count']."</a>". "</td>
+  <td>" ."<a href='../on-member/detail.php?did=".$row['reg_no']."'>Detail</a>"."</td>
+  <td>" ."<a onclick=\"return confirm('Apakah anda yakin ingin menghapus member ini?')\" href='../on-member/delete.php?did=".$row['reg_no']."'>Hapus</a> "."</td>
+ 
+  </tr>"; 
+  }
 
-                // output data of each row
-                while($row = $fetchresult->fetch_assoc()){ 
-                  
-                if ($row['followers_count'] >= $b['batasatas'] || $row['followers_count']>= $b['batasbawah']) {
-                  
-                }
-                elseif ($row['followers_count'] >= $c['batasatas'] || $row['followers_count']>= $c['batasbawah']) {
-             
-                }
-                elseif ($row['followers_count'] >= $d['batasatas'] || $row['followers_count']>= $d['batasbawah']) {
-             
-                }
-                elseif ($row['followers_count'] >= $e['batasatas'] || $row['followers_count']>= $e['batasbawah']) {
-                  echo "<tr>
-                  <td>" . $row['reg_no'] . "</td>
-                  <td>" . $row['name'] . "</td>
-                  <td>" ."<a href='../on-member/followers.php?did=".$row['reg_no']."'>".$row['followers_count']."</a>". "</td>
-                  <td>" ."<a href='../on-member/detail.php?did=".$row['reg_no']."'>Detail</a>"."</td>
-                  <td>" ."<a onclick=\"return confirm('Apakah anda yakin ingin menghapus member ini?')\" href='../on-member/delete.php?did=".$row['reg_no']."'>Hapus</a> "."</td>
-                 
-                  </tr>";
-                }
-                elseif ($row['followers_count'] >= $f['batasatas'] || $row['followers_count']>= $f['batasbawah']) {
-                 
-                }
-                elseif ($row['followers_count'] >= $g['batasatas'] || $row['followers_count']>= $g['batasbawah']) {
-               
-                }
-                else {
-                  
-                }
-          
-                   
-                  }
-                ?>
+
+
+?>
 </tbody>
               </table>
 

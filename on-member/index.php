@@ -674,7 +674,7 @@
               <option value="6">Warga</option>
             </select></p>
             <div class="column">
-            <input type="text" id="batasbawah" name="batasbawah" onkeypress="return hanyaAngka(event)"><br>
+            <input type="number" id="batasbawah" name="batasbawah" onkeypress="return hanyaAngka(event)"><br>
           </div>
           <div class="column">
             <select id="cars" name="cars">
@@ -685,7 +685,7 @@
             </select>
           </div>
           <div class="column2">
-            <input type="text" id="batasatas" name="batasatas" onkeypress="return hanyaAngka(event)"><br>
+            <input type="number" id="batasatas" name="batasatas" onkeypress="return hanyaAngka(event)"><br>
           </div>
           <input type="submit" class="updt-follower" id="updt-follower" name="updt-follower"value="Update"/>
          </form>
