@@ -30,11 +30,19 @@ $referral=$_POST['referral'];
 $checkquery ="SELECT * FROM full WHERE nik='".$nik."'";
 $fetchquery = $dbconnect->query($checkquery);
 
-    if (!$fetchquery)
+$checkreferral ="SELECT * FROM full WHERE referral='".$referral."'";
+$fetchreferral = $dbconnect->query($checkreferral);
+
+    if (!$fetchquery OR !$fetchreferral)
     {
       trigger_error('Wrong SQL Command: ' . $fetchquery . ' Error: ' . $dbconnect->error, E_USER_ERROR);
     }
+    if(mysqli_num_rows($fetchreferral) == 0){
 
+      echo "<script>alert('Referral Tidak Tersedia!')</script>";
+      echo "<meta http-equiv=refresh content=\"0; url=index.html\">";
+   return true;
+   }
 if(mysqli_num_rows($fetchquery) > 0){
 
    echo "<script>alert('Nik Sudah Pernah Terdaftar!')</script>";
