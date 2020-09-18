@@ -86,6 +86,13 @@
           <span>Cek Verikasi Member</span></a>
       </li>
 
+      
+      <li class="nav-item">
+        <a class="nav-link" id="klikpengaduan" href="#klikpengaduan">
+      <i class="far fa-comment-alt"></i>
+          <span>Pesan Pengaduan Member</span></a>
+      </li>
+
                   <!-- Nav Item - Tables -->
 
                   <li class="nav-item">
@@ -654,6 +661,57 @@
 </div>
 </div>
 
+<div class="container-fluid"  id="pengaduan">
+
+<!-- Page Heading -->
+<h1 class="h3 mb-2 text-gray-800">Pengaduan Member</h1>
+<!-- DataTales Example -->
+<div class="card shadow mb-4">
+  <div class="card-header py-3">
+    
+    
+  </div>
+  <div class="card-body">
+  <div style="overflow-x:auto;">
+    <div class="table-responsive">
+    <table class="table table-bordered" id="dataTable4" width="100%" cellspacing="0">
+    <thead>
+      <tr>
+      <th>Nama</th>
+      <th>NIK</th>
+      <th>No HP</th>
+      <th>Date</th>
+      <th>Isi Pesan</th>
+      </tr>
+      </thead>
+
+        <tbody>
+        <!-- list verifikasi ktp -->
+        <?php
+        include '../configtabl.php';
+        // list all member query
+        $fetchktp = "SELECT * FROM full JOIN ktp ON full.nik= ktp.nik WHERE full.verifikasi=''";
+        $fetchresultKTP = $dbconnect ->query($fetchktp);
+
+        // output data of each row
+        while($row = $fetchresultKTP->fetch_assoc()){ 
+          echo "<tr>
+          <td>" . $row['reg_no'] . "</td>
+          <td>" . $row['nik'] . "</td>
+          <td>" . $row['name'] . "</td>
+          <td> " ."<img data-action='zoom' width=60 height=60 src=".$row['url'].">". "</td>
+                
+          </tr>"; 
+          }
+        ?>
+      </tbody>
+      </table>
+    </div>
+  </div>
+  </div>
+</div>
+</div>
+
 <div class="container-fluid" id="follower">
 <h1 class="h3 mb-2 text-gray-800">Edit Batas Follower</h1>
 <!-- DataTales Example -->
@@ -674,7 +732,7 @@
               <option value="6">Warga</option>
             </select></p>
             <div class="column">
-            <input type="number" id="batasbawah" name="batasbawah" onkeypress="return hanyaAngka(event)"><br>
+            <input type="text" id="batasbawah" name="batasbawah" onkeypress="return hanyaAngka(event)"><br>
           </div>
           <div class="column">
             <select id="cars" name="cars">
@@ -685,7 +743,7 @@
             </select>
           </div>
           <div class="column2">
-            <input type="number" id="batasatas" name="batasatas" onkeypress="return hanyaAngka(event)"><br>
+            <input type="text" id="batasatas" name="batasatas" onkeypress="return hanyaAngka(event)"><br>
           </div>
           <input type="submit" class="updt-follower" id="updt-follower" name="updt-follower"value="Update"/>
          </form>
@@ -1027,6 +1085,7 @@ if(isset($_POST['simpan']))
       $("#redeem").css("display","none")
       $("#blank").css("display","none")
       $("#verifikasi").css("display","none")
+      $("#pengaduan").css("display","none")
    })
   })
   </script>
@@ -1042,6 +1101,7 @@ if(isset($_POST['simpan']))
     $("#redeem").css("display","none")
     $("#blank").css("display","none")
     $("#verifikasi").css("display","none")
+    $("#pengaduan").css("display","none")
  })
 })
 </script>
@@ -1056,6 +1116,7 @@ if(isset($_POST['simpan']))
     $("#point").css("display","none")
     $("#redeem").css("display","none")
     $("#verifikasi").css("display","none")
+    $("#pengaduan").css("display","none")
  })
 })
 </script>
@@ -1070,6 +1131,7 @@ if(isset($_POST['simpan']))
     $("#point").css("display","none")
     $("#redeem").css("display","none")
     $("#verifikasi").css("display","none")
+    $("#pengaduan").css("display","none")
  })
 })
 </script>
@@ -1085,6 +1147,7 @@ if(isset($_POST['simpan']))
     $("#point").css("display","none")
     $("#redeem").css("display","none")
     $("#verifikasi").css("display","none")
+    $("#pengaduan").css("display","none")
  })
 })
 </script>
@@ -1099,7 +1162,8 @@ if(isset($_POST['simpan']))
     $("#follower").css("display","none")
     $("#point").css("display","none")
     $("#blank").css("display","none")
-    $("#verifikasi").css("display","none")   
+    $("#verifikasi").css("display","none")  
+    $("#pengaduan").css("display","none") 
  })
 })
 </script>
@@ -1115,6 +1179,7 @@ if(isset($_POST['simpan']))
     $("#point").css("display","none")
     $("#redeem").css("display","none")
     $("#verifikasi").css("display","none") 
+    $("#pengaduan").css("display","none")
  })
 })
 </script>
@@ -1130,6 +1195,7 @@ if(isset($_POST['simpan']))
     $("#dashboard").css("display","none")
     $("#redeem").css("display","none")
     $("#verifikasi").css("display","none") 
+    $("#pengaduan").css("display","none")
  })
 })
 </script>
@@ -1138,6 +1204,23 @@ if(isset($_POST['simpan']))
   $(document).ready(function(){
   $("#klikverifikasi").click(function(){
     $("#verifikasi").css("display","block") 
+    $("#point").css("display","none")
+    $("#follower").css("display","none")
+    $("#blank").css("display","none")
+    $("#ketentuan").css("display","none")
+    $("#identitas").css("display","none")
+    $("#dashboard").css("display","none")
+    $("#redeem").css("display","none")
+    $("#pengaduan").css("display","none")
+ })
+})
+</script>
+
+<script>
+  $(document).ready(function(){
+  $("#klikpengaduan").click(function(){
+    $("#pengaduan").css("display","block") 
+    $("#verifikasi").css("display","none") 
     $("#point").css("display","none")
     $("#follower").css("display","none")
     $("#blank").css("display","none")

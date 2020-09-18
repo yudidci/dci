@@ -40,7 +40,7 @@
                               <input name="name" placeholder="Masukan Nama Anda"  id="name" required pattern="[A-Za-z\s]{3,}" title="Nama harus lebih dari 2 karakter">
                             <div>
                               <label for="nik"><i class="fa fa-address-card"></i> NIK</label>
-                              <input name="nik" onkeypress="return hanyaAngka(event)" placeholder="Masukan NIK Anda"  id="nik" required pattern="[0-9]{16}" title="NIK harus 16 Digit" >
+                              <input name="nik" onkeypress="return hanyaAngka(event)" maxlength ="16" placeholder="Masukan NIK Anda"  id="nik" required pattern="[0-9]{16}" title="NIK harus 16 Digit" >
                             </div>
                             
                             <div id="kiri">
@@ -59,7 +59,7 @@
                             
                             <div id="kanan">
                               <label for="phone"><i class="fas fa-mobile-alt" ></i> No.Handphone</label>
-                              <input name="phone" placeholder="Masukan Nomer HP" id="phone" title="Nomor HP harus lebih dari 3 Karakter">
+                              <input name="phone" placeholder="Masukan Nomer HP" onkeypress="return hanyaAngka(event)" maxlength ="13" id="phone" title="Nomor HP harus lebih dari 3 Karakter">
                                 </label>
                                 <label for="password" ><i class="fa fa-lock"></i> Ulangi Password </label>
                               <div class="wrap-input100 validate-input" style="margin-bottom: -20px;" data-validate = "Password is required"></div>

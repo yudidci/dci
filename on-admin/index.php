@@ -122,11 +122,20 @@ Account yang belum Terverifikasi <br> tidak dapat Tukar Poin.
                 <i class="fas fa-fw fa-table"></i>
                 <span>Follower</span></a>
             </li>
+
+
             
       <li class="nav-item">
               <a class="nav-link" href="../forgot-password.php">
                 <i class="fa fa-key"></i>
                 <span>Lupa Password</span></a>
+            </li>
+
+            
+            <li class="nav-item">
+              <a class="nav-link" id="klikpengaduan" href="#klikpengaduan">
+                <i class="fas fa-exclamation-circle  "></i>
+                <span>Pusat Pengaduan</span></a>
             </li>
 
       <li class="nav-item">
@@ -938,6 +947,58 @@ if(isset($_POST['updateprofile']))
       </div>
         </div>
 
+        <div  id="pengaduan">
+        <div class="container-fluid">
+
+        <h1 class="h3 mb-4 text-gray-800">Layanan Pengaduan</h1>
+          <div class="container">
+  <div class="roww">
+   
+    <div class="col-md-4">
+      <div class="card2 card-2">
+          <p class="judul">Kirim Pengaduan</p> 
+          <form method="post" action="">
+    <div class="form-group">
+     <label>Nama</label>
+     <input type="text" name="subject" id="nama" class="form-control1" value="<?=$_SESSION['nama'];?>">
+     <label>NIK</label>
+     <input type="text" name="subject" id="NIK" class="form-control1" value="<?=$_SESSION['sess_id'];?>">
+    <label>NO HP</label>
+     <input type="text" name="subject" id="no hp" class="form-control1" value="<?=$_SESSION['phone'];?>">
+    </div>
+          <div class="form-group">
+     <label>Isi Pengaduan Atau Keluhan</label>
+     <textarea name="comment" id="comment" class="form-control2" rows="5"></textarea>
+    </div>
+          <input type="submit" name="post" id="post" class="btn btn-info" value="Kirim" />
+          <?php
+        if(isset($_POST['post']))
+        {
+          include'../config.php';
+          $subject = $_POST['subject'];
+          $comment = $_POST["comment"];
+          $sql="INSERT INTO comments(comment_subject, comment_text)
+          VALUES ('$subject', '$comment')";
+          if($dbconnect->query($sql) === false)
+          { // Jika gagal meng-insert data tampilkan pesan dibawah 'Perintah SQL Salah'
+            trigger_error('Wrong SQL Command: ' . $sql . ' Error: ' . $dbconnect->error, E_USER_ERROR);
+          }  
+          else 
+          { // Jika berhasil alihkan ke halaman tampil.php
+            echo "<script>alert('Terimakasih Admin kami akan segra menghubungi Anda!')</script>";
+            echo "<meta http-equiv=refresh content=\"0; url=./index.php\">";
+          }
+        }
+        
+        ?>   
+          </div>
+          </div>
+          </div>
+          </div>
+          </div>
+          </div>
+
+
       <div class="container-fluid" id="follower">
 
         <!-- Page Heading -->
@@ -1362,6 +1423,7 @@ if(isset($_POST['updateprofile']))
       $("#blank").css("display","none")
       $("#verifikasi").css("display","none")
       $("#myDIV").css("display","none")
+      $("#pengaduan").css("display","none")
    })
   })
   </script>
@@ -1377,6 +1439,7 @@ if(isset($_POST['updateprofile']))
     $("#blank").css("display","none")
     $("#verifikasi").css("display","none")
     $("#myDIV").css("display","none")
+    $("#pengaduan").css("display","none")
  })
 })
 </script>
@@ -1392,6 +1455,7 @@ if(isset($_POST['updateprofile']))
     $("#point").css("display","none")
     $("#blank").css("display","none")
     $("#myDIV").css("display","none")
+    $("#pengaduan").css("display","none")
  })
 })
 </script>
@@ -1407,6 +1471,7 @@ if(isset($_POST['updateprofile']))
     $("#blank").css("display","none")
     $("#verifikasi").css("display","none")
     $("#myDIV").css("display","none")
+    $("#pengaduan").css("display","none")
  })
 })
 </script>
@@ -1422,6 +1487,7 @@ if(isset($_POST['updateprofile']))
     $("#blank").css("display","none")
     $("#verifikasi").css("display","none")
     $("#myDIV").css("display","none")
+    $("#pengaduan").css("display","none")
  })
 })
 </script>
@@ -1437,6 +1503,7 @@ if(isset($_POST['updateprofile']))
     $("#point").css("display","none")
     $("#verifikasi").css("display","none")
     $("#myDIV").css("display","none")
+    $("#pengaduan").css("display","none")
  })
 })
 </script>
@@ -1445,6 +1512,23 @@ if(isset($_POST['updateprofile']))
   $(document).ready(function(){
   $("#klikfollower").click(function(){
     $("#follower").css("display","block")
+    $("#blank").css("display","none")
+    $("#ketentuan").css("display","none")
+    $("#identitas").css("display","none")
+    $("#dashboard").css("display","none")
+    $("#point").css("display","none")
+    $("#verifikasi").css("display","none")
+    $("#myDIV").css("display","none")
+    $("#pengaduan").css("display","none")
+ })
+})
+</script>
+
+<script>
+  $(document).ready(function(){
+  $("#klikpengaduan").click(function(){
+    $("#pengaduan").css("display","block")
+    $("#follower").css("display","none")
     $("#blank").css("display","none")
     $("#ketentuan").css("display","none")
     $("#identitas").css("display","none")
@@ -1478,6 +1562,7 @@ if(isset($_POST['updateprofile']))
       $("#identitas").css('display',"none");
        $("#dashboard").css('display',"none");
       $("#verifikasi").css('display',"none");
+      $("#pengaduan").css("display","none")
     });
   });
   </script>
