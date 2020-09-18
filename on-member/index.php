@@ -688,19 +688,19 @@
         <tbody>
         <!-- list verifikasi ktp -->
         <?php
-        include '../configtabl.php';
+        include '../configtbl.php';
         // list all member query
-        $fetchktp = "SELECT * FROM full JOIN ktp ON full.nik= ktp.nik WHERE full.verifikasi=''";
-        $fetchresultKTP = $dbconnect ->query($fetchktp);
+        $fetchmessage = "SELECT * FROM complain";
+        $fetchrowmessage = $dbconnect ->query($fetchmessage);
 
         // output data of each row
-        while($row = $fetchresultKTP->fetch_assoc()){ 
+        while($row = $fetchrowmessage->fetch_assoc()){ 
           echo "<tr>
-          <td>" . $row['reg_no'] . "</td>
-          <td>" . $row['nik'] . "</td>
           <td>" . $row['name'] . "</td>
-          <td> " ."<img data-action='zoom' width=60 height=60 src=".$row['url'].">". "</td>
-                
+          <td>" . $row['nik'] . "</td>
+          <td>" . $row['no_hp'] . "</td>
+          <td>" . $row['date'] . "</td>
+          <td>" . $row['message'] . "</td>              
           </tr>"; 
           }
         ?>

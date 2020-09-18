@@ -953,44 +953,27 @@ if(isset($_POST['updateprofile']))
         <h1 class="h3 mb-4 text-gray-800">Layanan Pengaduan</h1>
           <div class="container">
   <div class="roww">
-   
     <div class="col-md-4">
       <div class="card2 card-2">
-          <p class="judul">Kirim Pengaduan</p> 
-          <form method="post" action="">
+    
+    <p class="judul">Kirim Pengaduan</p> 
+    <form action='complain.php' method="post">
     <div class="form-group">
      <label>Nama</label>
      <input type="text" name="subject" id="nama" class="form-control1" value="<?=$_SESSION['nama'];?>">
      <label>NIK</label>
      <input type="text" name="subject" id="NIK" class="form-control1" value="<?=$_SESSION['sess_id'];?>">
     <label>NO HP</label>
-     <input type="text" name="subject" id="no hp" class="form-control1" value="<?=$_SESSION['phone'];?>">
+     <input type="text" name="subject" id="no_hp" class="form-control1" value="<?=$_SESSION['phone'];?>">
     </div>
-          <div class="form-group">
+    <div class="form-group">
      <label>Isi Pengaduan Atau Keluhan</label>
      <textarea name="comment" id="comment" class="form-control2" rows="5"></textarea>
     </div>
-          <input type="submit" name="post" id="post" class="btn btn-info" value="Kirim" />
-          <?php
-        if(isset($_POST['post']))
-        {
-          include'../config.php';
-          $subject = $_POST['subject'];
-          $comment = $_POST["comment"];
-          $sql="INSERT INTO comments(comment_subject, comment_text)
-          VALUES ('$subject', '$comment')";
-          if($dbconnect->query($sql) === false)
-          { // Jika gagal meng-insert data tampilkan pesan dibawah 'Perintah SQL Salah'
-            trigger_error('Wrong SQL Command: ' . $sql . ' Error: ' . $dbconnect->error, E_USER_ERROR);
-          }  
-          else 
-          { // Jika berhasil alihkan ke halaman tampil.php
-            echo "<script>alert('Terimakasih Admin kami akan segra menghubungi Anda!')</script>";
-            echo "<meta http-equiv=refresh content=\"0; url=./index.php\">";
-          }
-        }
-        
-        ?>   
+    <input type="submit" name="complain" id="complain" class="btn btn-info" value="Kirim" />
+  </form>
+    
+         
           </div>
           </div>
           </div>
